@@ -108,40 +108,49 @@ you will be able to provide custom error handling for your user.
 
 ## [Tagging requests](#tagging-requests)
 
-It can be very useful to get some extra context on an error, for example
-which user was signed in. For these kinds of cases you can tag requests with
-any extra information you want, this information will then be visible in AppSignal.
-This was introduced in version 0.6.3 of the gem.
+You can use the `Appsignal.tag_request` method to supply extra context on an error. 
+This can help to add information that is not already part of the request, session or environment parameters.
+Be careful not to include any personally identifyable information or sensitive information like authentication tokens.
+This information will then be visible in AppSignal.
+`Appsignal.tag_request` was introduced in version 0.6.3 of the gem.
 
 You can use `Appsignal.tag_request` wherever the current request is accessible, we
-recommend calling it from a `before_filter`.
+recommend calling it in a `before_action`.
 
 ```ruby
 Appsignal.tag_request(
-   :user => current_user.name,
-   :email => current_user.email
+   :locale => I18n.locale
 )
 ```
 
-There are a couple of rules on tagging:
+There are a few limitations on tagging:
 
 * The key must be a string or symbol
 * The value must be a string, symbol or integer
-* The length of the key and value must be less than 100 caracters
+* The length of the key and value must be less than 100 characters
 
 ```ruby
-# Good
+# Good, I18n.locale/default_locale returns a symbol
 Appsignal.tag_request(
-  :user_email => 'John.doe@example.com'
+  locale: I18n.locale 
+  default_locale: I18n.default_locale
 )
 
-# Bad
+# Bad, hash type is not supported
 Appsignal.tag_request(
-  :user => current_user
+  i18n: {
+    locale: I18n.locale 
+    default_locale: I18n.default_locale
+  }
+)
+
+# Bad, leaks personally identifyable information
+Appsignal.tag_request(
+  user_email: 'John.doe@example.com'
 )
 ```
 
-Tags that don't meet these requirements will be dropped without warning.
+Tags that do not meet the limitations will be dropped without warning.
 Request tagging currently only works for errors.
 
 ## [Track exceptions in cron jobs or scripts](#cron-jobs-scripts)
