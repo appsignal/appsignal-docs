@@ -10,6 +10,8 @@ We currently support Ruby 1.9.3+ on Linux or Mac for the latest gem version `1.x
 gem 'appsignal'
 ```
 
+## A note on jRuby
+
 We aim to also support jRuby, and are undecided on supporting Windows. If you use Windows and/or jRuby in your production environment and would like to get notified when this is done please
 [send us an e-mail](mailto:support@appsignal.com).
 
@@ -19,6 +21,16 @@ Add this line to your Gemfile:
 ```ruby
 gem 'appsignal', '~> 0.11.17'
 ```
+
+If you're getting a `Java::JavaLang::RuntimeException: Could not generate DH keypair`, use an initializer like this:
+```ruby
+# config/initializers/java.rb
+if 'jruby' == RUBY_ENGINE
+  java.security.Security.setProperty("jdk.tls.disabledAlgorithms", "SSLv3, DHE")
+end
+```
+
+* The JVM SSL has some arbitrary limitations regarding DH keypair size.
 
 ## Supported frameworks
 
