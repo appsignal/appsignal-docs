@@ -10,10 +10,11 @@ Since it's good to share, here are a couple of our procedures.
 ## Diagnose
 
 Our [Ruby agent](/ruby/index.html) ships with a built-in diagnose command line
-tool in that outputs as much information about the configuration of the
-AppSignal gem and environment it's running in. All this information can help in
-finding a potential cause of a problem. So usually this is the first thing we
-ask you to run in a support request.
+tool that outputs information about the configuration of the AppSignal gem and
+environment it's running in. All this information can help in finding a
+potential cause of a problem.
+
+If you open a support request, we'll usually ask you to run this first.
 
 ```bash
 appsignal diagnose
@@ -55,7 +56,7 @@ The diagnose command will output the following data.
     agent. This section outputs the `install.log` and `mkmf.log` (Makefile log)
     files.
 
-The following options needs to be correctly configured for AppSignal to start.
+The following options need to be correctly configured for AppSignal to start.
 It's the absolute minimum, other configuration can also affect the
 instrumentation.
 
@@ -102,7 +103,7 @@ create an application on AppSignal.com. This process is also used in the
 
 ## Logs
 
-When there's not an immediate problem found in the diagnose information the
+When there's no an immediate problem found in the diagnose information the
 next best thing is the AppSignal logs. The AppSignal agents create log files to
 output useful information and problems that were encountered in the agent
 itself.
@@ -143,7 +144,7 @@ will write to a different location.
 
 It will first try to create a `appsignal.log` file in an application's root
 directory. For Rails applications it will create a log file in the `log/`
-directory instead. If it has no luck creating a log file it will fallback on
+directory instead. If it has no luck creating a log file it will fall back on
 the system's `/tmp` directory. This is also where other AppSignal agent files
 are saved.
 
@@ -186,16 +187,16 @@ AppSignal doesn't seem to be working or there are no logs available.
 
 ## Creating a reproducible state
 
-When it's not immediate obvious what the cause of a problem could be, the next
-step is to try and replicate the situation in the most minimal setup possible.
-Create a test application with as little configuration as possible, load the
-least amount of required libraries and other dependencies.
+If the steps described above haven't shown a cause for the problem, a good next
+step is to try to replicate the situation in the most minimal setup possible.
+
+Create a test application with as little configuration as possible, loading
+only the minimum required libraries and dependencies.
 
 With this reproducible example application we can start tracking down the cause
-of the problem. This means deep diving in the language specific agent, the
-C-extension and Rust agent. If there doesn't seem to be a problem, we
+of the problem.
 
 ## Contact us
 
-[Contact us](mailto:support@appsignal.com), if you haven't already, and let us
-know what your problem is.
+Don't hesitate to [contact us](mailto:support@appsignal.com) if you run into
+any issues while debugging the AppSignal client. We're here to help.
