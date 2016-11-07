@@ -89,7 +89,7 @@ instrumentation.
 
 ## Configuration
 
-The configuration is key. It's important, because without it we the AppSignal
+The configuration is key. It's important, because without it the AppSignal
 agent won't know which application it's instrumenting and in which environment.
 
 Using the [diagnose](#diagnose) information we see if we can find a problem
@@ -130,9 +130,10 @@ gem version `2.0.0`.
 
 ## Logs
 
-When there's no problem found in the diagnose information the next thing we
-look at are the agent logs. The AppSignal agents create log files to output
-useful information and problems that were encountered in the agent itself.
+When there's no problem found in the diagnose information, the agent's logs are
+the next thing you can look into. The AppSignal agents create log files to
+output useful information and problems that were encountered in the agent
+itself.
 
 By default the agents log "info"-level logs and higher (warning & error). To
 log more data relevant for debugging, enable the [debug
@@ -141,7 +142,7 @@ option](http://localhost:4567/ruby/configuration/options.html#code-appsignal_deb
 ### Logs contents
 
 The AppSignal log file contains information from three different AppSignal
-components. It will prefix every log entry with a timestamp, component name,
+components. It will prefix every log entry with a time stamp, component name,
 process PID, log level indicator and the log message itself.
 
 The available agent components are:
