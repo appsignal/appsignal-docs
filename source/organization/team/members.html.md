@@ -15,12 +15,12 @@ If you check one of the teams the invitee will become a member of those
 teams. See [Manage owners & teams](/getting-started/manage-owners-teams.html)
 for more information about owners and teams.
 
-![Invite a new user](/images/screenshots/invite_new_member.png)
+![Invite a new user](/images/screenshots/org_team_invitation.png)
 
 Once you invite a new member the invitation will show up in the
 outstanding invitations table.
 
-![Outstanding invitations](/images/screenshots/outstanding_invitations.png)
+![Outstanding invitations](/images/screenshots/org_team_outstanding_invitations.png)
 
 If the invitee has not received an invitation email you can resend the
 email. Please contact us at
@@ -32,4 +32,4 @@ Once the invitation has been accepted the invitation will not be shown in
 the outstanding invitations table anymore. The person will now be
 present in the members screen, you can remove the member here if needed.
 
-![Members](/images/screenshots/members.png)
+![Members](/images/screenshots/org_team_members.png)

@@ -6,7 +6,7 @@ AppSignal can send notifications of new incidents to several services, like Camp
 
 To receive a webhook, go to the "Integrations" tab the site's sidebar and fill out the url where you'd like to receive your webhook data.
 
-![Webhook](/images/screenshots/webhook.png)
+![Webhook](/images/screenshots/app_webhook.png)
 
 Depending on the incident we push three different JSON bodies.
 

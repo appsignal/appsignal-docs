@@ -31,7 +31,7 @@ the "Manage owners|this team" link.
 Read more about [team management](/organization/team/index.html) in the
 Organization topic.
 
-![App settings teams](/images/screenshots/app_settings_teams.png)
+![App settings teams](/images/screenshots/app_teams.png)
 
 ## Push & Deploy
 
