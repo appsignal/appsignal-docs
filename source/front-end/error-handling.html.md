@@ -114,7 +114,7 @@ class @Appsignal
     @action = action
 
   tag_request: (tags) ->
-    for key in tags
+    for key or tags
       @tags[key] = tags[key]
 
   sendError: (error) ->
