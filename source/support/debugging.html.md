@@ -24,29 +24,40 @@ Since it's good to share, here are a couple of our procedures.
 
 ## Diagnose
 
-Our [Ruby agent](/ruby/index.html) ships with a built-in diagnose command-line
-tool that outputs information about the configuration of the AppSignal gem and
-environment it's running in. All this information can help in finding a
-potential cause of a problem.
+Our [Ruby gem](/ruby/index.html) and [Elixir package](/elixir/index.html) ship
+with a built-in diagnose command-line tool that outputs information about the
+configuration of the AppSignal library and environment it's running in. All
+this information can help in finding a potential cause of a problem.
 
 If you open a support request, we'll usually ask you to run this first.
 
 ```bash
+# Ruby
 appsignal diagnose
+
+# Elixir
+mix appsignal.diagnose
+# Or with the release binary
+bin/your_app command appsignal_tasks diagnose
 ```
 
 The diagnose command has to be run in the directory of an application that has
-the AppSignal agent installed.
+the AppSignal library installed.
 
 Unless the application is configured with environment variables it's necessary
 to provide the diagnose command with an environment. The environment will help
 AppSignal load the correct configuration that needs to be diagnosed.
 
 ```bash
+# Ruby
 APPSIGNAL_APP_ENV=production appsignal diagnose
-
 # --environment option support since Ruby gem version 2.0.4
 appsignal diagnose --environment=production
+
+# Elixir
+MIX_ENV=production mix appsignal.diagnose
+# Or with the release binary
+bin/your_app command appsignal_tasks diagnose
 ```
 
 ### Diagnose information
@@ -54,27 +65,29 @@ appsignal diagnose --environment=production
 The diagnose command will output the following data.
 
 - Agent information
-  - Ruby gem version
+  - Ruby gem / Elixir package version
   - Agent version
   - Ruby gem installation path
-  - C-extension loaded: `yes`/`no`
+  - C-extension / Nif loaded: `yes`/`no`
 - Host information
   - Hardware architecture
   - Operating system
-  - Ruby version
-  - Heroku detection - only on Heroku
-  - Container id - only in a Docker/LXC container
+  - Ruby / Elixir & OTP version
+  - Heroku detection - only visible on Heroku
+  - Container detection
   - Current user is `root` user: `yes`/`no`
-- [Agent](/appsignal/terminology.html#agent) diagnostics (Available since
-  Ruby gem 2.0.4)
+- [Agent](/appsignal/terminology.html#agent) diagnostics
   - Starts the agent in diagnose mode
   - Agent configuration validation
   - Agent logger initialization
   - Agent lock file path writable check
 - Configuration
-  - Environment - Outputs a warning if none is found.
-  - See [Ruby configuration](/ruby/configuration/options.html) for all
-    available options.
+  - Environment
+      - The Ruby gem outputs a warning if none is found.
+  - List of configuration options
+      - See [Ruby configuration](/ruby/configuration/options.html) and [Elixir
+        configuration](/elixir/configuration/options.html) for all
+        available options.
 - Push API key validation
   - Tests if the Push API key that's being used is a valid key at AppSignal.com.
 - Path information
@@ -82,12 +95,13 @@ The diagnose command will output the following data.
     the current user.
   - `current_path` - path the diagnose command is run in. Should be a path for
     the application you're trying to debug. Usually the same as `root_path`.
+    (Ruby only)
   - `root_path` - application path. AppSignal will try to find a
-    `config/appsignal.yml` file here.
+    `config/appsignal.yml` file here. (Ruby only)
   - `log_dir_path` - path the log file is created in.
   - `log_file_path` - path the log file is created. Is empty if no viable path
     could be found.
-- Installation information
+- Installation information (Ruby only)
   - Something could have gone wrong during the installation of the AppSignal
     agent. This section outputs the `install.log` and `mkmf.log` (Makefile log)
     files.
@@ -96,7 +110,7 @@ The following options need to be correctly configured for AppSignal to start.
 It's the absolute minimum, other configuration can also affect the
 instrumentation.
 
-- Configuration `Environment` is set.
+- Configuration `Environment` / `env` is set.
 - Configuration `name` is set.
 - Configuration `push_api_key` is set.
 - Configuration `active` is set to `true`.
@@ -110,13 +124,24 @@ agent won't know which application it's instrumenting and in which environment.
 Using the [diagnose](#diagnose) information we see if we can find a problem
 with the configuration of the agent.
 
-The AppSignal agents have multiple methods of configuration. For the Ruby agent
-we recommend you read the [configuration topic](/ruby/configuration/index.html)
-to get started, specifically [minimal required
-configuration](/ruby/configuration/#minimal-required-configuration), the
-[configuration load order](/ruby/configuration/load-order.html) and the
-[configuration options](/ruby/configuration/options.html) if you're
-experiencing problems.
+The AppSignal agents have multiple methods of configuration.
+
+We recommend you read the configuration topic to get started, specifically the
+minimal required configuration, configuration load order and the configuration
+options pages if you're experiencing problems.
+
+- Configuration overview:
+  [Ruby](/ruby/configuration/index.html) /
+  [Elixir](/elixir/configuration/index.html)
+- Minimal required configuration:
+  [Ruby](/ruby/configuration/#minimal-required-configuration) /
+  [Elixir](/elixir/configuration/#minimal-required-configuration)
+- Configuration load order:
+  [Ruby](/ruby/configuration/load-order.html) /
+  [Elixir](/elixir/configuration/load-order.html)
+- Configuration options:
+  [Ruby](/ruby/configuration/options.html) /
+  [Elixir](/elixir/configuration/options.html)
 
 ## No data appearing
 
@@ -130,18 +155,26 @@ track the problem down. To rule out the AppSignal agent and its processing we
 can send "demo samples".
 
 ```bash
+# Ruby
 appsignal demo --environment=development
+
+# Elixir
+MIX_ENV=prod mix appsignal.demo
+# Or with the release binary
+bin/your_app command appsignal_tasks demo
 ```
 
 This command sends a fake web request and error sample to the AppSignal servers
 for the application. Once data has been received the AppSignal servers start
-processing the data and create an application on AppSignal.com. This process is
-also used in the `appsignal install` command-line tool to help with the
-installation process.
+processing the data and create an application on AppSignal.com.
+
+In the AppSignal Ruby gem this process is also used in the `appsignal install`
+command-line tool to help with the installation process.
 
 Note that the "demo" command has to be run in the directory of an application
-that has the AppSignal agent installed. The "demo" command was added in Ruby
-gem version `2.0.0`.
+that has the AppSignal agent installed.
+
+The "demo" command was added in Ruby gem version `2.0.0`.
 
 ## Logs
 
@@ -152,7 +185,7 @@ itself.
 
 By default the agents log "info"-level logs and higher (warning & error). To
 log more data relevant for debugging, enable the [debug
-option](http://localhost:4567/ruby/configuration/options.html#code-appsignal_debug-code-code-debug-code).
+option](/ruby/configuration/options.html#code-appsignal_debug-code-code-debug-code).
 
 ### Logs contents
 
@@ -163,7 +196,7 @@ process PID, log level indicator and the log message itself.
 The available agent components are:
 
 - `process`  
-  Language specific implementation (Ruby/Elixir).
+  Language specific implementation (Ruby / Elixir).
 - `extension`  
   C-lang extension to the language implementation. Runs in the same process as
   `process`.
@@ -186,9 +219,9 @@ The available agent components are:
 
 #### STDOUT log message breakdown
 
-For STDOUT loggers the AppSignal gem prefixes a recognizable "appsignal" prefix
-to the message so that specific AppSignal messages can be grepped in the parent
-process' log output.
+For STDOUT loggers the AppSignal Ruby gem prefixes a recognizable "appsignal"
+prefix to the message so that specific AppSignal messages can be grepped in the
+parent process' log output.
 
 ```
 [2016-10-19T11:06:18 (process) #11329][DEBUG] appsignal: Starting appsignal
@@ -203,25 +236,29 @@ process' log output.
 
 ### Log location
 
-There are two methods of saving logs from the AppSignal gem. By writing the
+There are two methods of saving logs from the AppSignal library. By writing the
 logs to a log-file and by printing the logs in the process' STDOUT. See the
 [`log`
 configuration](/ruby/configuration/options.html#code-appsignal_log-code-code-log-code)
 for more information.
 
-Log written to a log file are not written to your application's log files, but
+Logs written to a log file are not written to your application's log files, but
 have their own `appsignal.log` file. Depending on the permissions of a host the
 agent will write the logs to a different location.
 
-It will first try to create a log file in an application's root directory. For
-Rails applications it will create a log file in the `log/` directory instead.
-If it has no luck creating a log file it will fall back on the system's `/tmp`
-directory. This is also where other AppSignal agent files are saved.
+The Ruby gem will first try to create a log file in an application's directory.
+For Ruby on Rails applications it will create a log file in the `log/`
+directory instead. If it has no luck creating a log file it will fall back on
+the system's `/tmp` directory. This is also where other AppSignal agent files
+are saved.
+
+The Elixir package will write the log files to the `/tmp/appsignal.log`
+log-file.
 
 If it completely fails to find a writable location to save its logs to, it will
 output them in the STDOUT of the parent application's process. This can also be
-configured. On the [Heroku](http://heroku.com/) hosting platform the agent will
-log to STDOUT automatically.
+configured with the `:log` option. On the [Heroku](http://heroku.com/) hosting
+platform the agent will log to STDOUT automatically.
 
 To let AppSignal tell you where it will write its logs to, see the output of
 the [diagnose](#diagnose) command.
