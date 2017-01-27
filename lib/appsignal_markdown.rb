@@ -28,7 +28,7 @@ class AppsignalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
   # Create a link from the heading.
   def header(text, level)
     anchor = text.parameterize
-    %(<h%s id="%s"><a href="#%s">%s</a></h%s>) % [level, anchor, anchor, text, level]
+    %(<h%s><span class="anchor" id="%s"></span><a href="#%s">%s</a></h%s>) % [level, anchor, anchor, text, level]
   end
 
   private

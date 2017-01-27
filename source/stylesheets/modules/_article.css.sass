@@ -22,9 +22,17 @@
     @extend %h-tiny
 
   h1, h2, h3, h4
+    position: relative
+
     a
       color: $font-heading
       text-decoration: none
+
+    .anchor
+      position: absolute
+      top: -($header-height + 20px)
+      pointer-events: none
+      user-select: none
 
   p + h2
     margin-top: 40px
