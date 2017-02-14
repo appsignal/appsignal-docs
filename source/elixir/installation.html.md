@@ -83,6 +83,7 @@ your application's `config.exs`.
 ```elixir
 # config/config.exs
 config :appsignal, :config,
+  active: true,
   name: :my_first_app,
   push_api_key: "your-hex-appsignal-key"
 ```
