@@ -83,13 +83,13 @@ config :phoenix, :template_engines,
 
 ## Queries
 
-To enable query logging, add the following to you Repo configuration in
-`config.exs`.
+To enable query logging, add the `Appsignal.Ecto` module to your Repo's logger configuration:
+
 
 ```elixir
 # config/config.exs
 config :my_app, MyApp.Repo,
-  loggers: [Appsignal.Ecto]
+  loggers: [Appsignal.Ecto, Ecto.LogEntry]
 ```
 
 Note that this is not Phoenix-specific but works for all Ecto queries. The
