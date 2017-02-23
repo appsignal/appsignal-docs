@@ -51,7 +51,7 @@ Set this to `false` to disable [host metrics](/metrics/host.html).
 
 ## `APPSIGNAL_FILTER_PARAMETERS` / `:filter_parameters`
 
-- Value: Array<String>. Default: `[]`
+- Value: list(String). Default: `[]`
 
 List of parameter keys that should be ignored using AppSignal filtering. Their
 values will be replaced with `FILTERED` when transmitted to AppSignal. You can
@@ -75,14 +75,14 @@ complete proxy URL in this configuration key.
 
 ## `APPSIGNAL_IGNORE_ACTIONS` / `:ignore_actions`
 
-- Value: Array<String>. Default: `[]`.
+- Value: list(String). Default: `[]`.
 
 List of actions that will be ignored, everything that happens including
 exceptions will not be transmitted to AppSignal.
 
 ## `APPSIGNAL_IGNORE_ERRORS` / `:ignore_errors`
 
-- Value: Array<String>. Default: `[]`.
+- Value: list(String). Default: `[]`.
 
 List of error classes that will be ignored. Any error raised with this
 error type will not be transmitted to AppSignal.
