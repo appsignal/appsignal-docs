@@ -1,5 +1,5 @@
 ---
-title: "Integrating AppSignal"
+title: "Integrating AppSignal in Ruby"
 ---
 
 It's possible that AppSignal does not provide automatic integration for your
@@ -9,9 +9,9 @@ See our [list of supported integrations](/ruby/integrations/index.html) to see
 what frameworks and gems we support with the AppSignal gem.
 
 When AppSignal does not support something using the gem it's still possible to
-configure it to instrument an application. AppSignal needs to be configured and
-started once at the beginning of a process. It can be
-[configured](/ruby/configuration/index.html) through a configuration file or
+to instrument applications. AppSignal needs to be configured and started once
+at the beginning of a process. It can be
+[configured](/ruby/configuration/index.html) through a configuration file or by
 using environment variables.
 
 ## Configuration
