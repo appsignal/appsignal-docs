@@ -2,15 +2,12 @@
 title: "Custom metrics <sup>Beta</sup>"
 ---
 
--> This feature was introduced with the `1.0` version of the AppSignal gem.
-   It allows sending various metrics to AppSignal where they can be graphed.
+With AppSignal for both Ruby and Elixir, it's possible to add custom
+instrumentation ([Ruby](/ruby/instrumentation/index.html) /
+[Elixir](/elixir/instrumentation/index.html)) to get more details about your
+application performance. But sometimes you want to track other metrics as well.
 
-With the AppSignal Ruby gem it's possible to add [custom
-instrumentation](/ruby/instrumentation/index.html) to get more details about
-your application performance. But sometimes you want to track other metrics as
-well.
-
-Since the `1.0` release of our gem, you can send custom metrics to AppSignal.
+To track such metrics, you can send custom metrics to AppSignal.
 These metrics enable you to track anything in your application, from new
 accounts to database disk usage. These are not replacements for code
 instrumentation, but an additional way to make certain data in your code more
@@ -18,6 +15,10 @@ accessible and measurable over time.
 
 Also read our blog post [about custom
 metrics](http://blog.appsignal.com/blog/2016/01/26/custom-metrics.html).
+
+**Note**: This feature was introduced with the `1.0` version of the AppSignal
+Ruby gem. It allows sending various metrics to AppSignal where they can be
+graphed. It is also available in the Elixir package.
 
 ## Table of Contents
 
@@ -40,8 +41,8 @@ latest value for that moment in time is persisted:
 ```ruby
 # The key should be a string, the value a number
 # Appsignal.set_gauge(key, val)
-Appsignal.set_gauge('database_size', 100)
-Appsignal.set_gauge('database_size', 10)
+Appsignal.set_gauge("database_size", 100)
+Appsignal.set_gauge("database_size", 10)
 
 # Will yield a graph where the `database_size` is 10
 ```
@@ -53,8 +54,8 @@ With a measurement, the average and count will be persisted:
 ```ruby
 # The key should be a string, the value a number
 # Appsignal.add_distribution_value(key, val)
-Appsignal.add_distribution_value('memory_usage', 100)
-Appsignal.add_distribution_value('memory_usage', 110)
+Appsignal.add_distribution_value("memory_usage", 100)
+Appsignal.add_distribution_value("memory_usage", 110)
 
 # Will yield a graph where the `memory_usage_count` is 2 and the `memory_usage_mean` is 105
 ```
@@ -66,8 +67,8 @@ When set multiple times, the sum will be persisted:
 ```ruby
 # The key should be a string, the value a number
 # Appsignal.increment_counter(key, val)
-Appsignal.increment_counter('login_count', 1)
-Appsignal.increment_counter('login_count', 1)
+Appsignal.increment_counter("login_count", 1)
+Appsignal.increment_counter("login_count", 1)
 
 # Will yield a graph where the `login_count` is 2
 ```
