@@ -13,7 +13,7 @@ Whether AppSignal is active for this environment, can be `true` or `false`.
 
 ## `APPSIGNAL_APP_ENV` / `:env`
 
-- Value: String. Default: `:dev`
+- Value: Atom. Default: `:dev`
 
 The AppSignal environment in which the configuration is stored.
 
@@ -24,7 +24,7 @@ Other valid values are `:test` and `:prod`.
 
 ## `APPSIGNAL_APP_NAME` / `:name`
 
-- Value: String
+- Value: Atom/String.
 
 Name of your application as it should be displayed on AppSignal.com.
 
