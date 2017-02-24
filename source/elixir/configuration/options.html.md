@@ -7,7 +7,7 @@ environment variable and the name of the key in the configuration file.
 
 ## `APPSIGNAL_ACTIVE` / `:active`
 
-- Value: Boolean `true`/`false`. Default: `false`
+- Value: `true`/`false`. Default: `false`
 
 Whether AppSignal is active for this environment, can be `true` or `false`.
 
@@ -39,13 +39,13 @@ point to another certificate file if there's a problem connecting to our API.
 
 ## `APPSIGNAL_DEBUG` / `:debug`
 
-- Value: Boolean `true`/`false`. Default: `false`
+- Value: `true`/`false`. Default: `false`
 
 Enable debug logging, this is usually only needed on request from support.
 
 ## `APPSIGNAL_ENABLE_HOST_METRICS` / `:enable_host_metrics`
 
-- Value: Boolean `true`/`false`. Default: `true`
+- Value: `true`/`false`. Default: `true`
 
 Set this to `false` to disable [host metrics](/metrics/host.html).
 
@@ -125,7 +125,7 @@ with when sending data to AppSignal.
 
 ## `APPSIGNAL_RUNNING_IN_CONTAINER` / `:running_in_container`
 
-- Value: Boolean `true`/`false`. Default: `false`
+- Value: `true`/`false`. Default: `false`
 
 AppSignal expects to be running on the same machine between different deploys.
 Set this key to `true` if you use a container based deployment system such as
@@ -135,7 +135,7 @@ This option is set to `true` on [Heroku](http://heroku.com/).
 
 ## `APPSIGNAL_SKIP_SESSION_DATA` / `:skip_session_data`
 
-- Value: Boolean `true`/`false`. Default: `false`
+- Value: `true`/`false`. Default: `false`
 
 Whether to skip adding session data to exception traces and performance issue
 samples.
