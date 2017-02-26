@@ -1,5 +1,5 @@
 ---
-title: "AppSignal custom instrumentation"
+title: "Custom instrumentation for Ruby"
 ---
 
 - [Custom instrumentation](#custom-instrumentation)

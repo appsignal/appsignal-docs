@@ -26,8 +26,20 @@ class AppsignalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
 
   # Add anchor tags to every heading.
   # Create a link from the heading.
+  #
+  # Extra logic added:
+  # - Adds an invisible `span` element that is moved up on the page and acts as
+  #   an anchor. This makes sure the page header doesn't hide the title once
+  #   scrolled to the position on the page.
+  # - Anchor prefix: Start a heading with a caret symbol to prefix the
+  #   heading's anchor id. `##^prefix My heading` becomes `#prefix-my-heading`.
   def header(text, level)
+    if text =~ /^\^([a-zA-Z0-9-]+) /
+      anchor_prefix = $1
+      text = text.sub("^#{anchor_prefix} ", "")
+    end
     anchor = text.parameterize
+    anchor = "#{anchor_prefix}-#{anchor}" if anchor_prefix
     %(<h%s><span class="anchor" id="%s"></span><a href="#%s">%s</a></h%s>) % [level, anchor, anchor, text, level]
   end
 
