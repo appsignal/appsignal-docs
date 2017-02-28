@@ -21,9 +21,6 @@ If you use Sidekiq without Rails some additional setup is required. Add this sni
 require 'appsignal'
 
 Sidekiq.on(:startup) do
-  # Initialize the logger
-  Appsignal.start_logger
-
   # Load config
   Appsignal.config = Appsignal::Config.new(
     Dir.pwd,
@@ -33,6 +30,8 @@ Sidekiq.on(:startup) do
 
   # Start Appsignal
   Appsignal.start
+  # Initialize the logger
+  Appsignal.start_logger
 end
 
 Sidekiq.on(:shutdown) do
