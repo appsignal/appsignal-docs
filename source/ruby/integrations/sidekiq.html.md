@@ -22,14 +22,13 @@ require 'appsignal'
 
 Sidekiq.on(:startup) do
   # Initialize the logger
-  Appsignal.start_logger(Dir.pwd)
+  Appsignal.start_logger
 
   # Load config
   Appsignal.config = Appsignal::Config.new(
     Dir.pwd,
     ENV['APPSIGNAL_APP_ENV'],        # Set environment here
     :name   => 'Sidekiq standalone', # Set app name here
-    :active => true
   )
 
   # Start Appsignal
