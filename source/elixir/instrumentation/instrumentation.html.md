@@ -5,11 +5,11 @@ title: "Custom instrumentation for Elixir"
 In order to find out what specific pieces of code are causing performance
 problems it's useful to add custom instrumentation to your application. This
 allows us to create better breakdowns of which code runs slowest and what type
-of action was the most time spent on.
+of action the most amount of time was spent on.
 
-Custom instrumentation is possible in two ways: with function decorators and
-with instrumentation helper functions. The function decorators are easiest to
-use, but are less flexible than the instrumentation helper functions.
+Custom instrumentation is possible in two ways: using function decorators and
+instrumentation helper functions. The function decorators are easiest to use,
+but are less flexible than the instrumentation helper functions.
 
 This short guide will help you set up custom instrumentation. More details on
 the usage of certain helpers can be found in the Hex docs for the [AppSignal
@@ -34,9 +34,9 @@ package](https://hexdocs.pm/appsignal/).
 
 ## Function decorators
 
-Using the `Appsignal.Instrumentation.Decorators` decorator module it's possible
-quickly add custom instrumentation to your Elixir applications without a lot of
-code.
+Using the `Appsignal.Instrumentation.Decorators` decorator module, it's
+possible quickly add custom instrumentation to your Elixir applications without
+a lot of code.
 
 ###^decorator Transaction events
 
@@ -105,7 +105,7 @@ end
 In order to differentiate between HTTP requests and background jobs we can pass
 a namespace to the transaction once we start it.
 
-The following two namespaces official namespaces supported by AppSignal.
+The following two namespaces are official namespaces supported by AppSignal.
 
 - `http_request` - the default - is called the "web" namespace
 - `background_job` - creates the "background" namespace
@@ -294,7 +294,7 @@ Appsignal.Transaction.set_sample_data(
 In order to differentiate between HTTP requests and background jobs we can pass
 a namespace to the transaction once we start it.
 
-The following two namespaces official namespaces supported by AppSignal.
+The following two namespaces are official namespaces supported by AppSignal.
 
 - `http_request` - the default - is called the "web" namespace
 - `background_job` - creates the "background" namespace
