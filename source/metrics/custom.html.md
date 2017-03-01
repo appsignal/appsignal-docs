@@ -108,6 +108,7 @@ following fields are available:
 | title  | String | Title of the graph. |
 | [kind](#kind) | string | The kind of metrics to display, available options are: gauge, measurement and count. This determines the group of metrics where data can be graphed. See the "Sample fields from the last five minutes" section of the metrics editor to see what groups and fields are available.  |
 | [format](#format) | String | The formatter for the data, options are: "number, size, percent, duration, throughput. |
+| format_input | String | The format of the input of this metrics when usizing the size formatter, options are: "bit, byte, kilobit, kilobyte, megabyte" |
 | [fields](#fields) | Array<String> | An array of fields to graph. |
 | [filter](#filter) | String (Regex) | A regex, matching fields will be graphed. |
 | [draw_null_as_zero](#draw-null-as-zero) | Boolean, defaults: true | Graphs have two render options, if `draw_null_as_zero` is true (default) then if no value is received it will draw that point as 0, if `draw_null_as_zero` is set to false, then the previous value will be used, until a new value is received. |
@@ -128,7 +129,7 @@ For the graphs we have a number of formatters available for the data.
 
 | Format |  Description  |
 | ------ | ----- |
-| number | A formatted number, 1_000_000 will become `1M` 10_000 will become `10K`. |
+| number | A formatted number, by default 1_000_000 will become `1M` 10_000 will become `10K`. Use `format_input` to specify the input format. |
 | size | Size formatted from megabytes. 1.0 megabytes will become `1Mb`. |
 | percent | A percentage, 40 will become `40%`. |
 | duration | A duration of time in milliseconds. 100 will become `100ms` 60_000 will become `60sec`. Mostly used for measurements. |
