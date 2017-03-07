@@ -88,7 +88,7 @@ An example of a log entry with an exception:
         "path":"/blog",
         "exception":[
           "RuntimeError",
-          "je moeder"
+          "an error occured"
         ],
         "duration":1.4929999999999999,
         "time":"2012-08-22T15:30:45+02:00",
