@@ -2,7 +2,7 @@
 title: "AppSignal for Elixir"
 ---
 
-AppSignal supports the [Elixir language][elixir-lang] with a [Elixir
+AppSignal supports the [Elixir language][elixir-lang] with an [Elixir
 package][appsignal-package]. The package supports pure Elixir applications and
 the Phoenix framework out-of-the-box. Other frameworks and packages might
 require some [custom instrumentation](/elixir/instrumentation/index.html).
