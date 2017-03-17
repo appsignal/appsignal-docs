@@ -273,7 +273,7 @@ This can be a code deploy using a "Deploy marker" or a special event with a
 "Custom marker". These custom markers can be anything from scaling operations,
 sudden spikes in traffic or when a database was acting up.
 
-Read more about [makers](/api/markers.html).
+Read more about [makers](/application/markers/index.html).
 
 ## Metadata
 

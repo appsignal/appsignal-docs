@@ -13,6 +13,11 @@
         Your applications
         = image_tag "arrow.svg"
       %ul
+        %li
+          = link_with_active 'Markers', '/application/markers/index.html'
+          %ul
+            %li= link_with_active 'Deploy markers', '/application/markers/deploy-markers.html'
+            %li= link_with_active 'Custom markers', '/application/markers/custom-markers.html'
         %li= link_with_active 'Settings', '/application/settings.html'
         %li= link_with_active 'Link templates', '/application/link-templates.html'
         %li
