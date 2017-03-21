@@ -22,7 +22,7 @@ unclear or if you have any suggestions.
 
 - [AppSignal for Ruby](/ruby/index.html)
 - [AppSignal for Elixir](/elixir/index.html)
-- [Your first application](/getting-started/new-app.html)
+- [Your first application](/getting-started/new-application.html)
 - [Adding application integrations](/application/integrations/index.html)
   (Slack, HipChat, Jira, etc.)
 - [Add custom instrumentation](/ruby/instrumentation/index.html)
