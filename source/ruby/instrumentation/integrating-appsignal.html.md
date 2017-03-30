@@ -66,7 +66,7 @@ end
 ```
 
 If the first argument starts with `perform_job` the transaction will be
-recognized as a background job, if it starts with `perform_action` it will be
+recognized as a background job, if it starts with `process_action` it will be
 recognized as an HTTP request.
 
 Before your process exits it's necessary to call `Appsignal.stop` to make sure
