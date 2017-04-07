@@ -390,7 +390,7 @@ the updated marker.
   </tr>
   <tr>
     <td>Request method</td>
-    <td>DELETE</td>
+    <td>PUT</td>
   </tr>
   <tr>
     <td>Context</td>
@@ -446,7 +446,7 @@ This endpoint deletes a single marker.
   </tr>
   <tr>
     <td>Request method</td>
-    <td>PUT</td>
+    <td>DELETE</td>
   </tr>
   <tr>
     <td>Context</td>
