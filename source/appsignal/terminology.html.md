@@ -7,6 +7,7 @@ language of AppSignal.
 
 - [Agent](#agent)
 - [Alerting](#alerting)
+- [Allocations](#allocations)
 - [API](#api)
 - [API key](#api-key)
 - [Applications](#applications)
@@ -14,11 +15,13 @@ language of AppSignal.
 - [Blog](#blog)
 - [Changelog](#changelog)
 - [Configuration](#configuration)
+- [CPU](#cpu)
 - [Environments](#environments)
 - [Errors](#errors)
 - [Events](#events)
 - [Exceptions](#errors)
 - [Extension](#extension)
+- [Impact](#impact)
 - [Instrumentation](#instrumentation)
 - [Instrumentation events](#instrumentation-events)
 - [Libraries](#libraries)
@@ -26,11 +29,13 @@ language of AppSignal.
 - [Markers](#markers)
 - [Metadata](#metadata)
 - [Metrics](#metrics)
+- [Namespace](#namespace)
 - [Organizations](#organizations)
 - [Owners](#owners)
 - [Performance issues](#performance-issues)
 - [Push API](#push-api)
 - [Push API key](#push-api-key)
+- [Response time](#response-time)
 - [Ruby Magic](#ruby-magic)
 - [Samples](#samples)
 - [Stroopwafels](#stroopwaffles)
@@ -38,6 +43,8 @@ language of AppSignal.
 - [Teams](#teams)
 - [Third-party integrations](#third-party-integrations)
 - [Transactions](#transactions)
+- [Throughput](#troughput)
+- [Queue time](#queue-time)
 - [User account](#user-account)
 
 ## Agent
@@ -69,6 +76,10 @@ integrations](#third-party-integrations) are configured.
 application is running are detected using AppSignal [libraries](#libraries).
 Once a problematic event is detected an alert is sent out to alert users of a
 problem.
+
+## Allocations
+
+The number of times you are distributing memory in your application.
 
 ## API
 
@@ -170,6 +181,11 @@ The usage of environment variables is also recommended.
 For the configuration of the Ruby agent we recommend you read the
 [configuration topic](/ruby/configuration/index.html) to get started.
 
+## CPU
+
+Central Processing Unit, commonly called processor.
+Hardware in computer that carries out the instructions of a program.
+
 ## Environments
 
 Most [application](#applications) can be run in different modes. During
@@ -217,6 +233,24 @@ communication with each other. The libraries send data to the agent over a UNIX
 socket. To do so in a uniform way the libraries use an extension to the
 programming language they're written in. This extension is written in the
 C-language and installed when the language specific agent is installed.
+
+## Impact
+
+The impact of a controller in comparison to other controllers.
+
+Example:
+
+- Controller A happens 1000 times with an average duration of 0.5 seconds.
+The combined duration is 500 seconds.
+- Controller B happens 500 times with an average duration of 3 seconds.
+The combined duration is 1500 seconds.
+
+Total combined duration of all controllers is 2000 seconds.
+
+So, this means that:
+
+- Controller A has an impact of 25% (500/2000)
+- Controller B has an impact of 75% (1500/2000)
 
 ## Instrumentation
 
@@ -307,6 +341,12 @@ out causing the application to run much slower.
 
 Read more about [metrics](https://appsignal.com/for/metrics) on our tour page.
 
+## Namespace
+
+A class of elements (e.g. addresses, file locations, etc.) in which each element
+has a name unique to that class, although it may be shared with elements in
+other classes.
+
 ## Organizations
 
 Organizations are used to group together [applications](#applications) and
@@ -371,6 +411,10 @@ users to easily create more applications in an organization, for different
 The Push API key for an application is given during the creation of an new
 application, and can also be found in an [application
 settings'](/application/settings.html#push-amp-deploy) "Push & deploy" tab.
+
+## Response time
+
+Duration of a request.
 
 ## Ruby Magic
 
@@ -451,6 +495,14 @@ for processing.
 
 [Tags](#tags) and [metadata](#metadata) are added on transaction-level to more
 easily identify differences between transaction samples.
+
+## Throughput
+
+Total number of requests sent through the controller in the selected timeframe.
+
+## Queue time
+
+The amount of time a job is waiting in queue before it's actually executed.
 
 ## User account
 
