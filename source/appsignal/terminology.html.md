@@ -16,6 +16,7 @@ language of AppSignal.
 - [Changelog](#changelog)
 - [Configuration](#configuration)
 - [CPU usage](#cpu-usage)
+- [Elixir Alchemy](## elixir-alchemy)
 - [Environments](#environments)
 - [Errors](#errors)
 - [Events](#events)
