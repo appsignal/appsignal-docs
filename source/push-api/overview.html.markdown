@@ -2,6 +2,9 @@
 title: "Push api overview"
 ---
 
+!> **Deprecated**
+The V1 API is deprecated, and parts of it will be turned off in the (near) future. Please contact us at <a href="mailto:contact@appsignal.com">contact@appsignal.com</a> if you're interested in building a custom integration on top of the AppSignal API.
+
 The appsignal_server push api is located at `https://push.appsignal.com` and accepts all requests with a valid API key. Make sure you use **https** to keep your data secure.
 
 ## Pushing events to the api
