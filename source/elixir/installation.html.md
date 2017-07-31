@@ -58,7 +58,7 @@ xcode-select --install
     ```elixir
     # mix.exs
     def deps do
-      [{:appsignal, "~> 1.0"}]
+      [{:appsignal, "~> 1.2"}]
     end
     ```
 
