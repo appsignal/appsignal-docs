@@ -75,3 +75,30 @@ We have an [example application][example-app] in our examples repository on
 GitHub. The example shows how to set up AppSignal with Grape.
 
 [example-app]: https://github.com/appsignal/appsignal-examples/tree/grape
+
+
+## Grape on Rails
+
+Grape is often used in combination with Ruby on Rails as a mounted application.
+To make sure performance and error metrics from both Grape and Rails are captured we recommend the following configuration:
+
+1. [Install AppSignal for Rails](/ruby/integrations/rails.html) as described in the documentation
+2. Add the `Appsignal::Grape::Middleware` to each grape-root file for every API, for example "app/controllers/api/v1/root.rb"
+
+
+```ruby
+# root.rb
+require "appsignal/integrations/grape"
+
+module Acme
+  class API < Grape::API
+    use Appsignal::Grape::Middleware # Include this middleware
+
+    prefix "api"
+    format :json
+    get "/" do
+      { :message => "Hello world!" }
+    end
+  end
+end
+```
