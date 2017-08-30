@@ -44,7 +44,7 @@ language of AppSignal.
 - [Teams](#teams)
 - [Third-party integrations](#third-party-integrations)
 - [Transactions](#transactions)
-- [Throughput](#troughput)
+- [Throughput](#throughput)
 - [Queue time](#queue-time)
 - [User account](#user-account)
 
