@@ -7,7 +7,19 @@ AppSignal provides *two-factor authentication* (2FA) to add an extra level of se
 ## Enabling two-factor authentication
 
 1. Download an authenticator application on your phone. We recommend [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=en) for Android and iOS users.
-2. Visit the [security page](https://appsignal.com/users/security) and click the "Enable two-factor authentication"-button. 
+2. Visit the [security page](https://appsignal.com/users/security) and click the "Enable two-factor authentication"-button.
 3. Scan the QR code shown on the next page with your authenticator application on your phone.
 4. Enter the six-digit code from the application and press "Enable two-factor authentication".
 5. 2FA is now enabled. Don't forget to save the backup codes in a safe location. You can use them to sign into AppSignal if you ever lose your phone.
+
+## Disabling two-factor authentication
+
+1. Visit the [security page](https://appsignal.com/users/security) and click the "Disable two-factor authentication"-button.
+2. You can now remove AppSignal from your authenticator application on your phone
+
+## Regenerating backup codes
+
+We show the backup codes once after enabling 2FA for your account. You can generate new backup codes, but that will invalidate any existing ones.
+
+1. Visit the [security page](https://appsignal.com/users/security) and click the "Regenerate backup codes"-button.
+2. Save the backup codes in a safe location. You can use them to sign into AppSignal if you ever lose your phone.
