@@ -19,7 +19,9 @@ AppSignal provides *two-factor authentication* (2FA) to add an extra level of se
 
 ## Regenerating backup codes
 
-We show the backup codes once after enabling 2FA for your account. You can generate new backup codes, but that will invalidate any existing ones.
+You can use a backup code to sign into your account when you lose access to your phone.
+
+We show the backup codes once after enabling 2FA for your account. If you lose your backup codes, you can regenerate them on the security page. The newly generated backup codes invalidate and replace any existing ones.
 
 1. Visit the [security page](https://appsignal.com/users/security) and click the "Regenerate backup codes"-button.
 2. Save the backup codes in a safe location. You can use them to sign into AppSignal if you ever lose your phone.
