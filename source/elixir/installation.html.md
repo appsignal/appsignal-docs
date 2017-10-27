@@ -53,7 +53,7 @@ xcode-select --install
 
 ### Installing the package
 
-1. Start by adding `appsignal` to your list of dependencies in `mix.exs`.
+1. Start by adding `appsignal` to your list of dependencies in `mix.exs`. In an umbrella app, put the dependency in the main `mix.exs` file.
 
     ```elixir
     # mix.exs
@@ -62,7 +62,7 @@ xcode-select --install
     end
     ```
 
-2. Ensure `appsignal` is started before your application by adding it to `:extra_applications`.
+2. Ensure `appsignal` is started before your application by adding it to `:extra_applications`. In an umbrella app, put `appsignal` in the `:extra_applications` in the `mix.exs` file in each nested app.
 
     ```elixir
     # mix.exs
@@ -74,7 +74,7 @@ xcode-select --install
     ```
 
 3. Then run `mix deps.get`
-4. Then run `mix appsignal.install YOUR_PUSH_API_KEY` or follow the [manual configuration guide](#configuration).
+4. Then run `mix appsignal.install YOUR_PUSH_API_KEY` or follow the [manual configuration guide](#configuration). In an umbrella app, install and configure AppSignal in the umbrella, and not separately in each nested app.
 5. If you use the [Phoenix framework][phoenix], continue with the [integrating AppSignal into Phoenix](/elixir/integrations/phoenix.html) guide.
 
 After the installation is complete start your application. When the AppSignal
