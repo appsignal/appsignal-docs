@@ -10,11 +10,18 @@ Sometimes it's good to know immediately when a threshold is reached, at other ti
 
 ## Table of Contents
 
+- [Alert states](#alert-states)
 - [Triggers](#setting-up-triggers)
   - [Editing triggers](#editing-triggers)
 - [Warm-up and cooldown](#warm-up-and-cooldown)
   - [Warm-up](#warm-up)
   - [Cooldown](#cooldown)
+
+## Alert states
+
+TODO: Some text explaining the flow of alerts.
+
+<object data="/images/anomaly_detection_alerts_flow.svg"></object>
 
 ## Setting up triggers
 
