@@ -19,9 +19,20 @@ Sometimes it's good to know immediately when a threshold is reached, at other ti
 
 ## Alert states
 
-TODO: Some text explaining the flow of alerts.
+Alerts can have four different states:
 
-<object data="/images/anomaly_detection_alerts_flow.svg"></object>
+- **Warming up** means that this alert is in its warm-up phase. You can configure this per alert. It allows you to wait for a condition to be true for a few minutes before you get alerted
+- **Ongoing** means that this alert is active. Its condition is currently true.
+- **Cooling down** means that an alert is not over the threshold anymore but will not be closed until the cooldown period is over. If it reaches its threshold again within the cooldown period, it will move back to the "ongoing" status.
+- **Closed** means the alert is not ongoing and not in the cooling down period. We don't call them "solved" because you still might want to look at what happened here.
+
+<object data="/images/anomaly_detection_alerts_flow.svg" class="full"></object>
+
+### When will I be notified?
+After you've configured notifications, you will be notified when an alert goes into the ongoing phase, for reminders you set up during that phase, and when it's closed again.
+
+### Email alerts
+In each email you receive about any alert, we'll send you a full overview of all your alerts. You'll see an overview of new alerts, reminders, ongoing alerts and closed alerts.
 
 ## Setting up triggers
 

@@ -3,12 +3,6 @@
     <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
     <title>flow</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
-            <stop stop-color="#83D888" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#4CAF50" offset="100%"></stop>
-        </linearGradient>
-    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="flow">
             <g id="Group-3" transform="translate(0.000000, -3.000000)">
@@ -29,35 +23,35 @@
                 <path d="M294.5,-58.8956044 L294.5,139.895604" id="Line-2" stroke="#C31633" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(294.500000, 40.500000) rotate(-90.000000) translate(-294.500000, -40.500000) "></path>
                 <path d="M90.5,-19.3351648 L90.5,100.335165" id="Line-2" stroke="#DC4904" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(90.500000, 40.500000) rotate(-90.000000) translate(-90.500000, -40.500000) "></path>
                 <path d="M490.5,-13.7197802 L490.5,93.5" id="Line-2" stroke="#0961C4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(490.500000, 40.000000) rotate(-90.000000) translate(-490.500000, -40.000000) "></path>
-                <path d="M636.5,-13.5 L636.5,93.5" id="Line-2" stroke="url(#linearGradient-1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(636.500000, 40.000000) rotate(-90.000000) translate(-636.500000, -40.000000) "></path>
-                <text id="Warming-up" font-family="sans-serif" font-size="14" font-weight="bold" fill="#DC4904">
+                <path d="M636.5,-13.5 L636.5,91.5" id="Line-2" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(636.500000, 40.000000) rotate(-90.000000) translate(-636.500000, -40.000000) "></path>
+                <text id="Warming-up" font-family="sans-serif" font-size="12" font-weight="bold" fill="#DC4904">
                     <tspan x="1" y="14">Warming up</tspan>
                 </text>
-                <text id="Ongoing" font-family="sans-serif" font-size="14" font-weight="bold" fill="#C31633">
+                <text id="Ongoing" font-family="sans-serif" font-size="12" font-weight="bold" fill="#C31633">
                     <tspan x="168" y="14">Ongoing</tspan>
                 </text>
-                <text id="Cooling-down" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0961C4">
+                <text id="Cooling-down" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0961C4">
                     <tspan x="411" y="14">Cooling down</tspan>
                 </text>
-                <text id="Open-alert" font-family="sans-serif" font-size="14" font-weight="bold" fill="#546E7A">
+                <text id="Open-alert" font-family="sans-serif" font-size="12" font-weight="bold" fill="#546E7A">
                     <tspan x="156.14" y="97">Open</tspan>
                     <tspan x="159.171" y="114">alert</tspan>
                 </text>
                 <path d="M172.5,58.5 L172.5,75.5293864" id="Line" stroke="#CFD8DC" stroke-linecap="square"></path>
-                <text id="Close-alert" font-family="sans-serif" font-size="14" font-weight="bold" fill="#546E7A">
+                <text id="Close-alert" font-family="sans-serif" font-size="12" font-weight="bold" fill="#546E7A">
                     <tspan x="547.685" y="97">Close</tspan>
                     <tspan x="551.171" y="114">alert</tspan>
                 </text>
                 <path d="M564.5,58.5 L564.5,75.5293864" id="Line" stroke="#CFD8DC" stroke-linecap="square"></path>
-                <text id="Alert-Reminders" font-family="sans-serif" font-size="14" font-weight="bold" fill="#546E7A">
+                <text id="Alert-Reminders" font-family="sans-serif" font-size="12" font-weight="bold" fill="#546E7A">
                     <tspan x="283.184" y="97">Alert</tspan>
                     <tspan x="264.501" y="114">Reminders</tspan>
                 </text>
                 <path d="M297.5,58.5 L297.5,75.5293864" id="Line" stroke="#CFD8DC" stroke-linecap="square"></path>
                 <path d="M257.5,58.5 L287.5,75.5293864" id="Line" stroke="#CFD8DC" stroke-linecap="square"></path>
                 <path d="M337.5,58.5 L307.5,75.5293864" id="Line" stroke="#CFD8DC" stroke-linecap="square"></path>
-                <text id="Finished" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4CAF50">
-                    <tspan x="558" y="14">Finished</tspan>
+                <text id="Finished" font-family="sans-serif" font-size="12" font-weight="bold" fill="#4CAF50">
+                    <tspan x="558" y="14">Closed</tspan>
                 </text>
             </g>
         </g>
