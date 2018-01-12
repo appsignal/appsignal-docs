@@ -4,10 +4,10 @@ title: "Exception handling"
 
 By default AppSignal tries to record as many exceptions as possible. With [our
 integrations](/ruby/integrations/index.html) for many frameworks and background
-job gems not a lot of exceptions will slip passed.
+job gems, not a lot of exceptions will slip past.
 
-In most applications some errors will get raised that aren't related to
-possible bugs in your code, they just happen when your app gets into contact
+In most applications, some errors will get raised that aren't related to
+possible bugs in your code--they just happen when your app gets into contact
 with the real world. Bots might drop by and try to automatically post forms,
 outdated links might direct visitors to content that doesn't exist anymore and
 so on.
