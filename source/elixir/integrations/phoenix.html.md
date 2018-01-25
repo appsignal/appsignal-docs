@@ -27,15 +27,15 @@ documentation][hex-appsignal].
 ## Incoming HTTP requests
 
 To start logging HTTP requests in your Phoenix app, make sure you use the
-`Appsignal.Phoenix` module in your `endpoint.ex` file, just **before** the line
-where your router module gets called (which should read something like `plug
-MyApp.Router`).
+`Appsignal.Phoenix` module in your `endpoint.ex` file.
 
 ```elixir
-# lib/my_app/endpoint.ex
-# ...
-use Appsignal.Phoenix
-plug MyApp.Router
+defmodule AppsignalPhoenixExampleWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :appsignal_phoenix_example
+  use Appsignal.Phoenix
+
+  # ...
+end
 ```
 
 This will create a transaction for every HTTP request which is performed on the
