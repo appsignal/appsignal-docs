@@ -31,7 +31,7 @@ mix appsignal.diagnose
 ### With a specific environment
 
 ```bash
-MIX_ENV=production mix appsignal.diagnose
+MIX_ENV=prod mix appsignal.diagnose
 ```
 
 ## Exit codes
