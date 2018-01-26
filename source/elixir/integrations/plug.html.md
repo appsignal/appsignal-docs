@@ -20,6 +20,7 @@ documentation][hex-appsignal].
 
 - [Incoming HTTP requests](#incoming-http-requests)
 - [Custom instrumentation](#custom-instrumentation)
+- [Instrumentation for included Plugs](#instrumentation-for-included-plugs)
 
 ## Incoming HTTP requests
 
@@ -85,5 +86,65 @@ end
 This will add an event for the `slow/0` function to the current transaction
 whenever it's called. For more information about custom instrumentation, read
 the [Elixir instrumentation](/elixir/instrumentation/index.html) documentation.
+
+## Instrumentation for included Plugs
+
+Exceptions in included Plugs are automatically caught by AppSignal, but
+performance samples need to be set up manually using the custom instrumentation
+helpers or decorators. 
+
+### Plug instrumentation with decorators
+
+To add instrumentation to Plugs, use the `Appsignal.Instrumentation.Decorators`
+module, and decorate your Plug's `call/2` function using the
+`transaction_event/0-1` function.
+
+``` elixir
+defmodule SlowPlugWithDecorators do
+  import Plug.Conn
+  # use Appsignal's decorators
+  use Appsignal.Instrumentation.Decorators
+
+  def init(opts), do: opts
+
+  # Decorate the call/2 function to add custom instrumentation
+  @decorate transaction_event()
+  def call(conn, _) do
+    :timer.sleep(1000)
+    conn
+  end
+end
+```
+
+See the
+[`transaction_event`](https://docs.appsignal.com/elixir/instrumentation/instrumentation.html#decorator-transaction-events)
+documentation for more information.
+
+### Plug instrumentation without decorators
+
+Instead of using the decorators, you can use the `instrument/3` method to
+decorate a block of code directly.
+
+``` elixir
+defmodule SlowPlugWithInstrumentationHelpers do
+  import Plug.Conn
+  # Import the instrument-function
+  import Appsignal.Instrumentation.Helpers, only: [instrument: 3]
+
+  def init(opts), do: opts
+
+  def call(conn, _) do
+    # Wrap the contents of the call/2 function in an instrumentation block
+    instrument("timer.sleep", "Sleeping", fn() ->
+      :timer.sleep(1000)
+      conn
+    end)
+  end
+end
+```
+
+See the [instrumentation
+helpers](https://docs.appsignal.com/elixir/instrumentation/instrumentation.html#instrumentation-helper-functions)
+documentation for more information.
 
 [hex-appsignal]: https://hexdocs.pm/appsignal/
