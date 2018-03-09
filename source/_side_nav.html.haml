@@ -1,10 +1,16 @@
 %nav.mod-side_nav
   %ul
     %li.section
-      %h2
-        = link_with_active '/' do
-          %i.fa.fa-home
-          Start
+      %ul
+        %li
+          %h2
+            = link_with_active '/' do
+              %i.fa.fa-home
+              Start
+          %h2
+            = link_with_active '/faq.html' do
+              %i.fa.fa-question
+              FAQs
 
     %li.section
       %h2{:data => { :menu => "getting-started" } }
