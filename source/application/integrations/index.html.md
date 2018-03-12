@@ -20,6 +20,7 @@ To enable notifications and issue tracker integration for external services, go 
 - [Phabricator](#phabricator)
 - [Pivotal Tracker](#pivotal-tracker)
 - [Slack](#slack)
+- [Discord](#discord)
 - [Trello](#trello)
 - [Webhook](/application/integrations/webhooks.html)
 - [Zapier](#zapier)
@@ -95,6 +96,14 @@ Website: [http://www.pivotaltracker.com/](http://www.pivotaltracker.com/)
 Slack brings all your communication together in one place. It's real-time messaging, archiving and search for modern teams.
 
 Website: [https://www.slack.com](https://www.slack.com)
+
+## Discord
+
+All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
+
+We support Discord through their [Slack-compatible webhook](https://discordapp.com/developers/docs/resources/webhook#execute-slackcompatible-webhook). To enable it, [find your webhook URL](https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks), append "/slack" to it, and use it as the webhook URL in our Slack integration.
+
+Website: [https://discordapp.com](https://discordapp.com)
 
 ## Trello
 
