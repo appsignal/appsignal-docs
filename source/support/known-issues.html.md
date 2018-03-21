@@ -26,3 +26,7 @@ See also the GitHub issue tracker for our [Ruby gem](https://github.com/appsigna
       - AppSignal Ruby gem versions: `v1.x` - most recent
       - AppSignal Elixir package versions: `v0.0.x` - most recent
       - Systems: Containerized systems such as Docker and Heroku (LXC).
+- [Plug actions registered as "unknown"](known-issues/plug-actions-registered-as-unknown.html)
+  - Symptom: Actions in Plug apps are marked as "unknown" in AppSignal
+  - Affected components:
+      - AppSignal Elixir package versions: `v1.5.0-beta.1` - most recent
