@@ -56,16 +56,15 @@ Your Intercom JavaScript integration would look something like this:
 
 Deploy this change to your server.
 
-### Step 2: Retrieve the Intercom app id and API key
+### Step 2: Connect AppSignal to Intercom
 
-In the Intercom app, click the settings button on the top right and go to "Integrations for [Your app name]".
+In AppSignal, navigate to the site you want to enable Intercom for. Then go to "Notifiers" and activate the Intercom integration. Enter the App id and API key noted in step 2, and save.
 
-![api_key](/images/screenshots/intercom/api_keys.png)
-Note the App id (1) and create a new read/write API key (2). Note this new key (3) as well.
+![intercom_ui](/images/screenshots/intercom/integration.png)
 
-### Step 3: Enable the Intercom integration in AppSignal
+On the integration page link AppSignal to Intercom.
 
-In AppSignal, navigate to the site you want to enable Intercom for. Then go to "Integrations" and activate the Intercom integration. Enter the App id and API key noted in step 2, and save.
+![intercom_ui](/images/screenshots/intercom/oauth.png)
 
 Once completed, these steps will enable the Intercom integration. When a user experiences an error while on your app, an Intercom event will be created for that user.
 
