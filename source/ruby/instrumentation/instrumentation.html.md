@@ -139,9 +139,31 @@ Appsignal.instrument('fetch.custom_database', 'Fetch latest post', sql) do
 end
 ```
 
-Please make sure that all sensitive data is scrubbed from this data because it
-will be send to the AppSignal servers and made visible on the performance
-sample pages. When passing in an SQL query, you can use `body_format =
+!> **Warning**: Please make sure the body payloads are sanitized (sensitive/dynamic data is removed). Non-sanitized body events will be discarded if they reach a certain limit.
+
+Good:
+
+```ruby
+Appsignal.instrument('custom.instrument', 'Instrument stuff', 'command/dynamic/?') do
+  # ...
+end
+Appsignal.instrument('custom.instrument', 'Instrument stuff', 'command/dynamic/?') do
+  # ...
+end
+```
+
+Bad:
+
+```ruby
+Appsignal.instrument('custom.instrument', 'Instrument stuff', 'command/dynamic/123') do
+  # ...
+end
+Appsignal.instrument('custom.instrument', 'Instrument stuff', 'command/dynamic/234') do
+  # ...
+end
+```
+
+When passing in an SQL query as the body, you can use `body_format =
 Appsignal::EventFormatter::SQL_BODY_FORMAT` to do so.
 
 #### `body_format` argument
