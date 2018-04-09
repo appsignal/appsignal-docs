@@ -62,9 +62,3 @@ helpers do
     )
   end
 end
-
-configure :build do
-  activate :gzip
-  activate :minify_css
-  activate :cache_buster
-end
