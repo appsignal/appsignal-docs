@@ -32,3 +32,14 @@ AppSignal configuration file.
 config :appsignal, :config,
   filter_parameters: ["password", "secret"]
 ```
+
+## Skip sending session data
+
+If you don't want to send your session data to AppSignal you can add this to the
+AppSignal configuration file:
+
+```elixir
+# config/config.exs
+config :appsignal, :config,
+  skip_session_data: true
+```
