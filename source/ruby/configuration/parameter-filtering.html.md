@@ -99,3 +99,8 @@ config in `appsignal.yml`:
 ```yaml
 skip_session_data: true
 ```
+
+!> **Note**: Do not send personal data to AppSignal. If your parameters contain
+   personal data, please use filtering. If your session data contains personal
+   data, please skip sending it to AppSignal _until we add filtering to session
+   data too (soon!)_.
