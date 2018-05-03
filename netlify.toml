@@ -1,0 +1,117 @@
+[[redirects]]
+  from = "/contributing"
+  to = "/appsignal/contributing.html"
+[[redirects]]
+  from = "/getting-started/your-user-account.html"
+  to = "/getting-started/user-account.html"
+[[redirects]]
+  from = "/getting-started/invite-new-members.html"
+  to = "/organization/team/members.html"
+[[redirects]]
+  from = "/getting-started/manage-owners-teams.html"
+  to = "/organization/team/owners.html"
+[[redirects]]
+  from = "/getting-started/set-up-a-new-app.html"
+  to = "/getting-started/new-application.html"
+[[redirects]]
+  from = "/getting-started/manage-app-settings.html"
+  to = "/application/settings.html"
+[[redirects]]
+  from = "/getting-started/lifecycle.html"
+  to = "/appsignal/request-lifecycle.html"
+[[redirects]]
+  from = "/getting-started/how-appsignal-operates.html"
+  to = "/appsignal/how-appsignal-operates.html"
+[[redirects]]
+  from = "/getting-started/custom-metrics.html"
+  to = "/metrics/custom.html"
+[[redirects]]
+  from = "/getting-started/host-metrics.html"
+  to = "/metrics/host.html"
+[[redirects]]
+  from = "/getting-started/integrations.html"
+  to = "/application/integrations/index.html"
+[[redirects]]
+  from = "/getting-started/integrations/pagerduty.html"
+  to = "/application/integrations/pagerduty.html"
+[[redirects]]
+  from = "/getting-started/integrations/jira.html"
+  to = "/application/integrations/jira.html"
+[[redirects]]
+  from = "/getting-started/integrations/intercom.html"
+  to = "/application/integrations/intercom.html"
+[[redirects]]
+  from = "/getting-started/webhooks.html"
+  to = "/application/integrations/webhooks.html"
+[[redirects]]
+  from = "/billing/declined-charges.html"
+  to = "/organization/billing.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/filter-parameter-logging.html"
+  to = "/ruby/configuration/parameter-filtering.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/integration-appsignal.html"
+  to = "/ruby/instrumentation/integrating-appsignal.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/handle-exceptions.html"
+  to = "/ruby/instrumentation/handle-exceptions.html"
+[[redirects]]
+  from = "/ruby/instrumentation/handle-exceptions.html"
+  to = "/ruby/instrumentation/exception-handling.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/integration-gems.html"
+  to = "/ruby/integrations/appsignal-gems.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/custom-instrumentation.html"
+  to = "/ruby/instrumentation/index.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/method-instrumentation.html"
+  to = "/ruby/instrumentation/method-instrumentation.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/link-templates.html"
+  to = "/ruby/instrumentation/link-templates.html"
+[[redirects]]
+  from = "/getting-started/supported-frameworks.html"
+  to = "/ruby/integrations/index.html"
+[[redirects]]
+  from = "/gem-settings/configuration.html"
+  to = "/ruby/configuration/index.html"
+[[redirects]]
+  from = "/ruby/configuration.html"
+  to = "/ruby/configuration/index.html"
+[[redirects]]
+  from = "/gem-settings/ignore-actions.html"
+  to = "/ruby/configuration/ignore-actions.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/ignore-instrumentation.html"
+  to = "/ruby/instrumentation/ignore-instrumentation.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/frontend-error-catching.html"
+  to = "/front-end/error-handling.html"
+[[redirects]]
+  from = "/tweaks-in-your-code/background-monitoring.html"
+  to = "/ruby/integrations/index.html"
+[[redirects]]
+  from = "/background-monitoring/sidekiq.html"
+  to = "/ruby/integrations/sidekiq.html"
+[[redirects]]
+  from = "/background-monitoring/delayed-job.html"
+  to = "/ruby/integrations/delayed-job.html"
+[[redirects]]
+  from = "/background-monitoring/resque.html"
+  to = "/ruby/integrations/resque.html"
+[[redirects]]
+  from = "/background-monitoring/rake.html"
+  to = "/ruby/integrations/rake.html"
+[[redirects]]
+  from = "/background-monitoring/custom.html"
+  to = "/ruby/instrumentation/background-jobs.html"
+[[redirects]]
+  from = "/security/overview.html"
+  to = "/appsignal/security.html"
+[[redirects]]
+  from = "/api/overview.html"
+  to = "/api/index.html"
+[[redirects]]
+  from = "/ruby/instrumentation/link-templates.html"
+  to = "/application/link-templates.html"
