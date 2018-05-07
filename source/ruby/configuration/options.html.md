@@ -276,6 +276,45 @@ The key to authenticate with our push API.
 Read more about the [AppSignal Push API
 key](/appsignal/terminology.html#push-api-key).
 
+## `APPSIGNAL_REQUEST_HEADERS` / `:request_headers`
+
+- Available since gem version `2.6.0`.
+- Value: `Array<String>`. Default: `[]`.
+
+The `request_headers` config option contains a list of HTTP request headers which are read and stored by the AppSignal Ruby gem.
+
+This `request_headers` config option is a *whitelist*, which means that it will only take headers as specified by this config option. If this config option is unset it will use the AppSignal default.
+
+Following list is the AppSignal gem default.
+
+```yml
+# config/appsignal.yml
+default: &defaults
+  request_headers:
+    - HTTP_ACCEPT
+    - HTTP_ACCEPT_CHARSET
+    - HTTP_ACCEPT_ENCODING
+    - HTTP_ACCEPT_LANGUAGE
+    - HTTP_CACHE_CONTROL
+    - HTTP_CONNECTION
+    - CONTENT_LENGTH
+    - PATH_INFO
+    - HTTP_RANGE
+    - REQUEST_METHOD
+    - REQUEST_URI
+    - SERVER_NAME
+    - SERVER_PORT
+    - SERVER_PROTOCOL
+```
+
+To configure AppSignal to not store any HTTP request headers on AppSignal transactions, configure the option with an empty array.
+
+```yml
+# config/appsignal.yml
+default: &defaults
+  request_headers: []
+```
+
 ## `APPSIGNAL_RUNNING_IN_CONTAINER` / `:running_in_container`
 
 - Available since gem version `1.0.0`.

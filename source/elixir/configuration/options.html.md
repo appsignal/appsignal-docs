@@ -193,6 +193,35 @@ Configure the endpoint to send data to AppSignal.
 The [Push API key](/appsignal/terminology.html#push-api-key) to authenticate
 with when sending data to AppSignal.
 
+## `APPSIGNAL_REQUEST_HEADERS` / `:request_headers`
+
+- Available since gem version `1.6.0`.
+- Value: `list(String)`. Default: `[]`.
+
+The `request_headers` config option contains a list of HTTP request headers which are read and stored by the AppSignal Elixir package.
+
+This `request_headers` config option is a *whitelist*, which means that it will only take headers as specified by this config option. If this config option is unset it will use the AppSignal default.
+
+Following list is the AppSignal package default.
+
+```elixir
+# config/appsignal.exs
+config :appsignal, :config,
+  request_headers: ~w(
+    accept accept-charset accept-encoding accept-language cache-control
+    connection content-length path-info range request-method
+    request-uri server-name server-port server-protocol
+  )
+```
+
+To configure AppSignal to not store any HTTP request headers on AppSignal transactions, configure the option with an empty array.
+
+```elixir
+# config/appsignal.exs
+config :appsignal, :config,
+  request_headers: []
+```
+
 ## `APPSIGNAL_RUNNING_IN_CONTAINER` / `:running_in_container`
 
 - Value: `true`/`false`. Default: `false`
