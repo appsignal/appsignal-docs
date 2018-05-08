@@ -54,6 +54,10 @@ $(document).ready(function() {
     $(".logged-out").hide();
   }
 
+  if (Cookies.get("appsignal_cookie_consent") == "true") {
+    $(".mod-cookies").hide();
+  }
+
   // Track pageview
   if (window.location.host == "docs.appsignal.com") {
     var tracker_src = "https://appsignal.com/ident.gif?page=" +
@@ -67,4 +71,17 @@ $(document).ready(function() {
     img.style = "display:none;";
     document.body.appendChild(img);
   }
+
+  $(".mod-cookies .accept_link").click(function(e) {
+    e.preventDefault();
+    $(".mod-cookies").hide();
+
+    var consent_src = "https://appsignal.com/cookie_consent.gif";
+    var img = document.createElement("img");
+    img.src = consent_src;
+    img.height = "1";
+    img.width = "1";
+    img.style = "display:none;";
+    document.body.appendChild(img);
+  })
 });
