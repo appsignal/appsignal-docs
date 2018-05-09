@@ -54,7 +54,7 @@ $(document).ready(function() {
     $(".logged-out").hide();
   }
 
-  if (Cookies.get("appsignal_cookie_consent") == "true") {
+  if (Cookies.get("cookie_consent") == "true") {
     $(".mod-cookies").hide();
   }
 
