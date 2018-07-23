@@ -39,6 +39,8 @@ Configure the path of the SSL certificate file on your machine. Default is
 `nil` and will use the system default certificate files. Use this option to
 point to another certificate file if there's a problem connecting to our API.
 
+<%= partial "shared/file_paths" %>
+
 ## `APPSIGNAL_DEBUG` / `:debug`
 
 - Value: `true`/`false`. Default: `false`
@@ -177,8 +179,9 @@ Select which logger to the AppSignal agent should use. Accepted values are
 
 - Value: String. Default: `/tmp/appsignal.log`
 
-Override the location of the path where the AppSignal log file will be written
-to.
+Override the location of the path where the AppSignal log file will be written to.
+
+<%= partial "shared/file_paths" %>
 
 ## `APPSIGNAL_PUSH_API_ENDPOINT` / `:endpoint`
 
@@ -247,6 +250,8 @@ samples.
 
 Override the location where AppSignal for Elixir creates a working directory.
 
+<%= partial "shared/file_paths" %>
+
 ## `APPSIGNAL_WORKING_DIRECTORY_PATH` / `:working_directory_path`
 
 - Available since package version `1.8.0`. (Please use the [`working_dir_path`](#appsignal_working_dir_path-working_dir_path) option on earlier versions.)
@@ -261,6 +266,8 @@ If you are running multiple applications using AppSignal on the same server, use
 config :appsignal, :config,
   working_dir_path: "/tmp/project_1/"
 ```
+
+<%= partial "shared/file_paths" %>
 
 ## `APP_REVISION` / `:revision`
 

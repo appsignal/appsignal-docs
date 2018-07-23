@@ -49,6 +49,8 @@ file](https://github.com/appsignal/appsignal-ruby/blob/4eed259e122d10df66655098a
 in the gem itself. Use this option to point to another certificate file if
 there's a problem connecting to our API.
 
+<%= partial "shared/file_paths" %>
+
 ## `APPSIGNAL_DEBUG` / `:debug`
 
 - Available since gem version `1.0.0`.
@@ -111,6 +113,8 @@ Select which logger to the AppSignal agent should use. Accepted values are
 
 Override the location of the path where the appsignal log file can be written
 to.
+
+<%= partial "shared/file_paths" %>
 
 ## `APPSIGNAL_ENABLE_ALLOCATION_TRACKING` / `:enable_allocation_tracking`
 
@@ -356,9 +360,11 @@ samples.
 
 Override the location where AppSignal for Ruby creates a working directory. See [`working_directory_path`](#appsignal_working_directory_path-working_directory_path) for the behavior it is applicable. This config option appends `/appsignal` to the specified path, where [`working_directory_path`](#appsignal_working_directory_path-working_directory_path) does not.
 
+<%= partial "shared/file_paths" %>
+
 ## `APPSIGNAL_WORKING_DIRECTORY_PATH` / `:working_directory_path`
 
-- Available since gem version `2.8.0`. (Please use the [`working_dir_path`](#appsignal_working_dir_path-working_dir_path) option on earlier versions.)
+- Available since gem version `2.7.0`. (Please use the [`working_dir_path`](#appsignal_working_dir_path-working_dir_path) option on earlier versions.)
 - Value: String. Default: detected by agent
 
 Override the location where AppSignal for Ruby can store temporary files. Use this option if the default location is not suitable. See our [how AppSignal operates](/appsignal/how-appsignal-operates.html) page for more information about the purpose of this working directory.
@@ -370,6 +376,8 @@ If you are running multiple applications using AppSignal on the same server, use
 default: &defaults
   working_directory_path: "/tmp/project_1/"
 ```
+
+<%= partial "shared/file_paths" %>
 
 ## `APP_REVISION` / `:revision`
 
