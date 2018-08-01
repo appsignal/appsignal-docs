@@ -40,3 +40,7 @@ See also the GitHub issue tracker for our [Ruby gem](https://github.com/appsigna
   - Affected components:
       - AppSignal for Elixir package versions: `v1.6.5` and earlier
       - Apps running OTP 21 or higher
+- [Shutdown of AppSignal Push API version 1](known-issues/shutdown-of-push-api-version-1.html)
+  - Symptom: No data is being reported to AppSignal after the 30th of August 2018.
+  - Affected components:
+    - AppSignal for Ruby package versions: `v0.11.x` and earlier
