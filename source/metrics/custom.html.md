@@ -90,7 +90,7 @@ YAML structure that will generate a tab on the metrics page with two graphs:
       title: "Database size"
       kind: "measurement"
       format: "size"
-      filter: "db_[a-z]+._size"
+      filter: "db_*_size"
     -
       title: "MongoDB collection count"
       kind: "gauge"
@@ -110,7 +110,7 @@ following fields are available:
 | [format](#format) | String | The formatter for the data, options are: "number, size, percent, duration, throughput. |
 | format_input | String | The format of the input of this metrics when usizing the size formatter, options are: "bit, byte, kilobit, kilobyte, megabyte" |
 | [fields](#fields) | Array<String> | An array of fields to graph. |
-| [filter](#filter) | String (Regex) | A regex, matching fields will be graphed. |
+| [filter](#filter) | String with wildard (*) | Filter out metrics by wildcard (`*`), matching fields will be graphed. |
 | [draw_null_as_zero](#draw-null-as-zero) | Boolean, defaults: true | Graphs have two render options, if `draw_null_as_zero` is true (default) then if no value is received it will draw that point as 0, if `draw_null_as_zero` is set to false, then the previous value will be used, until a new value is received. |
 
 ### Kind
@@ -149,11 +149,11 @@ A list of available fields per group can be found on the metric editor page.
 
 ### Filter
 
-When using a filter, all fields matching the given (JavaScript)regex will be
+When using a filter, all fields matching the given wildcard will be
 graphed. You can either use an array of fields, or a filter.
 
 ```yaml
-filter: "db_[a-z]+._size"
+filter: "db_*_size"
 ```
 
 This filter will match any field that begins with `db_` and ends with `_size`,
