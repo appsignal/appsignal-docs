@@ -16,7 +16,7 @@ begin
   require ::File.expand_path("../config/environment",  __FILE__)
 rescue Exception => error
   Appsignal.send_error(error)
-  raise e
+  raise
 end
 ```
 
