@@ -94,6 +94,22 @@ config :my_app, MyApp.Repo,
   loggers: [Appsignal.Ecto, Ecto.LogEntry]
 ```
 
+If you're using Ecto 3, attach `Appsignal.Ecto` to Telemetry query events in your
+application's `start/2` function:
+
+```elixir
+Telemetry.attach(
+  "appsignal-ecto",
+  [:my_app, :repo, :query],
+  Appsignal.Ecto,
+  :handle_event,
+  nil
+)
+```
+
+-> **Note**: Telemetry support was added in version 1.8.2 of the AppSignal for
+Elixir integration.
+
 Note that this is not Phoenix-specific but works for all Ecto queries. The
 process that performs the query however, must be associated with an
 `Appsignal.Transaction`, otherwise no event will be logged.
