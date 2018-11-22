@@ -15,7 +15,7 @@ Read more about [`:instrument_sequel`][instrument-sequel].
 
 ### sequel-rails integration
 
-When using the [sequel-rails](https://github.com/jeremyevans/sequel) gem the instrumentation from the
+When using the [sequel-rails][sequel-rails] gem the instrumentation from the
 sequel-rails gem and AppSignal gem can [conflict when running
 migrations][instrumentation-issue].
 
