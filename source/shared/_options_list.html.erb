@@ -1,4 +1,4 @@
-<% options = options_for(integration).sort_by { |o| o[:key] } %>
+<% options = options_for(integration).sort_by { |o| o[:config_key] } %>
 <% required_options = options.select { |o| o[:required] } %>
 <% not_required_options = options.reject { |o| o[:required] } %>
 <h2>Available options</h2>
@@ -7,7 +7,7 @@
     Required options
     <ul>
       <% required_options.each do |option| %>
-        <li><%= link_to option[:key], "#option-#{option[:key]}" %></li>
+        <li><%= link_to option[:config_key], "#option-#{option[:config_key]}" %></li>
       <% end %>
     </ul>
   </li>
@@ -15,7 +15,7 @@
     Options
     <ul>
       <% not_required_options.each do |option| %>
-        <li><%= link_to option[:key], "#option-#{option[:key]}" %></li>
+        <li><%= link_to option[:config_key], "#option-#{option[:config_key]}" %></li>
       <% end %>
     </ul>
   </li>

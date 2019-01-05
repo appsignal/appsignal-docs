@@ -1,4 +1,7 @@
 require "lib/appsignal_markdown"
+# TODO: Fixed in middleman 4.3.x. Once it is released we upgrade and remove
+# this silencer.
+Haml::TempleEngine.disable_option_validator!
 
 DOCS_ROOT   = File.expand_path(File.dirname(__FILE__))
 GITHUB_ROOT = "https://github.com/appsignal/appsignal-docs/tree/master"
@@ -16,6 +19,7 @@ set :images_dir, 'images'
 activate :syntax,
   :line_numbers => true,
   :css_class => "code-block"
+activate :sprockets
 
 helpers do
   def title
@@ -120,7 +124,7 @@ helpers do
   end
 
   def option_default_value(option)
-    default = option[:default]
+    default = option[:default_value]
     case default
     when Hash
       inline_markdown default[:markdown]

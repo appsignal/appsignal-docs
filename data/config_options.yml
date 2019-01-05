@@ -2,7 +2,7 @@ file_paths_notice: &file_paths_notice
   - "-> **Note**: The specified path cannot contain Operating Specific file system abstractions, such as the homedir symbol `~` for *NIX systems. This will be seen an malformed path."
 
 options:
-  - key: active
+  - config_key: active
     env_key: APPSIGNAL_ACTIVE
     required: true
     ruby:
@@ -10,18 +10,18 @@ options:
       since_notes:
         - "`0.11.6`: Support added for the system environment option."
       type: bool
-      default:
+      default_value:
         markdown: "`false` / detected by system"
     elixir:
       since: 0.1.0
       type: bool
-      default:
+      default_value:
         markdown: "`false` / detected by system"
     description: |
       Configure AppSignal to be active or not for a given environment. Most commonly used in the [file configuration](index.html) per environment.
 
       -> **Note**: When the [`APPSIGNAL_PUSH_API_KEY`](#option-push_api_key) environment variable is set, this defaults to `true`. Can be overridden by setting the system environment variable to `false`.
-  - key: env
+  - config_key: env
     env_key: APPSIGNAL_APP_ENV
     required: true
     ruby:
@@ -31,14 +31,14 @@ options:
         - "`1.3.6`: Support added for Sinatra."
         - "`2.0.4`: Standardizes the behavior for all configuration."
       type: string
-      default:
+      default_value:
         markdown: "`\"\"` / detected by system"
     elixir:
       since: 0.1.0
       since_notes:
         - "`0.9.2`: The environment variable name for this configuration option was renamed from `APPSIGNAL_ENVIRONMENT` to `APPSIGNAL_APP_ENV`."
       type: atom
-      default: :dev
+      default_value: :dev
     description: |
       The environment of the app to be reported to AppSignal.
 
@@ -49,77 +49,77 @@ options:
       The environment variable option is commonly used on platforms, such as Heroku, where apps run in the `production` environment by default. This setting allows an override to set the environment to `staging`, for example.
 
       -> **Note**: Changing the environment or [name](#option-name) of an existing app will create a new app on AppSignal.com.
-  - key: name
+  - config_key: name
     env_key: APPSIGNAL_APP_NAME
     required: true
     ruby:
       since: 1.0.0
       type: string
-      default: nil
+      default_value: nil
       description: |
         Name of your application as it should be displayed on AppSignal.com. If you use Ruby on Rails the gem will auto-detect the name and you can leave this empty. For other frameworks setting this is mandatory.
 
         -> **Note**: Changing the name or [environment](#option-env) will create a new app on AppSignal.com.
     elixir:
       type: atom
-      default: nil
+      default_value: nil
       description: |
         Name of your application as it should be displayed on AppSignal.com.
 
         -> **Note**: Changing the name or [environment](#option-env) of an existing app will create a new app on AppSignal.com.
-  - key: push_api_key
+  - config_key: push_api_key
     env_key: APPSIGNAL_PUSH_API_KEY
     required: true
     ruby:
       since: 0.1.0
       type: string
-      default: nil
+      default_value: nil
     elixir:
       since: 0.1.0
       type: string
-      default: nil
+      default_value: nil
     description: |
       The organization-level authentication key to authenticate with our Push API.
 
       Read more about the [AppSignal Push API key](/appsignal/terminology.html#push-api-key).
-  - key: ca_file_path
+  - config_key: ca_file_path
     env_key: APPSIGNAL_CA_FILE_PATH
     ruby:
       since: 1.3.5
       type: string
-      default:
+      default_value:
         markdown: Packaged `cacert.pem` file path.
       description:
         - Configure the path of the SSL certificate file. By default this points to the AppSignal [vendored `cacert.pem` file](https://github.com/appsignal/appsignal-ruby/blob/4eed259e122d10df66655098ad0aa8a362f3297d/resources/cacert.pem) in the gem itself.
     elixir:
       since: 0.12.0
       type: string
-      default:
+      default_value:
         markdown: Packaged `cacert.pem` file path.
       description:
         - Configure the path of the SSL certificate file. By default this points AppSignal [vendored `cacert.pem` file](https://github.com/appsignal/appsignal-elixir/blob/f90759c04a4ff0274e2566704a462d652c988a70/priv/cacert.pem) in the package itself.
     description:
       - Use this option to point to another certificate file if there's a problem connecting to our API.
       - *file_paths_notice
-  - key: debug
+  - config_key: debug
     env_key: APPSIGNAL_DEBUG
     ruby:
       since: 1.0.0
       type: bool
-      default: false
+      default_value: false
     elixir:
       type: bool
-      default: false
+      default_value: false
     description: |
       Enable debug logging, this is usually only needed on request from support. With this option enabled AppSignal will log a lot more information about decisions that are made during metrics collection and when data is sent to AppSignal.com servers.
-  - key: dns_servers
+  - config_key: dns_servers
     env_key: APPSIGNAL_DNS_SERVERS
     ruby:
       since: 2.2.0.beta.1
       type:
         array:
           - string
-      default: []
+      default_value: []
       description: |
         Configure DNS servers for the AppSignal agent to use.
 
@@ -147,7 +147,7 @@ options:
       type:
         list:
           - string
-      default: []
+      default_value: []
       description: |
         Configure DNS servers for the AppSignal agent to use.
 
@@ -168,63 +168,63 @@ options:
         - Not acceptable values: `foo`, `my.awesome.custom.local.dns.server`.
 
         If the DNS server cannot be reached the agent will fall back on the host's DNS configuration and output a message in the `appsignal.log` file: `A problem occured while setting DNS servers`.
-  - key: enable_allocation_tracking
+  - config_key: enable_allocation_tracking
     env_key: APPSIGNAL_ENABLE_ALLOCATION_TRACKING
     ruby:
       since: 1.0.0
       type: bool
-      default: true
+      default_value: true
     description: |
       Set this option to `false` to disable tracking of the number of allocated objects in Ruby.
-  - key: enable_frontend_error_catching
+  - config_key: enable_frontend_error_catching
     env_key: APPSIGNAL_ENABLE_FRONTEND_ERROR_CATCHING
     ruby:
       since: 1.0.0
       type: bool
-      default: false
+      default_value: false
       description: |
         Enable the experimental front-end error catching system. This will add a route to your app on `/appsignal_error_catcher` that can be used to catch JavaScript error and send them to AppSignal. You can configure this route with [`frontend_error_catching_path`](#option-frontend_error_catching_path).
-  - key: enable_gc_instrumentation
+  - config_key: enable_gc_instrumentation
     env_key: APPSIGNAL_ENABLE_GC_INSTRUMENTATION
     ruby:
       since: 1.0.0
       type: bool
-      default: false
+      default_value: false
       description: |
         Set this option to `true` to enable AppSignal instrumentation of Ruby's Garbage Collection.
-  - key: enable_host_metrics
+  - config_key: enable_host_metrics
     env_key: APPSIGNAL_ENABLE_HOST_METRICS
     ruby:
       since: 1.2.0
       type: bool
-      default: true
+      default_value: true
     elixir:
       type: bool
-      default: true
+      default_value: true
     description: |
       Set this option to `false` to disable [host metrics](/metrics/host.html) collection.
-  - key: endpoint
+  - config_key: endpoint
     env_key: APPSIGNAL_PUSH_API_ENDPOINT
     ruby:
       since: 0.1.0
       since_notes:
         - "`1.0.0`: Support for system environment variable added."
       type: string
-      default: https://push.appsignal.com
+      default_value: https://push.appsignal.com
     elixir:
       type: string
-      default: https://push.appsignal.com
+      default_value: https://push.appsignal.com
     description: |
       Configure the endpoint to send data to AppSignal. This setting will not have to be changed.
-  - key: log
+  - config_key: log
     env_key: APPSIGNAL_LOG
     ruby:
       since: 2.0.0
       type: string
-      default: file
+      default_value: file
     elixir:
       type: atom
-      default: :file
+      default_value: :file
     description: |
       Select which logger to the AppSignal agent should use. Accepted values are
       `file` and `stdout`. See also the `log_path` configuration.
@@ -236,41 +236,41 @@ options:
           Useful with hosting solutions such as container systems and Heroku.
 
       -> **Note**: At this time only the AppSignal integration supports this feature and the [AppSignal agent](/appsignal/how-appsignal-operates.html), which is used by the integration, does not yet support this.
-  - key: log_path
+  - config_key: log_path
     env_key: APPSIGNAL_LOG_PATH
     ruby:
       since: 1.0.0
       type: string
-      default: ./log
+      default_value: ./log
     elixir:
       type: string
-      default: "/tmp/appsignal.log"
+      default_value: "/tmp/appsignal.log"
       since: 1.0.0
       since_notes:
         - "`1.9.0`: The default log path was changed from `/tmp/appsignal/appsignal.log` to `/tmp/appsignal.log`."
     description:
       - Override the location of the path where the `appsignal.log` file can be written to.
       - *file_paths_notice
-  - key: files_world_accessible
+  - config_key: files_world_accessible
     env_key: APPSIGNAL_FILES_WORLD_ACCESSIBLE
     ruby:
       since: 2.3.6
       type: bool
-      default: true
+      default_value: true
     elixir:
       since: 1.3.4
       type: bool
-      default: true
+      default_value: true
     description: |
       If this is set to `true` the [AppSignal working directory](/appsignal/how-appsignal-operates.html#working-directory) that is created is accessible for all users (Unix permissions `0666`). This is often necessary because processes for the same app run under a different user. Set to `false` to disable this behaviour (Unix permissions `0644`).
-  - key: filter_parameters
+  - config_key: filter_parameters
     env_key: APPSIGNAL_FILTER_PARAMETERS
     ruby:
       since: 1.3.0
       type:
         array:
           - string
-      default: []
+      default_value: []
       description: |
         List of parameter keys that should be ignored using AppSignal filtering. Their values will be replaced with `[FILTERED]` when transmitted to AppSignal. You can configure this with a list of keys in the configuration file.
 
@@ -289,7 +289,7 @@ options:
       type:
         list:
           - string
-      default: []
+      default_value: []
       description: |
         List of parameter keys that should be ignored using AppSignal filtering. Their values will be replaced with `[FILTERED]` when transmitted to AppSignal. You can configure this with a list of keys in the configuration file.
 
@@ -300,14 +300,14 @@ options:
         ```
 
         Read more about [parameter filtering](/elixir/configuration/parameter-filtering.html).
-  - key: filter_session_data
+  - config_key: filter_session_data
     env_key: APPSIGNAL_FILTER_SESSION_DATA
     ruby:
       since: 2.6.0 (upgrade to `2.6.1` is recommend)
       type:
         array:
           - string
-      default: []
+      default_value: []
       description: |
         List of session data keys that should be ignored using AppSignal filtering. Their values will be replaced with `[FILTERED]` when transmitted to AppSignal. You can configure this with a list of keys in the configuration file.
 
@@ -329,7 +329,7 @@ options:
       type:
         list:
           - string
-      default: []
+      default_value: []
       description: |
         List of session data keys that should be ignored using AppSignal filtering. Their values will be replaced with `[FILTERED]` when transmitted to AppSignal. You can configure this with a list of keys in the configuration file.
 
@@ -340,104 +340,104 @@ options:
         ```
 
         Read more about [session data filtering](/elixir/configuration/session-data-filtering.html).
-  - key: hostname
+  - config_key: hostname
     env_key: APPSIGNAL_HOSTNAME
     ruby:
       since: 1.3.6
       type: string
-      default:
+      default_value:
         markdown: detected from system
     elixir:
       since: 0.12.0
       type: string
-      default:
+      default_value:
         markdown: detected from system
     description: |
       This overrides the server's hostname. Useful for when you're unable to set a custom hostname or when a nondescript id is generated for you on hosting services.
-  - key: http_proxy
+  - config_key: http_proxy
     env_key: APPSIGNAL_HTTP_PROXY
     ruby:
       since: 0.11.13
       type: string
-      default: nil
+      default_value: nil
     elixir:
       type: string
-      default: nil
+      default_value: nil
     description: |
       If you require the agent to connect to the Internet via a proxy set the complete proxy URL in this configuration key.
-  - key: ignore_actions
+  - config_key: ignore_actions
     env_key: APPSIGNAL_IGNORE_ACTIONS
     ruby:
       since: 0.10.0
       type:
         array:
           - string
-      default: []
+      default_value: []
     elixir:
       type:
         list:
           - string
-      default: []
+      default_value: []
     description: |
       List of actions that will be ignored, everything that happens including exceptions will not be transmitted to AppSignal.
 
       Read more about [ignoring actions](ignore-actions.html).
-  - key: ignore_errors
+  - config_key: ignore_errors
     env_key: APPSIGNAL_IGNORE_ERRORS
     ruby:
       since: 0.1.0
       type:
         array:
           - string
-      default: []
+      default_value: []
     elixir:
       type:
         list:
           - string
-      default: []
+      default_value: []
     description: |
       List of error classes that will be ignored. Any exception raised with this error class will not be transmitted to AppSignal. Read more about [ignoring errors](ignore-errors.html).
-  - key: ignore_namespaces
+  - config_key: ignore_namespaces
     env_key: APPSIGNAL_IGNORE_NAMESPACES
     ruby:
       since: 2.3.0
       type:
         array:
           - string
-      default: []
+      default_value: []
     elixir:
       since: 1.3.0
       type:
         list:
           - string
-      default: []
+      default_value: []
     description: |
       List of namespaces that will be ignored. Any error raised or slow request that occurs in this namespace will not be send to AppSignal. Read more about [namespaces](/application/namespaces.html).
-  - key: instrument_net_http
+  - config_key: instrument_net_http
     env_key: APPSIGNAL_INSTRUMENT_NET_HTTP
     ruby:
       since: 0.9.0
       type: bool
-      default: true
+      default_value: true
       description: |
         Whether to add instrumentation for `net/http` calls, can be `true` or `false`. default is `true`.
-  - key: instrument_redis
+  - config_key: instrument_redis
     env_key: APPSIGNAL_INSTRUMENT_REDIS
     ruby:
       since: 1.0.0
       type: bool
-      default: true
+      default_value: true
     description: |
       Whether to add instrumentation for `redis` queries using the [Redis gem](https://github.com/redis/redis-rb), can be `true` or `false`. Default is `true`.
-  - key: instrument_sequel
+  - config_key: instrument_sequel
     env_key: APPSIGNAL_INSTRUMENT_SEQUEL
     ruby:
       since: 1.0.0
       type: bool
-      default: true
+      default_value: true
     description: |
       Whether to add instrumentation for `sequel` queries using the [Sequel gem](http://sequel.jeremyevans.net/), can be `true` or `false`. Default is `true`.
-  - key: request_headers
+  - config_key: request_headers
     env_key: APPSIGNAL_REQUEST_HEADERS
     ruby:
       since: 2.6.0
@@ -446,7 +446,7 @@ options:
       type:
         array:
           - string
-      default: []
+      default_value: []
       description: |
         The `request_headers` config option contains a list of HTTP request headers which are read and stored by the AppSignal Ruby gem.
 
@@ -456,7 +456,7 @@ options:
 
         ```yml
         # config/appsignal.yml
-          default: &defaults
+        default: &defaults
           request_headers:
             - HTTP_ACCEPT
             - HTTP_ACCEPT_CHARSET
@@ -478,7 +478,7 @@ options:
 
         ```yml
         # config/appsignal.yml
-          default: &defaults
+        default: &defaults
           request_headers: []
         ```
     elixir:
@@ -488,7 +488,7 @@ options:
       type:
         list:
           - string
-      default: []
+      default_value: []
       description: |
         The `request_headers` config option contains a list of HTTP request headers which are read and stored by the AppSignal Elixir package.
 
@@ -513,52 +513,52 @@ options:
         config :appsignal, :config,
           request_headers: []
         ```
-  - key: running_in_container
+  - config_key: running_in_container
     env_key: APPSIGNAL_RUNNING_IN_CONTAINER
     ruby:
       since: 1.0.0
       since_notes:
         - Automatically detected since version `2.0`
       type: bool
-      default:
+      default_value:
         markdown: detected by Ruby gem
     elixir:
       type: bool
-      default: false
+      default_value: false
     description: |
       AppSignal expects to be running on the same machine between different deploys. Set this key to `true` if you use a container based deployment system such as Docker.
 
       Newer versions of the AppSignal integration automatically detect its container environment, so no manual configuration is necessary. If you're having trouble with the automatic detection, please [contact support](mailto:support@appsignal.com).
 
       This option is set to `true` automatically on [Heroku](http://heroku.com/).
-  - key: send_params
+  - config_key: send_params
     env_key: APPSIGNAL_SEND_PARAMS
     ruby:
       since: 0.9.0
       since_notes:
         - "`1.3.0`: Support added for the system environment option."
       type: bool
-      default: true
+      default_value: true
     description: |
       Whether to skip sending request parameters to AppSignal.
 
       For more information please read about [send_params](/ruby/configuration/parameter-filtering.html#filter-all-parameters) in filtering request parameters.
-  - key: skip_session_data
+  - config_key: skip_session_data
     env_key: APPSIGNAL_SKIP_SESSION_DATA
     ruby:
       since: 0.11.0
       type: bool
-      default: false
+      default_value: false
     elixir:
       type: bool
-      default: false
+      default_value: false
     description: |
       Set this option to `true` to not send any session data with exception traces and performance issue samples.
-  - key: working_dir_path
+  - config_key: working_dir_path
     env_key: APPSIGNAL_WORKING_DIR_PATH
     ruby:
       type: string
-      default:
+      default_value:
         markdown: detected by agent
       description:
         - "!> **Warning**: This config option is deprecated in Ruby gem 2.7.0. Please use the [`working_directory_path`](#option-working_directory_path) option instead for Ruby gem 2.7.0 and newer."
@@ -566,7 +566,7 @@ options:
     elixir:
       since: 1.8.0
       type: string
-      default:
+      default_value:
         markdown: detected by agent
       description:
         - "!> **Warning**: This config option is deprecated in Elixir package 1.8.0. Please use the [`working_directory_path`](#option-working_directory_path) option instead for Elixir package 1.8.0 and newer."
@@ -582,14 +582,14 @@ options:
           ```
     description:
       - *file_paths_notice
-  - key: working_directory_path
+  - config_key: working_directory_path
     env_key: APPSIGNAL_WORKING_DIRECTORY_PATH
     ruby:
       since: 2.7.0
       since_notes:
         - "Please use the [`working_dir_path`](#option-working_dir_path) option on versions earlier."
       type: string
-      default:
+      default_value:
         markdown: detected by agent
       description:
         - |
@@ -607,7 +607,7 @@ options:
       since_notes:
         - "Please use the [`working_dir_path`](#option-working_dir_path) option on earlier versions."
       type: string
-      default:
+      default_value:
         markdown: detected by agent
       description:
         - |
@@ -622,18 +622,18 @@ options:
           ```
     description:
       - *file_paths_notice
-  - key: revision
+  - config_key: revision
     env_key: APP_REVISION
     ruby:
       since: 2.6.0
       since_notes:
         - An upgrade to `2.6.1` is recommended when using this option.
       type: string
-      default: nil
+      default_value: nil
     elixir:
       since: 1.5.0
       type: string
-      default: nil
+      default_value: nil
     description: |
       Set the app revision for the currently running version of your app. Used to create deploy markers and tag all incoming data to a certain deploy for the host.
 

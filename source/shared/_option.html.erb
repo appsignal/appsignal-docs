@@ -1,8 +1,8 @@
 <h2>
-  <%= content_tag :a, "", :class => :anchor, :name => "option-#{option[:key]}".downcase %>
+  <%= content_tag :a, "", :class => :anchor, :name => "option-#{option[:config_key]}".downcase %>
   <%= content_tag :a, "", :class => :anchor, :name => "option-#{option[:env_key]}".downcase %>
-  <%= content_tag :a, "", :class => :anchor, :name => "#{option[:env_key]}-#{option[:key]}".downcase %>
-  <%= link_to option[:key], "#option-#{option[:key]}".downcase %>
+  <%= content_tag :a, "", :class => :anchor, :name => "#{option[:env_key]}-#{option[:config_key]}".downcase %>
+  <%= link_to option[:config_key], "#option-#{option[:config_key]}".downcase %>
 </h2>
 <% integration_details = option[integration] %>
 
@@ -10,7 +10,7 @@
   <tr>
     <th>Config file key</th>
     <td>
-      <code title="Key used in the AppSignal configuration file format"><%= option[:key] %></code>
+      <code title="Key used in the AppSignal configuration file format"><%= option[:config_key] %></code>
     </td>
   </tr>
   <tr>

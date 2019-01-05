@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem "middleman", "3.4.1"
+gem "middleman", "4.2.1"
+gem "middleman-sprockets"
 gem "middleman-blog"
 gem "middleman-syntax"
 gem "redcarpet"
