@@ -97,7 +97,7 @@ config :my_app, MyApp.Repo,
 If you're using Ecto 3, attach `Appsignal.Ecto` to Telemetry query events in your
 application's `start/2` function:
 
-```
+```elixir
 :telemetry.attach(
   "appsignal-ecto",
   [:my_app, :repo, :query],
