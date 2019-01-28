@@ -112,4 +112,4 @@ behavior to [contact@appsignal.com][coc-contact].
 [travis-appsignal]: https://travis-ci.org/appsignal
 [semver]: http://semver.org/
 [coc-contact]: mailto:contact@appsignal.com
-[coc]:/appsignal/code-of-conduct.html
+[coc]: /appsignal/code-of-conduct.html
