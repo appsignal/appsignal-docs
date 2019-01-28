@@ -26,11 +26,11 @@ Our main projects include:
 Other projects we have open sourced, and are used internally by other projects,
 include:
 
-- [AppSignal Rust agent][appsignal-rust]  
+- [AppSignal Rust agent][appsignal-rust]
   Early stage proof of concept of AppSignal Rust integration.
-- [sql_lexer][sql_lexer]  
+- [sql_lexer][sql_lexer]
   Rust library to lex and sanitize SQL queries.
-- [probes.rs][probes-rs]  
+- [probes.rs][probes-rs]
   Rust library to read out system stats from a machine running Linux.
 
 ## Using git and GitHub
@@ -89,6 +89,12 @@ If you think you've found a security issue with regards to our application,
 network or integrations, please let us know immediately by sending an email to
 [security@appsignal.com](mailto:security@appsignal.com).
 
+## Code of Conduct
+
+Everyone interacting in AppSignal's codebases and issue trackers is expected
+to follow the contributor [code of conduct][coc]. Please report unacceptable
+behavior to [contact@appsignal.com][coc-contact].
+
 [contact]: mailto:support@appsignal.com
 [blog]: http://blog.appsignal.com/
 [changelog]: https://appsignal.com/changelog
@@ -105,3 +111,5 @@ network or integrations, please let us know immediately by sending an email to
 [github-appsignal]: https://github.com/appsignal
 [travis-appsignal]: https://travis-ci.org/appsignal
 [semver]: http://semver.org/
+[coc-contact]: mailto:contact@appsignal.com
+[coc]:/appsignal/code-of-conduct.html
