@@ -8,6 +8,7 @@ To enable notifications and issue tracker integration for external services, go 
 
 ## Available integrations
 
+- [Asana](#asana)
 - [Discord](#discord)
 - [Flowdock](#flowdock)
 - [Geckoboard](#geckoboard)
@@ -22,8 +23,13 @@ To enable notifications and issue tracker integration for external services, go 
 - [Pivotal Tracker](#pivotal-tracker)
 - [Slack](#slack)
 - [Trello](#trello)
-- [Asana](#asana)
 - [Webhook](/application/integrations/webhooks.html)
+
+## Asana
+
+Easily organize and plan workflows, projects, and more, so you can keep your team's work on schedule.
+
+Website: [https://asana.com](https://asana.com)
 
 ## Discord
 
@@ -110,9 +116,3 @@ Website: [https://www.slack.com](https://www.slack.com)
 Trello makes it easy to organize anything with anyone.
 
 Website: [https://trello.com](https://trello.com)
-
-## Asana
-
-Easily organize and plan workflows, projects, and more, so you can keep your team's work on schedule.
-
-Website: [https://asana.com](https://asana.com)
