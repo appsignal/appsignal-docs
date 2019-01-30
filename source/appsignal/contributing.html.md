@@ -26,11 +26,11 @@ Our main projects include:
 Other projects we have open sourced, and are used internally by other projects,
 include:
 
-- [AppSignal Rust agent][appsignal-rust]
+- [AppSignal Rust agent][appsignal-rust]  
   Early stage proof of concept of AppSignal Rust integration.
-- [sql_lexer][sql_lexer]
+- [sql_lexer][sql_lexer]  
   Rust library to lex and sanitize SQL queries.
-- [probes.rs][probes-rs]
+- [probes.rs][probes-rs]  
   Rust library to read out system stats from a machine running Linux.
 
 ## Using git and GitHub
