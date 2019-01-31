@@ -8,7 +8,7 @@ To enable notifications and issue tracker integration for external services, go 
 
 ## Available integrations
 
-- [Asana](#asana)
+- [Asana](/application/integrations/asana.html)
 - [Discord](#discord)
 - [Flowdock](#flowdock)
 - [Geckoboard](#geckoboard)
@@ -24,12 +24,6 @@ To enable notifications and issue tracker integration for external services, go 
 - [Slack](#slack)
 - [Trello](#trello)
 - [Webhook](/application/integrations/webhooks.html)
-
-## Asana
-
-Easily organize and plan workflows, projects, and more, so you can keep your team's work on schedule.
-
-Website: [https://asana.com](https://asana.com)
 
 ## Discord
 
