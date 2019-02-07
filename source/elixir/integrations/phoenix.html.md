@@ -84,39 +84,34 @@ config :phoenix, :template_engines,
 
 ## Queries
 
-If you're using Ecto 3, attach `Appsignal.Ecto` to Telemetry query events in
-your application's `start/2` function:
+If you're using Ecto 3, attach `Appsignal.Ecto` to Telemetry query events in your application's `start/2` function:
 
-```
+```elixir
 :telemetry.attach(
-"appsignal-ecto",
-[:my_app, :repo, :query],
-&Appsignal.Ecto.handle_event/4,
-nil
+  "appsignal-ecto",
+  [:my_app, :repo, :query],
+  &Appsignal.Ecto.handle_event/4,
+  nil
 )
 ```
 
-For versions of Telemetry < 0.3.0, you'll need to call it slightly
-differently:
+For versions of Telemetry &lt; 0.3.0, you'll need to call it slightly differently:
 
-```
+```elixir
 Telemetry.attach(
-"appsignal-ecto",
-[:my_app, :repo, :query],
-Appsignal.Ecto,
-:handle_event,
-nil
+  "appsignal-ecto",
+  [:my_app, :repo, :query],
+  Appsignal.Ecto,
+  :handle_event,
+  nil
 )
 ```
 
-On Ecto 2, add the `Appsignal.Ecto` module to your Repo's logger
-configuration instead. The `Ecto.LogEntry` logger is the default logger for
-Ecto and needs to be set as well to keep the original Ecto logger behavior
-intact.
+On Ecto 2, add the `Appsignal.Ecto` module to your Repo's logger configuration instead. The `Ecto.LogEntry` logger is the default logger for Ecto and needs to be set as well to keep the original Ecto logger behavior intact.
 
-```
+```elixir
 config :my_app, MyApp.Repo,
-loggers: [Appsignal.Ecto, Ecto.LogEntry]
+  loggers: [Appsignal.Ecto, Ecto.LogEntry]
 ```
 
 -> **Note**: Telemetry support was added in version 1.8.2 of the AppSignal for
