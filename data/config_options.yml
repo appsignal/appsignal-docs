@@ -569,10 +569,14 @@ options:
         - "`1.3.0`: Support added for the system environment option."
       type: bool
       default_value: true
+    elixir:
+      since: 1.10.0
+      type: bool
+      default_value: true
     description: |
       Whether to skip sending request parameters to AppSignal.
 
-      For more information please read about [send_params](/ruby/configuration/parameter-filtering.html#filter-all-parameters) in filtering request parameters.
+      For more information please read about [send_params](parameter-filtering.html#filter-all-parameters) in filtering request parameters.
   - config_key: skip_session_data
     env_key: APPSIGNAL_SKIP_SESSION_DATA
     ruby:
