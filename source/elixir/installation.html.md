@@ -21,7 +21,7 @@ Before you can compile the AppSignal gem make sure the build/compilation tools a
 
 ### Installing the package
 
-1. Start by adding `appsignal` to your list of dependencies in `mix.exs`. In an umbrella app, put the dependency in the main `mix.exs` file.
+1. Start by adding `appsignal` to your list of dependencies in `mix.exs`. In an umbrella app, put the dependency in each app that will use AppSignal.
 
     ```elixir
     # mix.exs
@@ -30,20 +30,9 @@ Before you can compile the AppSignal gem make sure the build/compilation tools a
     end
     ```
 
-2. Ensure `appsignal` is started before your application by adding it to `:extra_applications`. In an umbrella app, put `appsignal` in the `:extra_applications` in the `mix.exs` file in each nested app.
-
-    ```elixir
-    # mix.exs
-    def application do
-      [
-        extra_applications: [:logger, :appsignal]
-      ]
-    end
-    ```
-
-3. Then run `mix deps.get`
-4. Then run `mix appsignal.install YOUR_PUSH_API_KEY` or follow the [manual configuration guide](#configuration). In an umbrella app, install and configure AppSignal in the umbrella, and not separately in each nested app.
-5. If you use the [Phoenix framework][phoenix], continue with the [integrating AppSignal into Phoenix](/elixir/integrations/phoenix.html) guide.
+2. Then run `mix deps.get`
+3. Then run `mix appsignal.install YOUR_PUSH_API_KEY` or follow the [manual configuration guide](#configuration). In an umbrella app, run the install task in the umbrella, and not separately in each nested app.
+4. If you use the [Phoenix framework][phoenix], continue with the [integrating AppSignal into Phoenix](/elixir/integrations/phoenix.html) guide.
 
 After the installation is complete start your application. When the AppSignal
 OTP application starts, it looks for a valid configuration (e.g. an AppSignal
