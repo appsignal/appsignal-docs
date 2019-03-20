@@ -22,7 +22,7 @@ Phoenix.Logger's configuration, you can set up filtered parameters in the
 AppSignal configuration file.
 
 ```elixir
-# config/appsignal.exs
+# config/your_mix_env.exs
 config :appsignal, :config,
   filter_parameters: ["password", "secret"]
 ```
@@ -51,7 +51,7 @@ configuration.
 To filter all parameters without individual parameter filtering, set [`send_params`](/elixir/configuration/options.html#option-send_params) to `false`.
 
 ```elixir
-# config/appsignal.exs
+# config/your_mix_env.exs
 config :appsignal, :config,
   send_params: false
 ```
