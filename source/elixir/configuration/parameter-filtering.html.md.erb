@@ -17,12 +17,12 @@ We support two ways of filtering parameters from being sent to AppSignal. Either
 
 ## AppSignal parameter filtering
 
-If you're not using Phoenix, or want to filter parameters without changing the
-Phoenix.Logger's configuration, you can set up filtered parameters in the
-AppSignal configuration file.
+If you're not using Phoenix, or want to filter parameters without changing the Phoenix.Logger's configuration, 
+you can set up filtered parameters in the generated config/appsignal.exs configuration file 
+(or in your app's main or application specific one in config/config.exs or config/{mix_env}.exs).
 
 ```elixir
-# config/your_mix_env.exs
+# config/appsignal.exs
 config :appsignal, :config,
   filter_parameters: ["password", "secret"]
 ```
@@ -48,10 +48,12 @@ configuration.
 
 ## Filter all parameters
 
-To filter all parameters without individual parameter filtering, set [`send_params`](/elixir/configuration/options.html#option-send_params) to `false`.
+To filter all parameters without individual parameter filtering, set [`send_params`](/elixir/configuration/options.html#option-send_params) to `false` 
+in the generated config/appsignal.exs configuration file 
+(or in your app's main or application specific one in config/config.exs or config/{mix_env}.exs).
 
 ```elixir
-# config/your_mix_env.exs
+# config/appsignal.exs
 config :appsignal, :config,
   send_params: false
 ```
