@@ -48,7 +48,7 @@ The minutely probes are configured using the [`enable_minutely_probes`](/elixir/
 ## Creating probes
 
 If you want to track more [custom metrics](/metrics/custom.html) from your app
-than our default proves do, you can add your own prove(s).
+than our default probes do, you can add your own probe(s).
 
 An AppSignal minutely probe can be an [Anonymous function](#anonymous-function), or a [Module based function](#module-based-function).
 
