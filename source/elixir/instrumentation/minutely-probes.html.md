@@ -9,8 +9,6 @@ collect metrics and then snoozed until the next minute.
 
 By default the AppSignal Elixir gem enables a probe for the ErlangVM.
 
--> **Note**: This feature is turned on by default in AppSignal Elixir package `1.10.1` and up.
-
 -> **Note**: We recommend using AppSignal Elixir package `1.10.1` and up when using this feature.
 
 ## Table of Contents
