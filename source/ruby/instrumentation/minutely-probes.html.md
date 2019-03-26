@@ -2,7 +2,7 @@
 title: "Minutely probes"
 ---
 
-Minutely probes are a mechanism to periodically send custom metrics to AppSignal. This is a system that is included in the AppSignal Ruby gem by default. At the start of every minute the minutely probes are triggered one by one to collect metrics and then snoozed until the next minute.
+Minutely probes are a mechanism to periodically send [custom metrics](/metrics/custom.html) to AppSignal. This is a system that is included in the AppSignal Ruby gem by default. At the start of every minute the minutely probes are triggered one by one to collect metrics and then snoozed until the next minute.
 
 By default the AppSignal Ruby gem enables probes for [libraries](/ruby/integrations) that are detected for your app.
 
@@ -29,7 +29,7 @@ The minutely probes allow the AppSignal Ruby gem to collect [custom metrics](/me
 
 ### Multiple instances
 
-Once activated the minutely probes system runs on every instance of an app. This means that if a probe report metrics without some kind of differentiating tag, global metrics may be overwritten by instance-level metrics. For example, there's a probe that tracks how large the local background job queue is for an app. The queue database runs locally on the instance and queue sizes may vary wildly. Each instance of an app reports different metric values for the same metric and tags, overwriting the metric value every minute with those of the last reporting instance.
+Once activated, the minutely probes system runs on every instance of an app. This means that if a probe report metrics without some kind of differentiating tag, global metrics may be overwritten by instance-level metrics. For example, there's a probe that tracks how large the local background job queue is for an app. The queue database runs locally on the instance and queue sizes may vary wildly. Each instance of an app reports different metric values for the same metric and tags, overwriting the metric value every minute with those of the last reporting instance.
 
 To remedy this, we suggest [tagging](/metrics/custom.html#metric-tags) your metrics with the hostname or something else unique for each instance. For example, the [Sidekiq probe](/ruby/integrations/sidekiq.html#minutely-probe) tags metrics with the Redis hostname by default.
 
