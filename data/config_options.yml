@@ -253,8 +253,14 @@ options:
         - "`2.9.0`: Default value was changed to `true`."
       type: bool
       default_value: true
-    description: |
-      Enables the [minutely probes](/ruby/instrumentation/minutely-probes.html) system.
+      description: |
+        Enables the [minutely probes](/ruby/instrumentation/minutely-probes.html) system.
+    elixir:
+      since: 1.10.1
+      type: bool
+      default_value: true
+      description: |
+        Enables the [minutely probes](/elixir/instrumentation/minutely-probes.html) system.
   - config_key: endpoint
     env_key: APPSIGNAL_PUSH_API_ENDPOINT
     ruby:
