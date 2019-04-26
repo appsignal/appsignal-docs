@@ -21,6 +21,7 @@ By default the AppSignal Ruby gem enables probes for [libraries](/ruby/integrati
   - [Initialized class probe](#initialized-class-probe)
 - [Registering probes](#registering-probes)
   - [Deprecated registration method](#deprecated-registration-method)
+- [Dependency requirements](#dependency-requirements)
 - [Overriding default probes](#overriding-default-probes)
 
 ## Usage
@@ -116,7 +117,7 @@ end
 
 # Registering an initialized Class probe
 Appsignal::Minutely.probes.register(
-  :visit_tracking_probe,
+  :background_job_library_probe,
   BackgroundJobLibraryProbe.new(:database => "redis://localhost:6379")
 )
 ```
@@ -157,6 +158,55 @@ Appsignal::Minutely.probes << lambda { puts "hello" }
 ```
 
 If you use this method, please update the registration method as described in [adding your own probe](#adding-your-own-probe).
+
+## Dependency requirements
+
+**Note**: This behavior was added in AppSignal for Ruby gem `2.9.6`.
+
+Not always should a probe be added to the list of probes by default. Some dependency may be required for the probe to work properly. This dependency check is used in probes shipped in the gem, but can also be used in your own probes.
+
+By adding a class method called `dependencies_present?`, a check can be performed ahead of starting the probe whether not it should be started. This works on both [class probes](#class-probe) and [initialized class probes](#initialized-class-probe). For the latter scenario there should be no call to said dependency in the `initialize` method of the probe as it's already initialized.
+
+```ruby
+# config/initializers/appsignal.rb or a file that's loaded on boot
+require "background_job_library"
+
+# Creating a probe using a Ruby class
+class BackgroundJobLibraryProbe
+  def self.dependencies_present?
+    # Only start the probe if the BackgroundJobLibrary version is higher or
+    # equal to 1.0.0.
+    Gem::Version.new(BackgroundJobLibrary::Version) >= Gem::Version.new("1.0.0")
+  end
+
+  def initialize(config = {})
+    @config = config
+  end
+
+  def call
+    stats = connection.fetch_queue_stats
+    Appsignal.set_gauge "background_job_library_queue_length", stats.queue_length
+    Appsignal.set_gauge "background_job_library_processed_jobs", stats.processed_jobs
+  end
+
+  private
+
+  def connection
+    @connection ||= BackgroundJobLibrary.connection(@config)
+  end
+end
+
+# Registering a Class probe with a `dependencies_present?` check
+Appsignal::Minutely.probes.register(
+  :background_job_library_probe,
+  BackgroundJobLibraryProbe
+)
+# Also works for initialized probes
+Appsignal::Minutely.probes.register(
+  :background_job_library_probe,
+  BackgroundJobLibraryProbe.new(:url => "schema://my_connection_url:9090")
+)
+```
 
 ## Overriding default probes
 
