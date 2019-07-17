@@ -21,7 +21,9 @@ Before you can compile the AppSignal gem make sure the build/compilation tools a
 
 ### Installing the package
 
-1. Start by adding `appsignal` to your list of dependencies in `mix.exs`. In an umbrella app, put the dependency in each app that will use AppSignal.
+-> **Note**: If you're running an umbrella application, see also our [umbrella installation guide](/elixir/installation/umbrella.html).
+
+1. Start by adding `appsignal` to your list of dependencies in `mix.exs`.
 
     ```elixir
     # mix.exs
@@ -30,8 +32,8 @@ Before you can compile the AppSignal gem make sure the build/compilation tools a
     end
     ```
 
-2. Then run `mix deps.get`
-3. Then run `mix appsignal.install YOUR_PUSH_API_KEY` or follow the [manual configuration guide](#configuration). In an umbrella app, run the install task in the umbrella, and not separately in each nested app.
+2. Then run `mix deps.get`.
+3. Then run `mix appsignal.install YOUR_PUSH_API_KEY` or follow the [manual configuration guide](#configuration).
 4. If you use the [Phoenix framework][phoenix], continue with the [integrating AppSignal into Phoenix](/elixir/integrations/phoenix.html) guide.
 
 After the installation is complete start your application. When the AppSignal

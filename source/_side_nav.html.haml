@@ -123,8 +123,10 @@
         AppSignal for Elixir
       %ul
         %li= link_with_active "Overview", "/elixir/"
-        %li= link_with_active "Installation", "/elixir/installation.html"
-        %li= link_with_active "Installation in umbrella applications", "/elixir/installation-umbrella.html"
+        %li
+          = link_with_active "Installation", "/elixir/installation.html"
+          %ul
+            %li= link_with_active "Umbrella applications", "/elixir/installation/umbrella.html"
         %li
           = link_with_active "Configuration", "/elixir/configuration/"
           %ul
