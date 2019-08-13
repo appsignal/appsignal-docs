@@ -3,6 +3,8 @@ title: "AppSignal documentation"
 title_no_brand: true
 ---
 
+TEST
+
 Welcome to the [AppSignal](https://appsignal.com) documentation!
 
 In this documentation we aim to give you all the information you need to get started, get the most out of the features and integrate your stuff with our API. Click on a topic on the left in the navigation sidebar to expand it and see more pages about this topic.
