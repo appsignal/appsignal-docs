@@ -5,7 +5,7 @@ title: "plugin-window-events"
 The `plugin-window-events` plugin binds to the `window.onerror` and `window.onunhandledrejection` event handlers to catch any errors that are otherwise not caught elsewhere in your code.
 
 ```javascript
-import { plugin } from `appsignal/plugin-window-events`
+import { plugin } from `@appsignal/plugin-window-events`
 appsignal.use(plugin(options))
 ```
 
