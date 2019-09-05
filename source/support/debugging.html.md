@@ -40,7 +40,11 @@ appsignal diagnose
 
 # Elixir
 mix appsignal.diagnose
-# Or with the release binary
+
+# With an Elixir release (`mix release`) binary:
+bin/your_app eval ":appsignal_tasks.diagnose()"
+
+# With a Distillery release binary:
 bin/your_app command appsignal_tasks diagnose
 ```
 
