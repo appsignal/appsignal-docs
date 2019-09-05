@@ -16,7 +16,7 @@ Absinthe apps in Phoenix do lack a controller and action name registered in the 
 
 ## Absinthe Plug
 
--> **Note:** The Absinthe support relies on AppSignal's Phoenix integration. Follow the [Phoenix integration guide](https://docs.appsignal.com/elixir/integrations/phoenix.html) before adding the Absinthe Plug.
+-> **Note:** The Absinthe support relies on AppSignal's Phoenix integration. Follow the [Phoenix integration guide](/elixir/integrations/phoenix.html) before adding the Absinthe Plug.
 
 A small fix is required for Absinthe Phoenix apps to set the action name manually for the Absinthe requests. The following plug can be used to set the action name for Absinthe requests. Make sure to specify the correct `request_path` in the `call/2` function.
 
