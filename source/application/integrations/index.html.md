@@ -23,7 +23,7 @@ To enable notifications and issue tracker integration for external services, go 
 - [PagerDuty](/application/integrations/pagerduty.html)
 - [Phabricator](#phabricator)
 - [Pivotal Tracker](#pivotal-tracker)
-- [Slack](#slack)
+- [Slack](/application/integrations/slack.html)
 - [Trello](#trello)
 - [Webhook](/application/integrations/webhooks.html)
 
@@ -107,12 +107,6 @@ Website: [https://phacility.com/phabricator/](https://phacility.com/phabricator/
 Simple, collaborative project management from the experts in agile software development.
 
 Website: [http://www.pivotaltracker.com/](http://www.pivotaltracker.com/)
-
-## Slack
-
-Slack brings all your communication together in one place. It's real-time messaging, archiving and search for modern teams.
-
-Website: [https://www.slack.com](https://www.slack.com)
 
 ## Trello
 
