@@ -2,11 +2,7 @@
 title: "AppSignal for JavaScript"
 ---
 
-AppSignal now has an amazing solution for catching errors from front-end JavaScript applications and sending them to AppSignal. An `npm` library for catching JavaScript errors is available for that.
-
-This is a __Beta__ implementation, which means although you should expect few changes, the API _may_ change before public release.
-
-Although this is a beta version, we already use it to monitor errors right here on AppSignal.com! We can say with high confidence that you can safely start using this in your frontend apps today.
+AppSignal has amazing support for catching errors from front-end JavaScript applications and sending them to AppSignal. An `npm` library for catching JavaScript errors is available for that.
 
 ## Table of Contents
 

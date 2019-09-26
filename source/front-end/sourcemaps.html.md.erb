@@ -1,13 +1,6 @@
 ---
-title: "Sourcemaps <sup>beta</sup>"
+title: "Sourcemaps"
 ---
-
-!> **Warning**: Beta implementation.
-
-This is a __Beta__ implementation, which means:
-
-* We do our best to process every front-end backtrace and enrich them with sourcemap data.
-* Specific scenario's might fail, but we'll try and fix those.
 
 Sourcemaps are a way to convert (minified) JavaScript backtraces such as `https://your.host/application-minified.js:53:9895
 ` to something a bit more helpful. A sourcemap contains data about your front-end source code and given the minified file, line number and column number, we can ask a sourcemap for the original function, line/column number and even surrounding source code.

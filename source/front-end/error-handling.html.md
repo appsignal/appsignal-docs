@@ -1,5 +1,5 @@
 ---
-title: "Frontend error catching <sup>beta</sup>"
+title: "Frontend error catching"
 ---
 
 To catch an error and report it to AppSignal, add this to your code:
@@ -37,7 +37,7 @@ We recommend using a relevant [integration](/front-end/integrations/) as a bette
 
 ## Wrapping a block of code
 
-The library provides a convenience method for wrapping a block of code and sending any error thrown within it directly to AppSignal. This is the `appsignal.wrap()` method, an async function that returns a `Promise`. A function should be passed as an argument containing the code you'd like to wrap. 
+The library provides a convenience method for wrapping a block of code and sending any error thrown within it directly to AppSignal. This is the `appsignal.wrap()` method, an async function that returns a `Promise`. A function should be passed as an argument containing the code you'd like to wrap.
 
 ```js
 try {
@@ -60,4 +60,3 @@ appsignal.wrap(() => {
 ```
 
 If an error is thrown anywhere in this function, we return a rejected promise with the `Error` passed as an argument to the `catch` handler.
-
