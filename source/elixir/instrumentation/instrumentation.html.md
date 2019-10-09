@@ -346,7 +346,7 @@ defmodule InstrumentationHelpersExample do
 
     # Finish and close the transaction
     Appsignal.Transaction.finish(transaction)
-    :ok = Appsignal.Transaction.complete(transaction)
+    Appsignal.Transaction.complete(transaction)
   end
 end
 ```
@@ -484,7 +484,7 @@ defmodule InstrumentationExample do
 
     # Finish and close the transaction
     Appsignal.Transaction.finish(transaction)
-    :ok = Appsignal.Transaction.complete(transaction)
+    Appsignal.Transaction.complete(transaction)
   end
 end
 ```
