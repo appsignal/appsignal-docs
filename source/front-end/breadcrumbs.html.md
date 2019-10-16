@@ -11,7 +11,7 @@ When debugging an issue in a UI, it can be useful to know what events occurred i
 
 ## Usage
 
-By default, no breadcrumbs are tracked, but it's really easy to create your own. Wherever an interesting event, operation or state change occurs in your app, you can leave a breadcrumb like so:
+By default, no breadcrumbs are tracked, but it's really easy to track your own. Wherever an interesting event, operation or state change occurs in your app, you can leave a breadcrumb like so:
 
 ```js
 import Appsignal from "@appsignal/javascript"
