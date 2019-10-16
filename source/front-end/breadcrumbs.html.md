@@ -49,4 +49,4 @@ There are a number of [plugins](#plugins) available to enable automatic collecti
 - [`@appsignal/plugin-breadcrumbs-console`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/plugin-breadcrumbs-console)
 - [`@appsignal/plugin-breadcrumbs-network`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/plugin-breadcrumbs-network)
 
-Have a good idea for a breadcrumbs plugin?
+Have a good idea for a breadcrumbs plugin? Get in touch with us or [leave an issue on Github](https://github.com/appsignal/appsignal-javascript/issues)!
