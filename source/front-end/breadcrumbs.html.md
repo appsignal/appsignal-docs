@@ -44,7 +44,7 @@ When an error is thrown and caught by the AppSignal library, or a `Span` is pass
 
 ## Plugins
 
-There are a number of [plugins](#plugins) available to enable automatic collection of breadcrumbs, and more will be added as time goes on:
+There are a number of plugins available to enable automatic collection of breadcrumbs, and more will be added as time goes on:
 
 - [`@appsignal/plugin-breadcrumbs-console`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/plugin-breadcrumbs-console)
 - [`@appsignal/plugin-breadcrumbs-network`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/plugin-breadcrumbs-network)
