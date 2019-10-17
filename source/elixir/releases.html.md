@@ -1,8 +1,12 @@
-# Debugging Phoenix releases
+# Elixir Releases
 
-AppSignal’s Elixir integration does not require any extra configuration for apps deployed through Distillery or Elixir 1.9’s releases feature. However, since released applications can be more difficult to debug, here are the steps we take when a support request for a deployed Elixir application comes in.
+AppSignal’s Elixir integration does not require any extra configuration for apps deployed through [Distillery](https://github.com/bitwalker/distillery) or Elixir 1.9’s releases feature, but the agent needs to be built on a machine with the same architecture as the machine you'll be hosting your application on. AppSignal for Elixir doesn't support cross-compilation at this time.
 
-## Development mode
+## Debugging releases
+
+Since released applications can be more difficult to debug, here are the steps we take when a support request for a deployed Elixir application comes in.
+
+### Development mode
 
 First and foremost, we check if the problem is caused by the release by making sure everything works in development, on your local machine. Start your app locally, on your development machine, in the development environment:
 
@@ -20,7 +24,7 @@ If the install guide doesn’t show any missed steps, run the [diagnose command]
 
 The diagnose command runs diagnostics, and the `--send-report` option sends the report to our servers. Then, contact [support](mailto:support@appsignal.com) with the support token you receive at the end of the report.
 
-## Diagnose
+### Diagnose
 
 If everything works locally in development, but your production install isn’t yet, run the diagnose command on your release binary.
 
