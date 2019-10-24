@@ -26,20 +26,26 @@ documentation][hex-appsignal].
 
 We'll start out with a small Plug app that accepts `GET` requests to `/` and
 returns a welcome message. To start logging HTTP requests in this app, we'll
-use the `Appsignal.Plug` module to the end of our app.
+use the `Appsignal.Plug` module.
+
+The Plug integration [doesn’t automatically extract the request’s action
+name](https://docs.appsignal.com/support/known-issues/plug-actions-registered-as-unknown.html).
+Call `Appsignal.Transaction.set_action/1` in your action to set the action name
+for your requests to prevent your requests to be categorised as “unknown”.
 
 ``` elixir
 defmodule AppsignalPlugExample do
   use Plug.Router
+  use Appsignal.Plug # <- Add this
 
   plug :match
   plug :dispatch
 
   get "/" do
+    Appsignal.Transaction.set_action("GET /") # <- Set the action name
+
     send_resp(conn, 200, "Welcome")
   end
-
-  use Appsignal.Plug # <-- Add this
 end
 ```
 
