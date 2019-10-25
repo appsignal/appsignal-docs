@@ -38,7 +38,7 @@ end
 
 To measure performance in your task, start and stop a transaction manually and add events using the instrumentation helpers, like described in the [custom helper instrumentation](https://docs.appsignal.com/elixir/instrumentation/instrumentation.html#helper-transactions).
 
-```
+```elixir
 defmodule Mix.Tasks.Instrument do
   use Mix.Task
   import Appsignal.Instrumentation.Helpers, only: [instrument: 4]
