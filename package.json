@@ -20,5 +20,7 @@
     "build": "webpack --bail",
     "dev": "webpack --watch -d"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@appsignal/design-system": "appsignal/design-system#tailwind-toolchain"
+  }
 }
