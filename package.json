@@ -13,13 +13,12 @@
     "postcss-preset-env": "^6.7.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
-    "tailwindcss": "^1.1.2",
-    "tailwindcss-grid": "^1.2.1",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   },
   "scripts": {
     "build": "webpack --bail",
     "dev": "webpack --watch -d"
-  }
+  },
+  "dependencies": {}
 }
