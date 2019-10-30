@@ -1,6 +1,3 @@
 [submodule "source/assets/stylesheets/_design_language"]
 	path = source/assets/stylesheets/_design_language
   url = https://github.com/appsignal/design-language.git
-[submodule "source/assets/design-system"]
-	path = source/assets/design-system
-	url = https://github.com/appsignal/design-system.git
