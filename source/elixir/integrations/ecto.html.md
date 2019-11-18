@@ -29,3 +29,26 @@ In this example, we’ve attached the Telemetry handler to our Phoenix applicati
 2. `[:appsignal_phoenix_example, :repo, :query]` is the name of the event to watch. It’s made up of the repo module’s name (`AppsignalPhoenixExample.Repo`), and the event name (`:query`).
 3. `&Appsignal.Ecto.handle_event/4` is the function the event will be sent to in the AppSignal integration.
 4. We’ll omit the handler configuration by passing `nil` as the fourth argument. 
+
+## Telemetry < 0.3
+
+For versions of Telemetry &lt; 0.3.0, you'll need to call it slightly differently:
+
+```elixir
+Telemetry.attach(
+  "appsignal-ecto",
+  [:appsignal_phoenix_example, :repo, :query],
+  Appsignal.Ecto,
+  :handle_event,
+  nil
+)
+```
+
+## Ecto < 3.0
+
+On Ecto 2, add the `Appsignal.Ecto` module to your Repo's logger configuration instead. The `Ecto.LogEntry` logger is the default logger for Ecto and needs to be set as well to keep the original Ecto logger behavior intact.
+
+```elixir
+config :my_app, MyApp.Repo,
+  loggers: [Appsignal.Ecto, Ecto.LogEntry]
+```
