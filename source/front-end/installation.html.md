@@ -34,7 +34,7 @@ export default new Appsignal({
 
 Currently, we have no plans to supply a CDN-hosted version of this library.
 
-!> **NOTE:** If you are running a CDN in front of your assets, you'll need to make two changes for error reporting to be able to send errors to our API endpoint. These changes are described [here](/front-end/troubleshooting.html).
+!> **NOTE:** If you are running a CDN in front of your assets, you'll need to make [two changes](/front-end/troubleshooting.html) for error reporting to be able to send errors to our API endpoint. Read more about the [required changes](/front-end/troubleshooting.html).
 
 ### Supported browsers
 
