@@ -61,6 +61,7 @@ Uninstall AppSignal from your app by following the steps below. When these steps
 
 1. In the `package.json` of your app, delete all lines referencing an `appsignal` package: `"*appsignal/*": "*"`.
 1. Run `npm install` or `yarn install` to update your `package.lock`/`yarn.lock` with the removed packages state.
+   - Alternatively, run `npm uninstall @appsignal/<package name>` or `yarn remove @appsignal/<package name>` to uninstall an AppSignal package.
 1. Remove any AppSignal [configuration](/front-end/configuration/) from your app.
 1. Commit, deploy and restart your app.
   - This will make sure the AppSignal servers won't continue to receive data from your app.
