@@ -23,7 +23,7 @@ If AppSignal does not support your use-case or if you find a problem with the do
 
 ### Requirements
 
-Before you can compile the AppSignal gem make sure the build/compilation tools are installed for your system. Please check the [Supported Operating Systems](/support/operating-systems.html) page for any system dependencies that may be required.
+Before you can compile the AppSignal package make sure the build/compilation tools are installed for your system. Please check the [Supported Operating Systems](/support/operating-systems.html) page for any system dependencies that may be required.
 
 ### Installing the package
 
