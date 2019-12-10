@@ -85,15 +85,29 @@ config :phoenix, :template_engines,
 
 ## Queries
 
-If you're using Ecto 3, attach `Appsignal.Ecto` to Telemetry query events in your application's `start/2` function:
+If you're using Ecto 3, attach `Appsignal.Ecto` to Telemetry query events in your application's `start/2` function by calling `:telemetry.attach/4`. In most Phoenix applications, the application's start function is located in a module named `YourAppName.Application`:
 
-```elixir
-:telemetry.attach(
-  "appsignal-ecto",
-  [:my_app, :repo, :query],
-  &Appsignal.Ecto.handle_event/4,
-  nil
-)
+```
+defmodule AppsignalPhoenixExample.Application do
+  use Application
+
+  def start(_type, _args) do
+    children = [
+      # ...
+    ]
+
+    # Add this :telemetry.attach/4 call:
+    :telemetry.attach(
+      "appsignal-ecto",
+      [:my_app, :repo, :query],
+      &Appsignal.Ecto.handle_event/4,
+      nil
+    )
+
+    opts = [strategy: :one_for_one, name: AppsignalPhoenixExample.Supervisor]
+    Supervisor.start_link(children, opts)
+  end
+end
 ```
 
 For more information on query instrumentation and installation instructions for Telemetry < 0.3.0 and Ecto < 3.0, check out the [AppSignal Ecto documentation](/elixir/integration/ecto.html).
