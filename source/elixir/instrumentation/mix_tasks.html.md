@@ -30,9 +30,12 @@ defmodule Mix.Tasks.Rescue do
       reraise exception, __STACKTRACE__
   after
     Appsignal.Nif.stop
+    :timer.sleep(35_000) # For one-off containers
   end
 end
 ```
+
+**Note:** A sleep of 35 seconds was added to the end of the Mix task. This is recommended for tasks that are run on one-off containers. When the task completes the process stops. The `Appsignal.Nif.stop/0` function call flushes all the transaction data currently in the AppSignal extension to our agent. There it is [transmitted on a 30 second interval](/appsignal/how-appsignal-operates.html#agent). The one-off container may have exited before that time. To ensure the data is still transmitted, it needs to wait for 35 seconds.
 
 ## Measuring performance
 
@@ -59,6 +62,7 @@ defmodule Mix.Tasks.Instrument do
     Appsignal.Transaction.complete(transaction)
 
     Appsignal.Nif.stop()
+    :timer.sleep(35_000) # For one-off containers
   end
 end
 ```

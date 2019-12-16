@@ -100,10 +100,25 @@ When running a single Rake task in a container (e.g. with Kubernetes) there are 
 
 * [`Appsignal.stop`](#appsignal-stop-requirement) must be set in the Rake task
 * [`running_in_container`](/ruby/configuration/options.html#option-running_in_container) must be set to true in the config.
-
-For some containers `running_in_container` is automatically set to true when detected, for others manual configuration is required.
+  * For some containers `running_in_container` is automatically set to true when detected, for others manual configuration is required.
 
 These two options guarantee that the extension has time to push the data to the agent and the agent has time to send the data to our API before shutting (the container) down.
+
+```ruby
+# Rakefile
+# One-off container example task
+task :foo do
+  # Tracking data with AppSignal
+  Appsignal.increment_counter "my_custom_counter"
+
+  # "rake" is the parent process name which is being stopped and the reason why
+  # AppSignal is stopping.
+  Appsignal.stop "rake"
+  sleep 35 # For one-off containers
+end
+```
+
+**Note:** A sleep of 35 seconds was added to the end of the Rake task example. This is recommended for tasks that are run on one-off containers. When the task completes the process stops. The `Appsignal.stop` method call flushes all the transaction data currently in the AppSignal extension to our agent. There it is [transmitted on a 30 second interval](/appsignal/how-appsignal-operates.html#agent). The one-off container may have exited before that time. To ensure the data is still transmitted, it needs to wait for 35 seconds.
 
 ## Examples
 
