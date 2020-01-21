@@ -19,7 +19,7 @@
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "@appsignal/design-system": "appsignal/design-system#master"
+    "@appsignal/design-system": "0.0.1-alpha.4"
   },
   "scripts": {
     "build": "webpack --bail",
