@@ -167,7 +167,9 @@ options:
       type: bool
       default_value: false
     description: |
-      Enable debug logging, this is usually only needed on request from support. With this option enabled AppSignal will log a lot more information about decisions that are made during metrics collection and when data is sent to AppSignal.com servers.
+        Enable debug logging, this is usually only needed on request from support. With this option enabled AppSignal will log a lot more information about decisions that are made during metrics collection and when data is sent to AppSignal.com servers.
+
+        Enabling debug logging could have a slight impact on the disk usage and IO, especially on high-traffic sites. CPU overhead is minimal with the debug option enabled.
   - config_key: transaction_debug_mode
     env_key: APPSIGNAL_TRANSACTION_DEBUG_MODE
     ruby:
