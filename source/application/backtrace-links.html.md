@@ -13,7 +13,7 @@ To enable backtrace links an app on AppSignal.com needs to:
 
 ## Configure the repo url
 
-Owners of an Organisation can specify a Repo url on [the app settings page](https://appsignal.com/redirect-to/app?to=edit).
+Owners of an Organisation can specify a Repo url on [the app settings page](https://appsignal.com/redirect-to/app?to=edit). This is especially usefull for Git hosting platforms that are not GitHub (e.g. GitLab/BitBucket) or private repositories.
 
 ![App settings repo URL form](/assets/images/screenshots/repo_url.png)
 
