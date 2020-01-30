@@ -16,6 +16,7 @@ A list of Applications appears on the [Application index] and in the application
   - [Custom markers](markers/custom-markers.html)
 - [Settings](settings.html)
 - [Link templates](link-templates.html)
+- [Backtrace links](backtrace-links.html)
 - [Integrations (full list)](integrations/)
 - [Running multiple applications on one host](#running-multiple-applications-on-one-host)
 - [Removing an application](#removing-an-application)
