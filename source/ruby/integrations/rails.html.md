@@ -25,3 +25,27 @@ The errors that occur here will not be grouped under an incident with an action 
 ## Background jobs
 
 AppSignal supports ActiveJob for several background job libraries, such as Sidekiq. Please see the full list of Ruby [library integrations](/ruby/integrations) for more details.
+
+
+## Backtrace cleaner
+
+With the Rails integration, AppSignal will run the backtrace of each exception through the Rails [backtrace cleaner](https://api.rubyonrails.org/classes/ActiveSupport/BacktraceCleaner.html). This gives you the option to modify or filter out unwanted backtrace lines, preventing clutter and noise.
+
+You can add or remove filters and silencers to the default configuration.
+
+**Filters** will mutate the given line. An example would be to remove the `Rails.root` prefix.
+
+**Silencers** will remove the line from the backtrace, if the given expression returns `true`. You can add these additional backtrace cleaner rules in an initialize.
+
+
+For example:
+
+`config/initializers/backtrace_cleaner.rb`:
+
+```
+bc = Rails.backtrace_cleaner
+bc.add_filter { |line| line.gsub(Rails.root.to_s, '<root>') }
+bc.add_silencer { |line| line.index('<root>').nil? and line.index('/') == 0 }
+bc.add_silencer { |line| line.index('<root>/vendor/') == 0 }
+```
+For more information about the backtrace cleaner, see the [documentation](https://api.rubyonrails.org/classes/ActiveSupport/BacktraceCleaner.html)
