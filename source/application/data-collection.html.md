@@ -55,7 +55,7 @@ Our tagging system allows you to attach more metadata to samples, besides what w
 
 * [Tagging for Ruby](/ruby/instrumentation/tagging.html)
 * [Tagging for Elixir](/elixir/instrumentation/tagging.html)
-* [Tagging for front-end Javascript](/front-end/span.html#span-settags-tags-object)
+* [Tagging for front-end JavaScript](/front-end/span.html#span-settags-tags-object)
 
 
 ## Namespaces
@@ -68,6 +68,6 @@ Read more about namespaces in the [namespaces section](/application/namespaces.h
 
 ## Queries
 
-By default we parse SQL queries and try and remove any parameters in the query string. We've created an open-source (Rust) package that is used by our integrations. You can find it on [GitHub](https://github.com/appsignal/sql_lexer). If you see any query params in our UI, please open an isse on this repository.
+By default we parse SQL queries and try and remove any parameters in the query string. We've created an open-source (Rust) package that is used by our integrations. You can find [the sql_lexer project on GitHub](https://github.com/appsignal/sql_lexer). If you see any query params in our UI, please open an isse on this repository.
 
 MongoDB queries in the Ruby integration are sanitized by default.
