@@ -8,9 +8,7 @@ These are the things we do at AppSignal to keep your data safe.
 
 The [Ruby gem](https://github.com/appsignal/appsignal-ruby) and the [Elixir package](https://github.com/appsignal/appsignal-elixir) are public code, hosted on GitHub. You can browse the source to see how we handle the data. Our closed-source [agent](/appsignal/terminology.html#agent) will send the actual data to the AppSignal servers.
 
-Built into the Ruby gem and Elixir package is a system that allows you to scrub any data you don't want to send over the wire, such as passwords and identifiable user information. See the [Ruby gem documentation](/ruby/configuration/parameter-filtering.html) and [Elixir documentation](/elixir/configuration/parameter-filtering.html) on how to do this.
-
-It's also possible to ignore entire actions (such as controller actions and background jobs) by configuring the ignore actions option (for [Ruby](/ruby/configuration/ignore-actions.html) and [Elixir](/elixir/configuration/ignore-actions.html)). These actions will not be monitored and no data will be sent to the AppSignal servers.
+We have built several systems to filter or redact sensitive data from reaching our servers, please see the [scrub data guide](/appsignal/scrub-data) for more information.
 
 ## System agent
 
