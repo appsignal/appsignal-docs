@@ -8,7 +8,7 @@ These are the things we do at AppSignal to keep your data safe.
 
 The [Ruby gem](https://github.com/appsignal/appsignal-ruby) and the [Elixir package](https://github.com/appsignal/appsignal-elixir) are public code, hosted on GitHub. You can browse the source to see how we handle the data. Our closed-source [agent](/appsignal/terminology.html#agent) will send the actual data to the AppSignal servers.
 
-We have built several systems to filter or redact sensitive data from reaching our servers, please see the [scrub data guide](/appsignal/scrub-data) for more information.
+We have built several systems to filter or redact sensitive data from reaching our servers, please see the [data collection page](/application/data-collection) for more information.
 
 ## System agent
 

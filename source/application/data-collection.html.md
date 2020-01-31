@@ -4,7 +4,8 @@ title: "Customizing data collection"
 
 By default AppSignal gathers relevant data for errors and performance measurements to help you find the cause of the issue. Sometimes you need more information, app specific data or a custom request header your app uses.
 
-You can configure AppSignal to gather more, or less, information than it does by default by tagging your transactions and configuring the request headers, parameter filtering, etc.
+You can configure AppSignal to gather more, or less, information than it does by default by tagging your transactions and configuring the request headers, parameter filtering, etc. Ideally we receive as little metadata for samples as possible, and only data that is needed to debug an exception or performance issue.
+
 
 ## Table of Contents
 
@@ -13,7 +14,9 @@ You can configure AppSignal to gather more, or less, information than it does by
 - [Request headers](#request-headers)
 - [Parameters](#parameters)
 - [Session data](#session-data)
+- [Tagging](#tagging)
 - [Namespaces](#namespaces)
+- [Queries](#queries)
 
 ## Ignore actions
 
@@ -45,6 +48,16 @@ AppSignal gathers session data for requests by default. This may help you track 
 
 The session data can be filtered by the data's key name with our session data filtering for [Ruby](/ruby/configuration/session-data-filtering.html) and [Elixir](/elixir/configuration/session-data-filtering.html). It's also possible to disable session data collection entirely for [Ruby](/ruby/configuration/session-data-filtering.html#skip-sending-session-data) and [Elixir](/elixir/configuration/session-data-filtering.html#skip-sending-session-data).
 
+## Tagging
+
+Our tagging system allows you to attach more metadata to samples, besides what we already collect. Things such as the ID of the user making the request or other data that can help you identify who made the request or specific conditions for the request.
+
+
+* [Tagging for Ruby](/ruby/instrumentation/tagging.html)
+* [Tagging for Elixir](/elixir/instrumentation/tagging.html)
+* [Tagging for front-end Javascript](/front-end/span.html#span-settags-tags-object)
+
+
 ## Namespaces
 
 Namespaces allow grouping of [actions](/appsignal/terminology.html#actions). By default AppSignal uses the "web", "background" and "frontend" namespaces to group [transactions](/appsignal/terminology.html#transactions). It's possible to create a custom namespace such as "admin", "api" to group controllers in the same namespace.
@@ -52,3 +65,9 @@ Namespaces allow grouping of [actions](/appsignal/terminology.html#actions). By 
 The grouped actions in the namespace can be configured with their own notification defaults, allowing a critical namespace to always notify about errors, while the "web" namespace does not. It's also possible to configure the AppSignal integration to ignore a namespace to
 
 Read more about namespaces in the [namespaces section](/application/namespaces.html).
+
+## Queries
+
+By default we parse SQL queries and try and remove any parameters in the query string. We've created an open-source (Rust) package that is used by our integrations. You can find it on [GitHub](https://github.com/appsignal/sql_lexer). If you see any query params in our UI, please open an isse on this repository.
+
+MongoDB queries in the Ruby integration are sanitized by default.
