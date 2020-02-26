@@ -45,7 +45,7 @@ endpoint.
 
 ## Phoenix instrumentation hooks
 
--> **Note**: From AppSignal for Elixir package version `1.12.0` onward, manually configuring Phoenix instrumentation hooks is no longer needed and this step can be skipped.
+-> **Note**: From AppSignal for Elixir package version `1.12.0` onward, manually configuring Phoenix instrumentation hooks is no longer needed and this step can be skipped for apps running Phoenix 1.4.7 and up.
 
 Phoenix comes with instrumentation hooks built-in. To send Phoenix'
 default instrumentation events to AppSignal, add the following to your
