@@ -50,6 +50,8 @@ This package can be used in any ECMAScript 5 compatible browser. We aim for comp
 
 When developing, don’t forget to check browser support on [Can I Use?](https://caniuse.com/) and the [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/), and provide the appropriate polyfills or fallbacks. **In a small percentage of browsers, a `Promise` polyfill may be required to use this library.**
 
+`@appsignal/javascript` also works in React Native/Expo apps!
+
 ## Uninstall
 
 Uninstall AppSignal from your app by following the steps below. When these steps are completed your app will no longer send data to the AppSignal servers.
