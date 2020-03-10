@@ -62,12 +62,12 @@ Our tagging system allows you to attach more metadata to samples, besides what w
 
 Namespaces allow grouping of [actions](/appsignal/terminology.html#actions). By default AppSignal uses the "web", "background" and "frontend" namespaces to group [transactions](/appsignal/terminology.html#transactions). It's possible to create a custom namespace such as "admin", "api" to group controllers in the same namespace.
 
-The grouped actions in the namespace can be configured with their own notification defaults, allowing a critical namespace to always notify about errors, while the "web" namespace does not. It's also possible to configure the AppSignal integration to ignore a namespace to
+The grouped actions in the namespace can be configured with their own notification defaults, allowing a critical namespace to always notify about errors, while the "web" namespace does not. It's also possible to configure the AppSignal integration to ignore a namespace to ignore all transactional data from all actions in it.
 
 Read more about namespaces in the [namespaces section](/application/namespaces.html).
 
 ## Queries
 
-By default we parse SQL queries and try and remove any parameters in the query string. We've created an open-source (Rust) package that is used by our integrations. You can find [the sql_lexer project on GitHub](https://github.com/appsignal/sql_lexer). If you see any query params in our UI, please open an isse on this repository.
+By default we parse SQL queries and try and remove any parameters in the query string. We've created an open-source (Rust) package that is used by our integrations. You can find [the sql_lexer project on GitHub](https://github.com/appsignal/sql_lexer). If you see any query params in our UI, please open an issue in that repository.
 
 MongoDB queries in the Ruby integration are sanitized by default.
