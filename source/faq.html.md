@@ -25,7 +25,7 @@ AppSignal supports the [Ruby](https://www.ruby-lang.org/en/) and [Elixir](https:
 
 #### How to ignore actions from your app?
 
-By [ignoring actions](/application/data-collection.html#ignore-actions) for the it's possible to not record any data for the configured actions, requests, background jobs, etc.
+By [ignoring actions](/application/data-collection.html#ignore-actions) it's possible to not record any data for the configured actions, requests, background jobs, etc.
 
 #### How to ignore errors in your app?
 
