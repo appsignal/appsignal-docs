@@ -179,7 +179,6 @@ end
 -> **Note**: The LiveView helper functions are available from AppSignal for
 Elixir version `1.13.0` onward.
 
-
 A LiveView action is instrumented by wrapping its contents in a
 `Appsignal.Phoenix.LiveView.live_view_action/4` block.
 
@@ -195,7 +194,6 @@ defmodule AppsignalPhoenixExampleWeb.ClockLive do
     :timer.send_interval(1000, self(), :tick)
     {:ok, assign(socket, state: Time.utc_now())}
   end
-
 
   def handle_info(:tick, socket) do
     {:ok, assign(socket, state: Time.utc_now())}
