@@ -2,7 +2,7 @@
 title: "Creating and using a Span"
 ---
 
-Using the new `Span` API, even more insights in your application can be added by adding more instrumentation or tagging the data that appears in the UI at AppSignal.com. 
+Using the new `Span` API, even more insights in your application can be added by adding more instrumentation or tagging the data that appears in the UI at AppSignal.com.
 
 A `Span` is the name of the object that we use to capture data about your applications performance, any errors and any surrounding context. It is designed to be similar to, but not exactly like, the Span from the [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-specification) standard specification.
 
@@ -55,23 +55,76 @@ span
   .addError(new Error("test error"))
 ```
 
-### `span.set(key: string, value: string | number | boolean)`
+## `span.set(key: string, value: string | number | boolean)`
 
 Sets arbitary data on a current `Span`. The data can be a `string`, `number` or `boolean` type.
 
-### `span.setNamespace(name: string)`
+## `span.setNamespace(name: string)`
 
 Sets the `namespace` of the current `Span`. Namespaces are a way to group error incidents, performance incidents, and host metrics in your app.
 
-### `span.addError(error: Error | object)`
+## `span.addError(error: Error | object)`
 
 Sets the `error` of the current `Span`. When an `Error` object is passed to the `setError` method, the `stack` property is normalised and transformed into an array of strings, with each string representing a line in the stacktrace.
 
-### `span.setSampleData(key: string, data: Array<any> | { [key: string]: any })`
+## `span.setSampleData(key: string, data: Array<any> | { [key: string]: any })`
 
-Adds sample data to the current `Span`. The sample data object must not contain any nested objects.
+Adds sample data to the current `Span`. The sample data object must not contain any nested objects. This call accepts the following keys, some keys require a specific format.
 
-### `span.close(endTime?: number)`
+
+### `sesssion_data`
+
+Filled with session/cookie data by default, but can be overridden with the following call:
+
+```
+span.setSampleData("sesssion_data", {_csrf_token: "Z11CWRVG+I2egpmiZzuIx/qbFb/60FZssui5eGA8a3g="})
+```
+
+This key accepts nested objects that will be rendered as JSON on a Incident Sample page for both Exception and Performance samples.
+
+![sesssion_data](/assets/images/screenshots/sample_data/session_data.png)
+
+
+
+### `params`
+Filled with framework (such as Phoenix) parameters by default, but can be overridden or filled with the following call:
+
+```
+span.setSampleData("params", {action: "show", controller: "homepage"})
+```
+
+This key accepts nested objects and will show up as follows on a Incident Sample page for both Exception and Performance samples, formatted as JSON.
+
+![params](/assets/images/screenshots/sample_data/params.png)
+
+
+
+### `environment`
+Environment variables from a request/background job, filled by the Phoenix integration, but can be filled/overriden with the following call:
+
+```
+span.setSampleData("environment", {CONTENT_LENGTH: "0"})
+```
+
+This call only accepts a one-level key/value object, nested values will be ignored.
+This will result the following block on a Incident Sample page for both Exception and Performance samples.
+
+![environment](/assets/images/screenshots/sample_data/environment.png)
+
+
+
+### `custom_data`
+Custom data is not set by default, but can be used to add additional debugging data to solve a performance issue or exception.
+
+```
+span.setSampleData("custom_data", {foo: "bar"})
+```
+This key accepts nested objects and will result in the following block on a Incident Sample page for both Exception and Performance samples formatted as JSON.
+
+![custom_data](/assets/images/screenshots/sample_data/custom_data.png)
+
+
+## `span.close(endTime?: number)`
 
 Closes the current `Span`.
 
@@ -95,7 +148,7 @@ async function () {
       span.child("childSpan1Name"),
       async child => {
         // add code to instrument here!
-        // `tracer.withSpan` will return a Promise for any value 
+        // `tracer.withSpan` will return a Promise for any value
         // that you return in this callback
 
         // child spans must be closed explicitly!
@@ -106,7 +159,7 @@ async function () {
     tracer.withSpan(
       span.child("childSpan2Name"),
       child => {
-        // multiple functions can be intrumented at once, 
+        // multiple functions can be intrumented at once,
         // as well as purely synchrounous functions
 
         // child spans must be closed explicitly!
