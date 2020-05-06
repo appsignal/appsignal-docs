@@ -53,17 +53,17 @@ in our [link templates guide](/application/link-templates.html).
 Besides tags you can add more metadata to a transaction (or override default metadata from integrations such as Phoenix), below is a list of valid keys that can be given to `set_sample_data` and the format of the value.
 
 
-### `sesssion_data`
+### `session_data`
 
 Filled with session/cookie data by default, but can be overridden with the following call:
 
 ```
-Appsignal.Transaction.set_sample_data("sesssion_data", %{_csrf_token: "Z11CWRVG+I2egpmiZzuIx/qbFb/60FZssui5eGA8a3g="})
+Appsignal.Transaction.set_sample_data("session_data", %{_csrf_token: "Z11CWRVG+I2egpmiZzuIx/qbFb/60FZssui5eGA8a3g="})
 ```
 
 This key accepts nested objects that will be rendered as JSON on a Incident Sample page for both Exception and Performance samples.
 
-![sesssion_data](/assets/images/screenshots/sample_data/session_data.png)
+![session_data](/assets/images/screenshots/sample_data/session_data.png)
 
 
 

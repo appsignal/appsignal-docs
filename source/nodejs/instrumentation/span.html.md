@@ -77,12 +77,12 @@ Adds sample data to the current `Span`. The sample data object must not contain 
 Filled with session/cookie data by default, but can be overridden with the following call:
 
 ```
-span.setSampleData("sesssion_data", {_csrf_token: "Z11CWRVG+I2egpmiZzuIx/qbFb/60FZssui5eGA8a3g="})
+span.setSampleData("session_data", {_csrf_token: "Z11CWRVG+I2egpmiZzuIx/qbFb/60FZssui5eGA8a3g="})
 ```
 
 This key accepts nested objects that will be rendered as JSON on a Incident Sample page for both Exception and Performance samples.
 
-![sesssion_data](/assets/images/screenshots/sample_data/session_data.png)
+![session_data](/assets/images/screenshots/sample_data/session_data.png)
 
 
 
