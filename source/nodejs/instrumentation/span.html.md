@@ -67,12 +67,12 @@ Sets the `namespace` of the current `Span`. Namespaces are a way to group error 
 
 Sets the `error` of the current `Span`. When an `Error` object is passed to the `setError` method, the `stack` property is normalised and transformed into an array of strings, with each string representing a line in the stacktrace.
 
-## `span.setSampleData(key: string, data: Array<any> | { [key: string]: any })`
+## `span.setSampleData(key: string, data: Array<string | number | boolean> | { [key: string]: string | number | boolean })`
 
 Adds sample data to the current `Span`. The sample data object must not contain any nested objects. This call accepts the following keys, some keys require a specific format.
 
 
-### `sesssion_data`
+### `session_data`
 
 Filled with session/cookie data by default, but can be overridden with the following call:
 
@@ -87,10 +87,10 @@ This key accepts nested objects that will be rendered as JSON on a Incident Samp
 
 
 ### `params`
-Filled with framework (such as Phoenix) parameters by default, but can be overridden or filled with the following call:
+Filled with framework (such as Express) parameters by default, but can be overridden or filled with the following call:
 
 ```
-span.setSampleData("params", {action: "show", controller: "homepage"})
+span.setSampleData("params", {string: "value", number: 123 })
 ```
 
 This key accepts nested objects and will show up as follows on a Incident Sample page for both Exception and Performance samples, formatted as JSON.
@@ -100,7 +100,7 @@ This key accepts nested objects and will show up as follows on a Incident Sample
 
 
 ### `environment`
-Environment variables from a request/background job, filled by the Phoenix integration, but can be filled/overriden with the following call:
+Environment variables from a request/background job (typically filled by the default `http` integration, but can be further augmented by other integrations), but can be filled/overriden with the following call:
 
 ```
 span.setSampleData("environment", {CONTENT_LENGTH: "0"})
