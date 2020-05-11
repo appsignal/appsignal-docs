@@ -70,21 +70,19 @@ Warm-up and cooldown settings can be configured on a per Trigger basis. The sett
 
 ### Warm-up
 
-When a threshold condition is met an Alert is opened, e.g. the error rate is higher than 5%.
+An Alert is opened when a Trigger's threshold condition is met (e.g. the error rate is higher than 5%).
 
-When a warm-up duration is configured for a trigger it will wait with opening the alert until after the warm-up time has passed. The threshold condition needs to be met for the entire warm-up duration before the alert is opened.
+When a trigger has a warm-up period configured, the alert will only open once the warm-up time has passed. The threshold condition must be met for the entire warm-up period for the alert to open.
 
-When an alert's threshold condition is not met for the entire duration of the warm-up time, and thus not opened, the alert is removed. It will also not show as a closed alert in the [alerts table](https://appsignal.com/redirect-to/app?to=alerts). This is to avoid noise in the table from unopened alerts.
+When the threshold isn't met for the entire warm-up period, the alert is removed. These alerts aren't included in the [alerts table](https://appsignal.com/redirect-to/app?to=alerts). This reduces noise in the alerts table.
 
-Alerts that have only entered the warm-up phase are visible in the AppSignal web interface, but no notification will be send for these alerts.
+Alerts in the warm-up phase are displayed in the AppSignal web interface, but they do not send any notifications. 
 
 ### Cooldown
 
-When an Alert is opened by a Trigger it will automatically close when the Trigger threshold condition is no longer reached. When the threshold is reached again it will open another Alert. This may result in more notifications than wanted.
+Alerts opened by a Trigger are automatically closed when the threshold condition is no longer met. If the threshold is met again, another alert will open. If a metric keeps dipping above and below the threshold, this will cause noisy notifications.
 
-In order to not get overwhelmed with notifications about a Trigger threshold condition that constantly dips below and above a certain value you can use Trigger cooldowns.
-
-Triggers with cooldowns wait for the specified amount of time in minutes before closing an Alert. When it doesn't occur again in the cooldown time the Alert is finally closed. If it does occur, the Alert is reopened without an explicit notification.
+Use cooldown periods to reduce this noise. A trigger with a cooldown will wait for the specified amount of time before closing an alert. If the threshold isn't met during the cooldown period, the alert is closed. If the threshold is met, the alert is reopened without a notification. 
 
 ## Data processing
 
