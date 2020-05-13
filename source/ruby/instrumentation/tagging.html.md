@@ -1,5 +1,5 @@
 ---
-title: "Tagging"
+title: "Tagging and Sample Data"
 ---
 
 Use the `Appsignal.tag_request` method to supply extra context on errors and
