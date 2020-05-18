@@ -2,14 +2,26 @@
 title: "Express"
 ---
 
-Express.js v4+ can be instrumented via a middleware plugin to augment `Span`s with richer data.
+The AppSignal for Node.js integration for Express.js (`express`) v4.0.0+.
+
+## Installation
+
+Add both the `@appsignal/nodejs` and `@appsignal/express` packages to your `package.json`. Then, run `yarn install`/`npm install`.
+
+You can also add these packages to your `package.json` on the command line:
 
 ```bash
 yarn add @appsignal/nodejs @appsignal/express
 npm install --save @appsignal/nodejs @appsignal/express
 ```
 
-You can then import and use the package in your app:
+You can then import and use the package in your app. 
+
+## Usage
+
+### Middleware
+
+The module includes middleware for automatically instrumenting the routes of your application.
 
 ```js
 const { Appsignal } = require("@appsignal/nodejs")
@@ -28,6 +40,8 @@ const app = express()
 // ADD THIS AFTER ANY OTHER EXPRESS MIDDLEWARE, BUT BEFORE ANY ROUTES!
 app.use(expressMiddleware(appsignal))
 ```
+
+### Error Handler
 
 The module also contains a middleware for catching any errors passed to `next()`.
 

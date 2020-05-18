@@ -1,6 +1,8 @@
 ---
-title: "Installing AppSignal for Node.js"
+title: "Installation"
 ---
+
+## Installing Appsignal for Node.js
 
 !> In order to auto-instrument modules, the `Appsignal` module must be both *required and initialized before any other package*.
 
