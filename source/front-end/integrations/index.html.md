@@ -13,4 +13,4 @@ These currently include:
 - [Angular (beta) - `@appsignal/angular`](/front-end/integrations/angular.html)
 - [Ember (beta) - `@appsignal/ember`](/front-end/integrations/ember.html)
 - [Preact (beta) - `@appsignal/preact`](/front-end/integrations/preact.html)
-- [Stimulus (beta) - `@appsignal/stimulus`]("/front-end/integrations/stimulus.html)
+- [Stimulus (beta) - `@appsignal/stimulus`](/front-end/integrations/stimulus.html)
