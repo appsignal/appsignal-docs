@@ -9,7 +9,6 @@ To track application-wide metrics, you can send custom metrics to AppSignal. The
 With different [types of metrics](#metric-types) (gauges, counters and measurements) you can track any kind of data from your apps and [tag](#metric-tags) them with metadata to easily spot the differences between contexts.
 
 ![Custom metrics demo dashboard](/assets/images/screenshots/custom_metrics_dashboard.png)
-For the dashboard definition YAML, see our [dashboard definition page](/metrics/custom-metrics/dashboards.html).
 
 Also see our blog post [about custom metrics](http://blog.appsignal.com/blog/2016/01/26/custom-metrics.html) for more information.
 
@@ -24,7 +23,6 @@ Also see our blog post [about custom metrics](http://blog.appsignal.com/blog/201
 - [Metric naming](#metric-naming)
 - [Metric values](#metric-values)
 - [Metric tags](#metric-tags)
-- [Dashboards definition YAML](/metrics/custom-metrics/dashboards.html)
 
 ## Metric types
 
@@ -53,7 +51,7 @@ Appsignal.set_gauge("database_size", 10)
 
 At AppSignal measurements are used for things like response times. We allow you to track a metric with wildly varying values over time and create graphs based on their average value or call count during that time.
 
-By tracking a measurement, the average and count will be persisted for the metric. A measurement metric creates several [metric fields](/metrics/custom-metrics/dashboards.html#dashboard-graph-metrics-fields):
+By tracking a measurement, the average and count will be persisted for the metric. A measurement metric creates several metric fields:
 
 - `COUNT`, which counts how many times the helper was called
 - `MEAN`, the average metric value for the point in time.
@@ -134,7 +132,5 @@ Appsignal.set_gauge("database_size", 100, %{region: "eu"})
 ```
 
 Another example is how AppSignal uses [host metrics](host.html). Every host metric has a tag with a `hostname` to differentiate between different hosts. Some host metrics even have more tags such as the `state` tag for the `cpu` metric, `mountpoint` tag for the `disk_usage`, `disk` tag for `disk_io_read` and `disk_io_written`, etc.
-
-Read about how to use the [`tags`](/metrics/custom-metrics/dashboards.html#dashboard-graph-metrics-tags) dashboard config option to customize how tags are used in your graphs and how to use them in your [line labels](/metrics/custom-metrics/dashboards.html#dashboard-graphs-line-label).
 
 **Note**: We __do not__ recommend adding this context to your metric names like so: `eu.database_size`, `us.database_size` and `asia.database_size`. This creates multiple metrics that serve the same purpose. The same goes for any dynamic string that builds the metric key, e.g. `user_#{user.id}`.
