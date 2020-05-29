@@ -10,8 +10,6 @@ With different [types of metrics](#metric-types) (gauges, counters and measureme
 
 ![Custom metrics demo dashboard](/assets/images/screenshots/custom_metrics_dashboard.png)
 
-Also see our blog post [about custom metrics](http://blog.appsignal.com/blog/2016/01/26/custom-metrics.html) for more information.
-
 -> **Note**: This feature was introduced with the `1.0` version of the AppSignal for Ruby gem. It is also available in the Elixir package.
 
 ## Table of Contents

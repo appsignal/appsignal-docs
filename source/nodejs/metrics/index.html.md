@@ -8,7 +8,6 @@ With different [types of metrics](#metric-types) (gauges, counters and measureme
 
 ![Custom metrics demo dashboard](/assets/images/screenshots/custom_metrics_dashboard.png)
 
-Also see our blog post [about custom metrics](http://blog.appsignal.com/blog/2016/01/26/custom-metrics.html) for more information.
 
 ## Table of Contents
 
