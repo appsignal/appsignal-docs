@@ -54,7 +54,7 @@ automatically.
 
 ### YAML configuration file
 
-The AppSignal Ruby gem can be configured with an configuration file. During installation the Ruby gem will create a `config/appsignal.yml` file, if selected. In this file some default configuration is supplied and can be modified to fit your application's needs. This `config/appsignal.yml` file supports ERB tags so that system environment variables can also be loaded in this file.
+The AppSignal Ruby gem can be configured with a configuration file. During installation the Ruby gem will create a `config/appsignal.yml` file, if selected. In this file some default configuration is supplied and can be modified to fit your application's needs. This `config/appsignal.yml` file supports ERB tags so that system environment variables can also be loaded in this file.
 
 The `config/appsignal.yml` configuration examples shown for configuration options will use the `default` YAML anchor. The AppSignal installer will create an `config/appsignal.yml` file with this anchor by default. If not present, make sure you add the config option to the correct environment.
 
