@@ -6,6 +6,8 @@ title: "Delayed::Job"
 
 The AppSignal gem detects Delayed Job when it's present and hooks into the standard Delayed Job callbacks. No further action is required to enable integration.
 
+This integration aims to support all different Delayed::Job support enqueuing methods. Some methods may have some limitations and customization options.
+
 ## Classes with `#perform` methods
 
 -> **Note**: Reporting of jobs using this method is supported since AppSignal Ruby gem version 2.11.0.
@@ -54,6 +56,30 @@ end
 
 Delayed::Job.enqueue(StructJobWithName.new("id"))
 # Reported as "StructJobWithName#perform"
+```
+
+## Delay method call support
+
+Method calls queued with the delay extension will be reported with an action name similar to how they are called.
+
+The arguments given to the delayed method will be reported as the arguments for the job.
+
+```ruby
+Post.delay.archive_all("some selector")
+# Reported as "Post.archive_all"
+
+Post.create(:title => "Post title").delay.send_mail("mail subject")
+# Reported as "Post#send_mail"
+```
+
+## Delayed::Job.enqueue support
+
+-> **Note**: Job name detection was added in Ruby gem version 2.11.0.
+
+Custom jobs objects enqueued with `Delayed::Job.enqueue` will be reported as normal, but will not report arguments. A whole object is given to Delayed::Job, and serialized into YAML and back. We can't detect arguments in this scenario.
+
+```ruby
+Delayed::Job.enqueue job_object
 ```
 
 ## Active Job support
