@@ -11,6 +11,7 @@ Support for Sidekiq was added in AppSignal Ruby gem version `0.8`.
 - [Job naming](#job-naming)
 - [Usage](#usage)
   - [Using with Rails](#usage-with-rails)
+  - [Using with Active Job](#usage-with-active-job)
   - [Using standalone](#usage-standalone)
 - [Metrics](#metrics)
 - [Minutely probe](#minutely-probe)
@@ -30,7 +31,11 @@ You can recognize events from Sidekiq with the name `perform_job.sidekiq` in the
 
 The AppSignal Ruby gem automatically inserts a listener into the Sidekiq server middleware stack if the `Sidekiq` module is present if you use Rails. No further action is required.
 
-[Active Job](active-job.html) with the Sidekiq adapter is supported.
+### Using with Active Job
+
+The Sidekiq integration is compatible with [Active Job](active-job.html).
+
+Upgrade to version 2.11.0 of the Ruby gem or newer for improved support.
 
 ### Using standalone
 

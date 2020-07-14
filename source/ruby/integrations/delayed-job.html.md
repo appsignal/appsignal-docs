@@ -58,7 +58,7 @@ Delayed::Job.enqueue(StructJobWithName.new("id"))
 
 ## Active Job support
 
-The Delayed Job integration is compatible with Active Job. It will report [queue times in graphs](https://appsignal.com/redirect-to/app?to=performance/graphs), queues and priorities if set on the job.
+The Delayed Job integration is compatible with [Active Job](active-job.html). It will report [queue times in graphs](https://appsignal.com/redirect-to/app?to=performance/graphs), queues and priorities if set on the job.
 
 Upgrade to version 2.11.0 of the Ruby gem or newer for improved support.
 

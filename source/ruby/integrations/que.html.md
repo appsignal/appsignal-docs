@@ -12,6 +12,12 @@ Job names are automatically detected based on the Que worker class name and are 
 
 You can recognize events from Que with the name `perform_job.que` in the event timeline on the performance incident detail page.
 
+## Active Job support
+
+The Que integration is compatible with [Active Job](active-job.html).
+
+Upgrade to version 2.11.0 of the Ruby gem or newer for improved support.
+
 ## Example application
 
 We have an example application in our examples repository on GitHub.
