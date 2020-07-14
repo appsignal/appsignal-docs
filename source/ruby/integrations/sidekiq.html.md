@@ -30,6 +30,8 @@ You can recognize events from Sidekiq with the name `perform_job.sidekiq` in the
 
 The AppSignal Ruby gem automatically inserts a listener into the Sidekiq server middleware stack if the `Sidekiq` module is present if you use Rails. No further action is required.
 
+[Active Job](active-job.html) with the Sidekiq adapter is supported.
+
 ### Using standalone
 
 If you use Sidekiq without Rails some additional setup is required. Add this snippet to your Sidekiq config with the right environment and name:

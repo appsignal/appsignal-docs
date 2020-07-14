@@ -6,6 +6,12 @@ title: "Ruby on Rails"
 
 The AppSignal integration for Rails works by tracking exceptions and performance in requests. When an error occurs in a controller during a request AppSignal will report it. Performance issues will be based on the duration of a request and create a timeline of events detailing which parts of the application took the longest.
 
+## Active Job
+
+Support for Active Job for all adapters is available in Ruby gem 2.11.0 and newer.
+
+See our [Active Job page](active-job.html) for more information.
+
 ## Error reporting during start-up
 
 By default AppSignal does not report errors that occur during the start/boot of your application. To do get notified when these errors occur, adding the following to your `config.ru` file, around the line that requires the `environment.rb` file.

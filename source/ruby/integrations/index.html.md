@@ -5,6 +5,7 @@ title: "Ruby integrations"
 AppSignal works with most popular Ruby frameworks and gems out-of-the-box such
 as:
 
+* [Active Job](active-job.html)
 * [Capistrano](capistrano.html)
 * [DataMapper](datamapper.html)
 * [Delayed::Job](delayed-job.html)
