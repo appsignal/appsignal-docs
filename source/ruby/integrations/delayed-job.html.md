@@ -6,6 +6,25 @@ title: "Delayed::Job"
 
 The AppSignal gem detects Delayed Job when it's present and hooks into the standard Delayed Job callbacks. No further action is required to enable integration.
 
+## Classes with `#perform` methods
+
+-> **Note**: Reporting of jobs using this method is supported since AppSignal Ruby gem version 2.11.0.
+
+Delayed Job supports enqueuing jobs based on instances of classes or structs that listen to a `perform` instance method, when enqueued with `Delayed::Job.enqueue`. AppSignal will use the object's class name as the action naming, appending `#perform` to the action name. A job for `StructJob` is reported as `StructJob#perform`.
+
+```ruby
+class StructJob < Struct.new(:id)
+  def perform
+    # Do stuff
+  end
+end
+
+Delayed::Job.enqueue(StructJob.new("id"))
+# Reported as "StructJob#perform"
+```
+
+Note that this method of enqueuing does not support arguments as a whole object is enqueued. Job objects are serialized when enqueued and deserialized when processed. AppSignal does not read the state of the deserialized object. The argument `id` for the `StructJob` in the example above is not reported.
+
 ## Jobs using `display_name`
 
 Delayed Job allows any class to define its own `display_name`. This `display_name` value can interfere with AppSignal's reporting if it is built using dynamic values, such as the arguments given to the job.
@@ -36,6 +55,12 @@ end
 Delayed::Job.enqueue(StructJobWithName.new("id"))
 # Reported as "StructJobWithName#perform"
 ```
+
+## Active Job support
+
+The Delayed Job integration is compatible with Active Job. It will report [queue times in graphs](https://appsignal.com/redirect-to/app?to=performance/graphs), queues and priorities if set on the job.
+
+Upgrade to version 2.11.0 of the Ruby gem or newer for improved support.
 
 ## Changes to the integration
 
