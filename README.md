@@ -21,7 +21,7 @@ bundle install
 ## Usage
 
 ```sh
-bundle exec middleman
+FORTAWESOME_TOKEN=find_token_in_1password bundle exec middleman
 ```
 
 Open the browser at [localhost:4567](http://localhost:4567/) and click around.
