@@ -14,7 +14,7 @@ Run the following commands:
 ```sh
 git submodule init
 git submodule update
-yarn install
+FORTAWESOME_TOKEN=find_token_in_1password yarn install
 bundle install
 ```
 
