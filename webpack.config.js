@@ -1,7 +1,8 @@
-const path = require("path");
+const path = require("path"); 
+const { IgnorePlugin } = require("webpack")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-module.exports = {
+const WEBPACK_CONFIG = {
   entry: [
     "./source/assets/main.js"
   ],
@@ -11,7 +12,7 @@ module.exports = {
     publicPath: "/"
   },
   plugins: [
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
@@ -45,3 +46,12 @@ module.exports = {
     ],
   },
 };
+
+// ignore the fontawesome package if the token isn't present
+if (!process.env.FORTAWESOME_TOKEN) {
+  WEBPACK_CONFIG.plugins.push(new IgnorePlugin({
+    resourceRegExp: /@fortawesome\/fontawesome-pro\/js\/all/
+  }))
+}
+
+module.exports = WEBPACK_CONFIG

@@ -13,7 +13,9 @@
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "@appsignal/design-system": "6.1.0",
+    "@appsignal/design-system": "6.1.0"
+  },
+  "optionalDependencies": {
     "@fortawesome/fontawesome-pro": "^5.13.1"
   },
   "scripts": {
