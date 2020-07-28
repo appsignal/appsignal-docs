@@ -186,6 +186,8 @@ options:
     env_key: APPSIGNAL_DNS_SERVERS
     ruby:
       since: 2.2.0.beta.1
+      since_notes:
+        - "`2.11.0`: Support added for the system environment option."
       type:
         array:
           - string
