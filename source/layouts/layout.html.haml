@@ -27,21 +27,23 @@
     %link{:rel => "stylesheet", :href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"}
     = partial "analytics"
 
-  %body
+  %body.font-rubik.bg-gray-100
     = partial "header"
-    .layout-wrapper
-      %a.jump{href: "#navigation"}
-        %i.fa.fa-book
-        Documentation navigation
-
-      = partial "docsearch"
-      .layout-main#main
-        .inner= yield
-      .layout-side#navigation
-        = partial "side_nav"
-      .layout-footer
-        = partial "footer"
-      = partial "cookies"
+    .container
+      .flex.my-8
+        %a.jump{href: "#navigation"}
+          %i.fa.fa-book
+          Documentation navigation
+        .w-64.flex-shrink-0.mr-12.mt-4
+          = partial "docsearch"
+          = partial "side_nav"
+        .bg-white.px-12.py-8.rounded.shadow-sm
+          .inner= yield
+        .w-64.flex-shrink-0.ml-12.mt-4
+          %h3.uppercase.font-medium.text-gray-600.text-sm
+            On this page
+    = partial "footer"
+    = partial "cookies"
 
     %script{:type => "text/javascript", :src => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"}
     :javascript
