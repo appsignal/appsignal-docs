@@ -85,7 +85,15 @@ class AppsignalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
     else
       anchor = FormatHelpersWrapper.strip_tags(text).parameterize
     end
-    %(<h%s><span class="anchor" id="%s"></span><a href="#%s">%s</a></h%s>) % [level, anchor, anchor, text, level]
+    %(<h%s class="group relative">
+      <span class="anchor" id="%s"></span>
+      <a href="#%s">
+        %s
+        <div class="absolute left-0 top-0 transform -translate-x-6 hidden group-hover:block">
+          <i class="fa fa-hashtag text-sm font-normal text-gray-600 align-middle -mt-px"></i>
+        </div>
+      </a>
+    </h%s>) % [level, anchor, anchor, text, level]
   end
 
   private
