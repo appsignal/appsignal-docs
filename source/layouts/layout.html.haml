@@ -29,17 +29,21 @@
 
   %body.font-rubik.bg-gray-100
     = partial "header"
+    %a.block.lg:hidden.py-4.flex.items-center.bg-blue-200.no-underline{href: "#navigation"}
+      .container
+        %i.fa.fa-book.mr-2
+        Documentation navigation
     .container
-      .flex.my-8
-        %a.jump{href: "#navigation"}
-          %i.fa.fa-book
-          Documentation navigation
-        .w-64.flex-shrink-0.mr-12.mt-4
-          = partial "docsearch"
+      .lg:hidden.my-4
+        = partial "docsearch"
+      .flex.flex-wrap.flex-col-reverse.lg:flex-row.my-4.lg:my-8
+        #navigation.w-full.md:w-64.pr-12.mt-4
+          .hidden.lg:block
+            = partial "docsearch"
           = partial "side_nav"
-        .bg-white.px-12.py-8.rounded.shadow-sm
+        .flex-1.bg-white.px-4.lg:px-12.py-6.lg:py-8.rounded.shadow-sm
           .inner= yield
-        .w-64.flex-shrink-0.ml-12.mt-4
+        #toc.w-full.hidden.xl:block.md:w-64.pl-12.mt-4
           %h3.uppercase.font-medium.text-gray-600.text-sm
             On this page
     = partial "footer"
