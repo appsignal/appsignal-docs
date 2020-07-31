@@ -16,6 +16,7 @@
         {
           name: "Your applications",
           icon: "fas fa-rocket",
+          link: "/application/",
           pages: [
             {
               name: "Overview",
@@ -116,6 +117,7 @@
         {
           name: "Your organizations",
           icon: "fas fa-users",
+          link: "/organization/",
           pages: [
             {
               name: "Overview",
@@ -148,10 +150,11 @@
         {
           name: "Your user account",
           icon: "fas fa-user",
+          link: "/user-account/",
           pages: [
             {
               name:"Overview",
-              link: "/user-account/index.html"
+              link: "/user-account/"
             },
             {
               name:"Email addresses",
@@ -171,6 +174,7 @@
         {
           name: "AppSignal for Ruby",
           icon: "fas fa-gem",
+          link: "/ruby/",
           pages: [
             {
               name: "Overview",
@@ -365,6 +369,7 @@
         {
           name: "AppSignal for Elixir",
           icon: "fas fa-tint",
+          link: "/elixir/",
           pages: [
             {
               name: "Overview",
@@ -498,6 +503,7 @@
         {
           name: "AppSignal for Node.js",
           icon: "fab fa-node-js",
+          link:"/nodejs/",
           pages: [
             {
               name: "Overview",
@@ -584,6 +590,7 @@
         {
           name: "AppSignal for Front-end",
           icon: "fab fa-js",
+          link: "/front-end/",
           pages: [
             {
               name: "Overview",
@@ -683,10 +690,11 @@
         {
           name: "Standalone agent<sup>Beta</sup>",
           icon: "fas fa-user-secret",
+          link: "/standalone-agent/",
           pages: [
             {
               name: "Installation",
-              link: "/standalone-agent/installation.html"
+              link: "/standalone-agent/"
             },
             {
               name: "StatsD",
@@ -697,6 +705,7 @@
         {
           name: "Metrics",
           icon: "fas fa-chart-area",
+          link: "/metrics/custom.html",
           pages: [
             {
               name: "Custom metrics",
@@ -721,6 +730,7 @@
         {
           name: "AppSignal API <sup>Beta</sup>",
           icon: "fas fa-code",
+          link: "/api/",
           pages: [
             {
               name: "Overview",
@@ -764,6 +774,7 @@
         {
           name: "Support",
           icon: "",
+          link: "/support/",
           pages: [
             {
               name: "Contact us!",
@@ -798,6 +809,7 @@
         {
           name: "About AppSignal",
           icon: "",
+          link: "/appsignal/",
           pages: [
             {
               name: "Contributing",
@@ -837,6 +849,9 @@
 
 %>
 
+
+
+
 <nav>
   <ul>
     <% sections.each do |section| %>
@@ -845,26 +860,35 @@
           <%= section[:name] %>
         </h2>
         <ul>
-          <%# Sections %>
+          <%# Sub-sections %>
           <% section[:sub_sections].each do |sub_section| %>
-            <li>
-              <a href="<%= sub_section[:link] %>" class="c-cat-link group no-underline hover:bg-gray-200 hover:text-gray-800">
+              <% sub_section_active = path_active?(sub_section[:link]) %>
+              <% sub_section_active_classes = "c-cat-link--active bg-gray-200 bg-opacity-50 text-gray-800 font-medium" %>
+              <a href="<%= sub_section[:link] %>" class="c-cat-link <%= sub_section_active ? sub_section_active_classes : "" %> group no-underline hover:bg-gray-200 hover:text-gray-800">
                 <i class="fa <%= sub_section[:icon] %> mr-2"></i>
                 <%= sub_section[:name] %>
               </a>
-              <%# Sub-sections %>
-              <% if !sub_section[:pages].nil? %>
+
+              <%# Pages %>
+              <% if !sub_section[:pages].nil? && sub_section_active %>
                 <ul class="c-subnav c-subnav--with-icon">
-                  <%# Pages %>
                   <% sub_section[:pages].each do |page| %>
+                    <% page_active = path_active?(page[:link]) %>
+                    <% page_active_classes = "text-gray-800 font-medium" %>
                     <li>
-                      <a href="<%= page[:link] %>" class="c-nav-link no-underline">
+                      <a href="<%= page[:link] %>" class="c-nav-link <%= page_active ? page_active_classes : "" %> no-underline flex items-center">
                         <%= page[:name] %>
+                        <% if !page[:sub_pages].nil? %>
+                          <i class="fa  <%= page_active ? "fa-chevron-up" : "fa-chevron-down" %> ml-1" style="font-size: 8px"></i>
+                        <% end %>
                       </a>
+
                       <%# Sub-pages %>
-                      <% if !page[:sub_pages].nil? %>
+                      <% if !page[:sub_pages].nil? && page_active %>
                         <% page[:sub_pages].each do |sub_page| %>
-                          <a href="<%= sub_page[:link] %>" class="c-nav-link ml-2 no-underline">
+                          <% sub_page_active = path_active?(sub_page[:link]) %>
+                          <% sub_page_active_classes = "text-gray-800 font-medium" %>
+                          <a href="<%= sub_page[:link] %>" class="c-nav-link <%= sub_page_active ? sub_page_active_classes : "" %> ml-2 no-underline">
                             <%= sub_page[:name] %>
                           </a>
                         <% end %>
