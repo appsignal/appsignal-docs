@@ -84,4 +84,44 @@ $(document).ready(function() {
 
     loadAnalyticsScripts();
   })
+
+  // Mobile menu
+  var mobileMenuToggle = document.querySelector(".js-mobile-menu-toggle")
+
+  mobileMenuToggle.addEventListener("click", function(e) {
+    e.preventDefault()
+    toggleMobileMenu()
+  }, false)
+
+  function toggleMobileMenu() {
+    // Toggle mobile menu wrapper
+    var mobileMenuWrapper = document.querySelector(".js-mobile-menu-wrapper")
+    var mobileMenuWrapperActiveClasses = mobileMenuWrapper.getAttribute("data-mobile-menu-wrapper-active-classes").split(" ")
+
+    mobileMenuWrapperActiveClasses.map(function(className) {
+      mobileMenuWrapper.classList.toggle(className)
+    })
+
+    // Toggle mobile menu navigation elements
+    var mobileMenuNavs = document.querySelectorAll(".js-mobile-menu-nav")
+    mobileMenuNavs.forEach(function(mobileMenuNav) {
+      mobileMenuNav.classList.toggle("hidden")
+    })
+
+    // Toggle between menu and close icon
+    var mobileMenuToggleIcon = document.querySelector(".js-mobile-menu-toggle .fa")
+    mobileMenuToggleIcon.classList.toggle("fa-bars")
+    mobileMenuToggleIcon.classList.toggle("fa-times")
+
+    // Block scrolling on body
+    document.body.classList.toggle("overflow-y-hidden")
+  }
+
+  // Remove overflow-y-hidden when resizing to normal menu
+  $(window).on("load, resize", function() {
+    var viewportWidth = $(window).width()
+    if (viewportWidth > 1024) {
+      $("body").removeClass("overflow-y-hidden")
+    }
+  })
 });
