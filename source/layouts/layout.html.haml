@@ -27,21 +27,25 @@
     %link{:rel => "stylesheet", :href => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"}
     = partial "analytics"
 
-  %body
+  %body.font-rubik.bg-gray-100.pt-20
     = partial "header"
-    .layout-wrapper
-      %a.jump{href: "#navigation"}
-        %i.fa.fa-book
-        Documentation navigation
-
-      = partial "docsearch"
-      .layout-main#main
-        .inner= yield
-      .layout-side#navigation
-        = partial "side_nav"
-      .layout-footer
-        = partial "footer"
-      = partial "cookies"
+    %a.jump{href: "#navigation"}
+      %i.fa.fa-book
+      Documentation navigation
+    .container.my-4.lg:my-12
+      .grid.grid-cols-1.lg:grid-cols-12
+        .row-start-1.row-span-1.lg:col-start-1.lg:col-span-3
+          .my-4.lg:pr-12
+            = partial "docsearch"
+        #navigation.row.start-3.lg:row-start-2.lg:row-span-1.lg:col-start-1.lg:col-span-3
+          .mt-4.lg:pr-12
+            = partial "side_nav"
+        #main.row-start-2.lg:row-start-1.lg:row-span-2.lg:col-start-4.lg:col-span-9
+          .bg-white.px-4.lg:px-12.py-6.lg:py-8.rounded.shadow-sm
+            .inner= yield
+    .layout-footer
+      = partial "footer"
+    = partial "cookies"
 
     %script{:type => "text/javascript", :src => "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"}
     :javascript
