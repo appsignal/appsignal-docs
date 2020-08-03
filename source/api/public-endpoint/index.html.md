@@ -2,29 +2,25 @@
 title: "Public endpoint"
 ---
 
-## Public endpoint
+This API is a traffic-optimized endpoint to push data to AppSignal that is not sent through the [AppSignal agent](/appsignal/how-appsignal-operates.html#agent).
 
-This API is a traffic-optimised endpoint to push data to AppSignal that is not sent through the agent.
-
-
-Base URL:
+## Base URL
 
 ```
 https://appsignal-endpoint.net
 ```
 
-Authentication:
+## Authentication
 
-Authentication is done with a Public endpoint (or Front-end) API key, which can be found under "App settings".
+Authentication is done with a Public endpoint (or Front-end) API key, which can be found in [App settings](https://appsignal.com/redirect-to/app?to=info).
 
-URL Parameters:
+## URL Parameters
 
-| Param | Type | Description  |
-| ------ | ------ | -----: |
-| api_key | string | **Front-end** API key, can be found under "App settings" |
-|  name  |  string  |   Name of the application, must match existing application on AppSignal|
-|  environment  |  string |  Environment of application, must match existing application/environment on AppSignal.  |
-
+| Parameters | Type | Description |
+| --- | ------ | --- |
+| api_key | String | **Front-end** API key, can be found in [App settings](https://appsignal.com/redirect-to/app?to=info). |
+| name | String | Name of the application, must match existing application on AppSignal. |
+| environment | String | Environment of application, must match existing application/environment on AppSignal. |
 
 Full example:
 
@@ -32,8 +28,7 @@ Full example:
 https://appsignal-endpoint.net/metrics/statsd?api_key=<api_key>&name=<name>&environment=<environment>
 ```
 
--> **Note**: This endpoint is optimised for traffic and does not validate the API key or payload, a `200`(`OK`) is returned when the body size is within the `200k` limit. This doesn't mean the request is accepted when processed.
-
+-> **Note**: This endpoint is optimized for large amounts of traffic and does not validate the API key or payload, a `200` (`OK`) response is returned when the body size is within the `200k` limit. This doesn't mean the request is accepted when received.
 
 ## Endpoints
 
