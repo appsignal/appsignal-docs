@@ -1,0 +1,21 @@
+.tag
+  font-size: 11px
+  line-height: 23px
+  padding: 0 10px
+  background: $green
+  color: #fff
+  text-transform: uppercase
+  border-radius: $br
+  letter-spacing: 1px
+  +font-weight(bold)
+  margin-bottom: 5px
+  display: inline-block
+
+  @each $color in $colors
+    &.#{nth($color, 1)}
+      background: #{nth($color, 2)}
+      color: #fff
+
+  &.white
+    color: $dark
+    background: #fff

@@ -1,0 +1,99 @@
+body
+  font-family: $font-family
+  +font-weight(normal)
+  color: $font-color
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+p, ul, ol
+  line-height: $line-height
+
+a
+  text-decoration: underline
+  color: $blue
+
+  &:hover,
+  &:focus
+    color: darken($blue,8%)
+
+code
+  font-family: $pre-font
+  font-size: $font-size-small
+
+p, li, h2, h3, h4
+  code
+    padding: 4px 6px
+    background-color: $light
+    border-radius: 2px
+
+pre
+  line-height: 2
+
+  code
+    font-size: inherit
+    color: $pre-color
+
+small
+  font-size: .8em
+
+sup
+  vertical-align: super
+  font-size: .8em
+
+sub
+  vertical-align: sub
+  font-size: .8em
+
+%t-large
+  font-size: 18px
+  line-height: 1.75
+
+%t-normal
+  font-size: 16px
+  line-height: 1.75
+
+%t-small
+  font-size: 14px
+  line-height: 1.75
+
+%h-huge
+  font-size: 50px
+  line-height: 1.1
+  font-weight: bold
+  +max-width(1200px)
+    font-size: 50px
+
+%h-large
+  font-size: 40px
+  line-height: 1.25
+  font-weight: bold
+  +max-width(800px)
+    font-size: 30px
+
+%h-medium
+  font-size: 30px
+  line-height: 1.25
+  font-weight: bold
+  +max-width(800px)
+    font-size: 25px
+
+%h-normal
+  line-height: 1.5
+  font-weight: bold
+  font-size: 22px
+
+%h-small
+  line-height: 1.5
+  font-size: 14px
+  letter-spacing: 1px
+  +font-weight(bold)
+  text-transform: uppercase
+
+%h-tiny
+  +font-weight(bold)
+  line-height: 1.5
+  font-size: 12px
+  text-transform: uppercase

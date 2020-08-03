@@ -1,0 +1,65 @@
+.button
+  display: inline-block
+  padding: 10px 20px
+  color: #fff !important
+  line-height: 26px
+  font-size: 16px
+  border-radius: $br
+  background: $green
+  text-decoration: none
+  +font-weight(bold)
+  +shadow
+  border: 1px solid $green
+  cursor: pointer
+
+  +hocus
+    background: darken($green,6)
+    border: 1px solid darken($green,6)
+
+  &.small
+    padding: 5px 20px
+
+  &.tiny
+    padding: 5px 10px
+    line-height: 20px
+
+  &.outline-dark
+    background: #fff
+    border: 1px solid $border-dark
+    color: $blue-dark !important
+
+    +hocus
+      background: $border
+
+  &.orange
+    background: $orange
+
+    +hocus
+      background: darken($orange,5)
+      color: #fff !important
+      border-color: darken($orange,5)
+
+  &.red
+    background: $red
+
+    +hocus
+      background: darken($red,5)
+      color: #fff !important
+      border-color: darken($red,5)
+
+  &.outline-white
+    background: none
+    border: 1px solid rgba(#fff, .3)
+    color: #fff !important
+    box-shadow: none
+
+    +hocus
+      border: 1px solid rgba(#fff, .6)
+
+  &.white
+    background: #fff
+    border: 1px solid #fff
+    color: $dark !important
+    +hocus
+      background: $border
+      border: 1px solid $border

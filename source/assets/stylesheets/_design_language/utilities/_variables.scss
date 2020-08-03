@@ -1,0 +1,113 @@
+// Dark shades
+$darkest: #011940;
+$dark: #21375A;
+$medium: #6B7B96;
+$light: #EDEFF3;
+
+$blue-light: $light;
+$blue-dark: $dark;
+$dark-blue: $darkest;
+$gray: mix($light,$medium);
+
+$font-family: "MuseoSansRounded", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$pre-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-weights: (light: 200, normal: 400, bold: 600);
+$font-size-large: 19px;
+$font-size: 16px;
+$font-size-small: 13px;
+$line-height: 1.5;
+$font-color: $blue-dark;
+
+$border: $light;
+$border-dark: #C9CFDD;
+
+$blue-light: $light;
+
+$blue: #2166CD;
+$brown: #8E523D;
+$purple: #7826A2;
+$green: #09BA76;
+$orange: #F35320;
+$red: #D20325;
+$yellow: #F8A221;
+$cyan: #029B9B;
+
+// Color list
+
+$colors: (
+  ("white", #fff),
+  ("darkest", $darkest),
+  ("dark", $dark),
+  ("medium", $medium),
+  ("light", $light),
+  ("blue", $blue),
+  ("purple", $purple),
+  ("green", $green),
+  ("orange", $orange),
+  ("red", $red),
+  ("yellow", $yellow),
+  ("gray", $medium),
+  ("brown", $brown),
+  ("cyan", $cyan)
+);
+
+$br: 3px;
+
+// Padding + borders
+$padding: 20px;
+
+$body-bg: $light;
+
+// Code fonts
+$code-color: #024966;
+$pre-color:  #ecf0f2;
+
+$navigation: (
+  (
+    class: "errors",
+    icon: "fa-exclamation-triangle",
+    color: $orange,
+    background: linear-gradient(125deg,$orange,darken($orange,10))
+  ),
+  (
+    class: "performance",
+    color: $green,
+    background: linear-gradient(125deg,$green,darken($green,10))
+
+  ),
+  (
+    class: "hosts",
+    color: $purple,
+    background: linear-gradient(125deg,$purple,darken($purple,10))
+
+  ),
+  (
+    class: "metrics",
+    icon: "fa-area-chart",
+    color: $red,
+    background: linear-gradient(125deg,$red,darken($red,10))
+  ),
+  (
+    class: "dashboard",
+    color: mix($dark,$purple),
+    background: linear-gradient(125deg,mix($dark,$purple),mix($dark,$purple,80))
+  ),
+  (
+    class: "workflow",
+    icon: "fa-user",
+    color: $blue,
+    background: linear-gradient(125deg,$blue,darken($blue,10))
+  ),
+  (
+    class: "anomalies",
+    icon: "fa-user",
+    color: $blue,
+    background: linear-gradient(125deg,$blue,darken($blue,10))
+  ),
+  (
+    class: "dashboards",
+    icon: "fa-user",
+    color: $blue,
+    background: linear-gradient(125deg,$blue,darken($blue,10))
+  )
+);
