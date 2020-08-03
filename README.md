@@ -8,20 +8,20 @@ website][docs].
 - [Support][contact]
 
 ## Setup
-
-Run the following commands:
+1. Replace ${FONTAWESOME_TOKEN} in `.npmrc` with the token you can find in 1Password
+2. Run the following commands:
 
 ```sh
 git submodule init
 git submodule update
-FORTAWESOME_TOKEN=find_token_in_1password yarn install
+yarn install
 bundle install
 ```
 
 ## Usage
 
 ```sh
-FORTAWESOME_TOKEN=find_token_in_1password bundle exec middleman
+bundle exec middleman
 ```
 
 Open the browser at [localhost:4567](http://localhost:4567/) and click around.
