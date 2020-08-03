@@ -77,6 +77,14 @@ helpers do
     "AppSignal documentation"
   end
 
+  def path_active?(path)
+    if path === '/'
+      return current_page.url === '/'
+    end
+
+    return current_page.url.include?(path)
+  end
+
   def link_with_active(*args, &block)
     if block_given?
       path, options = args
