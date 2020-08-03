@@ -5,3 +5,5 @@
 .env
 /node_modules
 .tmp
+.npmrc
+yarn-error.log
