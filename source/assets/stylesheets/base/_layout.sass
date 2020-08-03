@@ -2,47 +2,6 @@ $sidebar-small: 240px
 $sidebar: 300px
 $full: 960px
 
-*
-  box-sizing: border-box
-
-img
-  max-width: 100%
-  -ms-interpolation-mode: bicubic
-
-html
-  height: 100%
-
-.layout-wrapper
-  +min-width($full)
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  min-height: calc(100vh - 80px)
-  margin-top: 80px
-
-.layout-side
-  background: $border
-
-  +min-width($full)
-    position: fixed
-    left: 0
-    top: 140px
-    width: $sidebar
-    overflow-y: auto
-    +scrollbar(7px, rgba($medium,.4))
-    height: calc(100vh - 140px)
-
-.layout-main
-  +min-width($full)
-    padding-top: 20px
-    flex: 1
-    margin-left: $sidebar
-
-  .inner
-    width: 100%
-    max-width: $full
-    margin: 0 auto
-
 .layout-footer
   +min-width($full)
     margin-left: $sidebar
