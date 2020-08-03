@@ -107,7 +107,7 @@ helpers do
     link_to(
       "Create a pull request",
       page_path.gsub(DOCS_ROOT, GITHUB_ROOT),
-      :class => "button tiny outline-white"
+      :class => "c-button c-button--sm c-button--gray ml-2"
     )
   end
 
