@@ -1,0 +1,906 @@
+<%
+  sections = [
+    {
+      name: "Overview",
+      sub_sections: [
+        {
+          name: "Start",
+          icon: "fas fa-rocket",
+          link: "/"
+        },
+        {
+          name: "FAQs",
+          icon: "fas fa-question-circle",
+          link: "/faq.html"
+        },
+        {
+          name: "Your applications",
+          icon: "fas fa-rocket",
+          link: "/application/",
+          pages: [
+            {
+              name: "Overview",
+              link: "/application/"
+            },
+            {
+              name: "Add an application",
+              link: "/application/new-application.html"
+            },
+            {
+              name: "Anomaly detection",
+              link: "/application/anomaly-detection/"
+            },
+            {
+              name: "Namespaces",
+              link: "/application/namespaces.html"
+            },
+            {
+              name: "Customizing data collection",
+              link: "/application/data-collection.html"
+            },
+            {
+              name: "Markers",
+              link: "/application/markers/",
+              sub_pages: [
+                {
+                  name: "Deploy markers",
+                  link: "/application/markers/deploy-markers.html"
+                },
+                {
+                  name: "Custom markers",
+                  link: "/application/markers/custom-markers.html"
+                }
+              ]
+            },
+            {
+              name: "Settings",
+              link: "/application/settings.html",
+              sub_pages: [
+                {
+                  name: "Notification settings",
+                  link: "/application/notification-settings.html"
+                },
+                {
+                  name: "Link templates",
+                  link: "/application/link-templates.html"
+                },
+                {
+                  name: "Backtrace links",
+                  link: "/application/backtrace-links.html"
+                }
+              ]
+            },
+            {
+              name: "Integrations (full list)",
+              link: "/application/integrations/",
+              sub_pages: [
+                {
+                  name: "Asana",
+                  link: "/application/integrations/asana.html"
+                },
+                {
+                  name: "Clubhouse",
+                  link: "/application/integrations/clubhouse.html"
+                },
+                {
+                  name: "Discord",
+                  link: "/application/integrations/discord.html"
+                },
+                {
+                  name: "Google Hangouts Chat",
+                  link: "/application/integrations/hangouts.html"
+                },
+                {
+                  name: "Intercom",
+                  link: "/application/integrations/intercom.html"
+                },
+                {
+                  name: "Jira",
+                  link: "/application/integrations/jira.html"
+                },
+                {
+                  name: "PagerDuty",
+                  link: "/application/integrations/pagerduty.html"
+                },
+                {
+                  name: "Slack",
+                  link: "/application/integrations/slack.html"
+                },
+                {
+                  name: "Webhooks",
+                  link: "/application/integrations/webhooks.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "Your organizations",
+          icon: "fas fa-users",
+          link: "/organization/",
+          pages: [
+            {
+              name: "Overview",
+              link: "/organization/"
+            },
+            {
+              name: "Team management",
+              link: "/organization/team/",
+              sub_pages: [
+                {
+                  name: "Manage members",
+                  link: "/organization/team/members.html"
+                },
+                {
+                  name: "Manage owners",
+                  link: "/organization/team/owners.html"
+                },
+                {
+                  name: "Manage teams",
+                  link: "/organization/team/teams.html"
+                }
+              ]
+            },
+            {
+              name: "Billing",
+              link: "/organization/billing.html"
+            }
+          ]
+        },
+        {
+          name: "Your user account",
+          icon: "fas fa-user",
+          link: "/user-account/",
+          pages: [
+            {
+              name:"Overview",
+              link: "/user-account/"
+            },
+            {
+              name:"Email addresses",
+              link: "/user-account/email-addresses.html"
+            },
+            {
+              name:"Two-factor authentication",
+              link: "/user-account/two-factor-authentication.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Languages",
+      sub_sections: [
+        {
+          name: "AppSignal for Ruby",
+          icon: "fas fa-gem",
+          link: "/ruby/",
+          pages: [
+            {
+              name: "Overview",
+              link: "/ruby/"
+            },
+            {
+              name: "Installation",
+              link: "/ruby/installation.html"
+            },
+            {
+              name: "Configuration",
+              link: "/ruby/configuration/",
+              sub_pages: [
+                {
+                  name: "Options",
+                  link: "/ruby/configuration/options.html"
+                },
+                {
+                  name: "Load order",
+                  link: "/ruby/configuration/load-order.html"
+                },
+                {
+                  name: "Ignore actions",
+                  link: "/ruby/configuration/ignore-actions.html"
+                },
+                {
+                  name: "Ignore errors",
+                  link: "/ruby/configuration/ignore-errors.html"
+                },
+                {
+                  name: "Parameter filtering",
+                  link: "/ruby/configuration/parameter-filtering.html"
+                },
+                {
+                  name: "Session data filtering",
+                  link: "/ruby/configuration/session-data-filtering.html"
+                },
+              ]
+            },
+            {
+              name: "Integrations",
+              link: "/ruby/integrations/",
+              sub_pages: [
+                {
+                  name: "Capistrano",
+                  link: "/ruby/integrations/capistrano.html"
+                },
+                {
+                  name: "DataMapper",
+                  link: "/ruby/integrations/datamapper.html"
+                },
+                {
+                  name: "Delayed::Job",
+                  link: "/ruby/integrations/delayed-job.html"
+                },
+                {
+                  name: "Grape",
+                  link: "/ruby/integrations/grape.html"
+                },
+                {
+                  name: "MongoDB",
+                  link: "/ruby/integrations/mongodb.html"
+                },
+                {
+                  name: "Padrino",
+                  link: "/ruby/integrations/padrino.html"
+                },
+                {
+                  name: "Puma",
+                  link: "/ruby/integrations/puma.html"
+                },
+                {
+                  name: "Que",
+                  link: "/ruby/integrations/que.html"
+                },
+                {
+                  name: "Rack",
+                  link: "/ruby/integrations/rack.html"
+                },
+                {
+                  name: "Rake",
+                  link: "/ruby/integrations/rake.html"
+                },
+                {
+                  name: "Resque",
+                  link: "/ruby/integrations/resque.html"
+                },
+                {
+                  name: "Ruby on Rails",
+                  link: "/ruby/integrations/rails.html"
+                },
+                {
+                  name: "Sequel",
+                  link: "/ruby/integrations/sequel.html"
+                },
+                {
+                  name: "Shoryuken",
+                  link: "/ruby/integrations/shoryuken.html"
+                },
+                {
+                  name: "Sidekiq",
+                  link: "/ruby/integrations/sidekiq.html"
+                },
+                {
+                  name: "Sinatra",
+                  link: "/ruby/integrations/sinatra.html"
+                },
+                {
+                  name: "Webmachine",
+                  link: "/ruby/integrations/webmachine.html"
+                },
+                {
+                  name: "Integration gems <sup>Deprecated</sup>",
+                  link: "/ruby/integrations/appsignal-gems.html"
+                },
+              ]
+            },
+            {
+              name: "Custom instrumentation",
+              link: "/ruby/instrumentation/",
+              sub_pages: [
+                {
+                  name: "Integrating AppSignal",
+                  link: "/ruby/instrumentation/integrating-appsignal.html"
+                },
+                {
+                  name: "Instrumentation",
+                  link: "/ruby/instrumentation/instrumentation.html"
+                },
+                {
+                  name: "Exception handling",
+                  link: "/ruby/instrumentation/exception-handling.html"
+                },
+                {
+                  name: "Tagging and Sample Data",
+                  link: "/ruby/instrumentation/tagging.html"
+                },
+                {
+                  name: "Namespaces",
+                  link: "/ruby/instrumentation/namespaces.html"
+                },
+                {
+                  name: "Ignore instrumentation",
+                  link: "/ruby/instrumentation/ignore-instrumentation.html"
+                },
+                {
+                  name: "Background jobs",
+                  link: "/ruby/instrumentation/background-jobs.html"
+                },
+                {
+                  name: "Method instrumentation",
+                  link: "/ruby/instrumentation/method-instrumentation.html"
+                },
+                {
+                  name: "Event formatters",
+                  link: "/ruby/instrumentation/event-formatters.html"
+                },
+                {
+                  name: "Minutely probes <sup>New</sup>",
+                  link: "/ruby/instrumentation/minutely-probes.html"
+                },
+                {
+                  name: "Request queue time",
+                  link: "/ruby/instrumentation/request-queue-time.html"
+                },
+              ]
+            },
+            {
+              name: "Command line tools",
+              link: "/ruby/command-line/",
+              sub_pages: [
+                {
+                  name: "Install",
+                  link: "/ruby/command-line/install.html"
+                },
+                {
+                  name: "Diagnose",
+                  link: "/ruby/command-line/diagnose.html"
+                },
+                {
+                  name: "Demo",
+                  link: "/ruby/command-line/demo.html"
+                },
+                {
+                  name: "Notify of deploy",
+                  link: "/ruby/command-line/notify_of_deploy.html"
+                },
+              ]
+            },
+          ]
+        },
+        {
+          name: "AppSignal for Elixir",
+          icon: "fas fa-tint",
+          link: "/elixir/",
+          pages: [
+            {
+              name: "Overview",
+              link: "/elixir/"
+            },
+            {
+              name: "Installation",
+              link: "/elixir/installation.html",
+              sub_pages: [
+                {
+                  name: "Umbrella applications",
+                  link: "/elixir/installation/umbrella.html"
+                },
+              ]
+            },
+            {
+              name: "Configuration",
+              link: "/elixir/configuration/",
+              sub_pages: [
+                {
+                  name: "Options",
+                  link: "/elixir/configuration/options.html"
+                },
+                {
+                  name: "Load order",
+                  link: "/elixir/configuration/load-order.html"
+                },
+                {
+                  name: "Ignore actions",
+                  link: "/elixir/configuration/ignore-actions.html"
+                },
+                {
+                  name: "Ignore errors",
+                  link: "/elixir/configuration/ignore-errors.html"
+                },
+                {
+                  name: "Parameter filtering",
+                  link: "/elixir/configuration/parameter-filtering.html"
+                },
+                {
+                  name: "Session data filtering",
+                  link: "/elixir/configuration/session-data-filtering.html"
+                },
+              ]
+            },
+            {
+              name: "Integrations",
+              link: "/elixir/integrations/",
+
+              sub_pages: [
+                {
+                  name: "Phoenix",
+                  link: "/elixir/integrations/phoenix.html"
+                },
+                {
+                  name: "Plug",
+                  link: "/elixir/integrations/plug.html"
+                },
+                {
+                  name: "Ecto",
+                  link: "/elixir/integrations/ecto.html"
+                },
+                {
+                  name: "Erlang",
+                  link: "/elixir/integrations/erlang.html"
+                },
+              ]
+            },
+            {
+              name: "Custom instrumentation",
+              link: "/elixir/instrumentation/",
+              sub_pages: [
+                {
+                  name: "Integrating AppSignal",
+                  link: "/elixir/instrumentation/integrating-appsignal.html"
+                },
+                {
+                  name: "Instrumentation",
+                  link: "/elixir/instrumentation/instrumentation.html"
+                },
+                {
+                  name: "Exception handling",
+                  link: "/elixir/instrumentation/exception-handling.html"
+                },
+                {
+                  name: "Tagging and Sample Data",
+                  link: "/elixir/instrumentation/tagging.html"
+                },
+                {
+                  name: "Namespaces",
+                  link: "/elixir/instrumentation/namespaces.html"
+                },
+                {
+                  name: "Minutely probes <sup>New</sup>",
+                  link: "/elixir/instrumentation/minutely-probes.html"
+                },
+                {
+                  name: "Mix tasks",
+                  link: "/elixir/instrumentation/mix_tasks.html"
+                },
+              ]
+            },
+            {
+              name: "Command line tools",
+              link: "/elixir/command-line/",
+              sub_pages: [
+                {
+                  name: "Install",
+                  link: "/elixir/command-line/install.html"
+                },
+                {
+                  name: "Diagnose",
+                  link: "/elixir/command-line/diagnose.html"
+                },
+                {
+                  name: "Demo",
+                  link: "/elixir/command-line/demo.html"
+                },
+              ]
+            },
+            {
+              name: "Releases",
+              link: "/elixir/releases.html"
+            },
+            {
+              name: "Why a NIF?",
+              link: "/elixir/why-nif.html"
+            },
+          ]
+        },
+        {
+          name: "AppSignal for Node.js",
+          icon: "fab fa-node-js",
+          link:"/nodejs/",
+          pages: [
+            {
+              name: "Overview",
+              link:"/nodejs/"
+            },
+            {
+              name: "Installation",
+              link:"/nodejs/installation.html"
+            },
+            {
+              name: "Configuration",
+              link:"/nodejs/configuration/",
+              sub_pages: [
+                {
+                  name: "Options",
+                  link:"/nodejs/configuration/options.html"
+                },
+                {
+                  name: "Load order",
+                  link:"/nodejs/configuration/load-order.html"
+                },
+              ]
+            },
+            {
+              name: "Tracing",
+              link:"/nodejs/tracing/",
+              sub_pages: [
+                {
+                  name: "The Tracer object",
+                  link:"/nodejs/tracing/tracer.html"
+                },
+                {
+                  name: "Async tracing and Scopes",
+                  link:"/nodejs/tracing/scopes.html"
+                },
+                {
+                  name: "Creating and using a Span",
+                  link:"/nodejs/tracing/span.html"
+                },
+                {
+                  name: "Span API",
+                  link:"/nodejs/tracing/span-api.html"
+                },
+              ]
+            },
+            {
+              name: "Metrics",
+              link:"/nodejs/metrics/",
+              sub_pages: [
+                {
+                  name: "The Metrics object",
+                  link:"/nodejs/metrics/meters.html"
+                },
+                {
+                  name: "Minutely probes",
+                  link:"/nodejs/metrics/minutely-probes.html"
+                },
+              ]
+            },
+            {
+              name: "Integrations",
+              link:"/nodejs/integrations/",
+              sub_pages: [
+                {
+                  name: "Node.js Core",
+                  link:"/nodejs/integrations/core.html"
+                },
+                {
+                  name: "Express",
+                  link:"/nodejs/integrations/express.html"
+                },
+                {
+                  name: "node-postgres",
+                  link:"/nodejs/integrations/pg.html"
+                },
+                {
+                  name: "Next.js",
+                  link:"/nodejs/integrations/nextjs.html"
+                },
+              ]
+            }
+          ]
+        },
+        {
+          name: "AppSignal for Front-end",
+          icon: "fab fa-js",
+          link: "/front-end/",
+          pages: [
+            {
+              name: "Overview",
+              link: "/front-end/"
+            },
+            {
+              name: "Installation",
+              link: "/front-end/installation.html"
+            },
+            {
+              name: "Configuration",
+              link: "/front-end/configuration/"
+            },
+            {
+              name: "Error handling",
+              link: "/front-end/error-handling.html"
+            },
+            {
+              name: "Creating and Using a Span",
+              link: "/front-end/span.html"
+            },
+            {
+              name: "Hooks",
+              link: "/front-end/hooks.html"
+            },
+            {
+              name: "Breadcrumbs",
+              link: "/front-end/breadcrumbs.html"
+            },
+            {
+              name: "Sourcemaps",
+              link: "/front-end/sourcemaps.html"
+            },
+            {
+              name: "Integrations",
+              link: "/front-end/integrations/",
+              sub_pages: [
+                {
+                  name: "React",
+                  link: "/front-end/integrations/react.html"
+                },
+                {
+                  name: "Vue",
+                  link: "/front-end/integrations/vue.html"
+                },
+                {
+                  name: "Angular",
+                  link: "/front-end/integrations/angular.html"
+                },
+                {
+                  name: "Ember",
+                  link: "/front-end/integrations/ember.html"
+                },
+                {
+                  name: "Preact",
+                  link: "/front-end/integrations/preact.html"
+                },
+                {
+                  name: "Stimulus",
+                  link: "/front-end/integrations/stimulus.html"
+                },
+              ]
+            },
+            {
+              name: "Plugins",
+              link: "/front-end/plugins/",
+              sub_pages: [
+                {
+                  name: "plugin-breadcrumbs-console",
+                  link: "/front-end/plugins/plugin-breadcrumbs-console.html"
+                },
+                {
+                  name: "plugin-breadcrumbs-network",
+                  link: "/front-end/plugins/plugin-breadcrumbs-network.html"
+                },
+                {
+                  name: "plugin-window-events",
+                  link: "/front-end/plugins/plugin-window-events.html"
+                },
+                {
+                  name: "plugin-path-decorator",
+                  link: "/front-end/plugins/plugin-path-decorator.html"
+                },
+              ]
+            },
+            {
+              name: "Troubleshooting",
+              link: "/front-end/troubleshooting.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Features",
+      sub_sections: [
+        {
+          name: "Standalone agent<sup>Beta</sup>",
+          icon: "fas fa-user-secret",
+          link: "/standalone-agent/",
+          pages: [
+            {
+              name: "Installation",
+              link: "/standalone-agent/"
+            },
+            {
+              name: "StatsD",
+              link: "/standalone-agent/statsd.html"
+            }
+          ]
+        },
+        {
+          name: "Metrics",
+          icon: "fas fa-chart-area",
+          link: "/metrics/",
+          pages: [
+            {
+              name: "Custom metrics",
+              link: "/metrics/"
+            },
+            {
+              name: "Host metrics",
+              link: "/metrics/host.html",
+              sub_pages: [
+                {
+                  name: "Heroku host metrics",
+                  link: "/metrics/host-metrics/heroku.html"
+                },
+                {
+                  name: "Container host metrics",
+                  link: "/metrics/host-metrics/containers.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "AppSignal API <sup>Beta</sup>",
+          icon: "fas fa-code",
+          link: "/api/",
+          pages: [
+            {
+              name: "Overview",
+              link: "/api/"
+            },
+            {
+              name: "Push API <sup>Deprecated</sup>",
+              link: "/push-api/overview.html"
+            },
+            {
+              name: "Deploy markers",
+              link: "/push-api/deploy-marker.html"
+            },
+            {
+              name: "Graphs",
+              link: "/api/graphs.html"
+            },
+            {
+              name: "Markers",
+              link: "/api/markers.html"
+            },
+            {
+              name: "Samples",
+              link: "/api/samples.html"
+            },
+            {
+              name: "Event names",
+              link: "/api/event-names.html"
+            },
+            {
+              name: "Sourcemaps",
+              link: "/api/sourcemaps.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: "More",
+      sub_sections: [
+        {
+          name: "Support",
+          icon: "fas fa-question-circle",
+          link: "/support/",
+          pages: [
+            {
+              name: "Contact us!",
+              link: "mailto:support@appsignal.com"
+            },
+            {
+              name: "Debugging AppSignal",
+              link: "/support/debugging.html"
+            },
+            {
+              name: "Supported Operating Systems",
+              link: "/support/operating-systems.html"
+            },
+            {
+              name: "Limiting requests",
+              link: "/support/limiting-requests.html"
+            },
+            {
+              name: "Known issues",
+              link: "/support/known-issues.html",
+            },
+            {
+              name: "About time",
+              link: "/support/about-time.html",
+            },
+            {
+              name: "Service status page",
+              link: "https://status.appsignal.com"
+            }
+          ]
+        },
+        {
+          name: "About AppSignal",
+          icon: "fas fa-info-circle",
+          link: "/appsignal/",
+          pages: [
+            {
+              name: "Contributing",
+              link: "/appsignal/contributing.html",
+              sub_pages: [
+                {
+                  name: "Code of Conduct",
+                  link: "/appsignal/code-of-conduct.html"
+                },
+              ]
+            },
+            {
+              name: "Security",
+              link: "/appsignal/security.html"
+            },
+            {
+              name: "GDPR",
+              link: "/appsignal/gdpr.html"
+            },
+            {
+              name: "How our integrations operate",
+              link: "/appsignal/how-appsignal-operates.html"
+            },
+            {
+              name: "Life cycle of app data",
+              link: "/appsignal/data-life-cycle.html"
+            },
+            {
+              name: "Terminology",
+              link: "/appsignal/terminology.html"
+            },
+          ]
+        }
+      ]
+    }
+  ]
+
+%>
+
+
+
+
+<nav>
+  <ul>
+    <% sections.each do |section| %>
+      <li class="mb-6">
+        <h2 class="c-heading--caps text-gray-600 text-ms">
+          <%= section[:name] %>
+        </h2>
+        <ul>
+          <%# Sub-sections %>
+          <% section[:sub_sections].each do |sub_section| %>
+              <% sub_section_active = path_active?(sub_section[:link]) %>
+              <% sub_section_active_classes = "c-cat-link--active bg-gray-200 bg-opacity-50 text-gray-800 font-medium" %>
+              <a href="<%= sub_section[:link] %>" class="c-cat-link <%= sub_section_active ? sub_section_active_classes : "" %> group no-underline hover:bg-gray-200 hover:text-gray-800">
+                <i class="fa-fw <%= sub_section[:icon] %> mr-2"></i>
+                <%= sub_section[:name] %>
+              </a>
+
+              <%# Pages %>
+              <% if !sub_section[:pages].nil? && sub_section_active %>
+                <ul class="c-subnav c-subnav--with-icon">
+                  <% sub_section[:pages].each do |page| %>
+                    <% page_active = path_active?(page[:link]) %>
+                    <% page_active_classes = "text-gray-800 font-medium" %>
+                    <li>
+                      <a href="<%= page[:link] %>" class="c-nav-link <%= page_active ? page_active_classes : "" %> no-underline flex items-center">
+                        <%= page[:name] %>
+                        <% if !page[:sub_pages].nil? %>
+                          <i class="far <%= page_active ? "fa-angle-up" : "fa-angle-down" %> ml-1 text-xs"></i>
+                        <% end %>
+                      </a>
+
+                      <%# Sub-pages %>
+                      <% if !page[:sub_pages].nil? && page_active %>
+                        <% page[:sub_pages].each do |sub_page| %>
+                          <% sub_page_active = path_active?(sub_page[:link]) %>
+                          <% sub_page_active_classes = "text-gray-800 font-medium" %>
+                          <a href="<%= sub_page[:link] %>" class="c-nav-link <%= sub_page_active ? sub_page_active_classes : "" %> ml-2 no-underline">
+                            <%= sub_page[:name] %>
+                          </a>
+                        <% end %>
+                      <% end %>
+                    </li>
+                  <% end %>
+                </ul>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+</nav>
