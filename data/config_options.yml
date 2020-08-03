@@ -653,6 +653,16 @@ options:
       Newer versions of the AppSignal integration automatically detect its container environment, so no manual configuration is necessary. If you're having trouble with the automatic detection, please [contact support](mailto:support@appsignal.com).
 
       This option is set to `true` automatically on [Heroku](http://heroku.com/).
+  - config_key: send_environment_metadata
+    env_key: APPSIGNAL_SEND_ENVIRONMENT_METADATA
+    ruby:
+      since: 2.11.0
+      type: bool
+      default_value: true
+    description: |
+      Send environment metadata about the app.
+
+      For more information please read about [environment metadata](/application/environment-metadata.html).
   - config_key: send_params
     env_key: APPSIGNAL_SEND_PARAMS
     ruby:

@@ -68,6 +68,18 @@ The following host metrics are collected by the AppSignal agent for every minute
 
 These host metrics are collected by default. To disable it, use the `enable_host_metrics` configuration option, for [Ruby](/ruby/configuration/options.html#option-enable_host_metrics) and [Elixir](/elixir/configuration/options.html#option-enable_host_metrics).
 
+### Environment metadata
+
+The AppSignal agent reports the following information of the host. Once received this metadata is shown on the [host metrics index page](https://appsignal.com/redirect-to/app?to=host_metrics) per host to provide more detail of all hosts running an app. Use this metadata to spot any differences between hosts that could cause differences in behavior.
+
+- Host architecture, 32 or 64-bit.
+- Operating System, either Linux, macOS or Windows.
+- Operating System Distribution, for Linux this reports Ubuntu, Fedora, etc.
+- Operating System version, the version of the Operating System.
+- Kernel version, for Linux this reports the installed kernel version.
+
+This metadata is collected by default. To disable it, use the `send_environment_metadata` configuration option, for [Ruby](/ruby/configuration/options.html#option-send_environment_metadata).
+
 ## Heroku support
 
 To use host metrics on Heroku, head to the [Heroku host metrics][heroku support] page.
