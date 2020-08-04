@@ -1,68 +1,42 @@
-.mod-docsearch
-  +min-width($full)
-    z-index: 10
+// Design system colors
+$gray-800: #203053
+$gray-600: #67789D
+$gray-200: #D9DDE7
 
-  .algolia-autocomplete
-    width: 100%
+// Documentation: https://docsearch.algolia.com/docs/styling
+.algolia-autocomplete
+  width: 100%
 
-    a
-      text-decoration: none
+  // Main dropdown wrapper
+  .ds-dropdown-menu
+    margin-left: -36px !important
 
-  input
-    width: 100%
-    +shadow
-    +br
-    padding: 10px
-    font-size: 14px
-    color: $medium
+    @media (max-width: 1024px)
+      width: calc(100% + 36px)
+      min-width: 100% !important
 
-  input:focus
-    outline: none
+    // Suggestion wrapper
+    .algolia-docsearch-suggestion
+      &.algolia-docsearch-suggestion__main
+        text-decoration: none
 
-  input::placeholder
-    color: rgba($medium,0.7)
+      // Category header
+      .algolia-docsearch-suggestion--category-header
+        font-weight: 500
+        color: $gray-800
+        border-bottom: 1px solid $gray-200
 
-  .algolia-autocomplete
-    font-size: 14px
+      // Subcategory
+      .algolia-docsearch-suggestion--subcategory-column
+        color: $gray-600
+        font-weight: 400
 
-  +max-width(600px)
-    .algolia-autocomplete .ds-dropdown-menu
-      left: 0 !important
-      right: 0 !important
-      min-width: 100%
-      max-width: 100%
+      // Title
+      .algolia-docsearch-suggestion--title
+        color: $gray-800
+        font-weight: 500
 
-  /* Main category (eg. Getting Started) */
-  .algolia-autocomplete .algolia-docsearch-suggestion--category-header
-    color: $dark
-    font-weight: bold
-    padding-bottom: 10px
-    border-bottom: 1px solid $border-dark
-
-  .algolia-autocomplete .ds-suggestion
-    & + &
-      margin-bottom: 10px
-
-  /* Category (eg. Downloads) */
-  .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column
-    color: rgba($medium,0.7)
-
-  .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column:before,
-  .algolia-autocomplete .algolia-docsearch-suggestion--content:before
-    background: $border-dark
-
-  /* Title (eg. Bootstrap CDN) */
-  .algolia-autocomplete .algolia-docsearch-suggestion--title
-    font-weight: bold
-    color: $dark
-    margin-bottom: 0
-
-  /* Description description (eg. Bootstrap currently works...) */
-  .algolia-autocomplete .algolia-docsearch-suggestion--text
-    font-size: 0.9rem
-    color: $medium
-
-  /* Highlighted text */
-  .algolia-autocomplete .algolia-docsearch-suggestion--highlight
-    color: $blue
-    background: $light
+      // Center divider
+      .algolia-docsearch-suggestion--content
+        &:before
+          background: $gray-200
