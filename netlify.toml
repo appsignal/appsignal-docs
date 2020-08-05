@@ -124,3 +124,6 @@
 [[redirects]]
   from = "/ruby/instrumentation/link-templates.html"
   to = "/application/link-templates.html"
+[[redirects]]
+  from = "/push-api/overview.html"
+  to = "/push-api/markers.html"
