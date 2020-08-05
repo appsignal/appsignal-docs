@@ -20,7 +20,7 @@ To setup AppSignal to receive these metrics, please follow the guide below.
 
 ### 1. Update the AppSignal integration.
 
-First update the Ruby gem to version 2.6.0 or newer.  
+First update the Ruby gem to version 2.6.0 or newer.
 For Elixir, please update to version 1.6.0 or newer of the AppSignal integration.
 
 We switched from using the dyno's UUID to the name (e.g. `web.1`), to make sure we can match the metrics we get from the Logplex drain with the data we receive from the integration, please make sure to run `2.6.x` or better.
@@ -57,7 +57,7 @@ Please see the [Heroku Logplex documentation](https://devcenter.heroku.com/artic
 In order to get the Dyno's host metrics to AppSignal you have to create a new Logplex drain.
 
 ```
-heroku drains:add "https://push.appsignal.com/2/logplex?api_key=<push_api_key>&name=<app_name>&environment=<app_environment>"
+heroku drains:add "https://appsignal-endpoint.net/logplex?api_key=<push_api_key>&name=<app_name>&environment=<app_environment>"
 ```
 
 Make sure to replace the placeholders (`<push_api_key>`, `<app_name>` and `<app_environment>`) with your AppSignal organization's Push API key, your app's name and environment. Make sure your app's name and environment match exactly with your app's AppSignal configuration. These values are case sensitive.
