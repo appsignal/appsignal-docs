@@ -19,12 +19,10 @@ Request method: `POST`
 | Parameter | Type | Description |
 | --- | --- | --- |
 | api_key | String | **Front-end** API key, can be found in [App settings](https://appsignal.com/redirect-to/app?to=info). |
-| name | String | Name of the application, must match existing application on AppSignal. |
-| environment | String | Environment of application, must match existing application/environment on AppSignal. |
 
 
 ```
-https://appsignal-endpoint.net/metrics/statsd?api_key=<api_key>&name=<name>&environment=<environment>
+https://appsignal-endpoint.net/metrics/statsd?api_key=<api_key>
 ```
 
 ## Body parameters
