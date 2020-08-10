@@ -15,7 +15,7 @@ yarn add @appsignal/nodejs @appsignal/express
 npm install --save @appsignal/nodejs @appsignal/express
 ```
 
-You can then import and use the package in your app. 
+You can then import and use the package in your app.
 
 ## Usage
 
@@ -24,21 +24,21 @@ You can then import and use the package in your app.
 The module includes middleware for automatically instrumenting the routes of your application.
 
 ```js
-const { Appsignal } = require("@appsignal/nodejs")
+const { Appsignal } = require("@appsignal/nodejs");
 
 const appsignal = new Appsignal({
   active: true,
   name: "<YOUR APPLICATION NAME>",
-  apiKey: "<YOUR API KEY>"
-})
+  apiKey: "<YOUR API KEY>",
+});
 
-const express = require("express")
-const { expressMiddleware } = require("@appsignal/express")
+const express = require("express");
+const { expressMiddleware } = require("@appsignal/express");
 
-const app = express()
+const app = express();
 
 // ADD THIS AFTER ANY OTHER EXPRESS MIDDLEWARE, BUT BEFORE ANY ROUTES!
-app.use(expressMiddleware(appsignal))
+app.use(expressMiddleware(appsignal));
 ```
 
 ### Error Handler

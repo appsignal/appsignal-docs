@@ -2,11 +2,11 @@
 title: "Next.js"
 ---
 
-The AppSignal integration for [Next.js](https://nextjs.org/) 9.3.0+, designed to be used in conjunction with `@appsignal/nodejs`. 
+The AppSignal integration for [Next.js](https://nextjs.org/) 9.3.0+, designed to be used in conjunction with `@appsignal/nodejs`.
 
 It is recommended to be used with [`@appsignal/javascript`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/javascript) and [`@appsignal/react`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/react) on the client side for full-stack performance monitoring and error tracking.
 
-At this time, it's only possible to use this integration with a [custom server script](https://nextjs.org/docs/advanced-features/custom-server). The integration **does not** work when using the Next CLI (e.g. `next start`). 
+At this time, it's only possible to use this integration with a [custom server script](https://nextjs.org/docs/advanced-features/custom-server). The integration **does not** work when using the Next CLI (e.g. `next start`).
 
 If you plan to use this in a serverless environment, we recommend using just [`@appsignal/javascript`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/javascript) and the [`@appsignal/react`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/react) integration.
 
@@ -21,11 +21,11 @@ yarn add @appsignal/nodejs @appsignal/nextjs
 npm install --save @appsignal/nodejs @appsignal/nextjs
 ```
 
-You can then import and use the package in your app. 
+You can then import and use the package in your app.
 
 ## Usage
 
-The `@appsignal/nextjs` package exports the `getRequestHandler()` function, which is designed to be used in the place of the `app.getRequestHandler()` method provided by the `next` module. 
+The `@appsignal/nextjs` package exports the `getRequestHandler()` function, which is designed to be used in the place of the `app.getRequestHandler()` method provided by the `next` module.
 
 Create a `server.js` in your project root and add the following:
 
@@ -121,7 +121,7 @@ app.prepare().then(() => {
 
 In Next.js 9.4.0, support was added for [Core Web Vitals](https://web.dev/vitals/) reporting. Core Web Vitals are the quality signals key to delivering great UX on the web, on top of which the famous [Lighthouse](https://developers.google.com/web/tools/lighthouse) reports are built. `@appsignal/nextjs` includes experimental support for sending these metrics to AppSignal.com.
 
-This works by providing a handler function, which is designed to be used as an endpoint in your application. When called, the `pathname`  of the request must be equal to `/__appsignal-web-vitals`. 
+This works by providing a handler function, which is designed to be used as an endpoint in your application. When called, the `pathname` of the request must be equal to `/__appsignal-web-vitals`.
 
 ```js
 const { Appsignal } = require("@appsignal/nodejs");
