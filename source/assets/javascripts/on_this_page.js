@@ -6,6 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const headers = mainContent.querySelectorAll("h2, h3")
 
+  console.log(headers.length)
+
+  if(headers.length == 0) {
+    const node = document.createElement("li")
+    node.textContent = "No subsections"
+    node.classList.add("text-gray-600")
+    node.classList.add("italic")
+    onThisPageBar.appendChild(node)
+
+    return;
+  }
+
   const items = []
 
   headers.forEach((item) => {
