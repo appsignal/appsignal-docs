@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const mainContent = document.querySelector("[data-role~='main-content']")
   const onThisPageBar = document.querySelector("[data-role~='on-this-page']")
-  const elementClassList = "my-2 block text-gray-600 no-underline hover:text-blue hover:underline"
+  const elementClassList = "my-2 block text-gray-600 text-sm no-underline hover:text-blue hover:underline"
   if (mainContent === null || onThisPageBar === null) return
 
   const headers = mainContent.querySelectorAll("h2, h3")
