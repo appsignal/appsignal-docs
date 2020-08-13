@@ -563,6 +563,13 @@ sections:
           -
             name: "Sourcemaps"
             link: "/api/sourcemaps.html"
+          -
+            name: "Public endpoint"
+            link: "/api/public-endpoint/"
+            sub_pages:
+              -
+                name: "StatsD"
+                link: "/api/public-endpoint/statsd.html"
   -
     name: "More"
     sub_sections:
