@@ -280,7 +280,7 @@ sections:
             link: "/elixir/overview.html"
           -
             name: "Installation"
-            link: "/elixir/installation.html"
+            link: "/elixir/installation/"
             sub_pages:
               -
                 name: "Umbrella applications"
