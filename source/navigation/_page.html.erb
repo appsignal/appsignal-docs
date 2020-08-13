@@ -1,0 +1,24 @@
+<%
+  is_active = path_active?(page[:link])
+  active_classes = "text-gray-800 font-medium"
+%>
+
+<li>
+  <a
+    href="<%= page[:link] %>"
+    class="c-nav-link <%= active_classes if is_active %> no-underline flex items-center"
+  >
+    <%= page[:name] %>
+    <% if !page[:sub_pages].nil? %>
+      <i class="far <%= is_active ? "fa-angle-up" : "fa-angle-down" %> ml-1 text-xs"></i>
+    <% end %>
+  </a>
+
+  <% if !page[:sub_pages].nil? %>
+    <ul class="<%= "hidden" unless is_active %>">
+      <% page[:sub_pages].each do |sub_page| %>
+        <%= partial "navigation/sub_page", :locals => { sub_page: sub_page } %>
+      <% end %>
+    </ul>
+  <% end %>
+</li>

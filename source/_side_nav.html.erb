@@ -1,52 +1,7 @@
 <nav>
   <ul>
     <% data.navigation.sections.each do |section| %>
-      <li class="mb-6">
-        <h2 class="c-heading--caps text-gray-600 text-ms font-medium">
-          <%= section[:name] %>
-        </h2>
-        <ul>
-          <%# Sub-sections %>
-          <% section[:sub_sections].each do |sub_section| %>
-              <% sub_section_active = path_active?(sub_section[:link]) %>
-              <% sub_section_active_classes = "c-cat-link--active bg-gray-200 bg-opacity-50 text-gray-800 font-medium" %>
-              <a href="<%= sub_section[:link] %>" class="c-cat-link <%= sub_section_active ? sub_section_active_classes : "" %> group no-underline hover:bg-gray-200 hover:text-gray-800">
-                <i class="fa-fw <%= sub_section[:icon] %> mr-2"></i>
-                <%= sub_section[:name] %>
-              </a>
-
-              <%# Pages %>
-              <% if !sub_section[:pages].nil? && sub_section_active %>
-                <ul class="c-subnav c-subnav--with-icon">
-                  <% sub_section[:pages].each do |page| %>
-                    <% page_active = path_active?(page[:link]) %>
-                    <% page_active_classes = "text-gray-800 font-medium" %>
-                    <li>
-                      <a href="<%= page[:link] %>" class="c-nav-link <%= page_active ? page_active_classes : "" %> no-underline flex items-center">
-                        <%= page[:name] %>
-                        <% if !page[:sub_pages].nil? %>
-                          <i class="far <%= page_active ? "fa-angle-up" : "fa-angle-down" %> ml-1 text-xs"></i>
-                        <% end %>
-                      </a>
-
-                      <%# Sub-pages %>
-                      <% if !page[:sub_pages].nil? && page_active %>
-                        <% page[:sub_pages].each do |sub_page| %>
-                          <% sub_page_active = path_active?(sub_page[:link]) %>
-                          <% sub_page_active_classes = "text-gray-800 font-medium" %>
-                          <a href="<%= sub_page[:link] %>" class="c-nav-link <%= sub_page_active ? sub_page_active_classes : "" %> ml-2 no-underline">
-                            <%= sub_page[:name] %>
-                          </a>
-                        <% end %>
-                      <% end %>
-                    </li>
-                  <% end %>
-                </ul>
-              <% end %>
-            </li>
-          <% end %>
-        </ul>
-      </li>
+      <%= partial "navigation/section", :locals => { section: section } %>
     <% end %>
   </ul>
 </nav>
