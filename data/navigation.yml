@@ -546,9 +546,6 @@ sections:
             name: "Overview"
             link: "/api/overview.html"
           -
-            name: "Push API <sup>Deprecated</sup>"
-            link: "/push-api/overview.html"
-          -
             name: "Deploy markers"
             link: "/push-api/deploy-marker.html"
           -
