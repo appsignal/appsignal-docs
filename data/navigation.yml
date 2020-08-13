@@ -17,7 +17,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/application/"
+            link: "/application/overview.html"
           -
             name: "Add an application"
             link: "/application/new-application.html"
@@ -91,7 +91,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/organization/"
+            link: "/organization/overview.html"
           -
             name: "Team management"
             link: "/organization/team/"
@@ -115,7 +115,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/user-account/"
+            link: "/user-account/overview.html"
           -
             name: "Email addresses"
             link: "/user-account/email-addresses.html"
@@ -133,7 +133,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/ruby/"
+            link: "/ruby/overview.html"
           -
             name: "Installation"
             link: "/ruby/installation.html"
@@ -277,7 +277,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/elixir/"
+            link: "/elixir/overview.html"
           -
             name: "Installation"
             link: "/elixir/installation.html"
@@ -374,7 +374,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/nodejs/"
+            link: "/nodejs/overview.html"
           -
             name: "Installation"
             link: "/nodejs/installation.html"
@@ -437,7 +437,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/front-end/"
+            link: "/front-end/overview.html"
           -
             name: "Installation"
             link: "/front-end/installation.html"
@@ -540,7 +540,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/api/"
+            link: "/api/overview.html"
           -
             name: "Push API <sup>Deprecated</sup>"
             link: "/push-api/overview.html"
