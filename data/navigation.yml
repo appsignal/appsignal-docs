@@ -511,7 +511,7 @@ sections:
         pages:
           -
             name: "Installation"
-            link: "/standalone-agent/"
+            link: "/standalone-agent/installation.html"
           -
             name: "StatsD"
             link: "/standalone-agent/statsd.html"
@@ -522,7 +522,7 @@ sections:
         pages:
           -
             name: "Custom metrics"
-            link: "/metrics/"
+            link: "/metrics/custom.html"
           -
             name: "Host metrics"
             link: "/metrics/host.html"
