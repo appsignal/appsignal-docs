@@ -23,7 +23,7 @@ sections:
             link: "/application/new-application.html"
           -
             name: "Anomaly detection"
-            link: "/application/anomaly-detection/"
+            link: "/application/anomaly-detection.html"
           -
             name: "Namespaces"
             link: "/application/namespaces.html"
