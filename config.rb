@@ -82,7 +82,7 @@ helpers do
       return current_page.url === '/'
     end
 
-    return current_page.url.include?(path)
+    current_page.url.include?(path)
   end
 
   def link_with_active(*args, &block)
