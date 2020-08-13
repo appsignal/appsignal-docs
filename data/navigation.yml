@@ -42,17 +42,17 @@ sections:
                 link: "/application/markers/custom-markers.html"
           -
             name: "Settings"
-            link: "/application/settings.html"
+            link: "/application/settings/"
             sub_pages:
               -
                 name: "Notification settings"
-                link: "/application/notification-settings.html"
+                link: "/application/settings/notification-settings.html"
               -
                 name: "Link templates"
-                link: "/application/link-templates.html"
+                link: "/application/settings/link-templates.html"
               -
                 name: "Backtrace links"
-                link: "/application/backtrace-links.html"
+                link: "/application/settings/backtrace-links.html"
           -
             name: "Integrations (full list)"
             link: "/application/integrations/"
