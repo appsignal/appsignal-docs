@@ -12,7 +12,7 @@ sections:
         link: "/faq.html"
       -
         name: "Your applications"
-        icon: "fas fa-rocket"
+        icon: "fas fa-server"
         link: "/application/"
         pages:
           -
