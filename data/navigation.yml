@@ -571,6 +571,9 @@ sections:
         link: "/support/"
         pages:
           -
+            name: "Overview"
+            link: "/support/overview.html"
+          -
             name: "Contact us!"
             link: "mailto:support@appsignal.com"
           -
