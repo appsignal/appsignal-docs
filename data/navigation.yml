@@ -522,17 +522,21 @@ sections:
         pages:
           -
             name: "Custom metrics"
-            link: "/metrics/custom.html"
+            link: "/metrics/custom/"
+            sub_pages:
+              -
+                name: "Dashboards"
+                link: "/metrics/custom/dashboards.html"
           -
             name: "Host metrics"
-            link: "/metrics/host.html"
+            link: "/metrics/host/"
             sub_pages:
               -
                 name: "Heroku host metrics"
-                link: "/metrics/host-metrics/heroku.html"
+                link: "/metrics/host/heroku.html"
               -
                 name: "Container host metrics"
-                link: "/metrics/host-metrics/containers.html"
+                link: "/metrics/host/containers.html"
       -
         name: "AppSignal API <sup>Beta</sup>"
         icon: "fas fa-code"
