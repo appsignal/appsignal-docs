@@ -609,11 +609,11 @@ sections:
         pages:
           -
             name: "Contributing"
-            link: "/appsignal/contributing.html"
+            link: "/appsignal/contributing"
             sub_pages:
               -
                 name: "Code of Conduct"
-                link: "/appsignal/code-of-conduct.html"
+                link: "/appsignal/contributing/code-of-conduct.html"
           -
             name: "Security"
             link: "/appsignal/security.html"
