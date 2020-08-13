@@ -1,0 +1,10 @@
+<%
+  is_active = path_active?(sub_page[:link])
+  active_classes = "text-gray-800 font-medium"
+%>
+
+<li>
+  <a href="<%= sub_page[:link] %>" class="c-nav-link <%= active_classes if is_active %> ml-2 no-underline">
+    <%= sub_page[:name] %>
+  </a>
+</li>

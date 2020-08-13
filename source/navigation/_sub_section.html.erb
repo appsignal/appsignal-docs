@@ -1,0 +1,22 @@
+<%
+  is_active = path_active?(sub_section[:link])
+  active_classes = "c-cat-link--active bg-gray-200 bg-opacity-50 text-gray-800 font-medium"
+%>
+
+<li>
+  <a
+    href="<%= sub_section[:link] %>"
+    class="c-cat-link <%= active_classes if  is_active %> group no-underline hover:bg-gray-200 hover:text-gray-800"
+  >
+    <i class="fa-fw <%= sub_section[:icon] %> mr-2"></i>
+    <%= sub_section[:name] %>
+  </a>
+
+  <% if !sub_section[:pages].nil? %>
+    <ul class="c-subnav c-subnav--with-icon <%= "hidden" unless is_active %>">
+      <% sub_section[:pages].each do |page| %>
+        <%= partial "navigation/page", :locals => { page: page } %>
+      <% end %>
+    </ul>
+  <% end %>
+</li>
