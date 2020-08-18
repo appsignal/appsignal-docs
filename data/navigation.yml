@@ -505,7 +505,7 @@ sections:
     name: "Features"
     sub_sections:
       -
-        name: "Standalone agent<sup>Beta</sup>"
+        name: "Standalone agent <sup>Beta</sup>"
         icon: "fas fa-user-secret"
         link: "/standalone-agent/"
         pages:
