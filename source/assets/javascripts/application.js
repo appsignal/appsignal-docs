@@ -124,5 +124,20 @@ $(document).ready(function() {
     if (viewportWidth > 1024) {
       $("body").removeClass("overflow-y-hidden")
     }
+
+
+  $('[data-role="accordion-head"]').click(function(event) {
+    event.preventDefault()
+
+    var accordion = $(event.target).parents('[data-role="accordion"]').first()
+    var accordion_head = accordion.children('[data-role="accordion-head"]')
+    var accordion_body = accordion.children('[data-role="accordion-body"]')
+
+    // Toggle accordion head
+    var accordion_head_active_classes = accordion_head.attr("data-accordion-head-active-classes")
+    accordion_head.toggleClass(accordion_head_active_classes)
+
+    // Toggle accordion body
+    accordion_body.toggle()
   })
 });
