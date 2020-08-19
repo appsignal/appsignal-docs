@@ -35,6 +35,9 @@ sections:
             link: "/application/markers/"
             sub_pages:
               -
+                name: "Overview"
+                link: "/application/markers/overview.html"
+              -
                 name: "Deploy markers"
                 link: "/application/markers/deploy-markers.html"
               -
@@ -44,6 +47,9 @@ sections:
             name: "Settings"
             link: "/application/settings/"
             sub_pages:
+              -
+                name: "Application settings"
+                link: "/application/settings/application-settings.html"
               -
                 name: "Notification settings"
                 link: "/application/settings/notification-settings.html"
@@ -57,6 +63,9 @@ sections:
             name: "Integrations (full list)"
             link: "/application/integrations/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/application/integrations/overview.html"
               -
                 name: "Asana"
                 link: "/application/integrations/asana.html"
@@ -142,6 +151,9 @@ sections:
             link: "/ruby/configuration/"
             sub_pages:
               -
+                name: "Overview"
+                link: "/ruby/configuration/overview.html"
+              -
                 name: "Options"
                 link: "/ruby/configuration/options.html"
               -
@@ -163,6 +175,9 @@ sections:
             name: "Integrations"
             link: "/ruby/integrations/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/ruby/integrations/overview.html"
               -
                 name: "Capistrano"
                 link: "/ruby/integrations/capistrano.html"
@@ -222,6 +237,9 @@ sections:
             link: "/ruby/instrumentation/"
             sub_pages:
               -
+                name: "Overview"
+                link: "/ruby/instrumentation/overview.html"
+              -
                 name: "Integrating AppSignal"
                 link: "/ruby/instrumentation/integrating-appsignal.html"
               -
@@ -259,6 +277,9 @@ sections:
             link: "/ruby/command-line/"
             sub_pages:
               -
+                name: "Overview"
+                link: "/ruby/command-line/overview.html"
+              -
                 name: "Install"
                 link: "/ruby/command-line/install.html"
               -
@@ -283,12 +304,18 @@ sections:
             link: "/elixir/installation/"
             sub_pages:
               -
+                name: "Overview"
+                link: "/elixir/installation/overview.html"
+              -
                 name: "Umbrella applications"
                 link: "/elixir/installation/umbrella.html"
           -
             name: "Configuration"
             link: "/elixir/configuration/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/elixir/configuration/overview.html"
               -
                 name: "Options"
                 link: "/elixir/configuration/options.html"
@@ -312,6 +339,9 @@ sections:
             link: "/elixir/integrations/"
             sub_pages:
               -
+                name: "Overview"
+                link: "/elixir/integrations/overview.html"
+              -
                 name: "Phoenix"
                 link: "/elixir/integrations/phoenix.html"
               -
@@ -327,6 +357,9 @@ sections:
             name: "Custom instrumentation"
             link: "/elixir/instrumentation/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/elixir/instrumentation/overview.html"
               -
                 name: "Integrating AppSignal"
                 link: "/elixir/instrumentation/integrating-appsignal.html"
@@ -352,6 +385,9 @@ sections:
             name: "Command line tools"
             link: "/elixir/command-line/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/elixir/command-line/overview.html"
               -
                 name: "Install"
                 link: "/elixir/command-line/install.html"
@@ -383,6 +419,9 @@ sections:
             link: "/nodejs/configuration/"
             sub_pages:
               -
+                name: "Overview"
+                link: "/nodejs/configuration/overview.html"
+              -
                 name: "Options"
                 link: "/nodejs/configuration/options.html"
               -
@@ -392,6 +431,9 @@ sections:
             name: "Tracing"
             link: "/nodejs/tracing/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/nodejs/tracing/overview.html"
               -
                 name: "The Tracer object"
                 link: "/nodejs/tracing/tracer.html"
@@ -409,6 +451,9 @@ sections:
             link: "/nodejs/metrics/"
             sub_pages:
               -
+                name: "Overview"
+                link: "/nodejs/metrics/overview.html"
+              -
                 name: "The Metrics object"
                 link: "/nodejs/metrics/meters.html"
               -
@@ -418,6 +463,9 @@ sections:
             name: "Integrations"
             link: "/nodejs/integrations/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/nodejs/integrations/overview.html"
               -
                 name: "Node.js Core"
                 link: "/nodejs/integrations/core.html"
@@ -443,7 +491,7 @@ sections:
             link: "/front-end/installation.html"
           -
             name: "Configuration"
-            link: "/front-end/configuration/"
+            link: "/front-end/configuration.html"
           -
             name: "Error handling"
             link: "/front-end/error-handling.html"
@@ -463,6 +511,9 @@ sections:
             name: "Integrations"
             link: "/front-end/integrations/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/front-end/integrations/overview.html"
               -
                 name: "React"
                 link: "/front-end/integrations/react.html"
@@ -485,6 +536,9 @@ sections:
             name: "Plugins"
             link: "/front-end/plugins/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/front-end/plugins/overview.html"
               -
                 name: "plugin-breadcrumbs-console"
                 link: "/front-end/plugins/plugin-breadcrumbs-console.html"
@@ -525,12 +579,18 @@ sections:
             link: "/metrics/custom/"
             sub_pages:
               -
+                name: "Overview"
+                link: "/metrics/custom/overview.html"
+              -
                 name: "Dashboards"
                 link: "/metrics/custom/dashboards.html"
           -
             name: "Host metrics"
             link: "/metrics/host/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/metrics/host/overview.html"
               -
                 name: "Heroku host metrics"
                 link: "/metrics/host/heroku.html"
@@ -567,6 +627,9 @@ sections:
             name: "Public endpoint"
             link: "/api/public-endpoint/"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/api/public-endpoint/overview.html"
               -
                 name: "StatsD"
                 link: "/api/public-endpoint/statsd.html"
@@ -611,6 +674,9 @@ sections:
             name: "Contributing"
             link: "/appsignal/contributing"
             sub_pages:
+              -
+                name: "Overview"
+                link: "/appsignal/contributing/overview.html"
               -
                 name: "Code of Conduct"
                 link: "/appsignal/contributing/code-of-conduct.html"
