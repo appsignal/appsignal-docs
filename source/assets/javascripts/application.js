@@ -124,7 +124,7 @@ $(document).ready(function() {
     if (viewportWidth > 1024) {
       $("body").removeClass("overflow-y-hidden")
     }
-
+  })
 
   $('[data-role="accordion-head"]').click(function(event) {
     event.preventDefault()
