@@ -127,3 +127,21 @@
 [[redirects]]
   from = "/push-api/overview.html"
   to = "/push-api/markers.html"
+[[redirects]]
+  from = "/organization/team/index.html"
+  to = "/organization/team/members.html"
+[[redirects]]
+  from = "/elixir/installation.html"
+  to = "/elixir/installation/index.html"
+[[redirects]]
+  from = "/metrics/custom-metrics/dashboards.html"
+  to = "/metrics/dashboards.html"
+[[redirects]]
+  from = "/metrics/host.html"
+  to = "/metrics/host-metrics/index.html"
+[[redirects]]
+  from = "/appsignal/contributing.html"
+  to = "/appsignal/contributing/index.html"
+[[redirects]]
+  from = "/appsignal/code-of-conduct.html"
+  to = "/appsignal/contributing/code-of-conduct.html"

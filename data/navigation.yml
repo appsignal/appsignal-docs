@@ -23,7 +23,7 @@ sections:
             link: "/application/new-application.html"
           -
             name: "Anomaly detection"
-            link: "/application/anomaly-detection.html"
+            link: "/application/anomaly-detection/index.html"
           -
             name: "Namespaces"
             link: "/application/namespaces.html"
@@ -44,21 +44,17 @@ sections:
                 name: "Custom markers"
                 link: "/application/markers/custom-markers.html"
           -
-            name: "Settings"
-            link: "/application/settings/"
-            sub_pages:
-              -
-                name: "Application settings"
-                link: "/application/settings/application-settings.html"
-              -
-                name: "Notification settings"
-                link: "/application/settings/notification-settings.html"
-              -
-                name: "Link templates"
-                link: "/application/settings/link-templates.html"
-              -
-                name: "Backtrace links"
-                link: "/application/settings/backtrace-links.html"
+            name: "Application settings"
+            link: "/application/settings.html"
+          -
+            name: "Notification settings"
+            link: "/application/notification-settings.html"
+          -
+            name: "Link templates"
+            link: "/application/link-templates.html"
+          -
+            name: "Backtrace links"
+            link: "/application/backtrace-links.html"
           -
             name: "Integrations (full list)"
             link: "/application/integrations/"
@@ -491,7 +487,7 @@ sections:
             link: "/front-end/installation.html"
           -
             name: "Configuration"
-            link: "/front-end/configuration.html"
+            link: "/front-end/configuration/index.html"
           -
             name: "Error handling"
             link: "/front-end/error-handling.html"
@@ -576,27 +572,23 @@ sections:
         pages:
           -
             name: "Custom metrics"
-            link: "/metrics/custom/"
-            sub_pages:
-              -
-                name: "Overview"
-                link: "/metrics/custom/"
-              -
-                name: "Dashboards"
-                link: "/metrics/custom/dashboards.html"
+            link: "/metrics/custom.html"
           -
             name: "Host metrics"
-            link: "/metrics/host/"
+            link: "/metrics/host-metrics/"
             sub_pages:
               -
                 name: "Overview"
-                link: "/metrics/host/"
+                link: "/metrics/host-metrics/"
               -
                 name: "Heroku host metrics"
-                link: "/metrics/host/heroku.html"
+                link: "/metrics/host-metrics/heroku.html"
               -
                 name: "Container host metrics"
-                link: "/metrics/host/containers.html"
+                link: "/metrics/host-metrics/containers.html"
+          -
+            name: "Dashboards"
+            link: "/metrics/dashboards.html"
       -
         name: "AppSignal API <sup>Beta</sup>"
         icon: "fas fa-code"
