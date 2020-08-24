@@ -1,7 +1,7 @@
 <%
   is_active = path_active?(page[:link])
   active_classes = "text-gray-800 font-medium"
-  has_sub_pages = !page[:sub_pages].nil?
+  has_sub_pages = page[:sub_pages]
 %>
 
 <% if has_sub_pages %>
