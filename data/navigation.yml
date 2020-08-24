@@ -17,7 +17,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/application/overview.html"
+            link: "/application/"
           -
             name: "Add an application"
             link: "/application/new-application.html"
@@ -36,7 +36,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/application/markers/overview.html"
+                link: "/application/markers/"
               -
                 name: "Deploy markers"
                 link: "/application/markers/deploy-markers.html"
@@ -65,7 +65,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/application/integrations/overview.html"
+                link: "/application/integrations/"
               -
                 name: "Asana"
                 link: "/application/integrations/asana.html"
@@ -100,7 +100,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/organization/overview.html"
+            link: "/organization/"
           -
             name: "Team management"
             link: "/organization/team/"
@@ -124,7 +124,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/user-account/overview.html"
+            link: "/user-account/"
           -
             name: "Email addresses"
             link: "/user-account/email-addresses.html"
@@ -142,7 +142,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/ruby/overview.html"
+            link: "/ruby/"
           -
             name: "Installation"
             link: "/ruby/installation.html"
@@ -152,7 +152,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/ruby/configuration/overview.html"
+                link: "/ruby/configuration/"
               -
                 name: "Options"
                 link: "/ruby/configuration/options.html"
@@ -177,7 +177,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/ruby/integrations/overview.html"
+                link: "/ruby/integrations/"
               -
                 name: "Capistrano"
                 link: "/ruby/integrations/capistrano.html"
@@ -238,7 +238,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/ruby/instrumentation/overview.html"
+                link: "/ruby/instrumentation/"
               -
                 name: "Integrating AppSignal"
                 link: "/ruby/instrumentation/integrating-appsignal.html"
@@ -278,7 +278,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/ruby/command-line/overview.html"
+                link: "/ruby/command-line/"
               -
                 name: "Install"
                 link: "/ruby/command-line/install.html"
@@ -298,14 +298,14 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/elixir/overview.html"
+            link: "/elixir/"
           -
             name: "Installation"
             link: "/elixir/installation/"
             sub_pages:
               -
                 name: "Overview"
-                link: "/elixir/installation/overview.html"
+                link: "/elixir/installation/"
               -
                 name: "Umbrella applications"
                 link: "/elixir/installation/umbrella.html"
@@ -315,7 +315,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/elixir/configuration/overview.html"
+                link: "/elixir/configuration/"
               -
                 name: "Options"
                 link: "/elixir/configuration/options.html"
@@ -340,7 +340,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/elixir/integrations/overview.html"
+                link: "/elixir/integrations/"
               -
                 name: "Phoenix"
                 link: "/elixir/integrations/phoenix.html"
@@ -359,7 +359,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/elixir/instrumentation/overview.html"
+                link: "/elixir/instrumentation/"
               -
                 name: "Integrating AppSignal"
                 link: "/elixir/instrumentation/integrating-appsignal.html"
@@ -387,7 +387,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/elixir/command-line/overview.html"
+                link: "/elixir/command-line/"
               -
                 name: "Install"
                 link: "/elixir/command-line/install.html"
@@ -410,7 +410,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/nodejs/overview.html"
+            link: "/nodejs/"
           -
             name: "Installation"
             link: "/nodejs/installation.html"
@@ -420,7 +420,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/nodejs/configuration/overview.html"
+                link: "/nodejs/configuration/"
               -
                 name: "Options"
                 link: "/nodejs/configuration/options.html"
@@ -433,7 +433,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/nodejs/tracing/overview.html"
+                link: "/nodejs/tracing/"
               -
                 name: "The Tracer object"
                 link: "/nodejs/tracing/tracer.html"
@@ -452,7 +452,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/nodejs/metrics/overview.html"
+                link: "/nodejs/metrics/"
               -
                 name: "The Metrics object"
                 link: "/nodejs/metrics/meters.html"
@@ -465,7 +465,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/nodejs/integrations/overview.html"
+                link: "/nodejs/integrations/"
               -
                 name: "Node.js Core"
                 link: "/nodejs/integrations/core.html"
@@ -485,7 +485,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/front-end/overview.html"
+            link: "/front-end/"
           -
             name: "Installation"
             link: "/front-end/installation.html"
@@ -513,7 +513,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/front-end/integrations/overview.html"
+                link: "/front-end/integrations/"
               -
                 name: "React"
                 link: "/front-end/integrations/react.html"
@@ -538,7 +538,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/front-end/plugins/overview.html"
+                link: "/front-end/plugins/"
               -
                 name: "plugin-breadcrumbs-console"
                 link: "/front-end/plugins/plugin-breadcrumbs-console.html"
@@ -580,7 +580,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/metrics/custom/overview.html"
+                link: "/metrics/custom/"
               -
                 name: "Dashboards"
                 link: "/metrics/custom/dashboards.html"
@@ -590,7 +590,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/metrics/host/overview.html"
+                link: "/metrics/host/"
               -
                 name: "Heroku host metrics"
                 link: "/metrics/host/heroku.html"
@@ -604,7 +604,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/api/overview.html"
+            link: "/api/"
           -
             name: "Deploy markers"
             link: "/push-api/deploy-marker.html"
@@ -629,7 +629,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/api/public-endpoint/overview.html"
+                link: "/api/public-endpoint/"
               -
                 name: "StatsD"
                 link: "/api/public-endpoint/statsd.html"
@@ -643,7 +643,7 @@ sections:
         pages:
           -
             name: "Overview"
-            link: "/support/overview.html"
+            link: "/support/"
           -
             name: "Contact us!"
             link: "mailto:support@appsignal.com"
@@ -676,7 +676,7 @@ sections:
             sub_pages:
               -
                 name: "Overview"
-                link: "/appsignal/contributing/overview.html"
+                link: "/appsignal/contributing/"
               -
                 name: "Code of Conduct"
                 link: "/appsignal/contributing/code-of-conduct.html"
