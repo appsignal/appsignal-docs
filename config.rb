@@ -78,8 +78,8 @@ helpers do
   end
 
   def path_active?(path)
-    if path === '/'
-      return current_page.url === '/'
+    if path == "/"
+      return current_page.url == "/"
     end
 
     current_page.url.include?(path)
