@@ -12,13 +12,15 @@ When a new deploy is detected, the list of incidents is empty for the newest dep
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Deploy methods](#deploy-methods)
-  - [Revision config option](#revision-config-option) (recommended method)
-      - [Heroku support](#heroku-support)
-      - [Config option](#config-option)
-      - [System environment variable](#system-environment-variable)
-  - [Manually create a Deploy marker](#manually-create-a-deploy-marker)
-      - [Ruby CLI tool](#ruby-cli-tool)
+- [Revision config option](#revision-config-option)
+  - [Config option](#config-option)
+  - [System environment variable](#system-environment-variable)
+  - [Heroku support](#heroku-support)
+  - [Cloud66 Support](#cloud66-support)
+- [Manually create a Deploy marker](#manually-create-a-deploy-marker)
+  - [Ruby CLI tool](#ruby-cli-tool)
 
 ## Deploy methods
 
@@ -96,7 +98,7 @@ When the deploy marker create/notify request is received by the AppSignal server
 
 To create a Deploy marker with a HTTP POST request you can use curl or some other tool like it. The payload of the request is a JSON object with data about the marker, such as the revision, user who deployed it and the application's repository.
 
-Read more about how to create Deploy markers with our Push API in our [Push API endpoint](/push-api/deploy-marker.html) documentation.
+Read more about how to create Deploy markers with our API in our [API endpoint](/api/markers.html) documentation.
 
 ### Ruby CLI tool
 

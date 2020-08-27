@@ -598,9 +598,6 @@ sections:
             name: "Overview"
             link: "/api/"
           -
-            name: "Deploy markers"
-            link: "/push-api/deploy-marker.html"
-          -
             name: "Graphs"
             link: "/api/graphs.html"
           -
