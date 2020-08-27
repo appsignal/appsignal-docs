@@ -64,7 +64,7 @@ Besides tags you can add more metadata to a transaction (or override default met
 Custom data is not set by default, but can be used to add additional debugging data to solve a performance issue or exception.
 
 ```
-Appsignal.Transaction.current.set_sample_data("custom_data", {foo: "bar"})
+Appsignal::Transaction.current.set_sample_data("custom_data", {foo: "bar"})
 ```
 
 This key accepts nested objects and will result in the following block on a Incident Sample page for both Exception and Performance samples formatted as JSON.
