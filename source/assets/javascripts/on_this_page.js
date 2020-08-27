@@ -2,11 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainContent = document.querySelector("[data-role~='main-content']")
   const onThisPageBar = document.querySelector("[data-role~='on-this-page']")
   const elementClassList = "my-2 block text-gray-600 text-sm no-underline hover:text-blue hover:underline"
-  if (mainContent === null || onThisPageBar === null) return
+  if (mainContent === null || onThisPageBar === null) { return }
 
   const headers = mainContent.querySelectorAll("h2, h3")
-
-  console.log(headers.length)
 
   if(headers.length == 0) {
     const node = document.createElement("li")
@@ -21,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const items = []
 
   headers.forEach((item) => {
-    const headerText = item.querySelector("a")
     const node = document.createElement("li")
     const linkNode = item.querySelector("a").cloneNode(true)
     linkNode.classList = elementClassList
