@@ -15,16 +15,17 @@ documentation][hex-appsignal].
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Incoming HTTP requests](#incoming-http-requests)
 - [Phoenix instrumentation hooks](#phoenix-instrumentation-hooks)
 - [Template rendering](#template-rendering)
 - [Queries](#queries)
 - [Channels](#channels)
-  - [Channels instrumentation with a channel's handle](#channel-instrumentation-with-a-channel-39-s-handle)
-  - [Channels instrumentation without decorators](#channel-instrumentation-without-decorators)
+  - [Channel instrumentation with a channel's handle](#channel-instrumentation-with-a-channels-handle)
+  - [Channel instrumentation without decorators](#channel-instrumentation-without-decorators)
   - [Adding channel payloads](#adding-channel-payloads)
 - [LiveView](#liveview)
-- [Instrumentation for custom Plugs](#instrumentation-for-included-plugs)
+- [Instrumentation for included Plugs](#instrumentation-for-included-plugs)
 - [Custom instrumentation](#custom-instrumentation)
 
 ## Incoming HTTP requests
@@ -159,7 +160,7 @@ end
 
 ### Adding channel payloads
 
-Channel payloads aren't included by default, but can be added by using [tagging]:
+Channel payloads aren't included by default, but can be added by using [sample_data]:
 
 ```elixir
 defmodule SomeApp.MyChannel do
@@ -167,8 +168,8 @@ defmodule SomeApp.MyChannel do
 
   @decorate channel_action
   def handle_in("ping", %{"body" => body}, socket) do
-    Appsignal.Transaction.set_sample_data("tags", %{body: body})
-
+    # make sure to sanitize any parameters such as emails/passwords and long strings
+    Appsignal.Transaction.set_sample_data("custom_data", %{body: body})
     # your code here..
   end
 end
@@ -237,4 +238,4 @@ requests.
 [phoenix]: http://www.phoenixframework.org/
 [hex-appsignal]: https://hexdocs.pm/appsignal/
 [hex-phoenix-channels]: https://hexdocs.pm/appsignal/Appsignal.Phoenix.Channel.html
-[tagging]:/elixir/instrumentation/tagging.html
+[sample_data]:/elixir/instrumentation/tagging.html#sample-data
