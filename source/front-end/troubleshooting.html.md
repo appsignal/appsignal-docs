@@ -29,3 +29,25 @@ Or if you are using a Rails helper:
 ```ruby
 <%= javascript_include_tag "application", :crossorigin => :anonymous %>
 ```
+
+## Content Security Policy (CSP)
+
+Your Application's content Security Policy might prevent the error tracking library from sending data to our `https://appsignal-endpoint.net` endpoint.
+
+> Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware.
+> <cite>[https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)</cite>
+
+Make sure to add `https://appsignal-endpoint.net` to your Content Security Policy header, if present.
+
+
+With just AppSignal in the header:
+
+```
+Content-Security-Policy: connect-src ‘self’ https://appsignal-endpoint.net
+```
+
+Or, with other content in the header:
+
+```
+Content-Security-Policy: <other_content>; connect-src ‘self’ https://appsignal-endpoint.net
+```
