@@ -4,6 +4,7 @@ title: "Installing AppSignal for JavaScript"
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Installation](#installation)
   - [Supported browsers](#supported-browsers)
 - [Uninstall](#uninstall)
@@ -42,7 +43,7 @@ export default new Appsignal({
 
 Currently, we have no plans to supply a CDN-hosted version of this library.
 
-!> **NOTE:** If you are running a CDN in front of your assets, you'll need to make [two changes](/front-end/troubleshooting.html) for error reporting to be able to send errors to our API endpoint. Read more about the [required changes](/front-end/troubleshooting.html).
+!> **NOTE:** If you are running a CDN in front of your assets, you'll need to make [two changes](/front-end/troubleshooting.html) for error reporting to be able to send errors to our API endpoint. Read more about the [required changes](/front-end/troubleshooting.html). <br /><br />If you use Content Security Policy, make sure to add the correct headers as [described here](/front-end/troubleshooting.html#content-security-policy-csp).
 
 ### Supported browsers
 
