@@ -474,6 +474,9 @@ sections:
               -
                 name: "Next.js"
                 link: "/nodejs/integrations/nextjs.html"
+              -
+                name: "node-redis"
+                link: "/nodejs/integrations/redis.html"
       -
         name: "AppSignal for Front-end"
         icon: "fab fa-js"
