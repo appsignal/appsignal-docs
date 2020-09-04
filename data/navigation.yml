@@ -477,6 +477,9 @@ sections:
               -
                 name: "node-redis"
                 link: "/nodejs/integrations/redis.html"
+              -
+                name: "Apollo Server"
+                link: "/nodejs/integrations/apollo.html"
       -
         name: "AppSignal for Front-end"
         icon: "fab fa-js"
