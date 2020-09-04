@@ -27,6 +27,8 @@ const appsignal = new Appsignal({
 })
 ```
 
+!> Installing the AppSignal for Node.js integration builds a native extension. In order to compile it, macOS users will need to install the [Xcode Developer Tools](https://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/). Linux users will need the dependencies outlined [here](https://github.com/nodejs/node-gyp#installation). **Windows is not supported.**
+
 ## Uninstalling Appsignal for Node.js
 
 Uninstall AppSignal from your app by following the steps below. When these steps are completed your app will no longer send data to the AppSignal servers.
