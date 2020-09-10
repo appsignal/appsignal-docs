@@ -27,10 +27,11 @@ Also see our list of [known issues](/support/known-issues.html) for a list of pr
 
 ## Diagnose
 
-Our [Ruby gem](/ruby/index.html) and [Elixir package](/elixir/index.html) ship
-with a built-in diagnose command-line tool that outputs information about the
-configuration of the AppSignal library and environment it's running in. All
-this information can help in finding a potential cause of a problem.
+Our [Ruby gem](/ruby/index.html), [Elixir package](/elixir/index.html) and
+[Node.js package](/nodejs/index.html) ship with a built-in diagnose command-line
+tool that outputs information about the configuration of the AppSignal library and
+environment it's running in. All this information can help in finding a potential
+cause of a problem.
 
 If you open a support request, we'll usually ask you to run this first.
 
@@ -46,6 +47,9 @@ bin/your_app eval ":appsignal_tasks.diagnose()"
 
 # With a Distillery release binary:
 bin/your_app command appsignal_tasks diagnose
+
+# Node.js
+npx appsignal-diagnose
 ```
 
 The diagnose command has to be run in the directory of an application that has
@@ -65,6 +69,9 @@ appsignal diagnose --environment=production
 MIX_ENV=production mix appsignal.diagnose
 # Or with the release binary
 bin/your_app command appsignal_tasks diagnose
+
+# Node.js
+NODE_ENV=production npx appsignal-diagnose
 ```
 
 ### Diagnose information
@@ -72,14 +79,14 @@ bin/your_app command appsignal_tasks diagnose
 The diagnose command will output the following data.
 
 - Agent information
-  - Ruby gem / Elixir package version
+  - Ruby gem / Elixir package / Node.js package version
   - Agent version
   - Ruby gem installation path
   - C-extension / Nif loaded: `yes`/`no`
 - Host information
   - Hardware architecture
   - Operating system
-  - Ruby / Elixir & OTP version
+  - Ruby / Elixir & OTP / Node.js version
   - Heroku detection - only visible on Heroku
   - Container detection
   - Current user is `root` user: `yes`/`no`
@@ -90,11 +97,11 @@ The diagnose command will output the following data.
   - Agent lock file path writable check
 - Configuration
   - Environment
-      - The Ruby gem outputs a warning if none is found.
+    - The Ruby gem outputs a warning if none is found.
   - List of configuration options
-      - See [Ruby configuration](/ruby/configuration/options.html) and [Elixir
-        configuration](/elixir/configuration/options.html) for all
-        available options.
+    - See [Ruby configuration](/ruby/configuration/options.html) and [Elixir
+      configuration](/elixir/configuration/options.html) for all
+      available options.
 - Push API key validation
   - Tests if the Push API key that's being used is a valid key at AppSignal.com.
 - Path information
@@ -159,7 +166,7 @@ no application is created.
 
 When an integration is broken or not setup correctly it can take a long time to
 track the problem down. To rule out the AppSignal agent and its processing we
-can send "demo samples".
+can send "demo samples". (Note: this is currently not implemented for Node.js)
 
 ```bash
 # Ruby

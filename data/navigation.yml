@@ -480,6 +480,13 @@ sections:
               -
                 name: "Apollo Server"
                 link: "/nodejs/integrations/apollo.html"
+          - 
+            name: "Command line tools"
+            link: "/nodejs/command-line/index.html"
+            sub_pages:
+              -
+                name: "Diagnose"
+                link: "/nodejs/command-line/diagnose.html"
       -
         name: "AppSignal for Front-end"
         icon: "fab fa-js"
