@@ -423,6 +423,9 @@ sections:
               -
                 name: "Load order"
                 link: "/nodejs/configuration/load-order.html"
+              -
+                name: "Ignore actions"
+                link: "/nodejs/configuration/ignore-actions.html"
           -
             name: "Tracing"
             link: "/nodejs/tracing/"
