@@ -89,6 +89,8 @@ sections:
               -
                 name: "Webhooks"
                 link: "/application/integrations/webhooks.html"
+          - name: "Environment metadata"
+            link: "/application/environment-metadata.html"
       -
         name: "Your organizations"
         icon: "fas fa-users"
@@ -480,7 +482,7 @@ sections:
               -
                 name: "Apollo Server"
                 link: "/nodejs/integrations/apollo.html"
-          - 
+          -
             name: "Command line tools"
             link: "/nodejs/command-line/index.html"
             sub_pages:
