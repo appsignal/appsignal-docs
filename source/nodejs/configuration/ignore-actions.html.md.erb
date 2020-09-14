@@ -1,0 +1,14 @@
+---
+title: "Ignore actions"
+---
+<%= partial "shared/ignore_actions" %>
+
+## Ignore by action name
+
+```js
+const appsignal = new Appsignal({
+  active: true,
+  name: "<YOUR APPLICATION NAME>",
+  ignoreActions: ["admin", "perform"]
+})
+```
