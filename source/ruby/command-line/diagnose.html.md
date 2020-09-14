@@ -53,6 +53,12 @@ On the command line in your project run:
 appsignal diagnose
 ```
 
+To run the diagnose on your production server, and send the report to AppSignal for support purposes, you can run the following command:
+
+```bash
+bundle exec appsignal diagnose --environment=production --send-report
+```
+
 ## Options
 
 | Option         | Description                            |
