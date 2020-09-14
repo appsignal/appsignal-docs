@@ -8,16 +8,6 @@ Anomaly detection works by detecting changes in metric values on a minutely basi
 
 Sometimes it's good to know immediately when a threshold is reached, at other times it may be good to wait a few minutes before alerting you. For this you can use [warm-ups and cooldowns](#warm-up-and-cooldown).
 
-## Table of Contents
-
-- [Alert states](#alert-states)
-- [Triggers](#setting-up-triggers)
-  - [Editing triggers](#editing-triggers)
-- [Warm-up and cooldown](#warm-up-and-cooldown)
-  - [Warm-up](#warm-up)
-  - [Cooldown](#cooldown)
-- [Data processing](#data-processing)
-
 ## Alert states
 
 Alerts can have four different states:

@@ -4,13 +4,6 @@ title: "AppSignal for Node.js configuration"
 
 In this section, we'll explain how to configure AppSignal, what can be configured in the Node.js package, and what the minimal configuration needed is.
 
-## Table of Contents
-
-- [Minimal required configuration](#minimal-required-configuration)
-- [Configuration options](/nodejs/configuration/options.html)
-- [Application environments](#application-environments)
-  - [Disable AppSignal for tests](#disable-appsignal-for-tests)
-
 ## Minimal required configuration
 
 The minimal required configuration needed by AppSignal for Node.js are the following items. If they are not present, AppSignal will not send any data to AppSignal.com.

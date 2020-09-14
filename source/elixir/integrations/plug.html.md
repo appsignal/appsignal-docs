@@ -16,12 +16,6 @@ instrumentation](/elixir/instrumentation/index.html) documentation.
 More information can be found in the [AppSignal Hex package
 documentation][hex-appsignal].
 
-## Table of Contents
-
-- [Incoming HTTP requests](#incoming-http-requests)
-- [Custom instrumentation](#custom-instrumentation)
-- [Instrumentation for included Plugs](#instrumentation-for-included-plugs)
-
 ## Incoming HTTP requests
 
 We'll start out with a small Plug app that accepts `GET` requests to `/` and

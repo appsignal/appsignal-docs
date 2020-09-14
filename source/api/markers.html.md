@@ -8,18 +8,6 @@ deploy using a "Deploy marker" or a custom event with a "Custom marker".
 This Marker endpoint allows the creation and indexing of markers that are
 available per application.
 
-## Table of Contents
-
-- [Marker types](#marker-types)
-  - [Deploy markers](#deploy-markers)
-  - [Custom markers](#custom-markers)
-- Endpoints
-  - [Marker create - POST markers.json](#marker-create)
-  - [Marker index - GET markers.json](#marker-index)
-  - [Marker show - GET markers/[marker_id].json](#marker-show)
-  - [Marker update - PUT markers.json](#marker-update)
-  - [Marker delete - DELETE markers.json](#marker-delete)
-
 ## Marker types
 
 ### Deploy markers

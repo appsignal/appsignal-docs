@@ -9,20 +9,6 @@ In this topic we'll explain how to configure AppSignal, what can be configured
 in the Ruby gem, what's the minimal configuration needed and how the
 configuration is loaded.
 
-## Table of Contents
-
-- [Minimal required configuration](#minimal-required-configuration)
-- [Configuration methods](#configuration-methods)
-  - [YAML configuration file](#yaml-configuration-file)
-  - [System environment variables](#system-environment-variables)
-- [Configuration options](/ruby/configuration/options.html)
-  - [Ignore actions](/ruby/configuration/ignore-actions.html)
-  - [Ignore errors](/ruby/configuration/ignore-errors.html)
-  - [Parameter filtering](/ruby/configuration/parameter-filtering.html)
-  - [Session data filtering](/ruby/configuration/session-data-filtering.html)
-- [Configuration load order](/ruby/configuration/load-order.html)
-- [Example configuration file](#example-configuration-file)
-
 ## Minimal required configuration
 
 ```yaml

@@ -6,11 +6,6 @@ AppSignal for Node.js contains a new concept that is different to the current Ru
 
 The Tracer is responsible for tracking the currently active `Span`, and exposes functions for creating and activating new `Span`s.
 
-## Table of Contents
-
-- [Retrieving the `Tracer`](#retrieving-the-tracer)
-- [Retrieving the current `Span`](#retrieving-the-current-span)
-
 ## Retrieving the `Tracer`
 
 ```js

@@ -15,12 +15,6 @@ See also our announcement posts about Custom markers:
 - [Introducing custom markers](http://blog.appsignal.com/2016/10/28/custom-markers.html)
 - [Add custom markers from any graph](http://blog.appsignal.com/2016/11/28/custom-markers-from-any-graph.html)
 
-## Table of Contents
-
-- [Creating a custom marker](#creating-a-custom-marker)
-  - [Using the Graph UI](#using-the-graph-ui)
-  - [Using the AppSignal API](#using-the-appsignal-api)
-
 ## Creating a custom marker
 
 A custom marker can be created in two ways. Through the UI on AppSignal.com on

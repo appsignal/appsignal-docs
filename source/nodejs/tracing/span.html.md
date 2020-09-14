@@ -6,13 +6,6 @@ A `Span` is the name of the object that we use to capture data about your applic
 
 It is designed to closely follow the concept of a Span from the [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-specification) standard specification, but there are some minor differences that we'll get into later.
 
-## Table of Contents
-
-- [Creating a new `Span`](#creating-a-new-span)
-- [Naming a `Span`](#naming-a-span)
-- [Updating a `Span`](#updating-a-span)
-- [`Span` API](#span-api)
-
 ## Creating a new `Span`
 
 A `Span` can be created by calling `tracer.createSpan()`, which initializes a new `Span` object.

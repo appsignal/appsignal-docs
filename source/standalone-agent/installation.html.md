@@ -4,14 +4,6 @@ title: "Standalone AppSignal Agent installation"
 
 In order to provide a full picture of your infrastructure, you should monitor not just application servers, but any server your application depends on (eg. database servers). In order to do this, we offer a standalone mode in our AppSignal agent. This allows you to run the AppSignal agent without having to start it from a Ruby/Elixir process.
 
-## Table of Contents
-
-- [Installation](#installation)
-  - [Ubuntu](#ubuntu)
-  - [Redhat Enterprise Linux/Centos](#redhat-enterprise-linux-centos)
-- [Configuration](#configuration)
-- [Collected metrics](#collected-metrics)
-
 ## Installation
 
 We are in the process of testing and packaging the standalone agent on Linux distributions that are most popular with our customers. [Let us know](mailto:support@appsignal.com) if you want to run the agent on a distribution that is not supported yet.

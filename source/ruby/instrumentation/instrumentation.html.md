@@ -33,13 +33,6 @@ instrumentation, as is used by Rails.
    your code. To track errors please read our
    [exception handling](/ruby/instrumentation/exception-handling.html) guide.
 
-## Table of Contents
-
-- [AppSignal instrumentation helpers](#appsignal-instrumentation-helpers) (Gem 1.3 and higher)
-  - [Nesting instrumentation](#nesting-instrumentation)
-  - [Collecting more data per event](#collecting-more-data-per-event)
-- [ActiveSupport::Notifications instrumentation](#activesupport-notifications)
-
 ## AppSignal instrumentation helpers
 
 -> This feature is available since AppSignal for Ruby gem 1.3. If you use an

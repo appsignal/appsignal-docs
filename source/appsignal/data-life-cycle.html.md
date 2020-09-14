@@ -8,17 +8,6 @@ AppSignal is eventually consistent. This means that, even though we try to minim
 
 Requests that are sent later than others will appear first in AppSignal.com. By breaking down the process we can tell you why this happens.
 
-## Table of Contents
-
-- [Language libraries](#language-libraries)
-- [Push API](#push-api)
-- [Processing](#processing)
-  - [Anomaly detection](#anomaly-detection)
-    - [Transmitting the data](#transmitting-the-data)
-    - [Clock drift on app servers](#clock-drift-on-app-servers)
-    - [Processing of metrics data](#processing-of-metrics-data)
-- [Conclusion](#conclusion)
-
 ## Language libraries
 
 The AppSignal language libraries ([Ruby](/ruby), [Elixir](/elixir), [JavaScript for Front-end](/front-end)) collect transaction and metrics data. [Transactions](/appsignal/terminology.html#transactions) are HTTP requests, background jobs and other custom transactions. Metrics data is based on the transaction data but can also be set using our [custom metrics](/metrics/custom.html).

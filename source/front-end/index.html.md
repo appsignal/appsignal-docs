@@ -4,25 +4,6 @@ title: "AppSignal for JavaScript"
 
 AppSignal has amazing support for catching errors from front-end JavaScript applications and sending them to AppSignal. An `npm` library for catching JavaScript errors is available for that.
 
-## Table of Contents
-
-- [Installation](/front-end/installation.html)
-- [Configuration](/front-end/configuration/)
-- [Error handling](/front-end/error-handling.html)
-- [Creating and Using a Span](/front-end/span.html)
-- [Hooks](/front-end/hooks.html)
-- [Sourcemaps](/front-end/sourcemaps.html)
-- [Integrations](/front-end/integrations/)
-  - [React](/front-end/integrations/react.html)
-  - [Vue](/front-end/integrations/vue.html)
-  - [Angular](/front-end/integrations/angular.html)
-  - [Ember](/front-end/integrations/ember.html)
-  - [Preact](/front-end/integrations/preact.html)
-  - [Stimulus](/front-end/integrations/stimulus.html)
-- [Plugins](/front-end/plugins/)
-  - [plugin-window-events](/front-end/plugins/plugin-window-events.html)
-  - [plugin-path-decorator](/front-end/plugins/plugin-path-decorator.html)
-
 !> **NOTE:** Uncaught exceptions are **not** captured by default. [Read this section to find out why](/front-end/error-handling.html#uncaught-exceptions). You can enable this functionality by enabling the [`plugin-window-events`](/front-end/plugins/plugin-window-events.html) plugin.
 
 ## Creating a Push API Key

@@ -5,14 +5,6 @@ description: "Command line tool to install AppSignal in a Ruby application. Docu
 
 Command line tool to install AppSignal in a Ruby application.
 
-## Table of Contents
-
-- [Description](#description)
-- [Configuration methods](#configuration-methods)
-- [Usage](#usage)
-- [Options](#options)
-- [Exit codes](#exit-codes)
-
 ## Description
 
 The command line tool is primarily used to help set up the configuration for AppSignal. Please follow the [installation guide](/application/new-application.html) when adding a new application to AppSignal.

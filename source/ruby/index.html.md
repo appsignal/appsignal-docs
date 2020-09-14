@@ -6,17 +6,6 @@ AppSignal supports the [Ruby language][ruby-lang] with a [Ruby gem][appsignal-ge
 
 It's also supported to add custom instrumentation to your application and get even more insights into the performance of your code.
 
-## Table of Contents
-
-- [Installation](/ruby/installation.html)
-- [Configuration](/ruby/configuration/index.html)
-- [Integrations](/ruby/integrations/index.html)
-- [Custom instrumentation](/ruby/instrumentation/index.html)
-- [Command line tools](/ruby/command-line/index.html)
-- [Ruby implementation support](#ruby-implementation-support)
-  - [Ruby MRI](#ruby-mri)
-  - [JRuby](#jruby)
-
 ## Configuration
 
 In the configuration topic we'll explain how to configure AppSignal, what can

@@ -7,13 +7,6 @@ package][appsignal-package]. The package supports pure Elixir applications and
 the Phoenix framework out-of-the-box. Other frameworks and packages might
 require some [custom instrumentation](/elixir/instrumentation/index.html).
 
-## Table of Contents
-
-- [Installation](/elixir/installation.html) - start here
-- [Configuration](/elixir/configuration/index.html)
-- [Integrating with Phoenix](/elixir/integrations/phoenix.html)
-- [Instrumentation](/elixir/instrumentation/index.html)
-
 ## Installation
 
 To get started with AppSignal for Elixir, follow our guide to [installing

@@ -6,16 +6,6 @@ Whenever AppSignal detects a new error or performance measurement, we open an in
 
 AppSignal can send out notifications whenever a new incident, or new instances of an already existing incident, is detected. Notifications can happen by email or by one of our [many notifiers](/application/integrations/).
 
-## Table of Contents
-
-- [Notification options](#notification-options)
-- [Error incident notification options](#notification-options)
-- [Performance incident notification options](#notification-options)
-- [Organization and app namespace defaults](#organization-and-app-namespace-defaults)
-  - [App notification defaults](#app-notification-defaults)
-  - [Organization notification defaults](#organization-notification-defaults)
-  - [Notification defaults inheritance](#notification-defaults-inheritance)
-
 ## Notification options
 
 Whenever a new incident gets created it will inherit the [app's notification defaults](#app-notification-defaults). When an [Error](#error-incident-notification-settings) or [Performance](#performance-incident-notification-settings) incident has been created, its notification settings can be changed on the incident page itself.

@@ -6,17 +6,6 @@ title: "Sidekiq"
 
 Support for Sidekiq was added in AppSignal Ruby gem version `0.8`.
 
-## Table of Contents
-
-- [Job naming](#job-naming)
-- [Usage](#usage)
-  - [Using with Rails](#usage-with-rails)
-  - [Using with Active Job](#usage-with-active-job)
-  - [Using standalone](#usage-standalone)
-- [Metrics](#metrics)
-- [Minutely probe](#minutely-probe)
-  - [Configuration](#minutely-probe-configuration)
-
 ## Job naming
 
 Job names are automatically detected based on the Sidekiq worker class name and are suffixed with the `perform` method name, resulting in something like: `MyWorker#perform`.

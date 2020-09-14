@@ -10,15 +10,6 @@ Read more about how to use the demonstration command on the [Debugging][debuggin
 
 This tool is available since version 0.11.0 of the AppSignal for Elixir package.
 
-## Table of Contents
-
-- [Usage](#usage)
-  - [With a specific environment](#with-a-specific-environment)
-  - [With a release binary](#with-a-release-binary)
-- [Options](#options)
-  - [Environment option](#options)
-- [Exit codes](#exit-codes)
-
 ## Usage
 
 On the command line in your project run:

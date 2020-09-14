@@ -10,18 +10,6 @@ When a new deploy is detected, the list of incidents is empty for the newest dep
 
 ![Deploy markers in samples list](/assets/images/screenshots/app_incident_samples_list.png)
 
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Deploy methods](#deploy-methods)
-- [Revision config option](#revision-config-option)
-  - [Config option](#config-option)
-  - [System environment variable](#system-environment-variable)
-  - [Heroku support](#heroku-support)
-  - [Cloud66 Support](#cloud66-support)
-- [Manually create a Deploy marker](#manually-create-a-deploy-marker)
-  - [Ruby CLI tool](#ruby-cli-tool)
-
 ## Deploy methods
 
 There are two methods of notifying AppSignal of a new deploy. These two methods cannot be used together.

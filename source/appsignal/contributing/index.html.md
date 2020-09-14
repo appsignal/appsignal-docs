@@ -11,16 +11,6 @@ questions about contributing to any of our projects.
 We're very happy sending anyone who contributes Stroopwaffles. Have look at
 everyone we sent a package to so far on our [Stroopwaffles page][waffles-page].
 
-## Table of Contents
-
-- [Open Source projects](#open-source-projects)
-- [Using git and GitHub](#using-git-and-github)
-- [Versioning](#versioning)
-- [Reporting bugs](#reporting-bugs)
-- [Feature requests](#feature-requests)
-- [Security issues](#security-issues)
-- [Code of Conduct][coc]
-
 ## Open Source projects
 
 All open source projects are available on our [AppSignal GitHub organization][github-appsignal].

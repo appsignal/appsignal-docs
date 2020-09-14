@@ -10,12 +10,6 @@ Host metrics for containerized systems are fully supported since AppSignal for R
 
 -> **Note**: This page is part of the [host metrics section](/metrics/host.html).
 
-## Table of Contents
-
-- [Container limits](#container-limits)
-- [Supported metrics](#supported-metrics)
-  - [About CPU metrics](#cpu-metrics)
-
 ## Container limits
 
 For container host metrics to be accurate, limits need to be set for every container. This means, configuring your container to have a limited number of CPUs and memory allocated to it. Without these limits the container reports the maximum possible value of these metrics, resulting in the host reporting Terabytes of available memory for example. A container without swap configured, or unsupported on the host system, will report a `0` value. For more information on how to limit your container's CPU and memory, please read the documentation on:

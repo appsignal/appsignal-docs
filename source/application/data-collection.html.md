@@ -6,18 +6,6 @@ By default AppSignal gathers relevant data for errors and performance measuremen
 
 You can configure AppSignal to gather more, or less, information than it does by default by tagging your transactions and configuring the request headers, parameter filtering, etc. Ideally we receive as little metadata for samples as possible, and only data that is needed to debug an exception or performance issue.
 
-
-## Table of Contents
-
-- [Ignore actions](#ignore-actions)
-- [Ignore errors](#ignore-errors)
-- [Request headers](#request-headers)
-- [Parameters](#parameters)
-- [Session data](#session-data)
-- [Tagging](#tagging)
-- [Namespaces](#namespaces)
-- [Queries](#queries)
-
 ## Ignore actions
 
 Noisy actions (web endpoints, background jobs, scheduled tasks) sometimes do more harm than good. To filter out these actions it's possible to ignore them in AppSignal by updating the AppSignal configuration in an app.

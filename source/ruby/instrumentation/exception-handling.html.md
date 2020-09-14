@@ -16,22 +16,6 @@ To avoid these errors from being raised as problems in AppSignal it's possible
 to add exception handling to your code or even let AppSignal completely ignore
 certain errors.
 
-## Table of Contents
-
-- [Ignore errors](#ignore-errors)
-- [Exception handling](#exception-handling)
-  - [Rails rescue_from](#rails-rescue_from)
-  - [Handle 404s](#handle-404s)
-  - [Handle invalid authenticity tokens](#handle-invalid-authenticity-tokens)
-  - [Handle hacking attempts](#handle-hacking-attempts)
-- [Appsignal.set_error](#appsignal-set_error)
-  - [Tagging](#appsignal-set_error-tagging)
-  - [Namespaces](#appsignal-set_error-namespaces)
-- [Appsignal.send_error](#appsignal-send_error)
-  - [Tagging](#appsignal-send_error-tagging)
-  - [Namespaces](#appsignal-send_error-namespaces)
-- [Appsignal.listen_for_error](#appsignal-listen_for_error)
-
 ## Ignore errors
 
 The AppSignal configuration makes it possible to [ignore

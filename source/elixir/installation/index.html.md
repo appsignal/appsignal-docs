@@ -4,17 +4,6 @@ title: "Installing AppSignal for Elixir"
 
 Please follow the [installation guide](/application/new-application.html) when adding a new application to AppSignal.
 
-## Table of Contents
-
-- [Installation](#installation)
-  - [Requirements](#requirements)
-  - [Configuration](#configuration)
-      - [Manual configuration](#manual-configuration)
-  - [Run your application!](#run-your-application)
-  - [Optional: Add Phoenix instrumentation](#optional-add-phoenix-instrumentation)
-  - [Optional: Add custom instrumentation](#optional-add-custom-instrumentation)
-- [Uninstall](#uninstall)
-
 ## Installation
 
 Installing the AppSignal package in your Elixir application requires a couple manual steps. Currently pure Elixir applications and the Phoenix framework are supported. Both use-cases are described in this guide.

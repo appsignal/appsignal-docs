@@ -4,11 +4,6 @@ title: "Erlang"
 
 The AppSignal for Elixir package integrates with the Erlang VM to provide metrics not just about your app but the virtual machine it's running in.
 
-## Table of Contents
-
-- [Minutely probe](#minutely-probe)
-  - [Configuration](#minutely-probe-configuration)
-
 ## Minutely probe
 
 Since AppSignal Elixir package `1.10.1` and up a [minutely probe](/elixir/instrumentation/minutely-probes.html) is activated by default. Once we detect these metrics we'll add a [magic dashboard](https://blog.appsignal.com/2019/03/27/magic-dashboards.html) to your apps.

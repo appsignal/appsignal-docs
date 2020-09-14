@@ -5,13 +5,6 @@ description: "Command line tool to install AppSignal in an Elixir application. D
 
 Command line tool to install AppSignal in an Elixir application.
 
-## Table of Contents
-
-- [Description](#description)
-- [Configuration methods](#configuration-methods)
-- [Usage](#usage)
-- [Exit codes](#exit-codes)
-
 The command line tool is primarily used to help set up the configuration for AppSignal. Please follow the [installation guide](/application/new-application.html) when adding a new application to AppSignal.
 
 After the configuration/installation is completed the installer perform the [demonstration](demo.html) command line tool and sends demo data to AppSignal servers to help with the installation wizard.

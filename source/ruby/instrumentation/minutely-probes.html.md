@@ -10,20 +10,6 @@ By default the AppSignal Ruby gem enables probes for [libraries](/ruby/integrati
 
 -> **Note**: We recommend using AppSignal Ruby gem `2.9.0` and up when using this feature.
 
-## Table of Contents
-
-- [Usage](#usage)
-  - [Multiple instances](#multiple-instances)
-- [Configuration](#configuration)
-- [Creating probes](#creating-probes)
-  - [Lambda probe](#lambda-probe)
-  - [Class probe](#class-probe)
-  - [Initialized class probe](#initialized-class-probe)
-- [Registering probes](#registering-probes)
-  - [Deprecated registration method](#deprecated-registration-method)
-- [Dependency requirements](#dependency-requirements)
-- [Overriding default probes](#overriding-default-probes)
-
 ## Usage
 
 The minutely probes allow the AppSignal Ruby gem to collect [custom metrics](/metrics/custom.html) by default for [integrations](/ruby/integrations) and app-specific metrics by [creating your own probe](#creating-probes).
