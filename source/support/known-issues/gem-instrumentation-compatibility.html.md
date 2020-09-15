@@ -11,7 +11,7 @@ title: Compatibility issue with other instrumentation gems
 
 ## Description
 
-Upon executing a rake task or performing a Net::HTTP request the app will raise a "stack level too deep (SystemStackError)" error. There may also be other scenarios this "SystemStackError" occurs, as it can potentially occur with every type of instrumentation set up by the AppSignal gem and other gems.
+Upon executing a rake task or performing a Net::HTTP request the app will raise a "stack level too deep (SystemStackError)" error. There may also be other scenarios where this "SystemStackError" occurs, as it can potentially occur with every type of instrumentation set up by the AppSignal gem and other gems.
 
 This error is caused by the AppSignal gem and other gems with instrumentation having different methods of instrumentation that are incompatible. These different methods cause aliased methods, set up by instrumentation gems, to be continuously called until Ruby's stack has been exhausted.
 
