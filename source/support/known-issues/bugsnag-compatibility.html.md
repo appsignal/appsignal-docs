@@ -4,7 +4,10 @@ title: Compatibility issue with other instrumentation gems
 
 ## Affected components
 
-- AppSignal for Ruby, in combination with Bugsnag 6.12.0 and later
+- AppSignal for Ruby, all versions, in combination with:
+  - http_logger gem 0.6.0 and later
+  - Bugsnag gem 6.12.0 and later
+  - Datadog gem
 
 ## Description
 
