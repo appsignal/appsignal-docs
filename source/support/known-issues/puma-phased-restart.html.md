@@ -4,7 +4,7 @@ title: Puma phased restarts
 
 ## Affected components
 
-- AppSignal for Ruby gem versions: `v2.9.17` (see [workarounds](#workaround)).
+- AppSignal for Ruby gem version `v2.9.17` and later (see [workarounds](#workaround)).
 
 ## Description
 
