@@ -18,4 +18,5 @@ The AppSignal integration stops, but is not restarted when using Puma phased res
 
 ## Workaround
 
-Locking to `2.9.16` should fix that issue for now.
+- Downgrade the AppSignal gem to `2.9.16` until the issue has been resolved.
+- Do not use Puma's phased restart feature until the issue has been resolved.
