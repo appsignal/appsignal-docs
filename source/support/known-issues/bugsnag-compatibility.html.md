@@ -1,5 +1,5 @@
 ---
-title: Bugsnag Compatibility
+title: Compatibility issue with other instrumentation gems
 ---
 
 ## Affected components
