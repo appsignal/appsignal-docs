@@ -19,4 +19,4 @@ Our rake integration uses the method aliasing approach, while Bugsnag uses `Modu
 
 ## Workaround
 
-Downgrade the Bugsnag to `6.11.x`, which doesn't use `Module.prepend` yet, or removing it altogether.
+Downgrade the Bugsnag library to `6.11.1`, which doesn't use `Module.prepend` yet, or remove it altogether.
