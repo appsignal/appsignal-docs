@@ -73,3 +73,12 @@ See also the GitHub issue tracker for our integrations for other known issues:
   - Affected components:
       - AppSignal for Ruby package versions: `v2.4.1` - `v2.5.2`
       - Integrations: Sidekiq.
+- [Compatibility issue with bugsnag](known-issues/bugsnag-compatibility.html.md)
+  - Symptom: It produces system stack errors when running rake tasks.
+  - Affected components:
+    - AppSignal for Ruby package versions: `v2.9.17` - `v2.11.0`
+  
+- [Puma phased restart are broken](known-issues/puma-phased-restart.md)
+  - Symptom: Puma phased restart are broken.
+  - Affected components:
+    - AppSignal for Ruby package versions: `v2.9.17`
