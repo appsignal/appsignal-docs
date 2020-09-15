@@ -13,7 +13,7 @@ We've added a new plugin to add our [Puma magic dashboard](https://docs.appsigna
 
 ## Symptoms
 
-- Puma phased restart are broken.
+- The AppSignal integration stops, but is not restarted when using Puma phased restarts.
 
 ## Workaround
 
