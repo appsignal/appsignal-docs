@@ -15,7 +15,7 @@ Our rake integration uses the method aliasing approach, while Bugsnag uses `Modu
 
 ## Symptoms
 
-- It produces system stack errors when running rake tasks
+- Running both AppSignal and Bugsnag 6.12.x or later produces SystemStackErrors when running rake tasks
 
 ## Workaround
 
