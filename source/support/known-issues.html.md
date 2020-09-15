@@ -73,8 +73,8 @@ See also the GitHub issue tracker for our integrations for other known issues:
   - Affected components:
       - AppSignal for Ruby package versions: `v2.4.1` - `v2.5.2`
       - Integrations: Sidekiq.
-- [Compatibility issue with bugsnag](known-issues/bugsnag-compatibility.html)
-  - Symptom: It produces system stack errors when running rake tasks.
+- [Compatibility issue with other instrumentation gems](known-issues/gem-instrumentation-compatibility.html)
+  - Symptom: Apps produce "SystemStackErrors" when other instrumentation gems are loaded, such as http_logger, bugsnag, datadog and potentially others.
   - Affected components:
       - AppSignal for Ruby package versions: `v2.9.17` - `v2.11.0`
 - [Puma phased restart are broken](known-issues/puma-phased-restart.html)
