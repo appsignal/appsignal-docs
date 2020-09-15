@@ -76,7 +76,7 @@ See also the GitHub issue tracker for our integrations for other known issues:
 - [Compatibility issue with other instrumentation gems](known-issues/gem-instrumentation-compatibility.html)
   - Symptom: Apps produce "SystemStackErrors" when other instrumentation gems are loaded, such as http_logger, bugsnag, datadog and potentially others.
   - Affected components:
-      - AppSignal for Ruby package versions: `v2.9.17` - `v2.11.0`
+      - AppSignal for Ruby package versions: `0.0.x` - most recent
 - [Puma phased restart are broken](known-issues/puma-phased-restart.html)
   - Symptom: Puma phased restart are broken.
   - Affected components:
