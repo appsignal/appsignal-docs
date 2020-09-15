@@ -1,5 +1,5 @@
 ---
-title: Puma phased restart
+title: Puma phased restarts
 ---
 
 ## Affected components
