@@ -11,14 +11,11 @@ title: Compatibility issue with other instrumentation gems
 
 ## Description
 
-We've switched to using `Module.prepend` in our net/http integration in version `2.10.5` of our gem. However, that version broke compatibility with other libraries that use the method aliasing approach, like New Relic and Bugsnag. We then reverted that change in `2.10.7`.
+Upon executing a rake task or performing a Net::HTTP request the app will raise a "stack level too deep (SystemStackError)" error. There may also be other scenarios this "SystemStackError" occurs, as it can potentially occur with every type of instrumentation set up by the AppSignal gem and other gems.
 
-Our rake integration uses the method aliasing approach, while Bugsnag uses `Module.prepend` in theirs. When using both approaches in the same method, you'll end up with a stack level too deep error.
+This error caused by the AppSignal gem and other gems with instrumentation having different methods of instrumentation that are incompatible. These different methods cause aliased methods, set up by instrumentation gems, to be continuously called until Ruby's stack has been exhausted.
 
-
-## Symptoms
-
-Running both AppSignal and Bugsnag 6.12.x or later produces SystemStackErrors when running rake tasks.
+We're looking into solutions for this issue in [appsignal-ruby issue #603](https://github.com/appsignal/appsignal-ruby/issues/603). This issue also contains more information about the cause of the issue and potential solutions. Please report issues with other gems if encountered in this issue.
 
 ## Workaround
 
