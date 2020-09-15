@@ -20,5 +20,6 @@ We're looking into solutions for this issue in [appsignal-ruby issue #603](https
 ## Workaround
 
 - Downgrade the Bugsnag library to `6.11.1`.
+- Downgrade the http_logger library to `0.5.1`.
 - Downgrade other gems that introduce the same problem in newer versions.
 - Remove either of the gems until the issue has been resolved.
