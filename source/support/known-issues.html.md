@@ -80,4 +80,4 @@ See also the GitHub issue tracker for our integrations for other known issues:
 - [Puma phased restart are broken](known-issues/puma-phased-restart.html)
   - Symptom: Puma phased restart are broken.
   - Affected components:
-      - AppSignal for Ruby package versions: `v2.9.17`
+      - AppSignal for Ruby package versions: `v2.9.17` - most recent
