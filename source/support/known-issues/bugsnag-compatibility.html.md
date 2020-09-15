@@ -4,7 +4,7 @@ title: Bugsnag Compatibility
 
 ## Affected components
 
-- AppSignal for Ruby gem versions: `v2.9.17` - `v2.11.0` (see [workarounds](#workaround))
+- AppSignal for Ruby, in combination with Bugsnag 6.12.0 and later
 
 ## Description
 
