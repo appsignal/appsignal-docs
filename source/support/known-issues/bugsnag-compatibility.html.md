@@ -22,4 +22,6 @@ Running both AppSignal and Bugsnag 6.12.x or later produces SystemStackErrors wh
 
 ## Workaround
 
-Downgrade the Bugsnag library to `6.11.1`, which doesn't use `Module.prepend` yet, or remove it altogether.
+- Downgrade the Bugsnag library to `6.11.1`.
+- Downgrade other gems that introduce the same problem in newer versions.
+- Remove either of the gems until the issue has been resolved.
