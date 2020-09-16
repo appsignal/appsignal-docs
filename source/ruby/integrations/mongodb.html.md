@@ -2,12 +2,6 @@
 title: "MongoDB instrumentation"
 ---
 
-## Table of Contents
-
-- [Usage](#usage)
-- [Metrics](#metrics)
-- [Older Mongoid versions and MongoMapper](#Older-Mongoid-versions-and-MongoMapper)
-
 ## Usage
 
 The AppSignal gem version `1.0` and up supports the [Mongo Ruby Driver] gem and the [Mongoid] gem out-of-the-box.

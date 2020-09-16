@@ -6,19 +6,6 @@ The AppSignal Ruby gem ships with a self diagnostic tool. This tool can be used 
 
 This tool has been available since version `1.1.0` of the AppSignal Ruby gem.
 
-## Table of Contents
-
-- [The diagnostic report](#the-diagnostic-report)
-- [Submitting the report](#submitting-the-report)
-- [Usage](#usage)
-- [Options](#options)
-  - [Environment option](#environment-option)
-  - [Report submission option](#report-submission-option)
-- [Configuration output format](#configuration-output-format)
-  - [Configuration option values format](#configuration-option-values-format)
-  - [Configuration sources](#configuration-sources)
-- [Exit codes](#exit-codes)
-
 ## The diagnostic report
 
 This command line tool is useful when testing AppSignal on a system and validating the local configuration. It outputs useful information to debug issues and it checks if AppSignal agent is able to run on the machine's architecture and communicate with the AppSignal servers.

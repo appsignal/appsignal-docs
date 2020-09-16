@@ -7,9 +7,3 @@ To track application-wide metrics, you can send custom metrics to AppSignal. The
 With different [types of metrics](#metric-types) (gauges, counters and measurements) you can track any kind of data from your apps and [tag](#metric-tags) them with metadata to easily spot the differences between contexts.
 
 ![Custom metrics demo dashboard](/assets/images/screenshots/custom_metrics_dashboard.png)
-
-
-## Table of Contents
-
-- [The Metrics object](/nodejs/metrics/meters.html)
-- [Minutely probes](/nodejs/metrics/minutely-probes.html)

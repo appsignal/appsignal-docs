@@ -12,12 +12,6 @@ To avoid these errors from being raised as problems in AppSignal it's possible
 to add exception handling to your code or even let AppSignal completely ignore
 certain errors.
 
-## Table of Contents
-
-- [Ignore errors](#ignore-errors)
-- [Appsignal.Transaction.set_error/3](#appsignal-transaction-set_error-3)
-- [Appsignal.send_error/6](#appsignal-send_error-6)
-
 ## Ignore errors
 
 The AppSignal configuration makes it possible to [ignore

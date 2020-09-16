@@ -12,11 +12,6 @@ In Rails applications AppSignal automatically stores the contents of the user's 
 
 -> This feature is available since AppSignal Ruby gem [version 2.6.0](https://blog.appsignal.com/2018/05/08/ruby-gem-2-6.html).
 
-## Table of Contents
-
-- [AppSignal session data filtering](#appsignal-session-data-filtering)
-- [Skip sending session data](#skip-sending-session-data)
-
 ## AppSignal session data filtering
 
 Session data filtering will filter out any values from specified keys in the [`filter_session_data`](/ruby/configuration/options.html#option-filter_session_data) configuration option. Any filtered out value will be replaced with `[FILTERED]` before it leaves your application and is send to the AppSignal servers. This means that AppSignal never receives any of the filtered data.

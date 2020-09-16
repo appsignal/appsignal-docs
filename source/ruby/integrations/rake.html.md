@@ -10,15 +10,6 @@ Every exception recorded in a Rake task will be sent to AppSignal and filed unde
 
 Depending on what version of the AppSignal gem you use and in what context some manual steps are required.
 
-## Table of Contents
-
-- [Integrations](#integrations)
-  - [Rails applications](#rails-applications)
-  - [Ruby applications](#ruby-applications)
-- [`Appsignal.stop` requirement](#appsignal-stop-requirement)
-- [Rake tasks and containers](#rake-tasks-and-containers)
-- [Examples](#examples)
-
 ## Integrations
 
 ### Rails applications

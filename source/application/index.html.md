@@ -6,22 +6,6 @@ Applications (previously known as "sites", also referred to as "apps") are Ruby,
 
 A list of Applications appears on the [Application index] and in the application quick switcher. Every application has a parent [organization](/organization/index.html), which can have multiple applications. (Exception: Organizations created by the Heroku add-on only support one application.)
 
-## Table of Contents
-
-- [Adding applications](#adding-applications)
-- [Environments](#environments)
-- [Namespaces](namespaces.html)
-- [Markers](markers/)
-  - [Deploy markers](markers/deploy-markers.html)
-  - [Custom markers](markers/custom-markers.html)
-- [Settings](settings.html)
-- [Incident notification settings](notification-settings.html)
-- [Link templates](link-templates.html)
-- [Backtrace links](backtrace-links.html)
-- [Integrations (full list)](integrations/)
-- [Running multiple applications on one host](#running-multiple-applications-on-one-host)
-- [Removing an application](#removing-an-application)
-
 ## Adding applications
 
 To add a new Application to AppSignal, please follow the [add a new application setup wizard](/application/new-application.html).

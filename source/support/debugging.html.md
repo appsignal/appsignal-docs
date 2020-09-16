@@ -9,22 +9,6 @@ Since it's good to share, here are a couple of our procedures.
 
 Also see our list of [known issues](/support/known-issues.html) for a list of problems that might affect your application.
 
-## Table of Contents
-
-- [Diagnose](#diagnose)
-  - [Diagnose information](#diagnose-information)
-- [Configuration](#configuration)
-- [No data appearing](#no-data-appearing)
-- [Logs](#logs)
-  - [Logs contents](#logs-contents)
-  - [Log message breakdown](#log-message-breakdown)
-  - [Log location](#log-location)
-  - [Log files on Heroku](#log-files-on-heroku)
-- [Is the agent running?](#is-the-agent-running)
-- [Other questions](#other-questions)
-- [Creating a reproducible state](#creating-a-reproducible-state)
-- [Contact us](#contact-us)
-
 ## Diagnose
 
 Our [Ruby gem](/ruby/index.html), [Elixir package](/elixir/index.html) and

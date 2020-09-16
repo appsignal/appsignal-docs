@@ -13,21 +13,6 @@ instrumentation](/elixir/instrumentation/index.html) documentation.
 More information can be found in the [AppSignal Hex package
 documentation][hex-appsignal].
 
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Incoming HTTP requests](#incoming-http-requests)
-- [Phoenix instrumentation hooks](#phoenix-instrumentation-hooks)
-- [Template rendering](#template-rendering)
-- [Queries](#queries)
-- [Channels](#channels)
-  - [Channel instrumentation with a channel's handle](#channel-instrumentation-with-a-channels-handle)
-  - [Channel instrumentation without decorators](#channel-instrumentation-without-decorators)
-  - [Adding channel payloads](#adding-channel-payloads)
-- [LiveView](#liveview)
-- [Instrumentation for included Plugs](#instrumentation-for-included-plugs)
-- [Custom instrumentation](#custom-instrumentation)
-
 ## Incoming HTTP requests
 
 To start logging HTTP requests in your Phoenix app, make sure you use the

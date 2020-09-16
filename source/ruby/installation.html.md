@@ -4,13 +4,6 @@ title: "Installing AppSignal for Ruby"
 
 Please follow the [installation guide](/application/new-application.html) when adding a new application to AppSignal.
 
-## Table of Contents
-
-- [Installation](#installation)
-  - [Requirements](#requirements)
-  - [Installing the gem](#installing-the-gem)
-- [Uninstall](#uninstall)
-
 ## Installation
 
 Please follow the [installation guide](/application/new-application.html) when adding a new application to AppSignal.

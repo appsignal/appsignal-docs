@@ -10,12 +10,6 @@ The metadata for the events formatted by the event formatters will be visible on
 
 -> **Note**: If there are no other reasons to use [`ActiveSupport::Notifications`][as_instrumentation] instrumentation than AppSignal instrumentation, we recommend using the [`Appsignal.instrument` helper][instrument_helper] for instrumentation. Using `ActiveSupport::Notifications` adds more overhead than directly calling `AppSignal.instrument`. No event formatter will be needed either, as `AppSignal.instrument` accepts the metadata to be set directly.
 
-## Table of Contents
-
-- [Creating an event formatter](#creating-an-event-formatter)
-- [Example event formatter](#example-event-formatter)
-- [Changes in gem 2.5](#changes-in-gem-2-5)
-
 ## Creating an event formatter
 
 An AppSignal event formatter is a class with one instance method, `format`. This format method receives the event payload Hash and needs to return an Array with three values.

@@ -7,12 +7,6 @@ AppSignal supports tagging of requests, as described in our tagging guides for
 to generate URLs to your own application to deep link to pages in your own
 system, such as related user profiles or blog posts.
 
-## Table of contents
-
-- [Tagging requests](#tagging-requests)
-- [Creating a link template](#creating-a-link-template)
-  - [Customizing link names](#customizing-link-names)
-
 ## Tagging requests
 
 For link templates to work AppSignal needs to have the data necessary to create

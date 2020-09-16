@@ -10,14 +10,6 @@ The new Node.js implementation contains some concepts that vary from the Ruby an
 
 -> **Note**: AppSignal for Node.js is currently under active development.
 
-## Table of Contents
-
-- [Installation][installation]
-- [Configuration][configuration]
-- [Tracing][tracing]
-- [Metrics][metrics]
-- [Integrations][integrations]
-
 ## Supported versions
 
 Our Node.js suppport tracks the active LTS release and above, which is currently [v10](https://github.com/nodejs/Release) and above.

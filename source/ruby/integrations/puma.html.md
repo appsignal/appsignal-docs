@@ -6,16 +6,6 @@ title: "Puma"
 
 Support for Puma was added in AppSignal Ruby gem version `1.0`.
 
-## Table of Contents
-
-- [Usage](#usage)
-- [Minutely probe](#minutely-probe)
-  - [Metrics](#minutely-probe-metrics)
-  - [Configuration](#minutely-probe-configuration)
-      - [Secrets](#minutely-probe-configuration-secrets)
-      - [Hostname](#minutely-probe-configuration-hostname)
-  - [Phased restart](#minutely-probe-phased-restart)
-
 ## Usage
 
 The AppSignal Ruby gem automatically inserts a listener into the Puma server. No further action is required.

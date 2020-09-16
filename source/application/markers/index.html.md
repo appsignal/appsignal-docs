@@ -13,7 +13,3 @@ Custom markers can be used for anything from scaling operations, to sudden
 spikes in traffic and infrastructure issues such as when a database was acting
 up.
 
-## Table of Contents
-
-- [Deploy markers](deploy-markers.html)
-- [Custom markers](custom-markers.html)

@@ -6,14 +6,6 @@ Let's say you have your own startup but still do some freelance work for clients
 
 Organizations are basically umbrellas for your applications, which we charge on the organization level.
 
-## Table of Contents
-
-- [Creating a new organization](#creating-a-new-organization)
-- [Renaming an organization](#renaming-an-organization)
-- [Leaving an organization](#leaving-an-organization)
-- [Team management](/organization/team)
-- [Billing](/organization/billing.html)
-
 ## Creating a new organization
 
 Once you sign up for an AppSignal account you will need to create an Organization, except when you accept an invitation to another organization.

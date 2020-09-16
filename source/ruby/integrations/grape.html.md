@@ -9,13 +9,6 @@ For older versions of the AppSignal Ruby gem, check [grape-appsignal
 gem](https://github.com/aai/grape-appsignal) created by [Mark
 Madsen](https://github.com/idyll).
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Grape on Rails](#grape-on-rails)
-- [Ignoring errors](#ignoring-errors)
-- [Example app](#example-app)
-
 ## Installation
 
 A Grape application requires a few manual steps to get working.

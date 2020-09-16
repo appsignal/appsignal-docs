@@ -4,12 +4,7 @@ title: "Breadcrumbs"
 
 When debugging an issue in a UI, it can be useful to know what events occurred in the build up to the error being thrown. Breadcrumbs are a time-ordered list of events in your application, that is filled as a user traverses your application, and is sent along with a `Span` whenever an error is caught by the library. This allows you to gather information that is useful for reproducing tricky-to-debug errors by re-tracing a user's path through your application.
 
-## Table of Contents
-
-- [Usage](#usage)
-- [Plugins](#plugins)
-
-    ![Breadcrumbs](/assets/images/screenshots/frontend/breadcrumbs.svg)
+![Breadcrumbs](/assets/images/screenshots/frontend/breadcrumbs.svg)
 
 ## Usage
 

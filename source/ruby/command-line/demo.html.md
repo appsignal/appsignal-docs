@@ -19,15 +19,6 @@ Read more about how to use the demonstration command on the
 
 This tool is available since version 2.0.0 of the AppSignal Ruby gem.
 
-## Table of Contents
-
-- [Usage](#usage)
-  - [With a specific environment](#with-a-specific-environment)
-  - [Standalone run](#standalone-run)
-- [Options](#options)
-  - [Environment option](#options)
-- [Exit codes](#exit-codes)
-
 ## Usage
 
 On the command line in your project run:

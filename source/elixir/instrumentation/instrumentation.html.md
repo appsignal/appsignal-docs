@@ -25,24 +25,6 @@ package](https://hexdocs.pm/appsignal/).
    your code. To track errors please read our
    [exception handling](/elixir/instrumentation/exception-handling.html) guide.
 
-## Table of Contents
-
-- [Function decorators](#function-decorators)
-  - [Transaction events](#decorator-transaction-events)
-  - [Transactions](#decorator-transactions)
-  - [Namespaces](#decorator-namespaces)
-      - [Custom namespaces](#decorator-custom-namespaces)
-  - [Phoenix channels](#decorator-phoenix-channels)
-- [Instrumentation helper functions](#instrumentation-helper-functions)
-  - [Instrument helper](#helper-instrument-helper)
-      - [Adding asynchronous events to a transaction](#adding-asynchronous-events-to-a-transaction)
-  - [Transactions](#helper-transactions)
-  - [Transaction metadata](#helper-transaction-metadata)
-  - [Namespaces](#helper-namespaces)
-      - [Custom namespaces](#helper-custom-namespaces)
-  - [Exception handling](#helper-exception-handling)
-  - [Example](#helper-example)
-
 ## Function decorators
 
 Using the `Appsignal.Instrumentation.Decorators` decorator module, it's

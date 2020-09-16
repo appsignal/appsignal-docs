@@ -8,13 +8,7 @@ To receive a webhook, go to the "Notifications" tab the site's sidebar, click th
 
 ![Webhook](/assets/images/screenshots/app_webhook.png)
 
-## Table of Contents
-
 There are multiple webhooks available. Which payloads the webhook receives can be configured in the configuration form for the webhook as seen in the screenshot above.
-
-- [Deploy markers](#deploy-markers)
-- [Exception incidents](#exception-incidents)
-- [Performance incidents](#performance-incidents)
 
 ## Deploy markers
 

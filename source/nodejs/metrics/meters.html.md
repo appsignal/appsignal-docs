@@ -2,16 +2,6 @@
 title: "The Metrics object"
 ---
 
-## Table of Contents
-
-- [Metric types](#metric-types)
-  - [Gauge](#gauge)
-  - [Measurement](#measurement)
-  - [Counter](#counter)
-- [Metric naming](#metric-naming)
-- [Metric values](#metric-values)
-- [Metric tags](#metric-tags)
-
 ## Metric types
 
 There are three types of metrics we collect all with their own purpose.

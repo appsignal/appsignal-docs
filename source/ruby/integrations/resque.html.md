@@ -7,12 +7,6 @@ title: "Resque"
 -> Support for Resque instrumentation was added in AppSignal for Ruby gem version `0.8`.  
 -> Support for automatic Resque instrumentation was added in AppSignal for Ruby gem version `2.11`.
 
-## Table of Contents
-
-- [Integration](#integration)
-- [Active Job support](#active-job-support)
-- [Example apps](#example-apps)
-
 ## Integration
 
 Since AppSignal Ruby gem 2.11 and newer Resque integration is automatic. If you have previously included or extended modules in your Resque job classes, they can now be removed.

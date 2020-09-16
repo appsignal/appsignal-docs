@@ -16,13 +16,6 @@ For a preview of how host metrics look in the AppSignal interface, please see ou
 -> </ul>
 -> A list of supported Operating Systems is available on the [Supported Operating Systems](/support/operating-systems.html) page.
 
-## Table of Contents
-
-- [Collected host metrics](#collected-host-metrics)
-- [Heroku support][heroku support]
-- [Docker/container support][container support]
-- [Dokku support](#dokku-support)
-
 ## Collected host metrics
 
 The following host metrics are collected by the AppSignal agent for every minute on your system.

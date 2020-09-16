@@ -14,18 +14,6 @@ For more information about how dashboards and graphs use metrics data, see our [
 
 -> **Note**: This feature was introduced with the `1.0` version of the AppSignal for Ruby gem. It is also available in other AppSignal integrations such as Elixir and Node.js.
 
-## Table of Contents
-
-- [Metric types](#metric-types)
-  - [Gauge](#gauge)
-  - [Measurement](#measurement)
-  - [Counter](#counter)
-- [Metric naming](#metric-naming)
-- [Metric values](#metric-values)
-    - [Value formatting](#metric-values-value-formatting)
-        - [File size](#metric-values-file-size)
-- [Metric tags](#metric-tags)
-
 ## Metric types
 
 There are three types of metrics we collect, each with their own purpose.

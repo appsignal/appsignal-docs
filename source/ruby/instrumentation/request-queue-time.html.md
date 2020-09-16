@@ -2,14 +2,6 @@
 title: "Track request queue time"
 ---
 
-## Table of Contents
-
-- [Queue times](#queue-times)
-- [Setup](#setup)
-  - [Nginx](#nginx)
-  - [Apache](#apache)
-- [Namespaces](#namespaces)
-
 ## Queue times
 
 A common setup for Ruby application is that the Ruby webserver such as Unicorn or Puma runs behind another (outer) webserver such as Nginx or Apache. Those are usually used to terminate SSL connections and handle static assets for example. When your Ruby webserver is busy processing requests, Nginx or Apache can still accept new connections and wait for a Ruby process to become available to handle the request. The outer webserver queue's the request in the meantime.

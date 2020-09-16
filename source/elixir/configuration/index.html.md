@@ -8,19 +8,6 @@ know which application it's instrumenting or in which environment.
 On this topic we'll explain how to configure AppSignal, what can be configured
 in the Elixir package and what the minimal configuration needed is.
 
-## Table of Contents
-
-- [Minimal required configuration](#minimal-required-configuration)
-- [Configuration options](/elixir/configuration/options.html)
-  - [Ignore actions](/elixir/configuration/ignore-actions.html)
-  - [Ignore errors](/elixir/configuration/ignore-errors.html)
-  - [Parameter filtering](/elixir/configuration/parameter-filtering.html)
-  - [Session data filtering](/elixir/configuration/session-data-filtering.html)
-- [Application environments](#application-environments)
-  - [Disable AppSignal for tests](#disable-appsignal-for-tests)
-- [Application versions](#application-versions)
-- [Example configuration](#example-configuration)
-
 ## Minimal required configuration
 
 The minimal required configuration needed by AppSignal for Elixir are the

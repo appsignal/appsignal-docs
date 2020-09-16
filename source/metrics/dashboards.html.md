@@ -9,11 +9,6 @@ This page provides more detailed information about how some dashboard graphs opt
 
 [Open the dashboard and graph builder](https://appsignal.com/redirect-to/app?to=dashboard&overlay=dashboardForm) in your app.
 
-## Table of Contents
-
-- [Graphs types](#graphs-types)
-- [NULL values](#null-values)
-
 ## Graphs types
 
 Some data is better understood if the graph is rendered in a different way. We provide three display options:

@@ -8,17 +8,6 @@ By default the AppSignal Elixir package enables a probe for the ErlangVM.
 
 -> **Note**: We recommend using AppSignal Elixir package `1.10.1` and up when using this feature.
 
-## Table of Contents
-
-- [Usage](#usage)
-  - [Multiple instances](#multiple-instances)
-- [Configuration](#configuration)
-- [Creating probes](#creating-probes)
-  - [Anonymous function](#anonymous-function)
-  - [Module based function](#module-based-function)
-- [Registering probes](#registering-probes)
-- [Overriding default probes](#overriding-default-probes)
-
 ## Usage
 
 The minutely probes allow the AppSignal Elixir package to collect [custom metrics](/metrics/custom.html) by default for the ErlangVM and app-specific metrics by [creating your own probe](#creating-probes).
