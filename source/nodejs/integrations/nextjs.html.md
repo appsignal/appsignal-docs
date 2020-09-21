@@ -72,7 +72,7 @@ app.prepare().then(() => {
 });
 ```
 
-The integration will then track any queries served by to Next.js, and send metrics and statistics to AppSignal. This also works great with Express and the `@appsignal/express` integration:
+The integration will then track any queries served by Next.js, and send metrics and statistics to AppSignal. This also works great with Express and the `@appsignal/express` integration:
 
 ```js
 // ENSURE APPSIGNAL IS THE FIRST THING TO BE REQUIRED/IMPORTED
