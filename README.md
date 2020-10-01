@@ -26,7 +26,7 @@ bundle exec middleman
 
 Open the browser at [localhost:4567](http://localhost:4567/) and click around.
 
-## Building
+## Construction
 
 We currently have a known issue where we can't build the project with the
 `--parallel` flag (Which is set to `true` by default).
@@ -37,7 +37,7 @@ To make building easier you can run a wrapper around the build script:
 bin/build
 ```
 
-## Deployment
+## Execution
 
 ```sh
 bundle exec rake build_deploy
