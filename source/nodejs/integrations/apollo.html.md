@@ -65,3 +65,11 @@ server.listen().then(({ url }) => {
 ```
 
 !> **NOTE:** You must define an [operation name](https://www.apollographql.com/blog/the-anatomy-of-a-graphql-query-6dffa9e9e747/) for your query to get an action name in the Performance view of AppSignal.com. For example, `query FetchData {}` would get the action name `FetchData` on AppSignal.com. If no operation name is set, the query will be grouped under the action name `[unknown graphql query]`.
+
+## Features
+
+The integration will send the following instrumentation data to AppSignal:
+
+- ✅ Query duration
+- ✅ GraphQL query bodies
+- ✅ Errors

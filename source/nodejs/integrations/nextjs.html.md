@@ -115,7 +115,9 @@ app.prepare().then(() => {
 });
 ```
 
-## Web Vitals Reporting (EXPERIMENTAL)
+## Features
+
+### Web Vitals Reporting (EXPERIMENTAL)
 
 **Requires Next.js v9.4.0+**
 

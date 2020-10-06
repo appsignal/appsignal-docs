@@ -15,12 +15,14 @@ yarn add @appsignal/nodejs
 npm install --save @appsignal/nodejs
 ```
 
-You can then import and use the package in your app.
+You can then import and use the package in your app. No further steps are required to instrument calls made to your database - this is done automatically. 
 
-No further steps are required to instrument calls made to your database - this is done automatically. The integration will send the following instrumentation data to AppSignal:
+## Features
 
-- Query duration
-- (Sanitized) SQL query body
-- Errors
+The integration will send the following instrumentation data to AppSignal:
 
-This also works with any library that depends on `pg` as its database adapter, such as [`knex`](https://github.com/knex/knex) or [TypeORM](https://github.com/typeorm/typeorm).
+- ✅ Query duration
+- ✅ (Sanitized) SQL query body
+- ✅ Errors
+
+These also work with any library that depends on `pg` as its database adapter, such as [`knex`](https://github.com/knex/knex) or [TypeORM](https://github.com/typeorm/typeorm).
