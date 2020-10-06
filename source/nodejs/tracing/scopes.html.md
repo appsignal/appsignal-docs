@@ -4,13 +4,21 @@ title: "Async tracing and Scopes"
 
 Another concept unique to the Node.js integration is the concept of Scopes, which allow `Span`s to be recalled across asynchronous code paths that may not be linked to each other by being on the same direct code path.
 
-As mentioned in the `Span` documentation, the currently active `Span` can be recalled by calling `tracer.currentSpan()` in order to add data to it or create `ChildSpan`s from it.
+## What is a "Scope"?
+
+As mentioned in the [`Span` documentation](/nodejs/tracing/span.html), the currently active `Span` can be recalled by calling `tracer.currentSpan()` in order to add data to it or create `ChildSpan`s from it.
 
 ```js
 const span = tracer.currentSpan();
 ```
 
-Before it can be recalled again, the `Span` must be given a Scope. A Scope is a wrapper for a `Span` that allows it to be recalled across asynchronous code paths that may not directly be directly linked to each other (in an `EventEmitter` or a timer, for example, or even in a completely different file or function scope). This wrapper is invisible to you and is managed internally via the `Tracer` objects `ScopeManager` and the internal `async_hooks` module. These Scopes are stored in a stack, meaning that the most recent `Span` to be given a scope will be the next `Span` returned by `tracer.currentSpan()`.
+Before it can be recalled again from elsewhere in your application (for example, in a completely different file), the `Span` must be given a Scope. THis is not to be confused with "lexical scope", which is a lanugage construct - it is a seperate, but not unrelated, concept.
+
+A Scope is a wrapper for a `Span` that allows it to be recalled across asynchronous code paths that may not directly be directly linked to each other (in an `EventEmitter` or a timer, for example, or even in a completely different file or function scope). This wrapper is invisible to you and is managed internally via the `Tracer` objects `ScopeManager` and the internal [`async_hooks` module](https://blog.appsignal.com/2020/09/30/exploring-nodejs-async-hooks.html).
+
+These Scopes are stored in a stack, meaning that the most recent `Span` to be given a scope will be the next `Span` returned by `tracer.currentSpan()`.
+
+## Assigning a Scope to a `Span`
 
 A `Span` can be given a Scope like this:
 
@@ -23,7 +31,7 @@ tracer.withSpan(tracer.createSpan(), (span) => {
 });
 ```
 
-In a different file or function scope...
+Once assigned to a Scope, the `Span` passed to `tracer.withSpan()` can be recalled using `tracer.currentSpan()` in a different file or lexical scope...
 
 ```js
 const tracer = appsignal.tracer();

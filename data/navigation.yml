@@ -442,14 +442,20 @@ sections:
                 name: "The Tracer object"
                 link: "/nodejs/tracing/tracer.html"
               -
-                name: "Async tracing and Scopes"
-                link: "/nodejs/tracing/scopes.html"
-              -
                 name: "Creating and using a Span"
                 link: "/nodejs/tracing/span.html"
               -
-                name: "Span API"
-                link: "/nodejs/tracing/span-api.html"
+                name: "Exception handling"
+                link: "/nodejs/tracing/exception-handling.html"
+              -
+                name: "Tagging and Sample Data"
+                link: "/nodejs/tracing/tagging.html"
+              -
+                name: "Namespaces"
+                link: "/nodejs/tracing/namespaces.html"
+              -
+                name: "Async tracing and Scopes"
+                link: "/nodejs/tracing/scopes.html"
           -
             name: "Metrics"
             link: "/nodejs/metrics/"
