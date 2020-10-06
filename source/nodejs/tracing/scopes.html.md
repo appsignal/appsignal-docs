@@ -26,19 +26,16 @@ A `Span` can be given a Scope like this:
 const tracer = appsignal.tracer();
 
 tracer.withSpan(tracer.createSpan(), (span) => {
-  // the `rootSpan` now has a Scope and will be the next `Span` to be returned
-  // by `tracer.currentSpan()`
+  // the span returned by `tracer.createSpan()` now has a Scope
+  // it and will be the next span to be returned by `tracer.currentSpan()`!
 });
 ```
 
-Once assigned to a Scope, the `Span` passed to `tracer.withSpan()` can be recalled using `tracer.currentSpan()` in a different file or lexical scope...
+Once assigned to a Scope, the `Span` passed to `tracer.withSpan()` can be recalled using `tracer.currentSpan()` in a different file or lexical scope.
 
 ```js
-const tracer = appsignal.tracer();
-const rootSpan = tracer.currentSpan(); // this is the same span passed to `withSpan` above!
-
-tracer.withSpan(rootSpan.child(), (span) => {
-  // the `ChildSpan` returned by rootSpan.child() now has a Scope and will
-  // be the next `Span` to be returned by `tracer.currentSpan()`
+tracer.withSpan(tracer.currentSpan(), (span) => {
+  // `span` is the same span created by `tracer.createSpan()` in the example above!
+  // http://gph.is/1KjihQe
 });
 ```
