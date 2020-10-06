@@ -12,17 +12,17 @@ The AppSignal configuration makes it possible to [ignore errors](/nodejs/configu
 
 ## `span.addError(error)`
 
-If you want to rescue exceptions in your application to prevent crashes, but still want to track the occurrence you can use `span.addError()` to add the exception to the current AppSignal transaction.
+If you want to catch exceptions in your application to prevent crashes, but still want to track the occurrence you can use `span.addError()` to add the exception to the context of the current `Span`:
 
 ```js
 const span = tracer.currentSpan();
 
 try {
-  throw new Error("Oh no!")
+  throw new Error("Oh no!");
 } catch (e) {
-  span.addError(e)
+  span.addError(e);
 } finally {
-  span.close()
+  span.close();
 }
 ```
 
