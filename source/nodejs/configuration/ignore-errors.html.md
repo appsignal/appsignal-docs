@@ -1,5 +1,5 @@
 ---
-title: "Ignore errors"
+title: "Ignoring errors"
 ---
 
 Sometimes an error is raised which AppSignal shouldn't send an alert about. It's not desired to capture an exception with a `try`/`catch` block just to prevent AppSignal from alerting you. Instead, the exception should be handled by the framework the application is using.
@@ -19,7 +19,7 @@ const appsignal = new Appsignal({
 });
 ```
 
-**Note:** Names set in `ignoreErrors` will be matched on String basis and not class inheritance. If you want to match subclasses of `Error`, they have to be listed separately.
+**Note:** Names set in `ignoreErrors` will be matched on the `Error` objects `name` property only, and will not honour any class inheritance. If you want to match subclasses of `Error`, each subclass has to be listed separately.
 
 You can also configure ignore exceptions via an environment variable.
 

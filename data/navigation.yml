@@ -429,10 +429,10 @@ sections:
                 name: "Load order"
                 link: "/nodejs/configuration/load-order.html"
               -
-                name: "Ignore actions"
+                name: "Ignoring spans"
                 link: "/nodejs/configuration/ignore-actions.html"
               -
-                name: "Ignore errors"
+                name: "Ignoring errors"
                 link: "/nodejs/configuration/ignore-errors.html"
           -
             name: "Tracing"

@@ -1,14 +1,18 @@
 ---
-title: "Ignore actions"
+title: "Ignoring spans"
 ---
 <%= partial "shared/ignore_actions" %>
 
-## Ignore by action name
+## Ignore by span name
+
+The name of a `Span` maps to an "action name" on AppSignal.com. An action name is used to identify the location of a certain sample error and performance issues. You can see a list of these in the "Action name" column of the _Issue list_ under [Performance](https://appsignal.com/redirect-to/app?to=performance) in the sidebar.
+
+To ignore a span by name, add that name to the `ignoreActions` array:
 
 ```js
 const appsignal = new Appsignal({
   active: true,
   name: "<YOUR APPLICATION NAME>",
-  ignoreActions: ["admin", "perform"]
+  ignoreActions: ["GET /ignore-me", "GET /ignore-me-too"]
 })
 ```
