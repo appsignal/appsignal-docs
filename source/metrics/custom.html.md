@@ -2,7 +2,7 @@
 title: "Custom metrics"
 ---
 
-With AppSignal for Ruby, Elixir and Node.js, it's possible to add custom instrumentation to [transactions](/appsignal/terminology.html#transactions) ([Ruby](/ruby/instrumentation/index.html) / [Elixir](/elixir/instrumentation/index.html)) to get more details about your application's performance. This instrumentation is per sample and don't give a complete picture of your application. Instead, you can use custom metrics for application-wide metrics.
+With AppSignal for Ruby, Elixir and Node.js, it's possible to add custom instrumentation to [transactions](/appsignal/terminology.html#transactions) ([Ruby](/ruby/instrumentation/index.html) / [Elixir](/elixir/instrumentation/index.html)) or spans ([Node.js](/nodejs/tracing/index.html)) to get more details about your application's performance. This instrumentation is per sample and doesn't give a complete picture of your application. Instead, you can use custom metrics for application-wide metrics.
 
 To track application-wide metrics, you can send custom metrics to AppSignal. These metrics enable you to track anything in your application, from newly registered users to database disk usage. These are not replacements for custom instrumentation, but provide an additional way to make certain data in your code more accessible and measurable over time.
 
@@ -26,15 +26,29 @@ There are three types of metrics we collect, each with their own purpose.
 
 A gauge is a metric value at a specific time. If you set more than one gauge with the same key, the last reported value for that moment in time is persisted.
 
-Gauges are used for things like tracking sizes of databases, disks, or other absolute values like CPU usage, a numbers of items (users, accounts, etc.). Currently all AppSignal [host metrics](host.html) are stored as gauges.
+Gauges are used for things like tracking sizes of databases, disks, or other absolute values like CPU usage, several items (users, accounts, etc.). Currently, all AppSignal [host metrics](host.html) are stored as gauges.
 
 ```ruby
+# Ruby
+#
 # The first argument is a string, the second argument a number
 # Appsignal.set_gauge(metric_name, value)
 Appsignal.set_gauge("database_size", 100)
 Appsignal.set_gauge("database_size", 10)
 
 # Will create the metric "database_size" with the value 10
+```
+
+```js
+// Node.js
+const meter = appsignal.metrics();
+
+// The first argument is a string, the second argument a number
+// meter.setGauge(metric_name, value)
+meter.setGauge("database_size", 100);
+meter.setGauge("database_size", 10);
+
+// Will create the metric "database_size" with the value 10
 ```
 
 ### Measurement
@@ -49,6 +63,8 @@ By tracking a measurement, the average and count will be persisted for the metri
 - 95th percentile: the 95th percentile of the metric value for the point in time.
 
 ```ruby
+# Ruby
+#
 # The first argument is a string, the second argument a number
 # Appsignal.add_distribution_value(metric_name, value)
 Appsignal.add_distribution_value("memory_usage", 100)
@@ -58,21 +74,48 @@ Appsignal.add_distribution_value("memory_usage", 110)
 # Will create a metric "memory_usage" with the count field value 2
 ```
 
+```js
+// Node.js
+const meter = appsignal.metrics();
+
+// The first argument is a string, the second argument a number
+// meter.addDistributionValue(metric_name, value)
+meter.addDistributionValue("memory_usage", 100);
+meter.addDistributionValue("memory_usage", 110);
+
+// Will create a metric "memory_usage" with the mean field value 105
+// Will create a metric "memory_usage" with the count field value 2
+```
+
 ### Counter
 
 The counter metric type stores a number value for a given time frame. These counter values are combined into a total count value for the display time frame resolution. This means that when viewing a graph with a minutely resolution it will combine the values of the given minute, and for the hourly resolution combines the values of per hour.
 
-Counters are good to use to track events. With a [gauge](#gauge) you can track how many of something (users, comments, etc.) there is at a certain time, but with counters you can track how many events occurred at a specific time (users signing in, comments being made, etc.).
+Counters are good to use to track events. With a [gauge](#gauge) you can track how many of something (users, comments, etc.) there is at a certain time, but with counters, you can track how many events occurred at a specific time (users signing in, comments being made, etc.).
 
 When the helper is called multiple times, the total/sum of all calls is persisted.
 
 ```ruby
+# Ruby
+#
 # The first argument is a string, the second argument a number
 # Appsignal.increment_counter(metric_name, value)
 Appsignal.increment_counter("login_count", 1)
 Appsignal.increment_counter("login_count", 1)
 
 # Will create the metric "login_count" with the value 2 for a point in the minutely/hourly resolution
+```
+
+```js
+// Node.js
+const meter = appsignal.metrics();
+
+// The first argument is a string, the second argument a number
+// meter.incrementCounter(metric_name, value)
+meter.incrementCounter("login_count", 1);
+meter.incrementCounter("login_count", 1);
+
+// Will create the metric "login_count" with the value 2 for a point in the minutely/hourly resolution
 ```
 
 ## Metric naming
@@ -92,7 +135,7 @@ Some examples of good metric names are:
 
 By default AppSignal already tracks metrics for your application, such as [host metrics](host.html). See the metrics list on the ["Add Dashboard"](https://appsignal.com/redirect-to/app?to=dashboard&overlay=dashboardForm) page for the metrics that are already available for your app.
 
-!> **Note**: We __do not__ recommend adding dynamic values to your metric names like so: `eu.database_size`, `us.database_size` and `asia.database_size`. This creates multiple metrics that serve the same purpose. Instead we recommend using [metric tags](#metric-tags) for this.
+!> **Note**: We **do not** recommend adding dynamic values to your metric names like so: `eu.database_size`, `us.database_size` and `asia.database_size`. This creates multiple metrics that serve the same purpose. Instead we recommend using [metric tags](#metric-tags) for this.
 
 ## Metric values
 
@@ -105,21 +148,28 @@ Appsignal.increment_counter("login_count", 1)
 Appsignal.increment_counter("assignment_completed", 0.12)
 ```
 
+In Node.js, only the `number` type is a valid value:
+
+```js
+const meter = appsignal.metrics();
+meter.incrementCounter("assignment_completed", 0.12);
+```
+
 ###^metric-values Value formatting
 
-AppSignal graphs have several display formats, such as numbers, file sizes, durations, etc. These formats help in presenting the metric values in a human readable way.
+AppSignal graphs have several display formats, such as numbers, file sizes, durations, etc. These formats help in presenting the metric values in a human-readable way.
 
 Selecting a value formatter input does not affect the data stored in our systems, only how it's displayed.
 
 To show metric values correctly using these formatters, please check the table below how the value should be reported.
 
-| Formatter | Reported value | Description |
-| --- | --- | --- |
-| Number | Display value | A human readable formatted number. The values should be reported on the same scale as they are displayed. The value `1` is displayed as "`1`", `10_000` as "`10 K`" and `1_000_000` is displayed as "`1 M`" . |
-| Percentage | Display value | A metric value formatted as percentage. The values should be reported on the same scale as they are displayed. The value `40` is displayed as "`40 %`". |
-| Throughput | Display value | A metric value formatted as requests per minute/hour. The values should be reported on the same scale as they are displayed. It will display the throughput formatted as a number for both the minute and the hour. The value `10_000` is displayed "`10k / hour 166 / min`". Commonly used for [`counter`](#counter) metrics. |
-| Duration | Milliseconds | A duration of time. The values should be reported as milliseconds. The value `100` is displayed as "`100 ms`" and 60_000 as "`60 sec`". Commonly used for [`measurement`](/metrics/custom.html#measurement) metric. |
-| File size | [Customizable](#metric-values-file-size) | A file size formatted as megabytes by default. `1.0` megabytes is displayed as `1Mb`. What file size unit the reported metric value is read as can be customized in the graph builder. |
+| Formatter  | Reported value                           | Description                                                                                                                                                                                                                                                                                                                    |
+| ---------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Number     | Display value                            | A human-readable formatted number. The values should be reported on the same scale as they are displayed. The value `1` is displayed as "`1`", `10_000` as "`10 K`" and `1_000_000` is displayed as "`1 M`".                                                                                                                  |
+| Percentage | Display value                            | A metric value formatted as a percentage. The values should be reported on the same scale as they are displayed. The value `40` is displayed as "`40 %`".                                                                                                                                                                        |
+| Throughput | Display value                            | A metric value formatted as requests per minute/hour. The values should be reported on the same scale as they are displayed. It will display the throughput formatted as a number for both the minute and the hour. The value `10_000` is displayed "`10k / hour 166 / min`". Commonly used for [`counter`](#counter) metrics. |
+| Duration   | Milliseconds                             | A duration of time. The values should be reported as milliseconds. The value `100` is displayed as "`100 ms`" and 60_000 as "`60 sec`". Commonly used for [`measurement`](/metrics/custom.html#measurement) metric.                                                                                                            |
+| File size  | [Customizable](#metric-values-file-size) | A file size formatted as megabytes by default. `1.0` megabytes is displayed as `1Mb`. What file size unit the reported metric value is read as can be customized in the graph builder.                                                                                                                                         |
 
 ####^metric-values File size
 
@@ -136,7 +186,14 @@ The available options are:
 When sending a metric with the following value:
 
 ```ruby
+# Ruby
 Appsignal.set_gauge("database_size", 1024)
+```
+
+```js
+// Node.js
+const meter = appsignal.metrics();
+meter.setGauge("database_size", 1024);
 ```
 
 The graph will render the following display value for the specified file size formatter:
@@ -153,7 +210,7 @@ The graph will render the following display value for the specified file size fo
 
 The same metric can be about different groups of data. These groups can be added as tags to the metric. By default, every tag and value combination will result in a line being drawn in an AppSignal graph.
 
-Metrics supports none or multiple tags. By default, no tags are set on a custom metric by the AppSignal metric helpers.
+Metrics support none or multiple tags. By default, no tags are set on a custom metric by the AppSignal metric helpers.
 
 How tags can be used in AppSignal graphs:
 
@@ -185,6 +242,14 @@ Appsignal.set_gauge("database_size",  50, %{region: "us"})
 Appsignal.set_gauge("database_size", 200, %{region: "asia"})
 ```
 
+```js
+// Node.js
+const meter = appsignal.metrics();
+meter.setGauge("database_size", 100, { region: "eu" });
+meter.setGauge("database_size", 50, { region: "us" });
+meter.setGauge("database_size", 200, { region: "asia" });
+```
+
 It's also possible to add multiple tags to a metric. Every tag combination will be drawn as a separate line for graphs on a dashboard.
 
 ```ruby
@@ -201,6 +266,14 @@ Appsignal.set_gauge("my_metric_name", 10, %{tag_a: "a", tag_b: "b"})
 Appsignal.set_gauge("my_metric_name", 200, %{tag_a: "b", tag_b: "c"})
 ```
 
+```js
+// Node.js
+const meter = appsignal.metrics();
+meter.setGauge("my_metric_name", 100, { tag_a: "a", tag_b: "b" });
+meter.setGauge("my_metric_name", 10, { tag_a: "a", tag_b: "b" });
+meter.setGauge("my_metric_name", 200, { tag_a: "b", tag_b: "c" });
+```
+
 ## Rendering metric with and without tags
 
 If you created a custom metric and you have multiple tags associated with it, you can render the metric with and without the tag at the same time in a graph. The one without the tag will be a total of all the ones with the tag.
@@ -215,4 +288,11 @@ Appsignal.increment_counter("sign_ups", 1)
 # Elixir
 Appsignal.increment_counter("sign_ups", 1, %{region: "eu"})
 Appsignal.increment_counter("sign_ups", 1)
+```
+
+```js
+// Node.js
+const meter = appsignal.metrics();
+meter.incrementCounter("sign_ups", 1, { region: "eu" });
+meter.incrementCounter("sign_ups", 1);
 ```

@@ -458,9 +458,6 @@ sections:
                 name: "Overview"
                 link: "/nodejs/metrics/"
               -
-                name: "The Metrics object"
-                link: "/nodejs/metrics/meters.html"
-              -
                 name: "Minutely probes"
                 link: "/nodejs/metrics/minutely-probes.html"
           -
