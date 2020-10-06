@@ -431,6 +431,9 @@ sections:
               -
                 name: "Ignore actions"
                 link: "/nodejs/configuration/ignore-actions.html"
+              -
+                name: "Ignore errors"
+                link: "/nodejs/configuration/ignore-errors.html"
           -
             name: "Tracing"
             link: "/nodejs/tracing/"
