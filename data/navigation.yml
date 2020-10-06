@@ -493,6 +493,12 @@ sections:
             link: "/nodejs/command-line/index.html"
             sub_pages:
               -
+                name: "Overview"
+                link: "/nodejs/command-line/"
+              -
+                name: "Install"
+                link: "/nodejs/command-line/install.html"
+              -
                 name: "Diagnose"
                 link: "/nodejs/command-line/diagnose.html"
       -

@@ -2,11 +2,11 @@
 title: "AppSignal for Node.js: Diagnose tool"
 ---
 
-The AppSignal Node.js package ships with a self diagnostic tool. This tool can be used to debug your AppSignal installation and is one of the first thing our support team asks for when there's an issue.
+The AppSignal Node.js package ships with a self-diagnostic tool. This tool can be used to debug your AppSignal installation and is one of the first things our support team asks for when there's an issue.
 
 ## The diagnostic report
 
-This command line tool is useful when testing AppSignal on a system and validating the local configuration. It outputs useful information to debug issues and it checks if AppSignal agent is able to run on the machine's architecture and communicate with the AppSignal servers.
+This command-line tool is useful when testing AppSignal on a system and validating the local configuration. It outputs useful information to debug issues and it checks if AppSignal agent can run on the machine's architecture and communicate with the AppSignal servers.
 
 This diagnostic tool collects and outputs the following:
 
@@ -22,20 +22,26 @@ Read more about how to use the diagnose command on the [Debugging][debugging] pa
 
 ## Submitting the report
 
-When you [send this support token to us](mailto:support@appsignal.com) we will review the report and help you debug the issue. We've seen that copy-pasting the report output usually loses formatting and makes it harder to read, which is why it's send to our servers in the JSON format.
+When you [send this support token to us](mailto:support@appsignal.com) we will review the report and help you debug the issue. We've seen that copy-pasting the report output usually loses formatting and makes it harder to read, which is why it's sent to our servers in the JSON format.
 
 ## Usage
 
-On the command line in your project run:
+On the command line in your project (a directory with a `package.json` and `@appsignal/nodejs` installed) run:
 
 ```bash
-npx appsignal-diagnose
+npx @appsignal/cli diagnose
 ```
 
-At the very least, the `APPSIGNAL_PUSH_API_KEY` must be set before the diagnose command can be run. If this isn't set in your environment already, you can also set it at runtime:
+At the very least, the `APPSIGNAL_PUSH_API_KEY` must be set before the diagnose command can be run. If this isn't set in your environment already, you can also set it at runtime with the `--api-key` option:
 
 ```bash
-APPSIGNAL_PUSH_API_KEY="<PUSH API KEY HERE>" npx appsignal-diagnose
+npx @appsignal/cli diagnose --api-key="<PUSH API KEY HERE>"
+```
+
+You can also set the environment variable at runtime:
+
+```bash
+APPSIGNAL_PUSH_API_KEY="<PUSH API KEY HERE>" npx @appsignal/cli diagnose
 ```
 
 ### Environment option
@@ -43,7 +49,7 @@ APPSIGNAL_PUSH_API_KEY="<PUSH API KEY HERE>" npx appsignal-diagnose
 Select a specific environment with the CLI.
 
 ```bash
-NODE_ENV=production npx appsignal-diagnose
+npx @appsignal/cli diagnose --environment="<development || staging || production>"
 ```
 
 The environment option is useful when the default environment is not the one you want to diagnose. The diagnose tool will warn you when no environment is selected.
@@ -60,11 +66,12 @@ The configuration options are printed to the CLI as their inspected values. This
   - Empty Arrays are printed as two square brackets: `[]`.
 - Null or undefined values are printed as `null` or `undefined`.
 
-### Configuration sources
+## Options
 
-The configuration section also prints where values from config options come from. This may help by identifying sources that override values from other config sources.
-
-For more on which configuration sources are available and in which order they're loaded and thus their priority, see the [configuration load order](/nodejs/configuration/load-order.html) page.
+| Option | Description |
+| ------ | ----------- |
+| `--environment` | Define which environment to use. |
+| `--api-key` | Define which API key to use. |
 
 ## Exit codes
 

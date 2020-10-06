@@ -2,7 +2,7 @@
 title: "Minutely probes"
 ---
 
-Minutely probes are a mechanism to periodically send custom metrics to AppSignal. In minutely intervals from when the probe was first created, a user-defined function can be called in which you can capture metrics in order to send them to AppSignal. As minutely probes are instances of `EventEmitter`s, they are asynchronous.
+Minutely probes are a mechanism to periodically send custom metrics to AppSignal. In minutely intervals from when the probe was first created, a user-defined function can be called in which you can capture metrics to send them to AppSignal. As minutely probes are instances of `EventEmitter`s, they are asynchronous.
 
 ## Creating probes
 

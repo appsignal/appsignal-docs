@@ -2,9 +2,9 @@
 title: "AppSignal for Node.js load order"
 ---
 
-AppSignal for Node.js can be configured in a couple of different ways - through the `Appsignal` constuctor or through environment variables.
+AppSignal for Node.js can be configured in a couple of different ways - through the `Appsignal` constructor or environment variables.
 
-The configuration is loaded in a four step process, starting with the package defaults and ending with reading environment variables. The configuration options can be mixed without losing configuration from a different option. 
+The configuration is loaded in a four-step process, starting with the package defaults and ending with reading environment variables. The configuration options can be mixed without losing configuration from a different option.
 
 ## Load orders
 
@@ -23,7 +23,7 @@ The agent defaults can be found in the [module source](https://github.com/appsig
 
 The gem detects what kind of system it's running on and configures itself accordingly.
 
-For example, when it's running inside a container based system (such as Docker and Heroku) it sets the configuration option `runningInContainer` to `true`.
+For example, when it's running inside a container-based system (such as Docker and Heroku) it sets the configuration option `runningInContainer` to `true`.
 
 ##=env 3. Environment variables
 
@@ -42,8 +42,8 @@ When initializing the `Appsignal` object, you can pass in the initial configurat
 const appsignal = new Appsignal({
   active: true,
   name: "<YOUR APPLICATION NAME>",
-  apiKey: "<YOUR API KEY>"
-})
+  apiKey: "<YOUR API KEY>",
+});
 ```
 
 This step will override all given options from the defaults or system detected configuration.

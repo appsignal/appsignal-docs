@@ -4,7 +4,7 @@ title: "Next.js"
 
 The AppSignal integration for [Next.js](https://nextjs.org/) 9.3.0+, designed to be used in conjunction with `@appsignal/nodejs`.
 
-It is recommended to be used with [`@appsignal/javascript`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/javascript) and [`@appsignal/react`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/react) on the client side for full-stack performance monitoring and error tracking.
+It is recommended to be used with [`@appsignal/javascript`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/javascript) and [`@appsignal/react`](https://github.com/appsignal/appsignal-javascript/tree/develop/packages/react) on the client-side for full-stack performance monitoring and error tracking.
 
 At this time, it's only possible to use this integration with a [custom server script](https://nextjs.org/docs/advanced-features/custom-server). The integration **does not** work when using the Next CLI (e.g. `next start`).
 

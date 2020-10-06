@@ -2,7 +2,7 @@
 title: "The Tracer object"
 ---
 
-AppSignal for Node.js contains a new concept that is different to the current Ruby implementation - the `Tracer` object. The `Tracer` object contains various methods that you might use when creating your own custom instrumentation.
+AppSignal for Node.js contains a new concept that is different from the current Ruby implementation - the `Tracer` object. The `Tracer` object contains various methods that you might use when creating your own custom instrumentation.
 
 The Tracer is responsible for tracking the currently active `Span`, and exposes functions for creating and activating new `Span`s.
 
@@ -12,11 +12,11 @@ The Tracer is responsible for tracking the currently active `Span`, and exposes 
 const tracer = appsignal.tracer();
 ```
 
-If the agent is currently inactive (you must actively set it as such by setting `active: true`), then the AppSignal client will return an instance of `NoopTracer`, which is safe to call within your code as if the agent were currently active, but does not record any data.
+If the agent is currently inactive (you must actively set it as such by setting `active: true`), then the AppSignal client will return an instance of `NoopTracer`, which is safe to call within your code as if the agent were currently active but does not record any data.
 
 ## Retrieving the current `Span`
 
-In most cases, a `Span` will be created by one of our automatic instrumentations, e.g. the `http` module integration. In order to add any custom instrumentation to your trace, you'll need to retrieve that `Span` using the `Tracer` instance.
+In most cases, a `Span` will be created by one of our automatic instrumentations, e.g. the `http` module integration. To add any custom instrumentation to your trace, you'll need to retrieve that `Span` using the `Tracer` instance.
 
 ```js
 const span = tracer.currentSpan();

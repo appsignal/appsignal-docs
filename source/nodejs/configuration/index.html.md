@@ -6,7 +6,7 @@ In this section, we'll explain how to configure AppSignal, what can be configure
 
 ## Minimal required configuration
 
-The minimal required configuration needed by AppSignal for Node.js are the following items. If they are not present, AppSignal will not send any data to AppSignal.com.
+The minimal required configuration needed by AppSignal for Node.js is the following items. If they are not present, AppSignal will not send any data to AppSignal.com.
 
 - A valid Push API Key
 - An application name
@@ -19,8 +19,8 @@ The integration supports loading configuration via options passed to the `Appsig
 const appsignal = new Appsignal({
   active: true,
   name: "<YOUR APPLICATION NAME>",
-  apiKey: "<YOUR API KEY>"
-})
+  apiKey: "<YOUR API KEY>",
+});
 ```
 
 Alternatively, you can configure the agent using system environment variables. AppSignal will automatically become active if the `APPSIGNAL_PUSH_API_KEY` environment variable is set.
@@ -47,8 +47,8 @@ If you activate AppSignal per environment, you can set the `active` property of 
 const appsignal = new Appsignal({
   active: process.env.NODE_ENV !== "development",
   name: "<YOUR APPLICATION NAME>",
-  apiKey: "<YOUR API KEY>"
-})
+  apiKey: "<YOUR API KEY>",
+});
 ```
 
 ### Disable AppSignal for tests
@@ -59,6 +59,6 @@ Make sure to put `active: false` in your test configuration unless you want to s
 const appsignal = new Appsignal({
   active: process.env.NODE_ENV === "production", // ignored in all envs except production
   name: "<YOUR APPLICATION NAME>",
-  apiKey: "<YOUR API KEY>"
-})
+  apiKey: "<YOUR API KEY>",
+});
 ```
