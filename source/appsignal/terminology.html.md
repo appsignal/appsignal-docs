@@ -157,6 +157,12 @@ Yes.. Let's explain!
 - `Appsignal` - The library name in the [Ruby](/ruby) gem and [Elixir](/elixir) package. Only used in the Ruby and Elixir code context.
 - `appsignal` - The AppSignal [Ruby gem](https://rubygems.org/gems/appsignal) and [Elixir package](https://hex.pm/packages/appsignal) name.
 
+The Node.js integration uses them sightly differently:
+
+- `AppSignal` - The name of the company, the application and almost everything else related to AppSignal. You're probably right using this capitalized version.
+- `Appsignal` - The name of the main class exported by `@appsignal/nodejs`.
+- `appsignal` - The instance of the `Appsignal` class.
+
 ## Blog
 
 We have a blog at [blog.appsignal.com](http://blog.appsignal.com/)!

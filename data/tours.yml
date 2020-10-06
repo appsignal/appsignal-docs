@@ -6,8 +6,8 @@ tours:
     title: Error tracking
     human_title: Error tracking
     human_teaser: "Catch errors and make sure they don't happen again."
-    meta_title: "Error Tracking for Ruby and Elixir"
-    meta_description: "Catch errors in your Ruby and Elixir applications. Get notified in tools like Slack or Discord and easily create issues in your issue tracker of choice."
+    meta_title: "Error Tracking for Ruby, Elixir & Node.js"
+    meta_description: "Catch errors in your Ruby, Elixir & Node.js applications. Get notified in tools like Slack or Discord and easily create issues in your issue tracker of choice."
     usps:
       -
         title: Real-time notifications
@@ -25,7 +25,7 @@ tours:
     title: Track performance
     human_title: Performance monitoring
     human_teaser: "Find performance issues before they find you."
-    meta_title: "Performance Monitoring for Ruby and Elixir"
+    meta_title: "Performance Monitoring for Ruby, Elixir & Node.js"
     meta_description: "Improve the performance of your controllers and background jobs. Get notified when requests are taking longer than you expect and dive deep into the causes of the slow requests."
     usps:
       -
@@ -44,7 +44,7 @@ tours:
     title: Host monitoring
     human_title: Host monitoring
     human_teaser: "Run healthy apps on healthy hardware."
-    meta_title: "Host Monitoring for Ruby and Elixir"
+    meta_title: "Host Monitoring for Ruby, Elixir & Node.js"
     meta_description: "If you want to run a healthy app, you need to know how your hosts are doing. AppSignal gives you insight into load, disk I/O, disk usage, memory consumption and network utilization."
     usps:
       -

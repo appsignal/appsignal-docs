@@ -2,7 +2,7 @@
 title: "Supported Operating Systems"
 ---
 
-The AppSignal integrations for Ruby and Elixir contain native extensions and a separate lightweight agent process. These native extensions are supported on most Linux distributions, FreeBSD and macOS/OSX. If an Operating System you use is not supported, please [get in touch](mailto:support@appsignal.com).
+The AppSignal integrations for Ruby, Elixir & Node.js contain native extensions and a separate lightweight agent process. These native extensions are supported on most Linux distributions, FreeBSD and macOS/OSX. If an Operating System you use is not supported, please [get in touch](mailto:support@appsignal.com).
 
 - [Support table](#support-table)
 - [Linux](#linux)
@@ -209,7 +209,7 @@ pkg install gcc gmake openssl-devel
 
 ## macOS
 
-macOS (OS X) `10.14.x` and up is supported by AppSignal for Ruby and Elixir. It currently does not support the [host metrics][host-metrics] feature.
+macOS (OS X) `10.14.x` and up is supported by AppSignal for Ruby, Elixir & Node.js. It currently does not support the [host metrics][host-metrics] feature.
 
 Please make sure Xcode is installed with the command line build tools.
 
