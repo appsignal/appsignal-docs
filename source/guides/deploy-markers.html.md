@@ -92,7 +92,13 @@ Are deploys not being reported or incorrectly? [Contact us][contact] and we will
 
 ## Next steps
 
+- [Grouping parts of your app with namespaces](/guides/namespaces.html) - next guide
 - [Setting up backtrace links][error backtrace links]
+
+---
+
+- [Add a new application](/guides/new-application.html) - previous guide
+- [Getting started guides](/guides/) - Guides overview
 
 [deploy markers]: /application/markers/deploy-markers.html
 [heroku support]: /application/markers/deploy-markers.html#heroku-support

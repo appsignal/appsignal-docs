@@ -19,6 +19,9 @@ sections:
             name: "Start"
             link: "/guides/"
           -
+            name: "Add a new application"
+            link: "/guides/new-application.html"
+          -
             name: "Reporting deploys"
             link: "/guides/deploy-markers.html"
       -
@@ -29,9 +32,6 @@ sections:
           -
             name: "Overview"
             link: "/application/"
-          -
-            name: "Add an application"
-            link: "/application/new-application.html"
           -
             name: "Anomaly detection"
             link: "/application/anomaly-detection/"
