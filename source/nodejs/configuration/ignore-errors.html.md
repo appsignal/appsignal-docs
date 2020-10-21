@@ -29,4 +29,4 @@ export APPSIGNAL_IGNORE_ERRORS="TypeError,AnotherError"
 
 Any exceptions defined here will not be sent to AppSignal and will not trigger a notification.
 
-Read more about [Exception handling with AppSignal](/nodejs/instrumentation/exception-handling.html).
+Read more about [Exception handling with AppSignal](/nodejs/tracing/exception-handling.html).
