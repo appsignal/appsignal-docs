@@ -2,11 +2,27 @@
 title: "Namespaces"
 ---
 
-Namespaces are a way to group error incidents, performance incidents from [actions](/appsignal/terminology.html#actions), and host metrics in your app. By default AppSignal provides three namespaces: the "web", "background" and "frontend" namespaces. You can add your own namespaces to separate parts of your app like the API or Admin panel.
+Namespaces are a way to group error incidents, performance incidents and metrics from [actions](/appsignal/terminology.html#actions). [By default](#default-namespaces) AppSignal provides three namespaces: the "web", "background" and "frontend" namespaces. You can add your own namespaces to separate parts of your app like the API or Admin panel with [custom namespaces](#custom-namespaces).
+
+-> 📖 Also read our guide on [how to set up namespaces](/guides/namespaces.html).
+
+## What can you do with namespaces?
+
+Let's start first with the things we can use namespaces for:
+
+- Group [error incidents](https://appsignal.com/redirect-to/app?to=exceptions) and [performance measurements](https://appsignal.com/redirect-to/app?to=performance) per namespace. Create overviews of the most important namespaces and fix those incidents first.
+- Track and graph metrics per namespace ([error rate, error count](https://appsignal.com/redirect-to/app?to=exceptions/graphs), [throughput, response times, queue times](https://appsignal.com/redirect-to/app?to=performance/graphs), and more).
+- Receive [Anomaly detection alerts per namespace](/anomaly-detection/).
+- Set up [notifications settings per namespace](/application/notification-settings.html).
+
+<figure>
+  <img src="/assets/images/screenshots/app_graphs_namespaces.png">
+  <figcaption>Example graphs with multiple namespaces, splitting out a GraphQL API and the "web" namespace. On the left a drop down with the namespace filter.</figcaption>
+</figure>
+
+## Default namespaces
 
 The "web" namespace holds all data for HTTP requests while the "background" namespace contains metrics from background job libraries and tasks. The "frontend" namespace is created by the [JavaScript front-end integration](/front-end).
-
-Namespaces can be used to group together actions that are related to the same part of an application. It's also possible to configure notification settings on a per-namespace level. You can find these settings on the [Notifications settings page](https://appsignal.com/redirect-to/app?to=notifications).
 
 You can add your own namespaces to separate parts of your app like the API and Admin panel.
 

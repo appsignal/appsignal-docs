@@ -8,3 +8,4 @@ In the next couple steps we'll guide you through ways to make the data being rep
 
 1. [Add a new application](/guides/new-application.html)
 1. [Reporting deploys to track improvements](/guides/deploy-markers.html)
+1. [Grouping parts of your app with namespaces](/guides/namespaces.html)

@@ -24,6 +24,9 @@ sections:
           -
             name: "Reporting deploys"
             link: "/guides/deploy-markers.html"
+          -
+            name: "Grouping with namespaces"
+            link: "/guides/namespaces.html"
       -
         name: "Your applications"
         icon: "fas fa-server"
