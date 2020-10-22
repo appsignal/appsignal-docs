@@ -23,6 +23,7 @@ To enable notifications and issue tracker integration for external services, go 
 - [Phabricator](#phabricator)
 - [Pivotal Tracker](#pivotal-tracker)
 - [Slack](/application/integrations/slack.html)
+- [Squadcast](#squadcast)
 - [Trello](#trello)
 - [Webhook](/application/integrations/webhooks.html)
 
@@ -92,6 +93,12 @@ Website: [https://phacility.com/phabricator/](https://phacility.com/phabricator/
 Simple, collaborative project management from the experts in agile software development.
 
 Website: [http://www.pivotaltracker.com/](http://www.pivotaltracker.com/)
+
+## Squadcast
+
+Squadcast helps you get alerted via Phone call, SMS, Email and Push notifications and lets you take actions on those alerts. AppSignal notifications can be sent to Squadcast via webhooks. Refer the official [Squadcast support documentation](https://support.squadcast.com/docs/appsignal) for configuring these webhooks.
+
+Website: [https://www.squadcast.com/](https://www.squadcast.com/)
 
 ## Trello
 
