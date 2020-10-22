@@ -33,9 +33,6 @@ sections:
             name: "Overview"
             link: "/application/"
           -
-            name: "Anomaly detection"
-            link: "/application/anomaly-detection/"
-          -
             name: "Namespaces"
             link: "/application/namespaces.html"
           -
@@ -598,6 +595,10 @@ sections:
   -
     name: "Features"
     sub_sections:
+      -
+        name: "Anomaly detection"
+        icon: "fas fa-bell"
+        link: "/anomaly-detection/"
       -
         name: "Metrics"
         icon: "fas fa-chart-area"

@@ -148,3 +148,6 @@
 [[redirects]]
   from = "/appsignal/code-of-conduct.html"
   to = "/appsignal/contributing/code-of-conduct.html"
+[[redirects]]
+  from = "/application/anomaly-detection/index.html"
+  to = "/anomaly-detection/index.html"
