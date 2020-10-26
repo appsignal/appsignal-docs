@@ -131,6 +131,7 @@ For more information, [read more about how spans work in Front-end JavaScript](f
 
 ## Next steps
 
+- [Filtering app data][filtering] - Next guide
 - [Read more about namespaces][namespaces] - More detailed information about namespaces
 - [Ignoring namespaces][ignoring namespaces] - Ignore data from an entire namespace
 
@@ -141,3 +142,4 @@ For more information, [read more about how spans work in Front-end JavaScript](f
 
 [namespaces]: /application/namespaces.html
 [ignoring namespaces]: /application/namespaces.html#ignoring-namespaces
+[filtering]: /guides/filter-data.html

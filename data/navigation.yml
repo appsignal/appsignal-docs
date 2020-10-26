@@ -27,6 +27,16 @@ sections:
           -
             name: "Grouping with namespaces"
             link: "/guides/namespaces.html"
+          -
+            name: "Filtering app data"
+            link: "/guides/filter-data.html"
+            sub_pages:
+              -
+                name: "Start"
+                link: "/guides/filter-data.html"
+              -
+                name: "Parameter filtering"
+                link: "/guides/filter-parameters.html"
       -
         name: "Your applications"
         icon: "fas fa-server"
@@ -41,6 +51,9 @@ sections:
           -
             name: "Customizing data collection"
             link: "/application/data-collection.html"
+          -
+            name: "Parameter filtering"
+            link: "/application/parameter-filtering.html"
           -
             name: "Markers"
             link: "/application/markers/"
@@ -174,9 +187,6 @@ sections:
               -
                 name: "Ignore errors"
                 link: "/ruby/configuration/ignore-errors.html"
-              -
-                name: "Parameter filtering"
-                link: "/ruby/configuration/parameter-filtering.html"
               -
                 name: "Session data filtering"
                 link: "/ruby/configuration/session-data-filtering.html"
@@ -340,9 +350,6 @@ sections:
               -
                 name: "Ignore errors"
                 link: "/elixir/configuration/ignore-errors.html"
-              -
-                name: "Parameter filtering"
-                link: "/elixir/configuration/parameter-filtering.html"
               -
                 name: "Session data filtering"
                 link: "/elixir/configuration/session-data-filtering.html"

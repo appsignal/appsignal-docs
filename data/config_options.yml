@@ -355,6 +355,8 @@ options:
     env_key: APPSIGNAL_FILTER_PARAMETERS
     ruby:
       since: 1.3.0
+      since_notes:
+        - "`2.3.0`: This config option is also used for argument filtering in background job integrations."
       type:
         array:
           - string
