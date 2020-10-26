@@ -11,6 +11,7 @@ You can configure AppSignal what kind of data it should not collect by filtering
 ## Next steps
 
 - [Filter request parameters](/guides/filter-data/filter-parameters.html) - the next step in this guide
+- [Filter session data](/guides/filter-data/filter-session-data.html) - future next step in this guide
 
 ---
 

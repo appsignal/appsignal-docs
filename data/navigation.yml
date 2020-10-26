@@ -37,6 +37,9 @@ sections:
               -
                 name: "Parameter filtering"
                 link: "/guides/filter-data/filter-parameters.html"
+              -
+                name: "Session data filtering"
+                link: "/guides/filter-data/filter-session-data.html"
       -
         name: "Your applications"
         icon: "fas fa-server"
@@ -54,6 +57,9 @@ sections:
           -
             name: "Parameter filtering"
             link: "/application/parameter-filtering.html"
+          -
+            name: "Session data filtering"
+            link: "/application/session-data-filtering.html"
           -
             name: "Markers"
             link: "/application/markers/"
@@ -187,9 +193,6 @@ sections:
               -
                 name: "Ignore errors"
                 link: "/ruby/configuration/ignore-errors.html"
-              -
-                name: "Session data filtering"
-                link: "/ruby/configuration/session-data-filtering.html"
           -
             name: "Integrations"
             link: "/ruby/integrations/"
@@ -350,9 +353,6 @@ sections:
               -
                 name: "Ignore errors"
                 link: "/elixir/configuration/ignore-errors.html"
-              -
-                name: "Session data filtering"
-                link: "/elixir/configuration/session-data-filtering.html"
           -
             name: "Integrations"
             link: "/elixir/integrations/"

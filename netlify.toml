@@ -157,3 +157,9 @@
 [[redirects]]
   from = "/elixir/configuration/parameter-filtering.html"
   to = "/application/parameter-filtering.html"
+[[redirects]]
+  from = "/ruby/configuration/session-data-filtering.html"
+  to = "/application/session-data-filtering.html"
+[[redirects]]
+  from = "/elixir/configuration/session-data-filtering.html"
+  to = "/application/session-data-filtering.html"
