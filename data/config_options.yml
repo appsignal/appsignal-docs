@@ -122,18 +122,18 @@ options:
       default_value: null
       description: |
         Name of your application as it should be displayed on AppSignal.com. If you use Ruby on Rails the gem will auto-detect the name and you can leave this empty. For other frameworks setting this is mandatory.
-
-        -> **Note**: Changing the name or [environment](#option-appsignal_app_env) of an existing app will create a new app on AppSignal.com.
     elixir:
       type: atom
       default_value: null
+      description: |
+        Name of your application as it should be displayed on AppSignal.com.
     nodejs:
       config_key: appName
       type: string
       default_value: nil
+      description: |
+        Name of your application as it should be displayed on AppSignal.com.
     description: |
-      Name of your application as it should be displayed on AppSignal.com.
-
       -> **Note**: Changing the name or [environment](#option-env) of an existing app will create a new app on AppSignal.com.
   - config_key: push_api_key
     env_key: APPSIGNAL_PUSH_API_KEY
