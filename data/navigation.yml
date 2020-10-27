@@ -40,6 +40,9 @@ sections:
               -
                 name: "Session data filtering"
                 link: "/guides/filter-data/filter-session-data.html"
+              -
+                name: "Request header collection"
+                link: "/guides/filter-data/filter-headers.html"
       -
         name: "Your applications"
         icon: "fas fa-server"
@@ -60,6 +63,9 @@ sections:
           -
             name: "Session data filtering"
             link: "/application/session-data-filtering.html"
+          -
+            name: "Request header collection"
+            link: "/application/header-filtering.html"
           -
             name: "Markers"
             link: "/application/markers/"

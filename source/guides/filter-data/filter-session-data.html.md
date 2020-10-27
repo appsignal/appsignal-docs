@@ -82,6 +82,10 @@ const appsignal = new Appsignal({
 
 ## Next steps
 
+- [Request headers collection](/guides/filter-data/filter-headers.html) - the next step in this guide
+
+---
+
 - [Filtering parameters](/guides/filter-data/filter-parameters.html) - the previous step in this guide
 - [Filtering app data](/guides/filter-data/) - the start of this guide
 - [Getting started guides](/guides/) - Guides overview
