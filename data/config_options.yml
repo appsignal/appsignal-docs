@@ -128,7 +128,6 @@ options:
       description: |
         Name of your application as it should be displayed on AppSignal.com.
     nodejs:
-      config_key: appName
       type: string
       default_value: nil
       description: |
