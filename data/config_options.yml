@@ -108,7 +108,7 @@ options:
 
         -> **Note**: Changing the [name](#option-name) or environment of an existing app will create a new app on AppSignal.com.
     nodejs:
-      config_key: appEnv
+      config_key: environment
       type: string
       default: env
       description: |
