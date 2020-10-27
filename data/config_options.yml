@@ -146,7 +146,7 @@ options:
       type: string
       default_value: null
     nodejs:
-      config_key: pushApiKey
+      config_key: apiKey
       type: string
       default_value: null
     description: |
