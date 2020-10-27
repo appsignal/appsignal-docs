@@ -17,6 +17,10 @@ options:
       type: bool
       default_value:
         markdown: "`false` / detected by system"
+    nodejs:
+      type: bool
+      default_value:
+        markdown: "`false` / detected by system"
     description: |
       Configure AppSignal to be active or not for a given environment. Most commonly used in the [file configuration](index.html) per environment.
 
@@ -103,6 +107,12 @@ options:
         ```
 
         -> **Note**: Changing the [name](#option-name) or environment of an existing app will create a new app on AppSignal.com.
+    nodejs:
+      config_key: appEnv
+      type: string
+      default: env
+      description: |
+        The environment of the app to be reported to AppSignal.
   - config_key: name
     env_key: APPSIGNAL_APP_NAME
     required: true
@@ -117,10 +127,14 @@ options:
     elixir:
       type: atom
       default_value: null
-      description: |
-        Name of your application as it should be displayed on AppSignal.com.
+    nodejs:
+      config_key: appName
+      type: string
+      default_value: nil
+    description: |
+      Name of your application as it should be displayed on AppSignal.com.
 
-        -> **Note**: Changing the name or [environment](#option-env) of an existing app will create a new app on AppSignal.com.
+      -> **Note**: Changing the name or [environment](#option-env) of an existing app will create a new app on AppSignal.com.
   - config_key: push_api_key
     env_key: APPSIGNAL_PUSH_API_KEY
     required: true
@@ -130,6 +144,10 @@ options:
       default_value: null
     elixir:
       since: 0.1.0
+      type: string
+      default_value: null
+    nodejs:
+      config_key: pushApiKey
       type: string
       default_value: null
     description: |
@@ -154,6 +172,11 @@ options:
         markdown: Packaged `cacert.pem` file path.
       description:
         - Configure the path of the SSL certificate file. By default this points AppSignal [vendored `cacert.pem` file](https://github.com/appsignal/appsignal-elixir/blob/f90759c04a4ff0274e2566704a462d652c988a70/priv/cacert.pem) in the package itself.
+    nodejs:
+      config_key: caFilePath
+      type: string
+      default_value:
+        markdown: Packaged `cacert.pem` file path.
     description:
       - Use this option to point to another certificate file if there's a problem connecting to our API.
       - *file_paths_notice
@@ -164,6 +187,9 @@ options:
       type: bool
       default_value: false
     elixir:
+      type: bool
+      default_value: false
+    nodejs:
       type: bool
       default_value: false
     description: |
@@ -240,6 +266,26 @@ options:
         - Not acceptable values: `foo`, `my.awesome.custom.local.dns.server`.
 
         If the DNS server cannot be reached the agent will fall back on the host's DNS configuration and output a message in the `appsignal.log` file: `A problem occurred while setting DNS servers`.
+    nodejs:
+      config_key: dnsServers
+      type:
+        list:
+          - string
+      default_value: []
+      description: |
+        Configure DNS servers for the AppSignal agent to use.
+
+        ```sh
+        # In the host environment
+        export APPSIGNAL_DNS_SERVERS="8.8.8.8,8.8.4.4"
+        ```
+
+        If you're affected by our [DNS timeouts](/support/known-issues.html#dns-timeouts), try setting a DNS server manually using this option that doesn't use more than __4__ dots in the server name.
+
+        - Acceptable values: `8.8.8.8`, `my.custom.local.server`.
+        - Not acceptable values: `foo`, `my.awesome.custom.local.dns.server`.
+
+        If the DNS server cannot be reached the agent will fall back on the host's DNS configuration and output a message in the `appsignal.log` file: `A problem occurred while setting DNS servers`.
   - config_key: enable_allocation_tracking
     env_key: APPSIGNAL_ENABLE_ALLOCATION_TRACKING
     ruby:
@@ -271,6 +317,10 @@ options:
       type: bool
       default_value: true
     elixir:
+      type: bool
+      default_value: true
+    nodejs:
+      config_key: enableHostMetrics
       type: bool
       default_value: true
     description: |
@@ -313,6 +363,9 @@ options:
     elixir:
       type: atom
       default_value: :file
+    nodejs:
+      type: string
+      default_value: file
     description: |
       Select which logger to the AppSignal agent should use. Accepted values are
       `file` and `stdout`. See also the `log_path` configuration.
@@ -336,6 +389,10 @@ options:
       since: 1.0.0
       since_notes:
         - "`1.9.0`: The default log path was changed from `/tmp/appsignal/appsignal.log` to `/tmp/appsignal.log`."
+    nodejs:
+      config_key: logPath
+      type: string
+      default_value: "/tmp/appsignal.log"
     description:
       - Override the location of the path where the `appsignal.log` file can be written to.
       - *file_paths_notice
@@ -390,6 +447,14 @@ options:
         ```
 
         Read more about [parameter filtering](/elixir/configuration/parameter-filtering.html).
+    nodejs:
+      config_key: filterParameters
+      type:
+        list:
+          - string
+      default_value: []
+      description: |
+        List of parameter keys that should be ignored using AppSignal filtering. Their values will be replaced with `[FILTERED]` when transmitted to AppSignal.
   - config_key: filter_session_data
     env_key: APPSIGNAL_FILTER_SESSION_DATA
     ruby:
@@ -432,6 +497,14 @@ options:
         ```
 
         Read more about [session data filtering](/elixir/configuration/session-data-filtering.html).
+    nodejs:
+      config_key: filterSessionData
+      type:
+        list:
+          - string
+      default_value: []
+      description: |
+        List of session data keys that should be ignored using AppSignal filtering. Their values will be replaced with `[FILTERED]` when transmitted to AppSignal.
   - config_key: hostname
     env_key: APPSIGNAL_HOSTNAME
     ruby:
@@ -444,6 +517,10 @@ options:
       type: string
       default_value:
         markdown: detected from system
+    nodejs:
+      type: string
+      default_value:
+        markdown: detected from system
     description: |
       This overrides the server's hostname. Useful for when you're unable to set a custom hostname or when a nondescript id is generated for you on hosting services.
   - config_key: http_proxy
@@ -453,6 +530,10 @@ options:
       type: string
       default_value: null
     elixir:
+      type: string
+      default_value: null
+    nodejs:
+      config_key: httpProxy
       type: string
       default_value: null
     description: |
@@ -470,6 +551,12 @@ options:
         list:
           - string
       default_value: []
+    nodejs:
+      config_key: ignoreActions
+      type:
+        list:
+          - string
+      default_value: []
     description: |
       List of actions that will be ignored, everything that happens including exceptions will not be transmitted to AppSignal.
 
@@ -483,6 +570,12 @@ options:
           - string
       default_value: []
     elixir:
+      type:
+        list:
+          - string
+      default_value: []
+    nodejs:
+      config_key: ignoreNamespaces
       type:
         list:
           - string
