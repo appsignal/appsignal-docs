@@ -172,3 +172,12 @@
 [[redirects]]
   from = "/nodejs/configuration/ignore-errors.html"
   to = "/guides/filter-data/ignore-errors.html"
+[[redirects]]
+  from = "/ruby/configuration/ignore-actions.html"
+  to = "/guides/filter-data/ignore-actions.html"
+[[redirects]]
+  from = "/elixir/configuration/ignore-actions.html"
+  to = "/guides/filter-data/ignore-actions.html"
+[[redirects]]
+  from = "/nodejs/configuration/ignore-actions.html"
+  to = "/guides/filter-data/ignore-actions.html"
