@@ -110,7 +110,8 @@ options:
     nodejs:
       config_key: environment
       type: string
-      default: env
+      default_value: |
+        Read from environment variable `NODE_ENV`, defaults to "development".
       description: |
         The environment of the app to be reported to AppSignal.
   - config_key: name
