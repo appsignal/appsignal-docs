@@ -101,7 +101,7 @@ Are deploys not being reported or incorrectly? [Contact us][contact] and we will
 
 ---
 
-- [Add a new application](/guides/new-application.html) - previous guide
+- [Configuring applications](/guides/configuration.html) - previous guide
 - [Getting started guides](/guides/) - Guides overview
 
 [deploy markers]: /application/markers/deploy-markers.html

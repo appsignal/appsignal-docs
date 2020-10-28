@@ -22,6 +22,9 @@ sections:
             name: "Add a new application"
             link: "/guides/new-application.html"
           -
+            name: "Configuration"
+            link: "/guides/configuration.html"
+          -
             name: "Reporting deploys"
             link: "/guides/deploy-markers.html"
           -

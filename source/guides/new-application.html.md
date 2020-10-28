@@ -27,7 +27,7 @@ JavaScript applications will create an app beforehand that generate an applicati
 
 ## Next steps
 
-- [Reporting deploys to track improvements](/guides/deploy-markers.html) - next guide
+- [Configuring applications](/guides/configuration.html) - next guide
 
 ---
 
