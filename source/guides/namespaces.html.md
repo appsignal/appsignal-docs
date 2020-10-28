@@ -175,6 +175,6 @@ Are namespaces not being reported or incorrectly? [Contact us][contact] and we w
 - [Getting started guides](/guides/) - Guides overview
 
 [namespaces]: /application/namespaces.html
-[ignoring namespaces]: /application/namespaces.html#ignoring-namespaces
+[ignoring namespaces]: /guides/filter-data/ignore-namespaces.html
 [filtering]: /guides/filter-data/
 [contact]: mailto:support@appsignal.com

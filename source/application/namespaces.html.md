@@ -4,7 +4,7 @@ title: "Namespaces"
 
 Namespaces are a way to group error incidents, performance incidents and metrics from [actions](/appsignal/terminology.html#actions). [By default](#default-namespaces) AppSignal provides three namespaces: the "web", "background" and "frontend" namespaces. You can add your own namespaces to separate parts of your app like the API or Admin panel with [custom namespaces](#custom-namespaces).
 
--> 📖 Also read our guide on [how to set up namespaces](/guides/namespaces.html).
+-> 📖 Read our guide on [how to set up namespaces](/guides/namespaces.html).
 
 ## What can you do with namespaces?
 
@@ -63,12 +63,10 @@ documentation for our [Ruby](/ruby/instrumentation/namespaces.html) and
 
 ## Ignoring namespaces
 
--> The `ignore_namespaces` feature was introduced in AppSignal for Ruby gem version 2.3.0, AppSignal for Elixir package version 1.3.0 and AppSignal for Node.js package version 1.0.0.
-
 Sometimes you have a certain part of an application that does not need to be monitored by AppSignal. The most common use case is an administration panel that you use internally which doesn't need constant monitoring. By ignoring an entire namespace AppSignal will ignore all transactional data from all actions in the configured namespaces.
 
-To ignore a namespace first make sure to configure AppSignal to report all actions you want to ignore under a certain namespace, as described in the [Custom namespaces](#custom-namespaces) section.
+To ignore a namespace first make sure to configure AppSignal to report all actions you want to ignore under a certain namespace, as described in the [namespaces guide](/guides/namespace.html) section.
 
-Then configure AppSignal in your app to ignore the namespace, see the documentation for [Ruby](/ruby/instrumentation/namespaces.html#ignore-by-namespace) & [Elixir](/elixir/instrumentation/namespaces.html#ignore-by-namespace) apps.
+Then configure AppSignal in your app to ignore the namespace, see our [ignore namespaces guide](/guides/filter-data/ignore-namespaces.html) for this.
 
 After restarting your app the actions in the selected namespace should no longer be reported on AppSignal.com.

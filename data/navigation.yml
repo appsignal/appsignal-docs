@@ -49,6 +49,9 @@ sections:
               -
                 name: "Ignore actions"
                 link: "/guides/filter-data/ignore-actions.html"
+              -
+                name: "Ignore namespaces"
+                link: "/guides/filter-data/ignore-namespaces.html"
       -
         name: "Your applications"
         icon: "fas fa-server"
