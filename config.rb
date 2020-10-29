@@ -125,6 +125,9 @@ helpers do
   end
 
   def markdown(content)
+    # Set the markdown renderer scope to current view object, so that it can
+    # call view helpers, instead of erroring on a `nil` scope object.
+    AppsignalMarkdown.scope = self if AppsignalMarkdown.scope.nil?
     # https://github.com/hashicorp/middleman-hashicorp/blob/14c705614b2f97b5a78903f17b904f767c1fdbe2/lib/middleman-hashicorp/redcarpet.rb
     Redcarpet::Markdown.new(AppsignalMarkdown, AppsignalMarkdown::OPTIONS).render(content)
   end
