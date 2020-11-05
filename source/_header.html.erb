@@ -1,10 +1,45 @@
 <%
   tours = [
-    { title: "Catch errors", slug: "errors", color: "orange", icon: "fa-bug", human_teaser: "Catch errors and make sure they don't happen again." },
-    { title: "Track performance", slug: "performance", color: "green", icon: "fa-rabbit-fast", human_teaser: "Find performance issues before they find you." },
-    { title: "Monitor hosts", slug: "hosts", color: "teal", icon: "fa-server", human_teaser: "Run healthy apps on healthy hardware." },
-    { title: "Visualise metrics", slug: "metrics", color: "purple", icon: "fa-tachometer-alt", human_teaser: "Collect metrics and visualize them with a few lines of code." },
-    { title: "Work smoother", slug: "workflow", color: "blue", icon: "fa-users", human_teaser: "AppSignal keeps your team focused on building great apps." }
+    {
+      title: "Catch errors",
+      slug: "errors",
+      color: "orange",
+      icon: "fa-bug",
+      human_teaser: "Catch errors and make sure they don't happen again.",
+      icon_class: "c-header-subnav__link__icon--orange"
+    },
+    {
+      title: "Track performance",
+      slug: "performance",
+      color: "green",
+      icon: "fa-rabbit-fast",
+      human_teaser: "Find performance issues before they find you.",
+      icon_class: "c-header-subnav__link__icon--green"
+    },
+    {
+      title: "Monitor hosts",
+      slug: "hosts",
+      color: "teal",
+      icon: "fa-server",
+      human_teaser: "Run healthy apps on healthy hardware.",
+      icon_class: "c-header-subnav__link__icon--teal"
+    },
+    {
+      title: "Visualise metrics",
+      slug: "metrics",
+      color: "purple",
+      icon: "fa-tachometer-alt",
+      human_teaser: "Collect metrics and visualize them with a few lines of code.",
+      icon_class: "c-header-subnav__link__icon--purple"
+    },
+    {
+      title: "Work smoother",
+      slug: "workflow",
+      color: "blue",
+      icon: "fa-users",
+      human_teaser: "AppSignal keeps your team focused on building great apps.",
+      icon_class: "c-header-subnav__link__icon--blue"
+    }
   ]
   platforms = [
     { name: "Elixir", link: "https://appsignal.com/elixir/", icon: "fa fa-tint", text_class: "text-purple", dark_text_class: "dark:text-purple-400" },
@@ -47,7 +82,7 @@
                     <% tours.each do |tour| %>
                       <li class="col-span-1">
                         <a href="https://appsignal.com/tour/<%= tour[:slug] %>" class="c-header-subnav__link c-header-subnav__link--large">
-                          <i class="fa fa-fw <%= tour[:icon] %> c-header-subnav__link__icon c-header-subnav__link__icon--<%= tour[:color] %>"></i>
+                          <i class="fa fa-fw <%= tour[:icon] %> c-header-subnav__link__icon <%= tour[:icon_class] %>"></i>/i>
                           <div>
                             <span class="c-header-subnav__link__title">
                               <%= tour[:title] %>
