@@ -9,7 +9,7 @@ A `Span` is the name of the object that we use to capture data about an error an
 A `Span` can be created by calling `appsignal.createSpan()`, which initializes a new `Span` object with any default options that you passed when the `Appsignal` object was initialized.
 
 ```js
-const span = appsignal.createSpan()
+const span = appsignal.createSpan();
 ```
 
 The `createSpan()` method can also take a function as a parameter, allowing you to define the `Span`'s data as the same time as it is created.
@@ -17,21 +17,18 @@ The `createSpan()` method can also take a function as a parameter, allowing you 
 ```js
 const span = appsignal.createSpan((span) => {
   return span.setTags({
-    tag: "value"
-  })
-})
+    tag: "value",
+  });
+});
 ```
 
 `Span`s cannot be nested, nor can multiple `Span`s be passed to `appsignal.send()` at once. We recommend using `Promise.all` for concurrent `send` operations.
 
 ```js
-const span1 = appsignal.createSpan()
-const span2 = appsignal.createSpan()
+const span1 = appsignal.createSpan();
+const span2 = appsignal.createSpan();
 
-Promise.all([
-  appsignal.send(span1),
-  appsignal.send(span2)
-])
+Promise.all([appsignal.send(span1), appsignal.send(span2)]);
 ```
 
 ## Updating a `Span`
@@ -39,23 +36,21 @@ Promise.all([
 After a `Span` is created, you can begin adding data to it using methods on the `Span` object:
 
 ```js
-const span = appsignal.createSpan()
-span.setTags({ tag: "value" })
+const span = appsignal.createSpan();
+span.setTags({ tag: "value" });
 
-console.log(span.serialize().tags) // { tag: "value" }
+console.log(span.serialize().tags); // { tag: "value" }
 ```
 
 Each method that modifies the `Span` returns `this`, allowing you to chain methods together:
 
 ```js
-const span = appsignal.createSpan()
+const span = appsignal.createSpan();
 
-span
-  .setTags({ tag: "value" })
-  .setError(new Error("test error"))
+span.setTags({ tag: "value" }).setError(new Error("test error"));
 
-console.log(span.serialize().tags)    // { tag: "value" }
-console.log(span.serialize().error)   // { name: "Error", message: "test error", backtrace: [...] }
+console.log(span.serialize().tags); // { tag: "value" }
+console.log(span.serialize().error); // { name: "Error", message: "test error", backtrace: [...] }
 ```
 
 ### `span.setAction(name: string)`
@@ -90,10 +85,10 @@ When you're finished adding data to the `Span`, it can then be passed to `appsig
 
 ```js
 const span = appsignal.createSpan((span) => {
-  return span.setError(new Error("test error"))
-})
+  return span.setError(new Error("test error"));
+});
 
-appsignal.send(span)
+appsignal.send(span);
 ```
 
 The `send()` method is different to the `sendError()` method as it allows a `Span` to be passed as a parameter, which is either pushed immediately to the API, or in the case of a network error, added to the queue to be retried later.
@@ -103,3 +98,9 @@ Once the `Span` is passed to `appsignal.send()`, any [Hooks](/front-end/hooks.ht
 - Decorators
 - Optional `tags` or `namespace` arguments to `appsignal.send()`
 - Overrides
+
+### About the Retry Queue
+
+If, for any reason, pushing an error to the API fails (e.g. if the network connection is not working), the `Span` object that it belongs to is placed in the retry queue. By default, requests are retried **5 times** with exponential backoff. If the request succeeds, the corresponding `Span` is removed from the queue. Once the retry limit has been reached, any `Span`s left in the queue are discarded.
+
+!> No caching is currently implemented for the retry queue, meaning that if a `Span` is in the queue when the user navigates away from your aplication, that `Span` will also be discarded.

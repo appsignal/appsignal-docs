@@ -6,12 +6,18 @@ AppSignal has amazing support for catching errors from front-end JavaScript appl
 
 !> **NOTE:** Uncaught exceptions are **not** captured by default. [Read this section to find out why](/front-end/error-handling.html#uncaught-exceptions). You can enable this functionality by enabling the [`plugin-window-events`](/front-end/plugins/plugin-window-events.html) plugin.
 
-## Creating a Push API Key
+## Supported browsers
 
-Before you begin, you'll need to locate your Push API key. Finding this is easy - look for the ["Push and deploy" section](https://appsignal.com/redirect-to/app?to=info) of your App settings page. You'll be able to find your API key under the "Front-end error monitoring". Once you have your key, follow the instructions under the [Installation](/front-end/installation.html) section to use it in your application.
+This package can be used in any ECMAScript 5 compatible browser. We aim for compatibility down to Internet Explorer 9 [(roughly 0.22% of all browsers used today)](https://www.w3counter.com/globalstats.php). All browsers older than this can only supported on a “best effort” basis, and full functionality cannot be guaranteed.
 
-## About the Retry Queue
+When developing, don’t forget to check browser support on [Can I Use?](https://caniuse.com/) and the [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/), and provide the appropriate polyfills or fallbacks. **In a small percentage of browsers, a `Promise` polyfill may be required to use this library.**
 
-If, for any reason, pushing an error to the API fails (e.g. if the network connection is not working), the `Span` object that it belongs to is placed in the retry queue. By default, requests are retried **5 times** with exponential backoff. If the request succeeds, the corresponding `Span` is removed from the queue. Once the retry limit has been reached, any `Span`s left in the queue are discarded.
+## Other supported environments
 
-!> No caching is currently implemented for the retry queue, meaning that if a `Span` is in the queue when the user navigates away from your aplication, that `Span` will also be discarded.
+`@appsignal/javascript` is more than just a front-end library! It's also designed to work in a variety of other JavaScript runtimes and use-cases where the `@appsignal/nodejs` library may not be a viable choice. `@appsignal/javascript` supports:
+
+- ✅ **Electron apps**
+- ✅ **Short-lived processes**
+- ✅ **Serverless functions**
+- ✅ **Statically generated apps**
+- ✅ **React Native/Expo apps**
