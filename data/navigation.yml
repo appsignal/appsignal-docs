@@ -56,6 +56,9 @@ sections:
                 name: "Ignore namespaces"
                 link: "/guides/filter-data/ignore-namespaces.html"
           -
+            name: "Find slow queries"
+            link: "/guides/slow-queries.html"
+          -
             name: "Application management"
             link: "/guides/application/"
             sub_pages:

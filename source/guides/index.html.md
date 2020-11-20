@@ -3,7 +3,8 @@ title: "AppSignal guides"
 ---
 
 - New to AppSignal? Start with our [getting started guides](#getting-started-guides).
-- Want to customize AppSignal further? Read our [other guides](#guides).
+- Exploring more features? Read up on our [feature guides](#feature-guides).
+- Want to customize AppSignal further? Read our [other guides](#otherguides).
 
 ## Getting started guides
 
@@ -17,7 +18,11 @@ In the next couple steps we'll guide you through ways to make the data being rep
 1. [Grouping parts of your app with namespaces](/guides/namespaces.html)
 1. [Filtering app data](/guides/filter-data/) - Customize which parameters, session data, headers and more are collected by AppSignal integrations.
 
-<a id="guides"></a>
+## Feature guides
+
+- [Find slow database queries](/guides/slow-queries.html)
+
+<a id="other-guides"></a>
 
 ## Application management guides
 
