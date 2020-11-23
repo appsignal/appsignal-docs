@@ -325,6 +325,9 @@ sections:
                 name: "Exception handling"
                 link: "/ruby/instrumentation/exception-handling.html"
               -
+                name: "Breadcrumbs"
+                link: "/ruby/instrumentation/breadcrumbs.html"
+              -
                 name: "Ignore instrumentation"
                 link: "/ruby/instrumentation/ignore-instrumentation.html"
               -
