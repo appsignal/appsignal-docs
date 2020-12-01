@@ -78,7 +78,7 @@ Instead of the custom `:template_engines` from 1.x, AppSignal for Elixir 2.x
 uses the new `Appsignal.View` module to gain insights into your template
 rendering.
 
-To upgrade, remove the `:template_engines` from `config/config.exs and add `use
+To upgrade, remove the `:template_engines` from `config/config.exs` and add `use
 Appsignal.Phoenix.View` to the view/0 function in your app's web module, after
 `use Phoenix.View`:
 
