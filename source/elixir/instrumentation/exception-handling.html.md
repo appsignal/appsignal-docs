@@ -22,17 +22,27 @@ specific errors AppSignal will not send alerts when these errors are raised.
 
 If you want to rescue exceptions in your application to prevent crashes, but
 still want to track the occurrence you can use
-[`Appsignal.set_error/3`][hexdocs-set_error] to add the exception to the
-current AppSignal transaction.
+[`Appsignal.set_error/2`][hexdocs-set_error-2] to add the exception to the
+current AppSignal transaction:
+
+```elixir
+try do
+  raise "Exception!"
+rescue
+  exception -> Appsignal.set_error(exception, __STACKTRACE__)
+end
+```
+
+!> **NOTE:** `Appsignal.set_error/2` was added in Appsignal for Elixir 2.1.0. If you're on a lower version, use `Appsignal.set_error/3` instead.
+
+On versions before 2.1.0, use `catch` and `Appsignal.send_error/3`:
 
 ```elixir
 try do
   raise "Exception!"
 catch
   kind, reason ->
-    stack = __STACKTRACE__
-
-    Appsignal.set_error(kind, reason, stack)
+    Appsignal.set_error(kind, reason, __STACKTRACE__)
 end
 ```
 
@@ -62,11 +72,25 @@ try do
   raise "Exception!"
 catch
   kind, reason ->
-    stack = __STACKTRACE__
-
-    Appsignal.send_error(kind, reason, stack)
+    Appsignal.send_error(kind, reason, __STACKTRACE__)
 end
 ```
 
-[hexdocs-set_error]: https://hexdocs.pm/appsignal/Appsignal.Instrumentation.html#set_error/3
+To add metadata to the sent error, pass a function as the fourth argument to
+`Appsignal.send_errror/4`:
+
+```elixir
+try do
+  raise "Exception!"
+catch
+  kind, reason ->
+    Appsignal.send_error(kind, reason, __STACKTRACE__, fn span ->
+      Appsignal.Span.set_attribute(span, "key", "value")
+    end)
+end
+```
+
+!> **NOTE:** `Appsignal.send_error/4` was added in Appsignal for Elixir 2.1.0.
+
+[hexdocs-set_error-2]: https://hexdocs.pm/appsignal/Appsignal.Instrumentation.html#set_error/2
 [hexdocs-send_error]: https://hexdocs.pm/appsignal/Appsignal.Instrumentation.html#send_error/3
