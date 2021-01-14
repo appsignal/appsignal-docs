@@ -295,6 +295,34 @@ options:
         - Not acceptable values: `foo`, `my.awesome.custom.local.dns.server`.
 
         If the DNS server cannot be reached the agent will fall back on the host's DNS configuration and output a message in the `appsignal.log` file: `A problem occurred while setting DNS servers`.
+  - config_key: ecto_repos
+    env_key: APPSIGNAL_ECTO_REPOS
+    elixir:
+      since: 2.0.0
+      type:
+        list:
+          - string
+      default_value: []
+      description: |
+        Configure which Ecto repos to instrument queries for.
+
+        ```elixir
+        # config/config.exs
+        config :appsignal, :config,
+          ecto_repos: [AppsignalPhoenixExample.Repo, AppsignalPhoenixExample.AnotherRepo]
+        ```
+
+        ```sh
+        # In the host environment
+        export APPSIGNAL_DNS_SERVERS="AppsignalPhoenixExample.Repo,AppsignalPhoenixExample.AnotherRepo"
+        ```
+
+        To turn off all Ecto instrumentation, configure `:ecto_repos` as an empty list:
+        ```elixir
+        # config/config.exs
+        config :appsignal, :config,
+          ecto_repos: []
+        ```
   - config_key: enable_allocation_tracking
     env_key: APPSIGNAL_ENABLE_ALLOCATION_TRACKING
     ruby:
