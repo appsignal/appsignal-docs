@@ -302,9 +302,9 @@ options:
       type:
         list:
           - string
-      default_value: []
+      default_value: nil
       description: |
-        Configure which Ecto repos to instrument queries for.
+        Configure which Ecto repos to instrument queries for. If unset, AppSignal will automatically find your repos through your application configuration.
 
         ```elixir
         # config/config.exs
