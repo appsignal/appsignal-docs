@@ -318,6 +318,7 @@ options:
         ```
 
         To turn off all Ecto instrumentation, configure `:ecto_repos` as an empty list:
+
         ```elixir
         # config/config.exs
         config :appsignal, :config,
