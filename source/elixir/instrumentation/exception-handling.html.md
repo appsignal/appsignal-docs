@@ -90,7 +90,7 @@ catch
 end
 ```
 
-!> **NOTE:** `Appsignal.send_error/4` was added in Appsignal for Elixir 2.1.0.
+!> **NOTE:** `Appsignal.send_error/4` was added in AppSignal for Elixir 2.1.0.
 
 [hexdocs-set_error-2]: https://hexdocs.pm/appsignal/Appsignal.Instrumentation.html#set_error/2
 [hexdocs-send_error]: https://hexdocs.pm/appsignal/Appsignal.Instrumentation.html#send_error/3
