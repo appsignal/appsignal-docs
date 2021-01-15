@@ -33,7 +33,7 @@ rescue
 end
 ```
 
-!> **NOTE:** `Appsignal.set_error/2` was added in Appsignal for Elixir 2.1.0. If you're on a lower version, use `Appsignal.set_error/3` instead.
+!> **NOTE:** `Appsignal.set_error/2` was added in AppSignal for Elixir 2.1.0. If you're on a lower version, use `Appsignal.set_error/3` instead.
 
 On versions before 2.1.0, use `catch` and `Appsignal.send_error/3`:
 
