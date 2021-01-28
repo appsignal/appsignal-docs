@@ -67,7 +67,7 @@ This source is listed as `initial` in the [diagnose](/ruby/command-line/diagnose
 ##=file 4. `appsignal.yml` config file
 
 The most common way to configure your application is using the `appsignal.yml`
-file. When you use the `appsignal install` command the gem will create on for
+file. When you use the `appsignal install` command the gem will create one for
 you.
 
 The path of this configuration file is `{project_root}/config/appsignal.yml`.
