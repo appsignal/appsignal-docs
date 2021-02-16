@@ -132,16 +132,16 @@ channel module and the action argument that you entered.
 Elixir version `1.13.0` onward.
 
 A LiveView action is instrumented by wrapping its contents in a
-`Appsignal.Phoenix.LiveView.live_view_action/4` block.
+`Appsignal.Phoenix.LiveView.instrument/4` block.
 
 Given a live view that updates its own state every second, we can add
 AppSignal instrumentation by wrapping both the mount/2 and handle_info/2
-functions with a `Appsignal.Phoenix.LiveView.live_view_action`/4 call:
+functions with a `Appsignal.Phoenix.LiveView.instrument`/4 call:
 
 ```elixir
 defmodule AppsignalPhoenixExampleWeb.ClockLive do
   use Phoenix.LiveView
-  import Appsignal.Phoenix.LiveView, only: [live_view_action: 4]
+  import Appsignal.Phoenix.LiveView, only: [instrument: 4]
 
   def render(assigns) do
     AppsignalPhoenixExampleWeb.ClockView.render("index.html", assigns)
@@ -149,9 +149,9 @@ defmodule AppsignalPhoenixExampleWeb.ClockLive do
 
   def mount(_session, socket) do
     # Wrap the contents of the mount/2 function with a call to
-    # Appsignal.Phoenix.LiveView.live_view_action/4
+    # Appsignal.Phoenix.LiveView.instrument/4
 
-    live_view_action(__MODULE__, "mount", socket, fn ->
+    instrument(__MODULE__, "mount", socket, fn ->
       :timer.send_interval(1000, self(), :tick)
       {:ok, assign(socket, state: Time.utc_now())}
     end)
@@ -159,9 +159,9 @@ defmodule AppsignalPhoenixExampleWeb.ClockLive do
 
   def handle_info(:tick, socket) do
     # Wrap the contents of the handle_info/2 function with a call to
-    # Appsignal.Phoenix.LiveView.live_view_action/4:
+    # Appsignal.Phoenix.LiveView.instrument/4:
 
-    live_view_action(__MODULE__, "tick", socket, fn ->
+    instrument(__MODULE__, "tick", socket, fn ->
       {:ok, assign(socket, state: Time.utc_now())}
     end)
   end
