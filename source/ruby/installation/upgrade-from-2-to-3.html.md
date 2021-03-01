@@ -44,7 +44,7 @@ For more information and background of this change, see [issue 603 on the Ruby g
 
 Some modules in the gem have been moved or renamed. The 2.x series of the gem will print a warning if it encounters any with the new location of the called module. This warning is printed by a fallback when the old module name is called. This warning will no longer be printed if the new module name is being called instead.
 
-If an app extended or monkeypatched an AppSignal module, the module name needs to be updated for the patch to work again. Do be warned that we do provide support for these patches. If a private module has been removed without replacement, we do not provide the integration any more or it has been merged into another module.
+If an app extended or monkeypatched an AppSignal module, the module name needs to be updated for the patch to work again. Do be warned that we do not provide support for these patches. If a private module has been removed without replacement, we do not provide the integration any more or it has been merged into another module.
 
 ## Removed JavaScript integration
 
