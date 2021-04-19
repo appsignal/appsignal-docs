@@ -75,7 +75,8 @@ If you'd like to use the Deploy Marker feature with [Cloud66](https://www.cloud6
 ```yml
 # For Ruby
 # config/appsignal.yml
-revision: "<%= ENV['CLOUD66_SERVICE_GIT_REF'] %>"
+production:
+  revision: "<%= `git log --pretty=format:'%h' -n 1` %>"
 ```
 
 ## Manually create a Deploy marker
