@@ -68,16 +68,6 @@ export APP_REVISION="cf8bc42"
 
 When using Heroku with the [Heroku Labs: Dyno Metadata](https://devcenter.heroku.com/articles/dyno-metadata) enabled it will automatically set the `revision` config option to the `HEROKU_SLUG_COMMIT` system environment variable. This will automatically report new deploys when the Heroku app gets deployed.
 
-### Cloud66 Support
-
-If you'd like to use the Deploy Marker feature with [Cloud66](https://www.cloud66.com/), you can do this by adding/updating the following line in your config file:
-
-```yml
-# For Ruby
-# config/appsignal.yml
-revision: "<%= ENV['CLOUD66_SERVICE_GIT_REF'] %>"
-```
-
 ## Manually create a Deploy marker
 
 -> Manually creating a deploy marker using this method is only useful for small applications that use one application instance. It creates a new deploy marker at a specific time, regardless of the version the application is actually running. This also means it's also more error prone to group data that shouldn't belong to it under the deploy. We recommend you use the [`revision` config option method](#revision-config-option).
