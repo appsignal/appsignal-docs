@@ -91,11 +91,12 @@ For short lived hosts, such as containers and Heroku schedulers, an additional s
 
 ## Rake tasks and containers
 
-When running a single Rake task on a one-off host (e.g. with Docker containers, Kubernetes or Heroku schedulers) there are two requirements. These two options guarantee that the app AppSignal extension has time to flush the data to the agent and the agent has time to send the data to our API before shutting (the container) down.
+When running a single Rake task on a one-off host (e.g. with Docker containers, Kubernetes or Heroku schedulers) there are three requirements. This guarantees that the app AppSignal extension has time to flush the data to the agent and the agent has time to send the data to our API before shutting (the container) down.
 
 * [`Appsignal.stop`](#appsignal-stop-requirement) must be called in the Rake task
 * [`running_in_container`](/ruby/configuration/options.html#option-running_in_container) must be set to true in the config.
   * For some containers `running_in_container` is automatically set to true when detected, for others manual configuration is required.
+* A sleep of e.g. 5 seconds to give AppSignal agent time to sent the data
 
 An example of how Appsignal.stop is called in the Rakefile:
 
