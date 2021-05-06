@@ -30,7 +30,7 @@ application](/elixir/integrations/phoenix.html). One thing to keep in mind is
 to `use Appsignal.Phoenix` in your application’s endpoint file. If you have
 multiple nested Phoenix applications, use the module in each.
 
--> If you include use `Plug.Builder` or any other module that redefines the `call/2` function, make sure to place the `use Appsignal.Phoenix` line after that.
+-> If you include `use Plug.Builder` or any other module that redefines the `call/2` function, make sure to place the `use Appsignal.Phoenix` line after that.
 
 ```elixir
 defmodule AppsignalPhoenixExampleWeb.Endpoint do
