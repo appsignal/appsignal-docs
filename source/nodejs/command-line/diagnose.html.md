@@ -22,6 +22,8 @@ Read more about how to use the diagnose command on the [Debugging][debugging] pa
 
 ## Submitting the report
 
+Since gem version `1.2.5`, you'll need to pass the `--send-report` option to send the diagnose report to AppSignal. If used, the report will be send to our servers and you will receive a support token.
+
 When you [send this support token to us](mailto:support@appsignal.com) we will review the report and help you debug the issue. We've seen that copy-pasting the report output usually loses formatting and makes it harder to read, which is why it's sent to our servers in the JSON format.
 
 ## Usage
