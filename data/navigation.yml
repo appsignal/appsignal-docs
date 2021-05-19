@@ -158,6 +158,9 @@ sections:
                 name: "Google Hangouts Chat"
                 link: "/application/integrations/hangouts.html"
               -
+                name: "GitHub"
+                link: "/application/integrations/github.html"
+              -
                 name: "Intercom"
                 link: "/application/integrations/intercom.html"
               -

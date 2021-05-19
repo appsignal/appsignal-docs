@@ -13,7 +13,7 @@ To enable notifications and issue tracker integration for external services, go 
 - [Discord](/application/integrations/discord.html)
 - [Flowdock](#flowdock)
 - [Geckoboard](#geckoboard)
-- [GitHub](#github)
+- [GitHub](/application/integrations/github.html)
 - [GitLab](#gitlab)
 - [Google Hangouts Chat](#google-hangouts-chat)
 - [Intercom](#intercom)
@@ -38,12 +38,6 @@ Website: [https://www.flowdock.com](https://www.flowdock.com)
 Use Geckoboard to build clear, effective data dashboards for your business that keep teams informed, motivated and aligned around your KPIs.
 
 Website: [https://www.geckoboard.com/](https://www.geckoboard.com/)
-
-## GitHub
-
-GitHub is the best place to share code with friends, co-workers, classmates, and complete strangers. Over six million people use GitHub to build amazing things together.
-
-Website: [https://github.com](https://github.com)
 
 ## GitLab
 
