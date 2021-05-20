@@ -2,7 +2,7 @@
 title: "Uptime monitoring <sup>Beta</sup>"
 ---
 
--> Uptime monitoring is currently in an invite-only beta. Do you want to help us test it? Great! Contact us at support@appsignal.com and ask for an invite.
+-> Uptime monitoring is in public beta. It's being used for hundreds of uptime monitoring and should be stable. The beta label wil be removed after a few weeks without new issues found for this feature.
 
 With AppSignal uptime monitoring you can receive alerts when your application is down.
 We check the given URL of your application from multiple regions across the world and will open an alert when any of these regions can't reach the given URL. We also graph the performance of this endpoint from different regions around the world.
