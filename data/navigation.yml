@@ -164,6 +164,9 @@ sections:
                 name: "Jira"
                 link: "/application/integrations/jira.html"
               -
+                name: "Microsoft Teams"
+                link: "/application/integrations/teams.html"
+              -
                 name: "PagerDuty"
                 link: "/application/integrations/pagerduty.html"
               -

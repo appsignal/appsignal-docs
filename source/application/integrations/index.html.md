@@ -18,6 +18,7 @@ To enable notifications and issue tracker integration for external services, go 
 - [Google Hangouts Chat](#google-hangouts-chat)
 - [Intercom](#intercom)
 - [Jira](#jira)
+- [Microsoft Teams](/application/integrations/teams.html)
 - [OpsGenie](#opsgenie)
 - [PagerDuty](/application/integrations/pagerduty.html)
 - [Phabricator](#phabricator)
