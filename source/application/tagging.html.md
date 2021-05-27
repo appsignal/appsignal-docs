@@ -27,7 +27,7 @@ Tags are a great way to pass along the additional details however they are limit
 There are 4 kind of sample data.
 
 1. Session data
-    * This stores the session/cookie data by default; you do not have to pass these in explicitly. AppSignal picks these up automatically (if you are using frameworks), 
+    * This stores the session data by default; you do not have to pass these in explicitly. AppSignal picks these up automatically (if you are using frameworks), 
 2. Params
    * If you are using Ruby on Rails or a Phoenix framework, then AppSignal will fill in the action params for you here automatically.
 3. Environment
