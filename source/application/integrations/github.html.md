@@ -14,7 +14,7 @@ On the next step click on the "Install Github app" button.
 
 <img src="/assets/images/screenshots/github/install.png" style="max-width: 650px" alt="Install GitHub app">
 
-You will be redirected to GitHub, here you should select your account/organization where the application sourcecode exists.
+You will be redirected to GitHub, here you should select your account/organization where the application source code exists.
 
 <img src="/assets/images/screenshots/github/github_org.png" style="max-width: 650px" alt="Select GitHub organization">
 
