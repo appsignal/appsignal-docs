@@ -62,7 +62,7 @@ The first argument to `setSampleData` takes a `key`, that can be one of the foll
 
 ### `session_data`
 
-Filled with session/cookie data by default, but can be overridden with the following call:
+Filled with session data by default, but can be overridden with the following call:
 
 ```js
 span.setSampleData("session_data", {
