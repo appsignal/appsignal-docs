@@ -8,7 +8,7 @@ title: GitHub
 
 Head over to your application's [integration](https://appsignal.com/redirect-to/app?to=integrations) page. Click on the "Configure" button for GitHub integration.
 
-<img src="/assets/images/screenshots/github/connfigure.png" style="max-width: 650px" alt="GitHub AppSignal integration">
+<img src="/assets/images/screenshots/github/configure.png" style="max-width: 650px" alt="GitHub AppSignal integration">
 
 On the next step click on the "Install Github app" button.
 
