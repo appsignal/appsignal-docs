@@ -25,9 +25,16 @@ Appsignal.tag_request(
 
 ```elixir
 # Elixir example
-Appsignal.Transaction.set_sample_data(
+Appsignal.Span.set_sample_data(
+  Appsignal.Tracer.root_span,
   "tags",
-  %{user_id: current_user.id, account_id: current_account.id}
+  %{
+    locale: "en",
+    user_id: user_id,
+    stripe_customer_id: stripe_customer_id,
+    locale: locale,
+    default_locale: default_locale
+  }
 )
 ```
 
