@@ -4,10 +4,11 @@ title: "Node.js integrations"
 
 AppSignal works with most popular Node.js frameworks and packages out-of-the-box such as:
 
-- [Node.js Core](core.html)
-- [Express](express.html)
-- [Next.js](nextjs.html)
 - [Apollo Server](apollo.html)
+- [Express](express.html)
+- [Koa.js](koajs.html)
+- [Next.js](nextjs.html)
+- [Node.js Core](core.html)
 - [node-postgres](pg.html)
 - [node-redis](redis.html)
 

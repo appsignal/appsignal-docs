@@ -531,23 +531,27 @@ sections:
                 name: "Overview"
                 link: "/nodejs/integrations/"
               -
-                name: "Node.js Core"
-                link: "/nodejs/integrations/core.html"
+                name: "Apollo Server"
+                link: "/nodejs/integrations/apollo.html"
               -
                 name: "Express"
                 link: "/nodejs/integrations/express.html"
               -
-                name: "node-postgres"
-                link: "/nodejs/integrations/pg.html"
+                name: "Koa.js"
+                link: "/nodejs/integrations/koajs.html"
               -
                 name: "Next.js"
                 link: "/nodejs/integrations/nextjs.html"
               -
+                name: "Node.js Core"
+                link: "/nodejs/integrations/core.html"
+              -
+                name: "node-postgres"
+                link: "/nodejs/integrations/pg.html"
+              -
                 name: "node-redis"
                 link: "/nodejs/integrations/redis.html"
-              -
-                name: "Apollo Server"
-                link: "/nodejs/integrations/apollo.html"
+
           -
             name: "Command line tools"
             link: "/nodejs/command-line/"
