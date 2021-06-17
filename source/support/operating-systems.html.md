@@ -88,6 +88,20 @@ mix deps.get
 mix compile
 ```
 
+### Linux ARM build override
+
+To opt-in to the experimental Linux ARM build, add the `APPSIGNAL_BUILD_FOR_LINUX_ARM` environment variable to your system environment before installing AppSignal and compiling your application. This build is opt-in because it requires more testing, and we don't want to automatically install it on ARM systems in case something doesn't work as expected.
+
+-> This build is currently only available for the Ruby gem, [let us know](mailto:support@appsignal.com) if you wish to try it for other integrations such as Elixir or Node.js.
+
+```sh
+# For Ruby
+export APPSIGNAL_BUILD_FOR_LINUX_ARM=1
+gem install appsignal
+# or with Bundler
+bundle install
+```
+
 ### Alpine Linux
 
 [Alpine Linux] support was added in version `2.1.0` of the AppSignal for Ruby gem. (JRuby is not supported on Alpine Linux.) Our AppSignal for Elixir package supports Alpine Linux since version `0.11.0`.
