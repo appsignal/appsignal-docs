@@ -424,9 +424,9 @@ options:
     nodejs:
       config_key: logPath
       type: string
-      default_value: "/tmp/appsignal.log"
+      default_value: "/tmp"
     description:
-      - Override the location of the path where the `appsignal.log` file can be written to.
+      - Override the location of the path (directory) where the `appsignal.log` file can be written to.
       - *file_paths_notice
   - config_key: files_world_accessible
     env_key: APPSIGNAL_FILES_WORLD_ACCESSIBLE
